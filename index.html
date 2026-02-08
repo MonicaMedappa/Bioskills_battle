@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDS-PAGE Quiz Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    </head>
 <body>
-    <div class="set-selector">
-    <label for="question-set">Choose your level:</label>
-    <select id="question-set" onchange="switchSet(this.value)">
-        <option value="Set-1-questions.json">Set 1: Fundamentals</option>
-        <option value="Set-2-questions.json">Set 2: Advanced</option>
-    </select>
-    </div>
-        <div id="quiz-container">
-        <div id="score-display"><span id="score-count">Score: 0</span></div>
-        <h1>SDS-PAGE Mastery Quiz</h1>
-        <div id="question-area">
-            <p id="question-text">Loading question...</p>
+
+    <div id="quiz-container">
+        <div class="set-selector">
+            <label for="question-set">Select Difficulty:</label>
+            <select id="question-set" onchange="switchSet(this.value)">
+                <option value="Set-1-questions.json">Set 1: Fundamentals</option>
+                <option value="Set-2-questions.json">Set 2: Advanced</option>
+            </select>
         </div>
+
+        <div id="score-display">
+            <span id="score-count">Score: 0</span>
+        </div>
+        
+        <div id="question-text">Loading...</div>
         <div id="answer-buttons" class="btn-grid"></div>
+        
         <div id="feedback-container" class="hide">
             <p id="feedback-text"></p>
             <button id="next-btn" onclick="nextQuestion()">Next Question</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
