@@ -61,6 +61,37 @@ button:hover {
     color: #3498db;
     margin-bottom: 10px;
 } 
+/* Styling for the Question Set Selector */
+.set-selector {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.set-selector label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#question-set {
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    background-color: white;
+    color: #2c3e50;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#question-set:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
 
 .hide {
     display: none;
