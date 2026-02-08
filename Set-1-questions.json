@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary factor used to separate proteins during SDS-PAGE?",
+    "options": ["Molecular weight", "Isoelectric point", "Amino acid sequence", "3D conformation"],
+    "answer": "Molecular weight",
+    "explanation": "SDS-PAGE standardizes the charge of proteins so that they migrate solely based on their size or molecular mass."
+  },
+  {
+    "id": 2,
+    "question": "In an electric field, towards which electrode do negatively charged particles travel?",
+    "options": ["The cathode", "The ground electrode", "The anode", "The neutral electrode"],
+    "answer": "The anode",
+    "explanation": "Opposites attract in electrophoresis; the positive electrode (anode) pulls the negatively charged molecules toward it."
+  },
+  {
+    "id": 3,
+    "question": "Why does DNA naturally migrate towards the positive electrode without special treatment?",
+    "options": ["Because of its nitrogenous bases", "Because of its sugar-phosphate backbone", "Because it is smaller than proteins", "Because it lacks amino acids"],
+    "answer": "Because of its sugar-phosphate backbone",
+    "explanation": "The phosphate groups in the backbone are negatively charged, giving DNA an inherent negative charge."
+  },
+  {
+    "id": 4,
+    "question": "What is a major complication when attempting electrophoresis on untreated proteins compared to DNA?",
+    "options": ["Proteins only move toward the cathode", "Proteins have a constant negative charge", "Proteins can have variable charges based on pH", "Proteins are always larger than DNA"],
+    "answer": "Proteins can have variable charges based on pH",
+    "explanation": "The presence of both amino and carboxyl groups means a protein's net charge changes with the pH of the environment."
+  },
+  {
+    "id": 5,
+    "question": "If two proteins have the same charge, which one will migrate the shortest distance in the gel?",
+    "options": ["The most negatively charged protein", "The largest protein", "The smallest protein", "The protein with more amino acids"],
+    "answer": "The largest protein",
+    "explanation": "Larger molecules face more resistance from the medium, causing them to travel a shorter distance."
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of treating a protein mixture with Sodium Dodecyl Sulfate (SDS)?",
+    "options": ["To ensure all proteins have a similar charge", "To change the pH of the solution", "To synthesize new amino acids", "To increase the protein's molecular weight"],
+    "answer": "To ensure all proteins have a similar charge",
+    "explanation": "SDS coats proteins to provide a uniform charge-to-mass ratio, ensuring they all migrate toward the same electrode."
+  },
+  {
+    "id": 7,
+    "question": "What might happen to a protein in an electric field if it is uncharged?",
+    "options": ["It may not migrate at all", "It will migrate towards the anode", "It will move faster than charged proteins", "It will migrate towards the cathode"],
+    "answer": "It may not migrate at all",
+    "explanation": "Without a net charge, the electric field exerts no directional force on the molecule."
+  },
+  {
+    "id": 8,
+    "question": "The working principle of protein electrophoresis is most similar to which other technique?",
+    "options": ["Mass spectrometry", "DNA electrophoresis", "Liquid chromatography", "Protein folding analysis"],
+    "answer": "DNA electrophoresis",
+    "explanation": "Both techniques separate molecules primarily based on their size as they move through a medium in an electric field."
+  },
+  {
+    "id": 9,
+    "question": "Which chemical groups in amino acids contribute to the variable charge of a protein?",
+    "options": ["Hydroxyl and Methyl groups", "Sodium and Sulfate groups", "Sugar and phosphate groups", "NH2+ and COO- groups"],
+    "answer": "NH2+ and COO- groups",
+    "explanation": "These amino and carboxyl groups can gain or lose protons, changing the net charge depending on the pH."
+  },
+  {
+    "id": 10,
+    "question": "True or False: Without SDS treatment, all proteins in a mixture will automatically migrate to the anode.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "Untreated proteins can be positive, negative, or neutral, meaning they do not all move toward the positive electrode automatically."
+  }
+]
