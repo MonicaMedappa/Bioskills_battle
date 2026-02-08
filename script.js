@@ -1,12 +1,35 @@
-const questionUrl = 'Set-1-questions.json'; 
+// Change 'const' to 'let' so we can update the URL dynamically
+let questionUrl = 'Set-1-questions.json'; 
 
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0; // Tracks the number of correct answers
 
+/**
+ * Switch the question set based on user selection
+ * @param {string} newUrl - The filename of the JSON set (e.g., 'Set-2-questions.json')
+ */
+async function switchSet(newUrl) {
+    questionUrl = newUrl;
+    currentQuestionIndex = 0; // Reset progress
+    score = 0;                // Reset score
+    
+    // Update UI for reset
+    updateScoreDisplay();
+    const feedbackContainer = document.getElementById('feedback-container');
+    if (feedbackContainer) {
+        feedbackContainer.classList.add('hide');
+    }
+    
+    // Reload the data and display the first question
+    await loadQuiz();
+}
+
 async function loadQuiz() {
     try {
         const response = await fetch(questionUrl);
+        if (!response.ok) throw new Error("Network response was not ok");
+        
         currentQuestions = await response.json();
         showQuestion();
     } catch (error) {
@@ -67,10 +90,11 @@ function nextQuestion() {
         document.getElementById('quiz-container').innerHTML = `
             <h1>Quiz Complete!</h1>
             <p>Your final score is ${score} out of ${currentQuestions.length}.</p>
-            <p>You've mastered SDS-PAGE fundamentals!</p>
+            <p>Keep practicing your Bio-skills!</p>
             <button onclick="location.reload()" style="margin-top: 20px;">Restart Quiz</button>
         `;
     }
 }
 
+// Initial load
 loadQuiz();
