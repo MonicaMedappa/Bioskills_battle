@@ -41,4 +41,18 @@ function selectAnswer(selected, correct, explanation) {
     feedbackContainer.classList.remove('hide');
 }
 
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < currentQuestions.length) {
+        document.getElementById('feedback-container').classList.add('hide');
+        showQuestion();
+    } else {
+        document.getElementById('quiz-container').innerHTML = `
+            <h1>Quiz Complete!</h1>
+            <p>You have mastered the SDS-PAGE fundamentals.</p>
+            <button onclick="location.reload()">Restart Quiz</button>
+        `;
+    }
+}
+
 loadQuiz();
