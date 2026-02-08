@@ -1,0 +1,57 @@
+[
+    {
+        "question": "What is the primary reason SDS is added to a protein mixture before electrophoresis?",
+        "options": [
+            "To strengthen hydrogen bonds",
+            "To prevent proteins from migrating",
+            "To ensure separation is based solely on molecular weight",
+            "To increase the variety of charges in the mixture"
+        ],
+        "answer": "To ensure separation is based solely on molecular weight",
+        "explanation": "SDS nullifies intrinsic charges and gives all proteins a uniform negative charge-to-mass ratio."
+    },
+    {
+        "question": "Which region of the SDS molecule is responsible for interacting with and unfolding the internal regions of proteins?",
+        "options": [
+            "The hydrophobic region",
+            "The oxygen atoms",
+            "The Sodium (Na+) ion",
+            "The ionic region"
+        ],
+        "answer": "The hydrophobic region",
+        "explanation": "The long carbon chain (hydrophobic region) interacts with and disrupts the hydrophobic core of the protein."
+    },
+    {
+        "question": "What occurs when the protein sample is heated to approximately 95°C during preparation?",
+        "options": [
+            "The protein becomes more folded",
+            "Hydrogen bonds are destroyed",
+            "The overall charge becomes positive",
+            "Ionic bonds are formed"
+        ],
+        "answer": "Hydrogen bonds are destroyed",
+        "explanation": "Heating provides the energy required to destroy the hydrogen bonds that maintain the protein's secondary and tertiary structures."
+    },
+    {
+        "question": "What is the state of the protein after being heated and treated with SDS?",
+        "options": [
+            "Alpha helix",
+            "3D globular structure",
+            "Linearized polypeptide chain",
+            "Uncharged amino acid sequence"
+        ],
+        "answer": "Linearized polypeptide chain",
+        "explanation": "The combination of heat and SDS results in a fully denatured, linearized polypeptide chain coated in negative charges."
+    },
+    {
+        "question": "Which electrode do proteins migrate toward after SDS treatment?",
+        "options": [
+            "The negative electrode (cathode)",
+            "The electrode with the same charge as the protein",
+            "They remain stationary",
+            "The positive electrode (anode)"
+        ],
+        "answer": "The positive electrode (anode)",
+        "explanation": "Since SDS confers a uniform negative charge, proteins are attracted to the positive electrode, which is the anode."
+    }
+]
