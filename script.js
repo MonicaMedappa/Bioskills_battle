@@ -2,6 +2,7 @@ const questionUrl = 'Set-1-questions.json';
 
 let currentQuestions = [];
 let currentQuestionIndex = 0;
+let score = 0; // Tracks the number of correct answers
 
 async function loadQuiz() {
     try {
@@ -33,12 +34,27 @@ function selectAnswer(selected, correct, explanation) {
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
     
+    // Check if the answer is correct and update score
     if (selected === correct) {
+        score++;
         feedbackText.innerHTML = `<strong>Correct!</strong> ${explanation}`;
     } else {
         feedbackText.innerHTML = `<strong>Not quite.</strong> ${explanation}`;
     }
+    
+    updateScoreDisplay();
     feedbackContainer.classList.remove('hide');
+
+    // Disable all buttons after an answer is selected to prevent double-scoring
+    const buttons = document.querySelectorAll('#answer-buttons button');
+    buttons.forEach(btn => btn.disabled = true);
+}
+
+function updateScoreDisplay() {
+    const scoreElement = document.getElementById('score-count');
+    if (scoreElement) {
+        scoreElement.innerText = `Score: ${score}`;
+    }
 }
 
 function nextQuestion() {
@@ -47,10 +63,12 @@ function nextQuestion() {
         document.getElementById('feedback-container').classList.add('hide');
         showQuestion();
     } else {
+        // Final Results Screen
         document.getElementById('quiz-container').innerHTML = `
             <h1>Quiz Complete!</h1>
-            <p>You have mastered the SDS-PAGE fundamentals.</p>
-            <button onclick="location.reload()">Restart Quiz</button>
+            <p>Your final score is ${score} out of ${currentQuestions.length}.</p>
+            <p>You've mastered SDS-PAGE fundamentals!</p>
+            <button onclick="location.reload()" style="margin-top: 20px;">Restart Quiz</button>
         `;
     }
 }
