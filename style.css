@@ -1,82 +1,58 @@
-/* Clean, laboratory-style look */
+/* style.css - Bioskills Battle Laboratory Theme */
+
+/* General Reset and Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Soft medical/lab blue-grey background */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
+/* Main Quiz Container */
 #quiz-container {
     background-color: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    width: 100%;
+    width: 90%; /* Ensures it looks good on mobile */
 }
 
+/* Main Title */
 h1 {
     color: #2c3e50;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
 }
 
-.btn-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-button {
-    padding: 12px;
-    border: 1px solid #3498db;
-    background-color: white;
-    color: #3498db;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #3498db;
-    color: white;
-}
-
-#feedback-container {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #e8f4fd;
-    border-left: 5px solid #3498db;
-}
-
-#score-display {
-    text-align: right;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #3498db;
-    margin-bottom: 10px;
-} 
-/* Styling for the Question Set Selector */
+/* Question Set Selector (Toggle Area) */
 .set-selector {
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    padding: 10px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
 }
 
 .set-selector label {
-    font-size: 0.9rem;
+    display: block;
+    font-size: 0.75rem;
     color: #7f8c8d;
-    font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 #question-set {
+    width: 100%;
     padding: 10px;
     border: 2px solid #3498db;
     border-radius: 6px;
@@ -85,14 +61,96 @@ button:hover {
     font-size: 1rem;
     cursor: pointer;
     outline: none;
-    transition: border-color 0.3s;
+    transition: border-color 0.2s;
 }
 
 #question-set:focus {
     border-color: #2980b9;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
+/* Score Display */
+#score-display {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* The Question Text */
+#question-text {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Answer Buttons Grid (Stacked for readability) */
+.btn-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 14px 20px;
+    border: 1px solid #3498db;
+    background-color: white;
+    color: #3498db;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+/* Button Hover and Active States */
+button:hover:not(:disabled) {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.15);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    border-color: #cbd5e0;
+    color: #a0aec0;
+}
+
+/* Feedback Box (Correct/Incorrect) */
+#feedback-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #eefbff;
+    border-left: 5px solid #3498db;
+    border-radius: 4px;
+}
+
+#feedback-text {
+    margin-top: 0;
+    line-height: 1.4;
+    color: #2c3e50;
+}
+
+/* Next Question Button */
+#next-btn {
+    background-color: #2ecc71; /* Green to indicate progression */
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#next-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Utility Class */
 .hide {
     display: none;
 }
