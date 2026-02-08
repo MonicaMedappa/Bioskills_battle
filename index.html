@@ -1,1 +1,23 @@
-<div id="quiz-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDS-PAGE Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>SDS-PAGE Mastery Quiz</h1>
+        <div id="question-area">
+            <p id="question-text">Loading question...</p>
+        </div>
+        <div id="answer-buttons" class="btn-grid"></div>
+        <div id="feedback-container" class="hide">
+            <p id="feedback-text"></p>
+            <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
