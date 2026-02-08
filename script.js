@@ -1,4 +1,4 @@
-const questionUrl = 'Set-1-questions.json'; 
+const questionUrl = 'Set-2-questions.json'; 
 
 let currentQuestions = [];
 let currentQuestionIndex = 0;
