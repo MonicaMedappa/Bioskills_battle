@@ -1,0 +1,57 @@
+[
+  {
+    "question": "In a polyacrylamide gel electrophoresis setup, what is the specific physical mechanism that allows for the separation of proteins by size?",
+    "options": [
+      "The different electrical charges of the proteins cause them to move at different speeds.",
+      "Staining with silver or Coomassie Brilliant Blue causes smaller proteins to move faster.",
+      "The gel matrix acts as a molecular sieve, offering more resistance to larger proteins.",
+      "The anode repels smaller proteins more effectively than larger ones."
+    ],
+    "answer": "The gel matrix acts as a molecular sieve, offering more resistance to larger proteins.",
+    "explanation": "Smaller proteins navigate through the pores of the polyacrylamide matrix more easily than larger proteins, which are slowed down by the sieve-like structure."
+  },
+  {
+    "question": "Based on the standard guidelines for gel concentration, which percentage should be used to best resolve a very large protein exceeding 200 kDa?",
+    "options": [
+      "7.5%",
+      "5%",
+      "12%",
+      "20%"
+    ],
+    "answer": "5%",
+    "explanation": "Lower gel percentages create larger pores, allowing very large proteins to enter and migrate through the matrix for better resolution."
+  },
+  {
+    "question": "At the anode during electrophoresis, which electrochemical process occurs as anions migrate toward it?",
+    "options": [
+      "Ionization, where neutral molecules become anions.",
+      "Oxidation, where the substance loses electrons to the electrode.",
+      "Reduction, where the electrode loses electrons to the substance.",
+      "Electrophoresis, which only involves the movement of ions without chemical reactions."
+    ],
+    "answer": "Oxidation, where the substance loses electrons to the electrode.",
+    "explanation": "The anode is defined as the electrode where oxidation occurs; anions lose electrons as they reach the positive terminal."
+  },
+  {
+    "question": "When working with a sample containing a wide size range of proteins from 15 kDa to 250 kDa, why might a gradient gel be preferred over a single-percentage gel?",
+    "options": [
+      "It eliminates the need for post-electrophoresis staining methods.",
+      "It ensures that all proteins reach the anode at the exact same time.",
+      "It provides a varying pore size that can resolve both very small and very large proteins simultaneously.",
+      "It converts larger proteins into smaller anions through oxidation."
+    ],
+    "answer": "It provides a varying pore size that can resolve both very small and very large proteins simultaneously.",
+    "explanation": "Gradient gels increase in concentration from top to bottom, providing large pores for big proteins at the start and smaller pores for tiny proteins further down."
+  },
+  {
+    "question": "If you are using a 10% polyacrylamide gel, which protein molecular weight range are you most likely trying to optimize for?",
+    "options": [
+      "15 — 100 kDa",
+      "4 — 40 kDa",
+      "25 — 200 kDa",
+      "Above 250 kDa"
+    ],
+    "answer": "15 — 100 kDa",
+    "explanation": "According to the data, a 10% gel is the optimal concentration for resolving proteins within the 15 to 100 kDa range."
+  }
+]
