@@ -7,7 +7,7 @@ let score = 0;
 
 // Timer Variables
 let timeLeft = 20;
-let timerInterval = null; // Initialize as null
+let timerInterval = null;
 
 /**
  * Switch the question set based on user selection
@@ -43,7 +43,7 @@ async function loadQuiz() {
  * Timer Logic
  */
 function startTimer() {
-    clearInterval(timerInterval); // Stop any running timer first
+    clearInterval(timerInterval); 
     timeLeft = 20; 
     
     const secondsDisplay = document.getElementById("seconds");
@@ -69,6 +69,12 @@ function handleTimeout() {
     const question = currentQuestions[currentQuestionIndex];
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
+    const flask = document.getElementById('lab-flask');
+
+    // Break the flask because time ran out
+    if (flask) {
+        flask.classList.add('break');
+    }
 
     if (feedbackText) {
         feedbackText.innerHTML = `<strong>⏰ Time's up!</strong> You ran out of time. ${question.explanation}`;
@@ -78,7 +84,6 @@ function handleTimeout() {
         feedbackContainer.classList.remove('hide');
     }
 
-    // Disable buttons
     const buttons = document.querySelectorAll('#answer-buttons button');
     buttons.forEach(btn => btn.disabled = true);
 }
@@ -86,7 +91,13 @@ function handleTimeout() {
 function showQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const questionDisplay = document.getElementById('question-text');
+    const flask = document.getElementById('lab-flask');
     
+    // 1. Reset the flask visual state for the new question
+    if (flask) {
+        flask.classList.remove('shake', 'break');
+    }
+
     if (questionDisplay) {
         questionDisplay.innerText = question.question;
     }
@@ -103,22 +114,29 @@ function showQuestion() {
         });
     }
 
-    // Explicitly call the timer
+    // 2. Start the countdown
     startTimer();
 }
 
 function selectAnswer(selected, correct, explanation) {
-    // STOP the timer immediately
     clearInterval(timerInterval);
 
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
+    const flask = document.getElementById('lab-flask');
     
     if (selected === correct && timeLeft > 0) {
         score++;
         if (feedbackText) feedbackText.innerHTML = `<strong>Correct!</strong> ${explanation}`;
+        
+        // Shake the flask (it stays intact)
+        if (flask) flask.classList.add('shake');
+        
     } else {
         if (feedbackText) feedbackText.innerHTML = `<strong>Not quite.</strong> ${explanation}`;
+        
+        // Break the flask
+        if (flask) flask.classList.add('break');
     }
     
     updateScoreDisplay();
@@ -154,5 +172,5 @@ function nextQuestion() {
     }
 }
 
-// Start game
+// Initial load
 loadQuiz();
