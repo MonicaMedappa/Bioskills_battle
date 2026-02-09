@@ -77,8 +77,7 @@ h1 {
     font-size: 1.1rem;
     color: #3498db;
     margin-bottom: 15px;
-}
-
+    
 #flask-wrapper {
     text-align: center;
     margin-bottom: 10px;
@@ -86,29 +85,29 @@ h1 {
 
 #lab-flask {
     width: 60px;
-    transition: transform 0.3s ease, filter 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-/* Shake animation for correct answers */
+/* Correct Answer Effect */
 .shake {
     animation: shake-animation 0.5s ease;
 }
 
 @keyframes shake-animation {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(5px) rotate(5deg); }
-    50% { transform: translateX(-5px) rotate(-5deg); }
-    75% { transform: translateX(5px) rotate(5deg); }
-    100% { transform: translateX(0); }
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(5px, 0) rotate(5deg); }
+    50% { transform: translate(-5px, 0) rotate(-5deg); }
+    75% { transform: translate(5px, 0) rotate(5deg); }
+    100% { transform: translate(0, 0); }
 }
 
-/* Breaking effect for wrong answers */
+/* Wrong Answer/Timeout Effect */
 .break {
-    transform: scale(0.8) translateY(20px);
-    filter: grayscale(1) opacity(0.3) blur(2px);
-    pointer-events: none;
+    filter: grayscale(1) sepia(1) hue-rotate(-50deg) saturate(5) blur(1px); /* Makes it look "damaged" */
+    transform: translateY(15px) scale(0.9);
+    opacity: 0.5;
 }
-
+    
 /* --- NEW TIMER STYLES --- */
 #timer-container {
     background-color: #f8fafc;
