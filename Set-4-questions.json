@@ -4,7 +4,7 @@
     "options": [
       "To increase the resistance of the gel matrix",
       "To catalyze the formation of disulfide bridges",
-      "SDS binds to the protein backbone at a constant ratio, masking the intrinsic charge",
+      "To provide a uniform negative charge proportional to length",
       "To stabilize the tertiary structure of the protein"
     ],
     "answer": "SDS binds to the protein backbone at a constant ratio, masking the intrinsic charge",
