@@ -10,22 +10,8 @@ let timeLeft = 20;
 let timerInterval = null;
 
 /**
- * Switch the question set based on user selection
+ * Initial load of the quiz data
  */
-async function switchSet(newUrl) {
-    questionUrl = newUrl;
-    currentQuestionIndex = 0;
-    score = 0;
-    
-    updateScoreDisplay();
-    const feedbackContainer = document.getElementById('feedback-container');
-    if (feedbackContainer) {
-        feedbackContainer.classList.add('hide');
-    }
-    
-    await loadQuiz();
-}
-
 async function loadQuiz() {
     try {
         const response = await fetch(questionUrl);
@@ -38,6 +24,21 @@ async function loadQuiz() {
         const questionText = document.getElementById('question-text');
         if (questionText) questionText.innerText = "Failed to load questions.";
     }
+}
+
+/**
+ * Switch question sets (if applicable)
+ */
+async function switchSet(newUrl) {
+    questionUrl = newUrl;
+    currentQuestionIndex = 0;
+    score = 0;
+    
+    updateScoreDisplay();
+    const feedbackContainer = document.getElementById('feedback-container');
+    if (feedbackContainer) feedbackContainer.classList.add('hide');
+    
+    await loadQuiz();
 }
 
 /**
@@ -63,14 +64,21 @@ function startTimer() {
     }, 1000);
 }
 
+/**
+ * Triggered when the clock hits zero
+ */
 function handleTimeout() {
     const question = currentQuestions[currentQuestionIndex];
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
     const flask = document.getElementById('lab-flask');
 
-    // Trigger "burn" animation for running out of time
-    if (flask) flask.classList.add('burn');
+    // Time out triggers the burn effect
+    if (flask) {
+        flask.className = ""; // Reset first
+        void flask.offsetWidth; // Trigger reflow
+        flask.classList.add('burn');
+    }
 
     if (feedbackText) {
         feedbackText.innerHTML = `<strong>⏰ Time's up!</strong> ${question.explanation}`;
@@ -82,15 +90,18 @@ function handleTimeout() {
     buttons.forEach(btn => btn.disabled = true);
 }
 
+/**
+ * Renders the question and resets the UI
+ */
 function showQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const questionDisplay = document.getElementById('question-text');
     const flask = document.getElementById('lab-flask');
     
-    // RESET: Remove all animation classes for the new question
-    if (flask) {
-        flask.classList.remove('shake', 'break', 'burn');
-    }
+    // RESET: Clear animations and hide feedback
+    if (flask) flask.className = ""; 
+    const feedbackContainer = document.getElementById('feedback-container');
+    if (feedbackContainer) feedbackContainer.classList.add('hide');
 
     if (questionDisplay) {
         questionDisplay.innerText = question.question;
@@ -110,21 +121,34 @@ function showQuestion() {
     startTimer();
 }
 
+/**
+ * Logic for selecting an answer
+ */
 function selectAnswer(selected, correct, explanation) {
     clearInterval(timerInterval);
-
+    const flask = document.getElementById('lab-flask');
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
-    const flask = document.getElementById('lab-flask');
     
-    if (selected === correct && timeLeft > 0) {
+    if (selected === correct) {
         score++;
         if (feedbackText) feedbackText.innerHTML = `<strong>Correct!</strong> ${explanation}`;
-        if (flask) flask.classList.add('shake'); // Shake for correct
         
+        // Trigger Shake
+        if (flask) {
+            flask.className = ""; 
+            void flask.offsetWidth; 
+            flask.classList.add('shake');
+        }
     } else {
         if (feedbackText) feedbackText.innerHTML = `<strong>Not quite.</strong> ${explanation}`;
-        if (flask) flask.classList.add('burn'); // Burn for wrong
+        
+        // Trigger Burn
+        if (flask) {
+            flask.className = ""; 
+            void flask.offsetWidth; 
+            flask.classList.add('burn');
+        }
     }
     
     updateScoreDisplay();
@@ -134,6 +158,9 @@ function selectAnswer(selected, correct, explanation) {
     buttons.forEach(btn => btn.disabled = true);
 }
 
+/**
+ * Updates the score display text
+ */
 function updateScoreDisplay() {
     const scoreElement = document.getElementById('score-count');
     if (scoreElement) {
@@ -141,25 +168,26 @@ function updateScoreDisplay() {
     }
 }
 
+/**
+ * Moves to the next question or ends the quiz
+ */
 function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < currentQuestions.length) {
-        const feedback = document.getElementById('feedback-container');
-        if (feedback) feedback.classList.add('hide');
         showQuestion();
     } else {
-        // Keeps the layout clean by only updating the inner content
         const container = document.getElementById('quiz-container');
         if (container) {
             container.innerHTML = `
-                <div style="text-align:center; padding: 20px;">
+                <div style="padding: 20px;">
                     <h1>Quiz Complete!</h1>
                     <p>Your final score is ${score} out of ${currentQuestions.length}.</p>
-                    <button onclick="location.reload()" class="next-btn" style="width:100%">Restart Quiz</button>
+                    <button onclick="location.reload()" style="margin-top: 20px; width: 100%;">Restart Quiz</button>
                 </div>
             `;
         }
     }
 }
 
+// Initial script execution
 loadQuiz();
