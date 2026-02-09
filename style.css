@@ -1,95 +1,86 @@
-/* style.css - Bioskills Battle Laboratory Theme */
+/* --- Bioskills Battle Master Styles --- */
 
-/* General Reset and Body Styling */
-body {
+/* Keeps the quiz from jumping around */
+#quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    min-height: 450px; /* Reserves space so layout stays stable */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8; /* Soft medical/lab blue-grey background */
+}
+
+/* Flask Container Logic */
+#flask-wrapper {
+    height: 120px; /* Ensures space for the flask animations */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-/* Main Quiz Container */
-#quiz-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 90%; /* Ensures it looks good on mobile */
-    text-align: center; /* Ensures inner elements align well */
-}
-
-/* Main Title */
-h1 {
-    color: #2c3e50;
-    text-align: center;
-    font-size: 1.6rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-}
-
-/* Question Set Selector (Toggle Area) */
-.set-selector {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f8fafc;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    text-align: left; /* Keeps labels aligned left */
-}
-
-.set-selector label {
-    display: block;
-    font-size: 0.75rem;
-    color: #7f8c8d;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#question-set {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #3498db;
-    border-radius: 6px;
-    background-color: white;
-    color: #2c3e50;
-    font-size: 1rem;
-    cursor: pointer;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-#question-set:focus {
-    border-color: #2980b9;
-}
-
-/* Score Display */
-#score-display {
-    text-align: right;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #3498db;
     margin-bottom: 15px;
-    
-#flask-wrapper {
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 #lab-flask {
-    width: 60px;
-    transition: all 0.5s ease;
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-/* 1. Shake Animation (Correct Answer) */
-/* We'll use your version with the rotation because it looks more like a chemical reaction! */
+/* Question & Answer Styling */
+#question-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px;
+    border: 2px solid #3498db;
+    background-color: #fff;
+    color: #3498db;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #3498db;
+    color: white;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    border-color: #ccc;
+    color: #999;
+}
+
+/* Feedback Section */
+#feedback-container {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.hide {
+    display: none;
+}
+
+/* --- ANIMATION EFFECTS --- */
+
+/* Correct Answer Effect */
 .shake {
     animation: shake-animation 0.5s ease;
 }
@@ -102,8 +93,7 @@ h1 {
     100% { transform: translate(0, 0); }
 }
 
-/* 2. Burn Animation (Wrong Answer / Timeout) */
-/* This replaces the old .break to give you the "flames" effect */
+/* Wrong Answer/Timeout Effect (Up in Flames) */
 .burn {
     animation: burn-animation 0.8s forwards;
     filter: drop-shadow(0 0 10px red) sepia(1) saturate(5);
@@ -120,105 +110,4 @@ h1 {
         opacity: 0.7; 
         filter: grayscale(1) brightness(0.5); /* Ends looking charred */
     }
-}
-    
-/* --- NEW TIMER STYLES --- */
-#timer-container {
-    background-color: #f8fafc;
-    padding: 8px 15px;
-    border-radius: 8px;
-    border: 2px solid #3498db;
-    display: inline-block;
-    min-width: 140px;
-    margin: 0 auto 20px auto;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2c3e50;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-#seconds {
-    color: #e74c3c; /* Emergency red for the countdown */
-    font-variant-numeric: tabular-nums; /* Prevents text jumping when numbers change */
-}
-/* ------------------------ */
-
-/* The Question Text */
-#question-text {
-    font-size: 1.2rem;
-    color: #34495e;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    font-weight: 500;
-    text-align: left;
-}
-
-/* Answer Buttons Grid (Stacked for readability) */
-.btn-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-button {
-    padding: 14px 20px;
-    border: 1px solid #3498db;
-    background-color: white;
-    color: #3498db;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    text-align: left;
-    transition: all 0.2s ease;
-}
-
-/* Button Hover and Active States */
-button:hover:not(:disabled) {
-    background-color: #3498db;
-    color: white;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.15);
-}
-
-button:disabled {
-    cursor: not-allowed;
-    border-color: #cbd5e0;
-    color: #a0aec0;
-}
-
-/* Feedback Box (Correct/Incorrect) */
-#feedback-container {
-    margin-top: 25px;
-    padding: 20px;
-    background-color: #eefbff;
-    border-left: 5px solid #3498db;
-    border-radius: 4px;
-    text-align: left;
-}
-
-#feedback-text {
-    margin-top: 0;
-    line-height: 1.4;
-    color: #2c3e50;
-}
-
-/* Next Question Button */
-#next-btn {
-    background-color: #2ecc71; /* Green to indicate progression */
-    color: white;
-    border: none;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-#next-btn:hover {
-    background-color: #27ae60;
-}
-
-/* Utility Class */
-.hide {
-    display: none;
 }
