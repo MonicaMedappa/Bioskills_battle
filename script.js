@@ -7,7 +7,7 @@ let score = 0;
 
 // Timer Variables
 let timeLeft = 20;
-let timerInterval;
+let timerInterval = null; // Initialize as null
 
 /**
  * Switch the question set based on user selection
@@ -43,15 +43,20 @@ async function loadQuiz() {
  * Timer Logic
  */
 function startTimer() {
-    timeLeft = 20; // Reset to 20 seconds
-    document.getElementById("seconds").innerText = timeLeft;
-
-    // Clear any existing timer to prevent overlapping loops
-    clearInterval(timerInterval);
+    clearInterval(timerInterval); // Stop any running timer first
+    timeLeft = 20; 
+    
+    const secondsDisplay = document.getElementById("seconds");
+    if (secondsDisplay) {
+        secondsDisplay.innerText = timeLeft;
+    }
 
     timerInterval = setInterval(() => {
         timeLeft--;
-        document.getElementById("seconds").innerText = timeLeft;
+        
+        if (secondsDisplay) {
+            secondsDisplay.innerText = timeLeft;
+        }
 
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
@@ -61,57 +66,64 @@ function startTimer() {
 }
 
 function handleTimeout() {
-    // Treat a timeout as a "wrong" answer (0 points)
     const question = currentQuestions[currentQuestionIndex];
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
 
-    feedbackText.innerHTML = `<strong>⏰ Time's up!</strong> You ran out of time. ${question.explanation}`;
+    if (feedbackText) {
+        feedbackText.innerHTML = `<strong>⏰ Time's up!</strong> You ran out of time. ${question.explanation}`;
+    }
     
-    feedbackContainer.classList.remove('hide');
+    if (feedbackContainer) {
+        feedbackContainer.classList.remove('hide');
+    }
 
-    // Disable buttons so user can't click after time is up
+    // Disable buttons
     const buttons = document.querySelectorAll('#answer-buttons button');
     buttons.forEach(btn => btn.disabled = true);
 }
 
 function showQuestion() {
     const question = currentQuestions[currentQuestionIndex];
-    document.getElementById('question-text').innerText = question.question;
+    const questionDisplay = document.getElementById('question-text');
+    
+    if (questionDisplay) {
+        questionDisplay.innerText = question.question;
+    }
     
     const buttonContainer = document.getElementById('answer-buttons');
-    buttonContainer.innerHTML = ''; 
+    if (buttonContainer) {
+        buttonContainer.innerHTML = ''; 
 
-    question.options.forEach(option => {
-        const button = document.createElement('button');
-        button.innerText = option;
-        button.onclick = () => selectAnswer(option, question.answer, question.explanation);
-        buttonContainer.appendChild(button);
-    });
+        question.options.forEach(option => {
+            const button = document.createElement('button');
+            button.innerText = option;
+            button.onclick = () => selectAnswer(option, question.answer, question.explanation);
+            buttonContainer.appendChild(button);
+        });
+    }
 
-    // Start the countdown as soon as the question is displayed
+    // Explicitly call the timer
     startTimer();
 }
 
 function selectAnswer(selected, correct, explanation) {
-    // STOP the timer immediately once an answer is chosen
+    // STOP the timer immediately
     clearInterval(timerInterval);
 
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
     
-    // Check if the answer is correct AND time hasn't run out
     if (selected === correct && timeLeft > 0) {
         score++;
-        feedbackText.innerHTML = `<strong>Correct!</strong> ${explanation}`;
+        if (feedbackText) feedbackText.innerHTML = `<strong>Correct!</strong> ${explanation}`;
     } else {
-        feedbackText.innerHTML = `<strong>Not quite.</strong> ${explanation}`;
+        if (feedbackText) feedbackText.innerHTML = `<strong>Not quite.</strong> ${explanation}`;
     }
     
     updateScoreDisplay();
-    feedbackContainer.classList.remove('hide');
+    if (feedbackContainer) feedbackContainer.classList.remove('hide');
 
-    // Disable buttons to prevent multiple clicks
     const buttons = document.querySelectorAll('#answer-buttons button');
     buttons.forEach(btn => btn.disabled = true);
 }
@@ -126,18 +138,21 @@ function updateScoreDisplay() {
 function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < currentQuestions.length) {
-        document.getElementById('feedback-container').classList.add('hide');
+        const feedback = document.getElementById('feedback-container');
+        if (feedback) feedback.classList.add('hide');
         showQuestion();
     } else {
-        // Final Results Screen
-        document.getElementById('quiz-container').innerHTML = `
-            <h1>Quiz Complete!</h1>
-            <p>Your final score is ${score} out of ${currentQuestions.length}.</p>
-            <p>Keep practicing your Bio-skills!</p>
-            <button onclick="location.reload()" style="margin-top: 20px; text-align: center; width: 100%;">Restart Quiz</button>
-        `;
+        const container = document.getElementById('quiz-container');
+        if (container) {
+            container.innerHTML = `
+                <h1>Quiz Complete!</h1>
+                <p>Your final score is ${score} out of ${currentQuestions.length}.</p>
+                <p>Keep practicing your Bio-skills!</p>
+                <button onclick="location.reload()" style="margin-top: 20px; text-align: center; width: 100%;">Restart Quiz</button>
+            `;
+        }
     }
 }
 
-// Initial load
+// Start game
 loadQuiz();
