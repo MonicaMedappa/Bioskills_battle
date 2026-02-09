@@ -1,0 +1,112 @@
+[
+  {
+    "question": "What is the primary function of SDS in protein electrophoresis?",
+    "options": [
+      "To increase the resistance of the gel matrix",
+      "To catalyze the formation of disulfide bridges",
+      "SDS binds to the protein backbone at a constant ratio, masking the intrinsic charge",
+      "To stabilize the tertiary structure of the protein"
+    ],
+    "answer": "SDS binds to the protein backbone at a constant ratio, masking the intrinsic charge",
+    "explanation": "Sodium Dodecyl Sulfate (SDS) is an anionic detergent that denatures proteins and imparts a uniform negative charge-to-mass ratio, allowing separation based solely on molecular weight."
+  },
+  {
+    "question": "Which chemical agents are specifically used to break disulfide bridges in a protein sample?",
+    "options": [
+      "BME or DTT",
+      "Polyacrylamide polymers",
+      "Sodium Lauryl Sulfate",
+      "Acrylamide monomers"
+    ],
+    "answer": "BME or DTT",
+    "explanation": "Beta-mercaptoethanol (BME) and Dithiothreitol (DTT) are reducing agents that break covalent disulfide bonds between cysteine residues, helping to fully linearize proteins."
+  },
+  {
+    "question": "What is the binding ratio of SDS to protein mass during sample preparation?",
+    "options": [
+      "1.0 gram of SDS per 1.4 grams of protein",
+      "Variable ratio depending on amino acid sequence",
+      "1.4 grams of SDS per gram of protein",
+      "2.5 grams of SDS per gram of protein"
+    ],
+    "answer": "1.4 grams of SDS per gram of protein",
+    "explanation": "SDS binds uniformly to the protein backbone at a specific constant ratio of approximately 1.4g of SDS for every 1g of protein."
+  },
+  {
+    "question": "In a polyacrylamide gel, which proteins will migrate the fastest toward the anode?",
+    "options": [
+      "Proteins with a high positive charge",
+      "Smaller proteins with shorter polypeptide chains",
+      "Larger proteins with longer polypeptide chains",
+      "Proteins that have retained their globular shape"
+    ],
+    "answer": "Smaller proteins with shorter polypeptide chains",
+    "explanation": "Smaller molecules move more easily through the pores of the polyacrylamide mesh, allowing them to migrate faster toward the positive electrode (anode)."
+  },
+  {
+    "question": "Which amino acid is primarily responsible for forming the disulfide bridges that BME and DTT disrupt?",
+    "options": [
+      "Glycine",
+      "Lysine",
+      "Cysteine",
+      "Leucine"
+    ],
+    "answer": "Cysteine",
+    "explanation": "Cysteine contains a thiol (-SH) group in its side chain that can form covalent disulfide bonds with other cysteine residues to stabilize protein structure."
+  },
+  {
+    "question": "How does the polyacrylamide gel matrix facilitate the separation of proteins?",
+    "options": [
+      "It acts as a chemical catalyst to speed up migration",
+      "It forms a mesh-like sieve that separates proteins by size",
+      "It provides the negative charge needed for movement",
+      "It breaks the non-covalent bonds of the proteins"
+    ],
+    "answer": "It forms a mesh-like sieve that separates proteins by size",
+    "explanation": "The gel matrix acts as a molecular sieve; as proteins are pulled through by an electric field, the mesh-like structure hinders larger molecules more than smaller ones."
+  },
+  {
+    "question": "What is the effect of SDS on the non-covalent bonds of a protein?",
+    "options": [
+      "It disrupts them to help unfold the protein",
+      "It strengthens them to prevent denaturation",
+      "It has no effect on non-covalent interactions",
+      "It converts them into covalent disulfide bonds"
+    ],
+    "answer": "It disrupts them to help unfold the protein",
+    "explanation": "By breaking non-covalent bonds, SDS helps convert folded proteins into linear chains, which is essential for uniform denaturation."
+  },
+  {
+    "question": "What factor is largely eliminated by using SDS and polyacrylamide gel in electrophoresis?",
+    "options": [
+      "The need for an electric field",
+      "The presence of amino acids",
+      "The influence of native structure and charge",
+      "The mass of the protein"
+    ],
+    "answer": "The influence of native structure and charge",
+    "explanation": "SDS masks the native charge and unfolds the structure, leaving size (molecular weight) as the primary factor for separation."
+  },
+  {
+    "question": "Which of the following describes the state of proteins after treatment with SDS and BME?",
+    "options": [
+      "Folded and positively charged",
+      "Branched chains with intact covalent bridges",
+      "Globular and neutrally charged",
+      "Unfolded linear chains with a negative charge"
+    ],
+    "answer": "Unfolded linear chains with a negative charge",
+    "explanation": "The combination of SDS (charge and denaturation) and BME (reduction of disulfide bridges) results in fully unfolded, negatively charged linear polypeptide chains."
+  },
+  {
+    "question": "Why is the migration of proteins in SDS-PAGE said to be based on 'polypeptide chain length'?",
+    "options": [
+      "Because reducing agents increase the length of the chain",
+      "Because all proteins are the same weight",
+      "Because the charge-to-mass ratio is made uniform",
+      "Because the gel matrix only allows certain lengths to pass"
+    ],
+    "answer": "Because the charge-to-mass ratio is made uniform",
+    "explanation": "By binding SDS at a constant ratio, the only variable affecting migration speed through the gel is the length of the chain, as the charge-to-mass ratio is consistent across different proteins."
+  }
+]
