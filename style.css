@@ -88,7 +88,8 @@ h1 {
     transition: all 0.5s ease;
 }
 
-/* Correct Answer Effect */
+/* 1. Shake Animation (Correct Answer) */
+/* We'll use your version with the rotation because it looks more like a chemical reaction! */
 .shake {
     animation: shake-animation 0.5s ease;
 }
@@ -101,11 +102,24 @@ h1 {
     100% { transform: translate(0, 0); }
 }
 
-/* Wrong Answer/Timeout Effect */
-.break {
-    filter: grayscale(1) sepia(1) hue-rotate(-50deg) saturate(5) blur(1px); /* Makes it look "damaged" */
-    transform: translateY(15px) scale(0.9);
-    opacity: 0.5;
+/* 2. Burn Animation (Wrong Answer / Timeout) */
+/* This replaces the old .break to give you the "flames" effect */
+.burn {
+    animation: burn-animation 0.8s forwards;
+    filter: drop-shadow(0 0 10px red) sepia(1) saturate(5);
+}
+
+@keyframes burn-animation {
+    0% { transform: scale(1); opacity: 1; }
+    50% { 
+        transform: scale(1.1); 
+        filter: brightness(1.5) drop-shadow(0 0 20px orange); 
+    }
+    100% { 
+        transform: scale(0.9); 
+        opacity: 0.7; 
+        filter: grayscale(1) brightness(0.5); /* Ends looking charred */
+    }
 }
     
 /* --- NEW TIMER STYLES --- */
