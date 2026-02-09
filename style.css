@@ -15,17 +15,18 @@
 
 /* Flask Container Logic */
 #flask-wrapper {
-    height: 120px; /* Ensures space for the flask animations */
+    height: 100px; /* Reserves vertical space */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 10px 0;
 }
 
 #lab-flask {
-    width: 80px;
-    height: auto;
-    transition: transform 0.3s ease;
+    width: 67px;   /* Matches the size in the URL */
+    height: 67px;
+    display: block; /* Ensures it takes up space even if broken */
+    object-fit: contain;
 }
 
 /* Question & Answer Styling */
