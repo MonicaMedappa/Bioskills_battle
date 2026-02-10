@@ -68,13 +68,57 @@ h1 {
     border-color: #2980b9;
 }
 
+/* Styling for the new header info container */
+#header-info {
+    display: flex;
+    justify-content: space-between; /* Puts timer on left, score on right */
+    align-items: center;
+    margin-bottom: 15px; /* Spacing from the question text below */
+}
+
 /* Score Display */
 #score-display {
     text-align: right;
     font-weight: bold;
     font-size: 1.1rem;
     color: #3498db;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
+}
+
+/* Timer Specific Styles */
+#timer-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    /* margin-bottom: 10px; */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2ecc71; /* Initial green color */
+}
+#timer-display {
+    min-width: 30px; /* Ensure space for two digits */
+    text-align: center;
+}
+
+#timer-container.red {
+    color: #e74c3c; /* Red color for timer */
+}
+
+/* Blinking animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+#timer-container.blink {
+    animation: blink 0.7s infinite alternate;
+}
+
+#time-up-message {
+    margin-left: 10px;
+    font-style: italic;
+    color: #e74c3c; /* Red for time's up message */
 }
 
 /* The Question Text */

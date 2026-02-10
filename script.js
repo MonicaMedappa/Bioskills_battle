@@ -5,6 +5,14 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0; // Tracks the number of correct answers
 
+// Timer Variables
+const TIME_PER_QUESTION = 20; // 20 seconds per question
+let timeLeft = TIME_PER_QUESTION;
+let timerInterval;
+let timerDisplay = document.getElementById('timer-display');
+let timeUpMessage = document.getElementById('time-up-message');
+let timerContainer = document.getElementById('timer-container');
+
 /**
  * Switch the question set based on user selection
  * @param {string} newUrl - The filename of the JSON set (e.g., 'Set-2-questions.json')
@@ -38,7 +46,41 @@ async function loadQuiz() {
     }
 }
 
+function startTimer() {
+    timeLeft = TIME_PER_QUESTION;
+    clearInterval(timerInterval); // Clear any existing timer
+    timerDisplay.innerText = timeLeft;
+    timerContainer.classList.remove('red', 'blink');
+    timeUpMessage.classList.add('hide');
+
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        timerDisplay.innerText = timeLeft;
+
+        if (timeLeft <= 10) {
+            timerContainer.classList.add('red');
+            timerContainer.classList.add('blink');
+        } else {
+            timerContainer.classList.remove('red', 'blink');
+        }
+
+        if (timeLeft <= 0) {
+            stopTimer();
+            timeUpMessage.classList.remove('hide');
+            // Automatically advance to the next question when time runs out
+            nextQuestion(); 
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+    timerContainer.classList.remove('red', 'blink');
+    timeUpMessage.classList.add('hide');
+}
+
 function showQuestion() {
+    startTimer(); // Start the timer for the new question
     const question = currentQuestions[currentQuestionIndex];
     document.getElementById('question-text').innerText = question.question;
     
@@ -54,6 +96,7 @@ function showQuestion() {
 }
 
 function selectAnswer(selected, correct, explanation) {
+    stopTimer(); // Stop the timer when an answer is selected
     const feedbackText = document.getElementById('feedback-text');
     const feedbackContainer = document.getElementById('feedback-container');
     
