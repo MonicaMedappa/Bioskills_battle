@@ -1,0 +1,112 @@
+[
+    {
+        "question": "If a protein is composed of 333 amino acids, what is its approximate molecular weight in kilodaltons (kDa)?",
+        "options": [
+            "1 kDa",
+            "10 kDa",
+            "100 kDa",
+            "37 kDa"
+        ],
+        "answer": "37 kDa",
+        "explanation": "333 amino acids (derived from 1000 bp) is equivalent to approximately 37 kDa."
+    },
+    {
+        "question": "How many base pairs (bp) are required to code for a protein that weighs 10 kDa?",
+        "options": [
+            "1000 bp",
+            "90 bp",
+            "27 bp",
+            "270 bp"
+        ],
+        "answer": "270 bp",
+        "explanation": "270 bp equals 10 kDa, which also corresponds to 90 amino acids."
+    },
+    {
+        "question": "If a DNA sequence is 27 bp long, how many amino acids will it translate into (assuming no stop codons)?",
+        "options": [
+            "3 amino acids",
+            "9 amino acids",
+            "27 amino acids",
+            "1 amino acid"
+        ],
+        "answer": "9 amino acids",
+        "explanation": "27 bp equals 1 kDa, which equals 9 amino acids."
+    },
+    {
+        "question": "A protein consists of 90 amino acids. What is the length of the coding DNA in base pairs?",
+        "options": [
+            "27 bp",
+            "333 bp",
+            "810 bp",
+            "270 bp"
+        ],
+        "answer": "270 bp",
+        "explanation": "Remember: 1 amino acid = 3bp. 10 kDa = 90 a.a. = 270 bp, this is the correct length."
+    },
+    {
+        "question": "Based on the ratio 27 bp = 1 kDa = 9 a.a., what is the average mass of a single amino acid in this model?",
+        "options": [
+            "37 Da",
+            "1000 Da",
+            "111 Da",
+            "333 Da"
+        ],
+        "answer": "111 Da",
+        "explanation": "If 9 amino acids weigh 1 kDa (1000 Da), then 1000 / 9 is approximately 111 Da."
+    },
+    {
+    "question": "If you have a 20 kDa protein, approximately how many base pairs were in its coding sequence?",
+    "options": {
+      "A": "1000 bp",
+      "B": "2000 bp",
+      "C": "270 bp",
+      "D": "540 bp"
+    },
+    "answer": "D",
+    "explanation": "Since 10 kDa is 270 bp, a 20 kDa protein would be coded by 2 × 270 = 540 bp."
+  },
+  {
+    "question": "How many amino acids are found in a 1 kDa protein segment?",
+    "options": {
+      "A": "27 a.a.",
+      "B": "3 a.a.",
+      "C": "90 a.a.",
+      "D": "9 a.a."
+    },
+    "answer": "D",
+    "explanation": "1 kDa is equivalent to 9 amino acids."
+  },
+  {
+    "question": "Which of the following represents the largest molecular structure based on your data?",
+    "options": {
+      "A": "333 a.a.",
+      "B": "90 a.a.",
+      "C": "10 kDa",
+      "D": "270 bp"
+    },
+    "answer": "A",
+    "explanation": "333 amino acids (37 kDa) is the largest unit described in your provided set."
+  },
+  {
+    "question": "True or False: A 1000 bp sequence codes for exactly 100 amino acids.",
+    "options": {
+      "True": "True",
+      "False": "False"
+    },
+    "answer": "False",
+    "explanation": "1000 bp codes for 333 amino acids, following the 3 bp per amino acid rule."
+  },
+  {
+    "question": "What is the ratio of base pairs to amino acids consistently shown in your data?",
+    "options": {
+      "A": "3:1",
+      "B": "1:1",
+      "C": "27:1",
+      "D": "10:1"
+    },
+    "answer": "A",
+    "explanation": "In every example (1000:333, 270:90, 27:9), the number of base pairs is 3 times the number of amino acids."
+  }
+]
+    
+    
