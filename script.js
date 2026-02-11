@@ -6,7 +6,8 @@ let currentQuestionIndex = 0;
 let score = 0; // Tracks the number of correct answers
 
 // Timer Variables
-const TIME_PER_QUESTION = 20; // 20 seconds per question
+const TIME_PER_QUESTION = 20;
+const TIME_PER_CALCULATION_QUESTION = 60;
 let timeLeft = TIME_PER_QUESTION;
 let timerInterval;
 let timerDisplay = document.getElementById('timer-display');
@@ -47,7 +48,8 @@ async function loadQuiz() {
 }
 
 function startTimer() {
-    timeLeft = TIME_PER_QUESTION;
+    if (questionUrl == "Set-5-questions.json") { timeLeft = TIME_PER_CALCULATION_QUESTION } 
+    else { timeLeft = TIME_PER_QUESTION };
     clearInterval(timerInterval); // Clear any existing timer
     timerDisplay.innerText = timeLeft;
     timerContainer.classList.remove('red', 'blink');
