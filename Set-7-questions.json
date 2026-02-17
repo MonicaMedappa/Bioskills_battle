@@ -1,0 +1,113 @@
+[
+  {
+    "question": "What is a common consequence of loading an excessive amount of protein into an electrophoresis well?",
+    "options": [
+      "Protein clumping and improper migration",
+      "Increased glycerol density",
+      "Spontaneous phosphorylation",
+      "Enhanced separation of secondary structures"
+    ],
+    "answer": "Protein clumping and improper migration",
+    "explanation": "High protein concentrations can lead to aggregation, preventing the sample from moving through the gel matrix as discrete bands."
+  },
+  {
+    "question": "To prevent protein precipitation and reduce aggregation in a sample, which agents should be added to the lysis buffer?",
+    "options": [
+      "Protease inhibitors",
+      "High concentrations of salt",
+      "SDS and Glycerol",
+      "DTT or BME"
+    ],
+    "answer": "DTT or BME",
+    "explanation": "These reducing agents break disulfide bonds, helping to disrupt secondary structures and maintain proteins in a linear form."
+  },
+  {
+    "question": "Which physical treatment is recommended alongside chemical reduction to ensure proteins remain in their primary, linear structure?",
+    "options": [
+      "Centrifugation at high speeds",
+      "Heating the lysate",
+      "Incubation on ice",
+      "Vigorous vortexing"
+    ],
+    "answer": "Heating the lysate",
+    "explanation": "Thermal energy assists in the denaturation process, helping to break non-covalent interactions and linearize the protein."
+  },
+  {
+    "question": "Can recombinant bacterial cells perform post-translational modifications (PTMs) on expressed proteins?",
+    "options": [
+      "Yes, but they are generally less complex than eukaryotic PTMs",
+      "No, they only produce linear primary structures",
+      "Yes, they perform complex glycosylation identically to human cells",
+      "No, bacteria lack the machinery for any modifications"
+    ],
+    "answer": "Yes, but they are generally less complex than eukaryotic PTMs",
+    "explanation": "While bacteria can perform modifications like lipidation or acetylation, they lack the sophisticated systems for complex glycosylation found in eukaryotes."
+  },
+  {
+    "question_number": 5,
+    "question": "Which of the following modifications is a bacterial cell capable of performing?",
+    "options": [
+      "Splicing of introns",
+      "Phosphorylation and acetylation",
+      "Complex N-linked glycosylation",
+      "Formation of advanced carbohydrate branching"
+    ],
+    "answer": "Phosphorylation and acetylation",
+    "explanation": "Bacterial enzymatic machinery is capable of these specific types of chemical modifications on proteins."
+  }
+{
+        "question": "Why might a researcher choose an alternative host over a standard bacterial strain for producing a biopharmaceutical?",
+        "options": [
+          "A. To achieve specific eukaryotic-like glycosylation",
+          "B. Because bacteria cannot produce linear proteins",
+          "C. To prevent all post-translational modifications",
+          "D. To avoid the use of DTT and BME"
+        ],
+        "answer": "A",
+        "explanation": "Since bacteria often fail to perform complex glycosylation, eukaryotic hosts are used when that modification is essential for the drug's function."
+      },
+      {
+        "question_number": 7,
+        "question": "What is the recommended target protein amount to load per well for standard analysis?",
+        "options": [
+          "10 ug",
+          "500 ug",
+          "100 ug",
+          "1 ug"
+        ],
+        "answer": "10 ug",
+        "explanation": "Loading approximately 10 ug per well is a common benchmark to ensure visibility without causing significant overloading artifacts."
+      },
+      {
+        "question": "Bacterial PTMs can impact which of the following properties of a recombinant protein?",
+        "options": [
+          "The genetic code of the plasmid",
+          "Folding, stability, and biological activity",
+          "The concentration of glycerol in the loading dye",
+          "Only the color of the final solution"
+        ],
+        "answer": "Folding, stability, and biological activity",
+        "explanation": "Modifications change the chemical landscape of the protein, which directly influences how it folds and functions."
+      },
+      {
+        "question": "True or False: It is necessary to determine the protein concentration of a sample before performing electrophoresis.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": "True",
+        "explanation": "Knowing the concentration allows for the loading of a precise amount, avoiding both overloading and insufficient signal."
+      },
+      {
+        "question": "Which of the following is an example of a lipid-based modification bacteria can perform?",
+        "options": [
+          "A. Lipidation",
+          "B. Glycosylation",
+          "C. Phosphorylation",
+          "D. Saponification"
+        ],
+        "answer": "A",
+        "explanation": "Lipidation is a specific post-translational modification involving the attachment of lipid groups, which bacteria are capable of."
+      }
+    ]
+  
