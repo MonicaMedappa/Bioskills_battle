@@ -1,0 +1,57 @@
+[
+  {
+    "question": "In the standard running buffer at pH 8.3, what is the primary ionic state of glycine?",
+    "options": [
+      "Glycine zwitterion",
+      "Neutral molecule",
+      "Glycinium cation",
+      "Glycinate anion"
+    ],
+    "answer": "Glycinate anion",
+    "explanation": "At pH 8.3, which is above its isoelectric point, glycine predominantly loses a proton from its amino group to become a negatively charged glycinate anion."
+  },
+  {
+    "question": "When glycine enters the stacking gel at pH 6.8, why does its migration speed decrease significantly?",
+    "options": [
+      "The low pH denatures the ion",
+      "It becomes a large aggregate",
+      "It transitions into a zwitterion",
+      "It binds to the acrylamide matrix"
+    ],
+    "answer": "It transitions into a zwitterion",
+    "explanation": "At pH 6.8, glycine moves closer to its isoelectric point (pI ~6.0), causing it to exist mostly as a neutral zwitterion with very low electrophoretic mobility."
+  },
+  {
+    "question": "Which ions act as the 'leading ions' due to their high electromobility in the gel system?",
+    "options": [
+      "Sulfate ions",
+      "Glycinate anions",
+      "Chloride ions (Cl-)",
+      "Tris cations"
+    ],
+    "answer": "Chloride ions (Cl-)",
+    "explanation": "Chloride ions are small and highly charged, allowing them to migrate faster than any other component in the buffer system, thereby leading the ion front."
+  },
+  {
+    "question": "The 'stacking' effect that concentrates proteins into a narrow band occurs because the protein electromobility is:",
+    "options": [
+      "Slower than the trailing glycine ions",
+      "Between the leading Cl- and trailing glycine ions",
+      "Identical to the glycine zwitterion",
+      "Faster than the leading Cl- ions"
+    ],
+    "answer": "Between the leading Cl- and trailing glycine ions",
+    "explanation": "Proteins are trapped in a high-voltage gradient between the fast-moving chloride ions and the slow-moving glycine zwitterions, forcing them into a tight band."
+  },
+  {
+    "question": "What is the primary change that occurs to glycine when it hits the resolving layer at pH 8.8?",
+    "options": [
+      "It gains a significant negative charge",
+      "It reverses direction toward the cathode",
+      "It polymerizes with the acrylamide",
+      "It loses its charge entirely"
+    ],
+    "answer": "It gains a significant negative charge",
+    "explanation": "The higher pH of 8.8 in the resolving gel converts glycine back into its anionic form, allowing it to migrate rapidly and leave the proteins behind."
+  }
+]
