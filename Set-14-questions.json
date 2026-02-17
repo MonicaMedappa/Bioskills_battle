@@ -1,0 +1,46 @@
+[
+  {
+    "question": "What is the primary reason for treating a gel with a fixative solution like methanol-acetic acid immediately after the run?",
+    "options": [
+      "To prevent the polypeptide bands from diffusing within the gel matrix",
+      "To activate the dye molecules in the staining solution",
+      "To increase the negative charge on the proteins",
+      "To wash away the SDS from the gel surface"
+    ],
+    "answer": "To prevent the polypeptide bands from diffusing within the gel matrix",
+    "explanation": "Fixing precipitates the proteins within the gel pores, locking them in place so they don't blur or wash away during staining."
+  },
+  {
+    "question": "What is the specific purpose of the 'destaining' step in the visualization process?",
+    "options": [
+      "To break the covalent bonds between the dye and the protein",
+      "To prepare the gel for a second electrophoresis run",
+      "To remove non-specific dye from the gel matrix to improve contrast",
+      "To reduce the molecular weight of the proteins"
+    ],
+    "answer": "To remove non-specific dye from the gel matrix to improve contrast",
+    "explanation": "Destaining removes the dye that has soaked into the gel background while leaving the dye bound to the proteins intact."
+  },
+  {
+    "question": "Which downstream analytical technique often requires physical excision of the stained band from the gel?",
+    "options": [
+      "Centrifugation",
+      "PCR (Polymerase Chain Reaction)",
+      "pH titration",
+      "Mass spectroscopy"
+    ],
+    "answer": "Mass spectroscopy",
+    "explanation": "To identify a protein via mass spec, the specific band must be cut from the gel and digested into peptides."
+  },
+  {
+    "question": "What would be the likely result of skipping the 'fixing' step and moving directly to staining?",
+    "options": [
+      "The protein bands would become blurred or disappear due to diffusion",
+      "The gel would dissolve instantly",
+      "The dye would turn from blue to red",
+      "The proteins would gain a positive charge"
+    ],
+    "answer": "The protein bands would become blurred or disappear due to diffusion",
+    "explanation": "Without fixation, the small protein molecules are free to migrate out of their bands and into the surrounding solution or gel."
+  }
+]
