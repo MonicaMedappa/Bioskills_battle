@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Which component acts as the catalyst to drive the formation of persulfate free radicals from APS?",
+    "options": [
+      "Acrylamide monomers",
+      "TEMED",
+      "Tris-HCl",
+      "Glycine"
+    ],
+    "answer": "TEMED",
+    "explanation": "TEMED (N,N,N',N'-tetramethylethylenediamine) acts as a catalyst that accelerates the decomposition of ammonium persulfate (APS) to generate free radicals."
+  },
+  {
+    "question": "What happens immediately after persulfate free radicals are added to acrylamide?",
+    "options": [
+      "The proteins become negatively charged",
+      "Acrylamide free radicals are formed",
+      "The pH of the solution drops to 6.8",
+      "Glycine becomes a zwitterion"
+    ],
+    "answer": "Acrylamide free radicals are formed",
+    "explanation": "The persulfate free radicals react with acrylamide monomers to turn them into acrylamide free radicals, which then initiate the polymerization chain reaction."
+  },
+  {
+    "question": "In a discontinuous buffer system, how do the stacking and resolving layers differ in terms of pH?",
+    "options": [
+      "The stacking layer is pH 6.8 and the resolving layer is pH 8.8",
+      "Both layers have a neutral pH of 7.0",
+      "The stacking layer is pH 8.8 and the resolving layer is pH 6.8",
+      "Both layers are highly acidic at pH 3.0"
+    ],
+    "answer": "The stacking layer is pH 6.8 and the resolving layer is pH 8.8",
+    "explanation": "The stacking gel typically has a lower pH (6.8) to facilitate the 'stacking' of proteins, while the resolving gel has a higher pH (8.8) to allow for separation based on size."
+  },
+  {
+    "question": "Why is glycine considered the 'key' to the discontinuous buffer system?",
+    "options": [
+      "It provides the structural mesh of the gel",
+      "It catalyzes the TEMED reaction",
+      "It acts as a permanent positive ion",
+      "Its electrical charge changes based on the pH of the layer"
+    ],
+    "answer": "Its electrical charge changes based on the pH of the layer",
+    "explanation": "Glycine's electrophoretic mobility changes significantly between the stacking and resolving gels because its net charge depends on the specific pH of those environments."
+  },
+  {
+    "question": "What is the physical state of glycine at a neutral pH of approximately 7?",
+    "options": [
+      "Positively charged ion",
+      "Uncharged zwitterion",
+      "Negatively charged ion",
+      "Gaseous molecule"
+    ],
+    "answer": "Uncharged zwitterion",
+    "explanation": "At a neutral pH near its isoelectric point, glycine exists primarily as a zwitterion with no net charge, which causes it to move very slowly in the stacking gel."
+  },
+  {
+    "question": "Which layer of the gel contains a lower percentage of acrylamide?",
+    "options": [
+      "The stacking layer",
+      "The resolving layer",
+      "Both layers have identical percentages"
+    ],
+    "answer": "The stacking layer",
+    "explanation": "The stacking layer has a lower acrylamide concentration (larger pores) so that proteins can move freely and concentrate into a thin band before entering the resolving layer."
+  }
+]
