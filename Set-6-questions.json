@@ -1,0 +1,110 @@
+[
+  {
+     "question": "If an SDS-PAGE gel reveals additional bands at a lower molecular weight than the expected target, which factor is the most likely cause?",
+    "options": {
+      "A": "Incomplete protein denaturation",
+      "B": "Protease activity in the sample",
+      "C": "High glycerol concentration",
+      "D": "Formation of protein multimers"
+    },
+    "correct_answer": "B",
+    "explanation": "Enzymatic cleavage of the target protein into smaller fragments results in the appearance of lower molecular weight bands."
+  },
+  {
+     "question": "What is the specific role of glycerol in the protein loading buffer?",
+    "options": {
+      "A": "Buffering the pH during the electrophoresis run",
+      "B": "Increasing sample density to ensure it sinks into the well",
+      "C": "Reducing disulfide bonds between cysteine residues",
+      "D": "Coating proteins with a uniform negative charge"
+    },
+    "correct_answer": "B",
+    "explanation": "Glycerol makes the sample heavier than the surrounding running buffer, preventing it from floating out during loading."
+  },
+  {
+     "question": "Which of the following is a common result of incomplete reduction of disulfide bonds?",
+    "options": {
+      "A": "Sample leakage into adjacent wells",
+      "B": "Presence of protein dimers or aggregates",
+      "C": "Complete loss of protein signal",
+      "D": "The appearance of blurred 'smiley' bands"
+    },
+    "correct_answer": "B",
+    "explanation": "If disulfide bridges remain intact, multiple protein chains stay linked, creating higher molecular weight structures."
+  },
+  {
+     "question": "When an immunoblot shows unexpected 'artifact' bands that are not present in a standard stained gel, what is the most likely culprit?",
+    "options": {
+      "A": "Non-specific antibody binding",
+      "B": "Excessive protein loading",
+      "C": "Depleted running buffer",
+      "D": "Insufficient glycerol"
+    },
+    "correct_answer": "A",
+    "explanation": "In Western blotting, antibodies may bind to proteins other than the target, creating signals that don't represent the actual protein concentration."
+  },
+  {
+    "question": "How do post-translational modifications, such as glycosylation, typically manifest on an SDS-PAGE gel?",
+    "options": {
+      "A": "By preventing the protein from entering the stacking gel",
+      "B": "As a sharp band at a much lower molecular weight",
+      "C": "By neutralizing the negative charge provided by SDS",
+      "D": "As multiple bands or a slight shift in migration"
+    },
+    "correct_answer": "D",
+    "explanation": "Adding groups like sugars or phosphates changes the protein's mass, leading to different migration speeds."
+  }, 
+  {
+     "question": "Which running condition is most likely to cause band distortion due to heat generation?",
+    "options": [
+      "A. Freshly prepared running buffer",
+      "B. Loading the maximum volume in a well",
+      "C. Excessively high voltage",
+      "D. Running the gel at 4°C"
+    ],
+    "correct_answer": "C",
+    "explanation": "High voltage increases the current, which generates heat and can warp the gel or distort the bands."
+  },
+  {
+    "question": "A researcher observes that their protein sample is floating out of the well and into the running buffer. What should they check first?",
+    "options": [
+      "A. The presence of protease inhibitors",
+      "B. The glycerol concentration in the loading dye",
+      "C. The voltage of the power supply",
+      "D. The temperature of the denaturation step"
+    ],
+    "correct_answer": "B",
+    "explanation": "Inadequate glycerol results in a sample that is not dense enough to stay at the bottom of the well."
+  },
+  {
+    "question": "What is the primary risk of 'sample overload' in an electrophoresis well?",
+    "options": [
+      "A. Increased glycosylation of the protein",
+      "B. Spontaneous reduction of disulfide bonds",
+      "C. Protein clumping and smeared bands",
+      "D. Chemical degradation of the running buffer"
+    ],
+    "correct_answer": "C",
+    "explanation": "Excess protein can aggregate or overwhelm the gel matrix, leading to a loss of resolution and broad smears."
+  },
+  {
+   "question": "True or False: Using fresh buffers and appropriate salt concentrations can help prevent the formation of extra bands.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "Proper buffer conditions are essential for maintaining stable pH and conductivity, which prevents migration artifacts."
+  },
+  {
+    "question": "Which of the following is a preventative measure to avoid 'ghost' or 'extra' bands caused by protein isoforms?",
+    "options": [
+      "A. Understanding the biological variations of the target protein",
+      "B. Increasing the voltage significantly",
+      "C. Eliminating the reduction step",
+      "D. Removing all glycerol from the buffer"
+    ],
+    "correct_answer": "A",
+    "explanation": "Isoforms are natural biological variations; they aren't 'fixed' by prep but must be recognized as legitimate signals."
+  }
+]
