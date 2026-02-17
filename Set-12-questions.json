@@ -1,0 +1,110 @@
+[
+  {
+    "question": "What is the primary purpose of using a lower percentage of acrylamide (around 4-5%) in the stacking gel compared to the resolving gel?",
+    "options": [
+      "To create larger pores that allow proteins to move freely",
+      "To prevent the gel from polymerizing too quickly",
+      "To decrease the electrical conductivity",
+      "To increase the density of the gel matrix"
+    ],
+    "answer": "To create larger pores that allow proteins to move freely",
+    "explanation": "A lower acrylamide concentration creates a large-pore matrix that does not restrict protein movement, allowing different-sized proteins to migrate at the same speed and concentrate (stack) at the interface of the resolving gel."
+  },
+  {
+    "question": "Which buffer is specifically used in the stacking gel to maintain a lower pH of 6.8?",
+    "options": [
+      "Isopropanol buffer",
+      "Sodium Phosphate buffer",
+      "Tris-HCl pH 6.8",
+      "Tris-HCl pH 8.8"
+    ],
+    "answer": "Tris-HCl pH 6.8",
+    "explanation": "Tris-HCl at pH 6.8 is critical for the 'discontinuous' buffer system. This specific pH ensures that glycine ions move slowly (as zwitterions), which is essential for creating the voltage gradient needed to stack proteins."
+  },
+  {
+    "question": "During the gel casting process, what is the function of applying an isopropanol overlay on top of the resolving gel?",
+    "options": [
+      "To initiate the polymerization of acrylamide",
+      "To increase the hydration of the gel matrix",
+      "To ensure a flat and level surface before pouring the next layer",
+      "To denature the proteins in the sample"
+    ],
+    "answer": "To ensure a flat and level surface before pouring the next layer",
+    "explanation": "Isopropanol is used to exclude oxygen (which inhibits polymerization) and to create a perfectly horizontal interface between the resolving and stacking gels, ensuring that protein bands remain straight."
+  },
+  {
+    "question": "The concentration of proteins into a thin, sharp band before they enter the resolving gel is necessary for:",
+    "options": [
+      "Activating the TEMED catalyst",
+      "Improving the resolution of the final separation",
+      "Reducing the total run time",
+      "Removing contaminants from the sample"
+    ],
+    "answer": "Improving the resolution of the final separation",
+    "explanation": "If proteins are not stacked into a narrow band, they would enter the resolving gel at different times and positions, leading to broad, blurry bands and poor resolution of similar molecular weights."
+  },
+  {
+    "question": "Which anionic detergent is added to both the stacking and resolving gels to provide proteins with a uniform negative charge?",
+    "options": [
+      "APS",
+      "Tris",
+      "TEMED",
+      "SDS"
+    ],
+    "answer": "SDS",
+    "explanation": "Sodium Dodecyl Sulfate (SDS) binds to proteins in a constant ratio, imparting a net negative charge that masks the protein's intrinsic charge, allowing separation based solely on mass."
+  },
+  {
+    "question": "What role does water play in the preparation of both the stacking and resolving gel solutions?",
+    "options": [
+      "It prevents the gel from becoming too acidic",
+      "It acts as a cross-linker for acrylamide",
+      "It provides the free radicals for polymerization",
+      "It is used to adjust the total volume and final concentrations"
+    ],
+    "answer": "It is used to adjust the total volume and final concentrations",
+    "explanation": "Deionized water (ddH2O) is used as a solvent to reach the desired final volume, which determines the final concentration of the buffer and acrylamide percentage."
+  },
+  {
+    "question": "In the Resolving Gel, what factor primarily allows proteins to separate based on their molecular size?",
+    "options": [
+      "The dense acrylamide matrix and pH 8.8 environment",
+      "The presence of TEMED in the running buffer",
+      "The pH 6.8 buffer environment",
+      "The addition of isopropanol to the wells"
+    ],
+    "answer": "The dense acrylamide matrix and pH 8.8 environment",
+    "explanation": "The higher acrylamide percentage creates a sieve-like matrix where smaller proteins navigate through the pores more easily than larger ones, while the pH 8.8 ensures glycine ions move fast and do not interfere with separation."
+  },
+  {
+    "question": "Which component is described as a 'radical initiator' that begins the chemical hardening of the gel?",
+    "options": [
+      "SDS",
+      "Ammonium persulfate (APS)",
+      "Bis-acrylamide",
+      "Tris-HCl"
+    ],
+    "answer": "Ammonium persulfate (APS)",
+    "explanation": "Ammonium persulfate (APS) provides the free radicals necessary to trigger the polymerization of acrylamide and bis-acrylamide monomers into a solid gel."
+  },
+  {
+    "question": "True or False: The stacking gel has a higher pH than the resolving gel to facilitate the stacking effect.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "False",
+    "explanation": "The stacking gel has a *lower* pH (6.8) than the resolving gel (8.8). This difference is what causes glycine to change its charge and mobility, creating the stacking effect."
+  },
+  {
+    "question": "What is the result of 'TEMED' being added to the gel mixture?",
+    "options": [
+      "It stabilizes the pH at 8.8",
+      "It accelerates the production of free radicals from APS",
+      "It increases the pore size of the resolving gel",
+      "The proteins become more negatively charged"
+    ],
+    "answer": "It accelerates the production of free radicals from APS",
+    "explanation": "TEMED acts as a catalyst that stabilizes and accelerates the formation of free radicals from APS, thereby initiating the polymerization reaction."
+  }
+]
