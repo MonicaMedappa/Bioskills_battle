@@ -1,0 +1,57 @@
+[
+  {
+    "question": "Which two gases are primarily responsible for the bubbling observed during electrophoresis?",
+    "options": [
+      "Water vapor and Ozone",
+      "Hydrogen (H2) and Oxygen (O2)",
+      "Chlorine and Helium",
+      "CO2 and Nitrogen"
+    ],
+    "answer": "Hydrogen (H2) and Oxygen (O2)",
+    "explanation": "The electrolysis of water in the running buffer produces hydrogen gas at the cathode and oxygen gas at the anode."
+  },
+  {
+    "question": "What occurs at the negatively charged cathode to generate gas?",
+    "options": [
+      "Protein molecules are converted into gas.",
+      "Oxygen ions lose electrons to become O2 gas.",
+      "Positively charged hydrogen ions become hydrogen gas.",
+      "The buffer evaporates due to high heat."
+    ],
+    "answer": "Positively charged hydrogen ions become hydrogen gas.",
+    "explanation": "At the cathode, reduction occurs where hydrogen ions ($H^+$) gain electrons to form $H_2$ gas."
+  },
+  {
+    "question": "Why is there typically a higher volume of bubbles at the cathode than at the anode?",
+    "options": [
+      "Because hydrogen is lighter than oxygen.",
+      "The anode is made of a material that absorbs gas.",
+      "The cathode is hotter than the anode.",
+      "Because water contains two hydrogen atoms for every one oxygen atom."
+    ],
+    "answer": "Because water contains two hydrogen atoms for every one oxygen atom.",
+    "explanation": "The stoichiometry of water electrolysis ($2H_2O \rightarrow 2H_2 + O_2$) results in twice the molar volume of hydrogen gas compared to oxygen."
+  },
+  {
+    "question": "At which electrode are electrons removed from water molecules, resulting in oxygen gas formation?",
+    "options": [
+      "The power supply itself",
+      "Both electrodes equally",
+      "The negatively charged cathode",
+      "The positively charged anode"
+    ],
+    "answer": "The positively charged anode",
+    "explanation": "Oxidation occurs at the anode, where electrons are removed from water molecules to produce oxygen gas and protons."
+  },
+  {
+    "question": "What type of chemical reaction is responsible for the formation of gas in an electrophoresis tank?",
+    "options": [
+      "Acid-base neutralization",
+      "Nuclear fission",
+      "Redox (reduction-oxidation) reaction",
+      "Precipitation reaction"
+    ],
+    "answer": "Redox (reduction-oxidation) reaction",
+    "explanation": "Electrolysis is a redox process where oxidation happens at the anode and reduction happens at the cathode simultaneously."
+  }
+]
