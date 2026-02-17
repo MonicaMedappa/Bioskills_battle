@@ -1,2 +1,2 @@
 # Bioskills_battle
-An interactive SDS PAGE quiz game
+An interactive biology techniques game
