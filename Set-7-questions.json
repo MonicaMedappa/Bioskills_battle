@@ -44,7 +44,6 @@
     "explanation": "While bacteria can perform modifications like lipidation or acetylation, they lack the sophisticated systems for complex glycosylation found in eukaryotes."
   },
   {
-    "question_number": 5,
     "question": "Which of the following modifications is a bacterial cell capable of performing?",
     "options": [
       "Splicing of introns",
@@ -54,16 +53,27 @@
     ],
     "answer": "Phosphorylation and acetylation",
     "explanation": "Bacterial enzymatic machinery is capable of these specific types of chemical modifications on proteins."
-  }
-{
-        "question": "Why might a researcher choose an alternative host over a standard bacterial strain for producing a biopharmaceutical?",
+  },
+  {
+    "question": "What is the primary reason for using reducing agents like DTT or BME in sample preparation for SDS-PAGE?",
+    "options": [
+      "To increase the negative charge on proteins",
+      "To break disulfide bonds and prevent aggregation",
+      "To enhance the binding of SDS to the protein",
+      "To stabilize the tertiary structure of proteins"
+    ],
+    "answer": "To break disulfide bonds and prevent aggregation",
+    "explanation": "DTT and BME are reducing agents that break disulfide bonds between cysteine residues, preventing protein aggregation."
+  },
+  {
+    "question": "Why might a researcher choose an alternative host over a standard bacterial strain for producing a biopharmaceutical?",
         "options": [
-          "A. To achieve specific eukaryotic-like glycosylation",
-          "B. Because bacteria cannot produce linear proteins",
-          "C. To prevent all post-translational modifications",
-          "D. To avoid the use of DTT and BME"
+          "To achieve specific eukaryotic-like glycosylation",
+          "Because bacteria cannot produce linear proteins",
+          "To prevent all post-translational modifications",
+          "To avoid the use of DTT and BME"
         ],
-        "answer": "A",
+        "answer": "To achieve specific eukaryotic-like glycosylation",
         "explanation": "Since bacteria often fail to perform complex glycosylation, eukaryotic hosts are used when that modification is essential for the drug's function."
       },
       {
