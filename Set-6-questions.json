@@ -7,8 +7,8 @@
       "High glycerol concentration",
       "Formation of protein multimers"
      ],
-    "correct_answer": "B",
-    "explanation": "Enzymatic cleavage of the target protein into smaller fragments results in the appearance of lower molecular weight bands."
+     "correct_answer": "Protease activity in the sample",
+     "explanation": "Enzymatic cleavage of the target protein into smaller fragments results in the appearance of lower molecular weight bands."
   },
   {
      "question": "What is the specific role of glycerol in the protein loading buffer?",
@@ -18,7 +18,7 @@
       "C": "Reducing disulfide bonds between cysteine residues",
       "D": "Coating proteins with a uniform negative charge"
     },
-    "correct_answer": "B",
+    "correct_answer": "Increasing sample density to ensure it sinks into the well",
     "explanation": "Glycerol makes the sample heavier than the surrounding running buffer, preventing it from floating out during loading."
   },
   {
@@ -29,7 +29,7 @@
       "Complete loss of protein signal",
       "The appearance of blurred 'smiley' bands"
   ],
-    "correct_answer": "B",
+    "correct_answer": "Presence of protein dimers or aggregates",
     "explanation": "If disulfide bridges remain intact, multiple protein chains stay linked, creating higher molecular weight structures."
   },
   {
@@ -40,7 +40,7 @@
     "Depleted running buffer",
     "Insufficient glycerol"
   ],
-    "correct_answer": "A",
+    "correct_answer": "Non-specific antibody binding",
     "explanation": "In Western blotting, antibodies may bind to proteins other than the target, creating signals that don't represent the actual protein concentration."
   },
   {
@@ -51,7 +51,7 @@
      "By neutralizing the negative charge provided by SDS",
      "As multiple bands or a slight shift in migration"
   ],
-    "correct_answer": "D",
+    "correct_answer": "As multiple bands or a slight shift in migration",
     "explanation": "Adding groups like sugars or phosphates changes the protein's mass, leading to different migration speeds."
   }, 
   {
@@ -62,7 +62,7 @@
       "Excessively high voltage",
       "Running the gel at 4°C"
     ],
-     "correct_answer": "C",
+     "correct_answer": "Excessively high voltage",
      "explanation": "High voltage increases the current, which generates heat and can warp the gel or distort the bands."
   },
   {
@@ -73,7 +73,7 @@
       "The voltage of the power supply",
       "The temperature of the denaturation step"
     ],
-     "correct_answer": "B",
+     "correct_answer": "The glycerol concentration in the loading dye",
      "explanation": "Inadequate glycerol results in a sample that is not dense enough to stay at the bottom of the well."
   },
   {
@@ -84,7 +84,7 @@
       "Protein clumping and smeared bands",
       "Chemical degradation of the running buffer"
     ],
-    "correct_answer": "C",
+    "correct_answer": "Protein clumping and smeared bands",
     "explanation": "Excess protein can aggregate or overwhelm the gel matrix, leading to a loss of resolution and broad smears."
   },
   {
@@ -104,7 +104,7 @@
       "Eliminating the reduction step",
       "Removing all glycerol from the buffer"
     ],
-    "correct_answer": "A",
+    "correct_answer": "Understanding the biological variations of the target protein",
     "explanation": "Isoforms are natural biological variations; they aren't 'fixed' by prep but must be recognized as legitimate signals."
   }
 ]
