@@ -1,0 +1,46 @@
+[
+  {
+    "question": "Which specific components in a reducing dye are responsible for breaking disulfide bonds between cysteine residues?",
+    "options": [
+      "Heat and Water",
+      "SDS and Glycerol",
+      "β-mercaptoethanol (BME) or Dithiothreitol (DTT)",
+      "Bromophenol blue and Tris"
+    ],
+    "answer": "β-mercaptoethanol (BME) or Dithiothreitol (DTT)",
+    "explanation": "Reducing agents like BME and DTT donate electrons to break the covalent S-S bonds that stabilize a protein's tertiary or quaternary structure."
+  },
+  {
+    "question": "If a protein complex is analyzed using a non-reducing dye, what will the resulting bands on the gel represent?",
+    "options": [
+      "Completely degraded protein fragments",
+      "Only the Bromophenol blue tracking line",
+      "Intact protein complexes or disulfide-linked forms",
+      "Individual, dissociated polypeptide chains"
+    ],
+    "answer": "Intact protein complexes or disulfide-linked forms",
+    "explanation": "Without reducing agents, disulfide bonds remain intact, meaning multimeric proteins will migrate as a single, larger unit."
+  },
+  {
+    "question": "What is the physical purpose of including glycerol in the loading buffer?",
+    "options": [
+      "To catalyze the reduction of cysteine residues",
+      "To maintain a constant pH of 8.8",
+      "To provide a tracking color for the user",
+      "To increase sample density so it sinks into the well"
+    ],
+    "answer": "To increase sample density so it sinks into the well",
+    "explanation": "Glycerol increases the density of the sample relative to the running buffer, ensuring it stays at the bottom of the well during loading."
+  },
+  {
+    "question": "The combination of SDS, BME, and heat is specifically intended to convert proteins into their:",
+    "options": [
+      "Quaternary structure",
+      "Zwitterionic state",
+      "Primary structure (linear form)",
+      "Circular disulfide loops"
+    ],
+    "answer": "Primary structure (linear form)",
+    "explanation": "These treatments denature the protein, breaking its secondary, tertiary, and quaternary structures to create a linear polypeptide chain."
+  }
+]
