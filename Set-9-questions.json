@@ -1,0 +1,109 @@
+[
+  {
+    "question": "Which specific component is responsible for cross-linking individual polyacrylamide chains to create a three-dimensional molecular mesh?",
+    "options": [
+      "Bis-acrylamide",
+      "TEMED",
+      "Tris-HCl",
+      "Acrylamide"
+    ],
+    "answer": "Bis-acrylamide",
+    "explanation": "Bis-acrylamide serves as the crucial cross-linking agent that joins polymer chains together to form the gel's pores."
+  },
+  {
+    "question": "What is the typical ratio of bis-acrylamide to acrylamide used to ensure a proper molecular network?",
+    "options": [
+      "1:35",
+      "37.5:1",
+      "10:1",
+      "1:1"
+    ],
+    "answer": "1:35",
+    "explanation": "A ratio of approximately 1:35 is standard to create an effective molecular mesh for separation."
+  },
+  {
+    "question": "Which two chemicals must react together to initiate the polymerization process by forming free radicals?",
+    "options": [
+      "Acrylamide and Bis-acrylamide",
+      "SDS and Tris-HCl",
+      "APS and TEMED",
+      "Bis-acrylamide and SDS"
+    ],
+    "answer": "APS and TEMED",
+    "explanation": "APS acts as the radical initiator, and TEMED serves as the catalyst that accelerates the production of these radicals."
+  },
+  {
+    "question": "What is the primary function of the Tris-HCl buffer (pH 8.8) in the resolving gel?",
+    "options": [
+      "To accelerate the formation of free radicals",
+      "To maintain an alkaline pH optimal for separation",
+      "To denature the proteins",
+      "To impart a negative charge to the proteins"
+    ],
+    "answer": "To maintain an alkaline pH optimal for separation",
+    "explanation": "The pH 8.8 environment provided by Tris-HCl is essential for the specific protein migration conditions of the resolving gel."
+  },
+  {
+    "question": "What structural feature of 'Activated Acrylamide' allows it to form long polymer chains?",
+    "options": [
+      "The amide group ($NH_{2}$)",
+      "The Carbonyl group ($C = O$)",
+      "The double bond ($CH_{2} = CH$)"
+    ],
+    "answer": "The double bond ($CH_{2} = CH$)",
+    "explanation": "The carbon-carbon double bond allows the monomers to link together into long chains during polymerization."
+  }, 
+  {
+    "question": "Which component in the resolving gel mix is an anionic detergent that denatures proteins and provides them with a uniform negative charge?",
+    "options": [
+      "Bis-acrylamide",
+      "APS",
+      "SDS (Sodium dodecyl sulfate)",
+      "Tris-HCl"
+    ],
+    "answer": "SDS (Sodium dodecyl sulfate)",
+    "explanation": "SDS is the anionic detergent that unfolds proteins and coats them with a negative charge proportional to their mass."
+  },
+  {
+    "question": "What structural change occurs to the acrylamide monomer to allow it to link into long polyacrylamide chains?",
+    "options": [
+      "The carbonyl group ($C = O$) breaks apart.",
+      "The double bond ($CH_2 = CH$) opens to form single bonds with other monomers.",
+      "The monomer binds to Tris-HCl molecules.",
+      "The amide group ($NH_2$) is removed."
+    ],
+    "answer": "The double bond ($CH_2 = CH$) opens to form single bonds with other monomers.",
+    "explanation": "Polymerization occurs through the opening of the carbon-carbon double bond, allowing new covalent bonds to form with adjacent monomers."
+  },
+  {
+    "question": "Why is it common practice to purchase acrylamide in pre-mixed liquid solutions rather than as a raw powder?",
+    "options": [
+      "The powder form is highly toxic and dangerous to handle.",
+      "To increase the speed of the polymerization reaction.",
+      "The powder form cannot be cross-linked by bis-acrylamide.",
+      "The liquid form has a higher pH of 8.8 automatically."
+    ],
+    "answer": "The powder form is highly toxic and dangerous to handle.",
+    "explanation": "Acrylamide powder is a neurotoxin; using liquid solutions minimizes the risk of accidental inhalation."
+  },
+  {
+    "question": "If a researcher intends to separate very small proteins, which adjustment to the gel composition is necessary?",
+    "options": [
+      "Change the pH from 8.8 to 6.8.",
+      "Increase the acrylamide percentage to create smaller pores.",
+      "Decrease the acrylamide percentage to create larger pores.",
+      "Remove the bis-acrylamide cross-linker."
+    ],
+    "answer": "Increase the acrylamide percentage to create smaller pores.",
+    "explanation": "A higher density of polyacrylamide chains creates a tighter mesh, which provides better resolution for small molecules."
+  },
+  {
+    "question": "True or False: Acrylamide can form a solid, functional electrophoresis gel matrix without the presence of bis-acrylamide.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "False",
+    "explanation": "Bis-acrylamide is essential because it acts as a bridge between acrylamide chains, creating the 3D network required for a gel."
+  }
+]
