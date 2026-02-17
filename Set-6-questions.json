@@ -12,12 +12,12 @@
   },
   {
      "question": "What is the specific role of glycerol in the protein loading buffer?",
-     "options": {
-      "A": "Buffering the pH during the electrophoresis run",
-      "B": "Increasing sample density to ensure it sinks into the well",
-      "C": "Reducing disulfide bonds between cysteine residues",
-      "D": "Coating proteins with a uniform negative charge"
-    },
+     "options": [
+      "Buffering the pH during the electrophoresis run",
+      "Increasing sample density to ensure it sinks into the well",
+      "Reducing disulfide bonds between cysteine residues",
+      "Coating proteins with a uniform negative charge"
+     ],
     "correct_answer": "Increasing sample density to ensure it sinks into the well",
     "explanation": "Glycerol makes the sample heavier than the surrounding running buffer, preventing it from floating out during loading."
   },
@@ -33,7 +33,7 @@
     "explanation": "If disulfide bridges remain intact, multiple protein chains stay linked, creating higher molecular weight structures."
   },
   {
-     "question": "When an immunoblot shows unexpected 'artifact' bands that are not present in a standard stained gel, what is the most likely culprit?",
+    "question": "When an immunoblot shows unexpected 'artifact' bands that are not present in a standard stained gel, what is the most likely culprit?",
     "options": [
     "Non-specific antibody binding",
     "Excessive protein loading",
