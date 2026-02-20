@@ -58,8 +58,8 @@
   {
     "id": 9,
     "question": "Which chemical groups in amino acids contribute to the variable charge of a protein?",
-    "options": ["Hydroxyl and Methyl groups", "Sodium and Sulfate groups", "Sugar and phosphate groups", "NH2+ and COO- groups"],
-    "answer": "NH2+ and COO- groups",
+    "options": ["Hydroxyl and Methyl groups", "Sodium and Sulfate groups", "Sugar and phosphate groups", "NH₂⁺ and COO⁻ groups"],
+    "answer": "NH₂⁺ and COO⁻ groups",
     "explanation": "These amino and carboxyl groups can gain or lose protons, changing the net charge depending on the pH."
   },
   {
