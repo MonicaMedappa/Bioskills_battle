@@ -46,11 +46,11 @@
   {
     "question": "What structural feature of 'Activated Acrylamide' allows it to form long polymer chains?",
     "options": [
-      "The amide group ($NH_{2}$)",
-      "The Carbonyl group ($C = O$)",
-      "The double bond ($CH_{2} = CH$)"
+      "The amide group (NH<sub>2</sub>)",
+      "The Carbonyl group (C = O)",
+      "The double bond (CH<sub>2</sub>=CH)"
     ],
-    "answer": "The double bond ($CH_{2} = CH$)",
+    "answer": "The double bond (CH<sub>2</sub>=CH)",
     "explanation": "The carbon-carbon double bond allows the monomers to link together into long chains during polymerization."
   }, 
   {
