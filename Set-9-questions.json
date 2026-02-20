@@ -46,11 +46,11 @@
   {
     "question": "What structural feature of 'Activated Acrylamide' allows it to form long polymer chains?",
     "options": [
-      "The amide group (NH<sub>2</sub>)",
-      "The Carbonyl group (C = O)",
-      "The double bond (CH<sub>2</sub>=CH)"
+      "The amide group (NH₂)",
+      "The Carbonyl group (C=O)",
+      "The double bond (CH₂=CH)"
     ],
-    "answer": "The double bond (CH<sub>2</sub>=CH)",
+    "answer": "The double bond (CH₂=CH)",
     "explanation": "The carbon-carbon double bond allows the monomers to link together into long chains during polymerization."
   }, 
   {
@@ -67,12 +67,12 @@
   {
     "question": "What structural change occurs to the acrylamide monomer to allow it to link into long polyacrylamide chains?",
     "options": [
-      "The carbonyl group ($C = O$) breaks apart.",
-      "The double bond ($CH_2 = CH$) opens to form single bonds with other monomers.",
+      "The carbonyl group (C=O) breaks apart.",
+      "The double bond (CH₂=CH) opens to form single bonds with other monomers.",
       "The monomer binds to Tris-HCl molecules.",
-      "The amide group ($NH_2$) is removed."
+      "The amide group (NH₂) is removed."
     ],
-    "answer": "The double bond ($CH_2 = CH$) opens to form single bonds with other monomers.",
+    "answer": "The double bond (CH₂=CH) opens to form single bonds with other monomers.",
     "explanation": "Polymerization occurs through the opening of the carbon-carbon double bond, allowing new covalent bonds to form with adjacent monomers."
   },
   {
