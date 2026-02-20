@@ -55,24 +55,25 @@
         "explanation": "If 9 amino acids weigh 1 kDa (1000 Da), then 1000 / 9 is approximately 111 Da."
     },
     {
-    "question": "If you have a 20 kDa protein, approximately how many base pairs were in its coding sequence?",
-    "options": {
-      "1000 bp",
-      "2000 bp",
-      "270 bp",
-      "540 bp"
-    },
+        "question": "If you have a 20 kDa protein, approximately how many base pairs were in its coding sequence?",
+        "options": [
+          "1000 bp",
+          "2000 bp",
+          "270 bp",
+          "540 bp"
+        ],
+        
     "answer": "540 bp",
     "explanation": "Since 10 kDa is 270 bp, a 20 kDa protein would be coded by 2 × 270 = 540 bp."
   },
   {
-    "question": "How many amino acids (a.a) are found in a 1 kDa protein segment?",
-    "options": {
-      "27 a.a.",
-      "3 a.a.",
-      "90 a.a.",
-      "9 a.a."
-    },
+       "question": "How many amino acids (a.a) are found in a 1 kDa protein segment?",
+       "options": [
+          "27 a.a.",
+          "3 a.a.",
+          "90 a.a.",
+          "9 a.a."
+    ],
     "answer": "9 a.a",
     "explanation": "1 kDa is equivalent to 9 amino acids."
   },
@@ -89,21 +90,21 @@
   },
   {
     "question": "True or False: A 1000 bp sequence codes for exactly 100 amino acids.",
-    "options": {
+    "options": [
       "True",
       "False"
-    },
+    ],
     "answer": "False",
     "explanation": "1000 bp codes for 333 amino acids, following the 3 bp per amino acid rule."
   },
   {
     "question": "What is the ratio of base pairs to amino acids consistently shown in your data?",
-    "options": {
+    "options": [
       "3:1",
       "1:1",
       "27:1",
       "10:1"
-    },
+    ],
     "answer": "3:1",
     "explanation": "In every example (1000:333, 270:90, 27:9), the number of base pairs is 3 times the number of amino acids."
   }
