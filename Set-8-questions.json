@@ -3,23 +3,23 @@
     "question": "Which two gases are primarily responsible for the bubbling observed during electrophoresis?",
     "options": [
       "Water vapor and Ozone",
-      "Hydrogen (H2) and Oxygen (O2)",
+      "Hydrogen (H₂) and Oxygen (O₂)",
       "Chlorine and Helium",
-      "CO2 and Nitrogen"
+      "CO₂ and Nitrogen"
     ],
-    "answer": "Hydrogen (H2) and Oxygen (O2)",
+    "answer": "Hydrogen (H⁺) and Oxygen (O₂)",
     "explanation": "The electrolysis of water in the running buffer produces hydrogen gas at the cathode and oxygen gas at the anode."
   },
   {
     "question": "What occurs at the negatively charged cathode to generate gas?",
     "options": [
       "Protein molecules are converted into gas.",
-      "Oxygen ions lose electrons to become O2 gas.",
+      "Oxygen ions lose electrons to become O₂ gas.",
       "Positively charged hydrogen ions become hydrogen gas.",
       "The buffer evaporates due to high heat."
     ],
     "answer": "Positively charged hydrogen ions become hydrogen gas.",
-    "explanation": "At the cathode, reduction occurs where hydrogen ions ($H^+$) gain electrons to form $H_2$ gas."
+    "explanation": "At the cathode, reduction occurs where hydrogen ions H⁺ gain electrons to form H₂ gas."
   },
   {
     "question": "Why is there typically a higher volume of bubbles at the cathode than at the anode?",
@@ -30,7 +30,7 @@
       "Because water contains two hydrogen atoms for every one oxygen atom."
     ],
     "answer": "Because water contains two hydrogen atoms for every one oxygen atom.",
-    "explanation": "The stoichiometry of water electrolysis ($2H_2O \rightarrow 2H_2 + O_2$) results in twice the molar volume of hydrogen gas compared to oxygen."
+    "explanation": "The stoichiometry of water electrolysis 2H₂O → 2H₂ + O₂ results in twice the molar volume of hydrogen gas compared to oxygen."
   },
   {
     "question": "At which electrode are electrons removed from water molecules, resulting in oxygen gas formation?",
