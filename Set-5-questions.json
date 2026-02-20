@@ -79,12 +79,12 @@
   },
   {
     "question": "Which of the following represents the largest molecular structure based on your data?",
-    "options": {
+    "options": [
       "333 a.a.",
       "90 a.a.",
       "10 kDa",
       "270 bp"
-    },
+    ],
     "answer": "333 a.a",
     "explanation": "333 amino acids (37 kDa) is the largest unit described in your provided set."
   },
