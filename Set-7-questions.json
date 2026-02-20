@@ -80,13 +80,13 @@
         "question_number": 7,
         "question": "What is the recommended target protein amount to load per well for standard analysis?",
         "options": [
-          "10 ug",
-          "500 ug",
-          "100 ug",
-          "1 ug"
+          "10 µg",
+          "500 µg",
+          "100 µg",
+          "1 µg"
         ],
-        "answer": "10 ug",
-        "explanation": "Loading approximately 10 ug per well is a common benchmark to ensure visibility without causing significant overloading artifacts."
+        "answer": "10 µg",
+        "explanation": "Loading approximately 10 µg per well is a common benchmark to ensure visibility without causing significant overloading artifacts."
       },
       {
         "question": "Bacterial PTMs can impact which of the following properties of a recombinant protein?",
