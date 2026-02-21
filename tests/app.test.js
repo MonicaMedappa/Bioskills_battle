@@ -26,6 +26,7 @@ jest.unstable_mockModule('../src/quizUI.js', () => ({
         updateScoreDisplay: jest.fn(),
         getQuizContainer: jest.fn(),
         renderFinalResults: jest.fn(),
+        getFeedbackContainer: jest.fn(), // Added this line
     }
 }));
 
@@ -106,6 +107,7 @@ describe('App Module', () => {
         QuizUI.getQuestionSetSelector.mockReturnValue({ onchange: null });
         QuizUI.getNextButton.mockReturnValue({ onclick: null });
         QuizUI.getQuizContainer.mockReturnValue({ classList: { contains: jest.fn(() => false) } });
+        QuizUI.getFeedbackContainer.mockReturnValue({classList: {contains: jest.fn((className) => className === 'hide')}}); // Mock feedback container as hidden
     });
 
     // Test for init()
@@ -221,12 +223,17 @@ describe('App Module', () => {
         expect(QuizUI.disableAnswerButtons).toHaveBeenCalledWith(true);
     });
 
-    test('selectAnswer should automatically advance to the next question after a delay', () => {
+    test('selectAnswer should NOT automatically advance to the next question, and feedback container should be visible', async () => {
         const nextQuestionSpy = jest.spyOn(app, 'nextQuestion').mockImplementation(() => {});
+        const feedbackContainer = QuizUI.getFeedbackContainer();
+        feedbackContainer.classList.contains.mockReturnValue(false); // Initially not hidden, meaning visible
+
         app.selectAnswer('any answer');
-        expect(nextQuestionSpy).not.toHaveBeenCalled(); // It should not be called immediately
-        jest.advanceTimersByTime(1500); // Fast-forward time by 1.5 seconds
-        expect(nextQuestionSpy).toHaveBeenCalled();
+        
+        jest.advanceTimersByTime(2000); // Advance time past the 1.5s delay
+        expect(nextQuestionSpy).not.toHaveBeenCalled();
+        expect(QuizUI.updateFeedback).toHaveBeenCalled(); // Ensure feedback is shown
+        expect(feedbackContainer.classList.contains('hide')).toBe(false); // Should be visible
     });
 
     // Test for nextQuestion()

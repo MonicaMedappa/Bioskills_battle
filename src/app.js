@@ -122,10 +122,6 @@ function selectAnswer(selected) {
     
     app.updateScoreDisplay(QuizModel.getScore());
     QuizUI.disableAnswerButtons(true); // Disable all buttons after an answer is selected
-
-    setTimeout(() => {
-        app.nextQuestion();
-    }, 1500);
 }
 
 /**
