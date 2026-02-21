@@ -221,6 +221,14 @@ describe('App Module', () => {
         expect(QuizUI.disableAnswerButtons).toHaveBeenCalledWith(true);
     });
 
+    test('selectAnswer should automatically advance to the next question after a delay', () => {
+        const nextQuestionSpy = jest.spyOn(app, 'nextQuestion').mockImplementation(() => {});
+        app.selectAnswer('any answer');
+        expect(nextQuestionSpy).not.toHaveBeenCalled(); // It should not be called immediately
+        jest.advanceTimersByTime(1500); // Fast-forward time by 1.5 seconds
+        expect(nextQuestionSpy).toHaveBeenCalled();
+    });
+
     // Test for nextQuestion()
     test('nextQuestion should advance to next question if available', () => {
         QuizModel.getCurrentQuestion.mockReturnValueOnce({ /* next question */ }); // Indicate next question exists
