@@ -198,3 +198,42 @@ button:disabled {
 .hide {
     display: none;
 }
+
+/* Landing Page Specific Styles */
+#landing-page {
+    text-align: center;
+    margin-top: 50px;
+    background-color: white; /* Match quiz container background */
+    padding: 40px; /* More padding for a grander feel */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    max-width: 700px; /* Wider landing page */
+    width: 90%;
+}
+
+#cover-text {
+    font-size: 1.3em; /* Slightly larger font */
+    max-width: 650px; /* Wider text area */
+    margin: 25px auto; /* More margin */
+    color: #34495e; /* Consistent text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+#start-btn {
+    background-color: #3498db; /* Blue, matching theme */
+    color: white;
+    border: none; /* No border for a cleaner look */
+    padding: 18px 35px; /* Larger button */
+    font-size: 1.6em; /* Larger text */
+    cursor: pointer;
+    margin-top: 40px; /* More space above */
+    border-radius: 8px; /* Consistent border radius */
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); /* Button shadow */
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+#start-btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.6);
+}
