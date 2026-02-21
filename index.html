@@ -8,12 +8,20 @@
 </head>
 <body>
 
-    <div id="quiz-container">
+    <div id="landing-page" style="text-align: center; margin-top: 50px;">
+        <p id="cover-text" style="font-size: 1.2em; max-width: 600px; margin: 20px auto;">
+            Hey Skiller! Ready to unlock the secrets of the cell? Biology is a wild ride, and its techniques are the keys to the kingdom. Come explore the lab, brush up on your basics, and level up your knowledge—all while having a blast.
+            Gear up, dive in, and let the Bioskills Battle begin!
+        </p>
+        <button id="start-btn" style="padding: 15px 30px; font-size: 1.5em; cursor: pointer; margin-top: 30px;">GOOD LUCK!</button>
+    </div>
+
+    <div id="quiz-container" class="hide">
         <h1>Bioskills Battle</h1>
 
         <div class="set-selector">
             <label for="question-set">Active Challenge:</label>
-            <select id="question-set" onchange="switchSet(this.value)">
+            <select id="question-set">
                 <option value="Set-1-questions.json">Set 1</option>
                 <option value="Set-2-questions.json">Set 2</option>
                 <option value="Set-3-questions.json">Set 3</option> 
@@ -47,10 +55,13 @@
         
         <div id="feedback-container" class="hide">
             <div id="feedback-text"></div>
-            <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+            <button id="next-btn">Next Question</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module">
+        import app from './src/app.js';
+        document.addEventListener('DOMContentLoaded', app.init);
+    </script>
 </body>
 </html>
