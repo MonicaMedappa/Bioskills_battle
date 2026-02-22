@@ -3,7 +3,7 @@
 /* General Reset and Body Styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8; /* Soft medical/lab blue-grey background */
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,24 +11,247 @@ body {
     margin: 0;
 }
 
-/* Main Quiz Container */
+/* Welcome page background with grid lines */
+body:has(#landing-page:not(.hide)) {
+    background-color: #000000;
+    background-image:
+        /* Vertical dark purple lines */
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 59px,
+            rgba(90, 30, 120, 0.35) 59px,
+            rgba(90, 30, 120, 0.35) 60px),
+        /* Horizontal dark purple lines */
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 59px,
+            rgba(90, 30, 120, 0.35) 59px,
+            rgba(90, 30, 120, 0.35) 60px),
+        /* Vertical neon green lines (offset) */
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 119px,
+            rgba(57, 255, 20, 0.18) 119px,
+            rgba(57, 255, 20, 0.18) 120px),
+        /* Horizontal neon green lines (offset) */
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 119px,
+            rgba(57, 255, 20, 0.18) 119px,
+            rgba(57, 255, 20, 0.18) 120px);
+    background-size: 60px 60px, 60px 60px, 120px 120px, 120px 120px;
+    animation: gridShift 8s linear infinite;
+}
+
+/* When quiz is active: black bg with animated purple/green grid */
+body:has(#quiz-container:not(.hide)) {
+    background-color: #000000;
+    background-image:
+        /* Neon purple grid */
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 59px,
+            rgba(191, 64, 255, 0.22) 59px,
+            rgba(191, 64, 255, 0.22) 60px),
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 59px,
+            rgba(191, 64, 255, 0.22) 59px,
+            rgba(191, 64, 255, 0.22) 60px),
+        /* Neon green grid */
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 119px,
+            rgba(57, 255, 20, 0.2) 119px,
+            rgba(57, 255, 20, 0.2) 120px),
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 119px,
+            rgba(57, 255, 20, 0.2) 119px,
+            rgba(57, 255, 20, 0.2) 120px);
+    background-size: 60px 60px, 60px 60px, 120px 120px, 120px 120px;
+    animation: gridShift 8s linear infinite;
+}
+
+/* SDS-PAGE background: dark purple with subtle neon green lines */
+body:has(#sds-page:not(.hide)) {
+    background-color: #12061e;
+    background-image:
+        /* Vertical neon green lines */
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 79px,
+            rgba(57, 255, 20, 0.12) 79px,
+            rgba(57, 255, 20, 0.12) 80px),
+        /* Horizontal neon green lines */
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 79px,
+            rgba(57, 255, 20, 0.12) 79px,
+            rgba(57, 255, 20, 0.12) 80px);
+    background-size: 80px 80px;
+    animation: none;
+}
+
+/* ========== SDS-PAGE Styles ========== */
+#sds-page {
+    text-align: center;
+    background: rgba(18, 6, 30, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 45px 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(90, 30, 120, 0.5);
+    box-shadow:
+        0 0 40px rgba(90, 30, 120, 0.2),
+        0 0 80px rgba(57, 255, 20, 0.04),
+        0 8px 32px rgba(0, 0, 0, 0.7);
+    max-width: 720px;
+    width: 92%;
+    position: relative;
+    overflow: hidden;
+}
+
+#sds-page.hide {
+    display: none;
+}
+
+/* Top accent line */
+#sds-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(90, 30, 120, 0.8), rgba(57, 255, 20, 0.6), rgba(90, 30, 120, 0.8), transparent);
+    border-radius: 2px;
+}
+
+#sds-title {
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: rgba(220, 220, 240, 0.95);
+    margin: 0 0 8px 0;
+    text-shadow: 0 0 20px rgba(90, 30, 120, 0.5);
+}
+
+#sds-subtitle {
+    font-size: 1em;
+    color: rgba(180, 180, 200, 0.7);
+    margin: 0 0 30px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Tile Grid */
+.set-tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
+    padding: 5px;
+}
+
+/* Individual Tile */
+.set-tile {
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.88), rgba(40, 200, 60, 0.92));
+    color: #0a0a12;
+    border: none;
+    padding: 22px 10px;
+    font-size: 1.05em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow:
+        0 0 12px rgba(57, 255, 20, 0.2),
+        0 3px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.set-tile::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.set-tile:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        0 0 22px rgba(57, 255, 20, 0.45),
+        0 0 50px rgba(57, 255, 20, 0.15),
+        0 6px 16px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(57, 255, 20, 1), rgba(50, 220, 70, 1));
+}
+
+.set-tile:hover::after {
+    left: 100%;
+}
+
+.set-tile:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+@keyframes gridShift {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 60px 60px, 60px 60px, 120px 120px, 120px 120px;
+    }
+}
+
+/* Main Quiz Container — Lignin Yellow Paper Texture */
 #quiz-container {
-    background-color: white;
+    background-color: #f5ecd0;
+    background-image:
+        /* Paper fiber noise layer 1 */
+        repeating-linear-gradient(135deg,
+            transparent,
+            transparent 2px,
+            rgba(210, 190, 140, 0.15) 2px,
+            rgba(210, 190, 140, 0.15) 3px),
+        /* Paper fiber noise layer 2 */
+        repeating-linear-gradient(45deg,
+            transparent,
+            transparent 3px,
+            rgba(190, 170, 120, 0.1) 3px,
+            rgba(190, 170, 120, 0.1) 4px),
+        /* Subtle aged gradient */
+        radial-gradient(ellipse at 30% 20%,
+            rgba(245, 236, 208, 1) 0%,
+            rgba(235, 222, 185, 1) 50%,
+            rgba(225, 210, 170, 1) 100%);
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(90, 30, 120, 0.1),
+        inset 0 0 60px rgba(210, 190, 140, 0.15);
     max-width: 500px;
-    width: 90%; /* Ensures it looks good on mobile */
+    width: 90%;
+    border: 1px solid rgba(190, 170, 120, 0.4);
+    position: relative;
 }
 
 /* Main Title */
 h1 {
-    color: #2c3e50;
+    color: #3d2b1f;
     text-align: center;
     font-size: 1.6rem;
     margin-top: 0;
     margin-bottom: 20px;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #8b6914;
     padding-bottom: 10px;
 }
 
@@ -71,9 +294,11 @@ h1 {
 /* Styling for the new header info container */
 #header-info {
     display: flex;
-    justify-content: space-between; /* Puts timer on left, score on right */
+    justify-content: space-between;
+    /* Puts timer on left, score on right */
     align-items: center;
-    margin-bottom: 15px; /* Spacing from the question text below */
+    margin-bottom: 15px;
+    /* Spacing from the question text below */
 }
 
 /* Score Display */
@@ -81,34 +306,46 @@ h1 {
     text-align: right;
     font-weight: bold;
     font-size: 1.1rem;
-    color: #3498db;
-    /* margin-bottom: 15px; */
+    color: #8b6914;
 }
 
 /* Timer Specific Styles */
 #timer-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: flex-start; /* Align to the left */
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: flex-start;
+    /* Align to the left */
     align-items: center;
     /* margin-bottom: 10px; */
     font-size: 1.1rem;
     font-weight: bold;
-    color: #2ecc71; /* Initial green color */
+    color: #5a8a2e;
 }
+
 #timer-display {
-    min-width: 30px; /* Ensure space for two digits */
+    min-width: 30px;
+    /* Ensure space for two digits */
     text-align: center;
 }
 
 #timer-container.red {
-    color: #e74c3c; /* Red color for timer */
+    color: #e74c3c;
+    /* Red color for timer */
 }
 
 /* Blinking animation */
 @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 #timer-container.blink {
@@ -118,13 +355,14 @@ h1 {
 #time-up-message {
     margin-left: 10px;
     font-style: italic;
-    color: #e74c3c; /* Red for time's up message */
+    color: #e74c3c;
+    /* Red for time's up message */
 }
 
 /* The Question Text */
 #question-text {
     font-size: 1.2rem;
-    color: #34495e;
+    color: #3d2b1f;
     margin-bottom: 20px;
     line-height: 1.5;
     font-weight: 500;
@@ -138,51 +376,50 @@ h1 {
     margin-top: 20px;
 }
 
-button {
+#quiz-container .btn-grid button {
     padding: 14px 20px;
-    border: 1px solid #3498db;
-    background-color: white;
-    color: #3498db;
-    border-radius: 8px;
+    border: 1px solid #8b6914;
+    background-color: rgba(245, 236, 208, 0.6);
+    color: #3d2b1f;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
     text-align: left;
     transition: all 0.2s ease;
 }
 
-/* Button Hover and Active States */
-button:hover:not(:disabled) {
-    background-color: #3498db;
-    color: white;
+#quiz-container .btn-grid button:hover:not(:disabled) {
+    background-color: #8b6914;
+    color: #f5ecd0;
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.15);
+    box-shadow: 0 4px 6px rgba(139, 105, 20, 0.25);
 }
 
-button:disabled {
+#quiz-container .btn-grid button:disabled {
     cursor: not-allowed;
-    border-color: #cbd5e0;
-    color: #a0aec0;
+    border-color: #c4b48a;
+    color: #a09070;
 }
 
 /* Feedback Box (Correct/Incorrect) */
 #feedback-container {
     margin-top: 25px;
     padding: 20px;
-    background-color: #eefbff;
-    border-left: 5px solid #3498db;
+    background-color: rgba(235, 222, 185, 0.5);
+    border-left: 5px solid #8b6914;
     border-radius: 4px;
 }
 
 #feedback-text {
     margin-top: 0;
     line-height: 1.4;
-    color: #2c3e50;
+    color: #3d2b1f;
 }
 
 /* Next Question Button */
 #next-btn {
-    background-color: #2ecc71; /* Green to indicate progression */
-    color: white;
+    background-color: #8b6914;
+    color: #f5ecd0;
     border: none;
     width: 100%;
     text-align: center;
@@ -191,7 +428,7 @@ button:disabled {
 }
 
 #next-btn:hover {
-    background-color: #27ae60;
+    background-color: #6d5210;
 }
 
 /* Utility Class */
@@ -203,37 +440,70 @@ button:disabled {
 #landing-page {
     text-align: center;
     margin-top: 50px;
-    background-color: white; /* Match quiz container background */
-    padding: 40px; /* More padding for a grander feel */
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
-    max-width: 700px; /* Wider landing page */
+    background: rgba(10, 10, 18, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 50px 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(90, 30, 120, 0.4);
+    box-shadow:
+        0 0 30px rgba(90, 30, 120, 0.15),
+        0 0 60px rgba(57, 255, 20, 0.05),
+        0 8px 32px rgba(0, 0, 0, 0.6);
+    max-width: 700px;
     width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+#landing-page.hide {
+    display: none;
+}
+
+/* Subtle top accent line */
+#landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.6), rgba(90, 30, 120, 0.8), rgba(57, 255, 20, 0.6), transparent);
+    border-radius: 2px;
 }
 
 #cover-text {
-    font-size: 1.3em; /* Slightly larger font */
-    max-width: 650px; /* Wider text area */
-    margin: 25px auto; /* More margin */
-    color: #34495e; /* Consistent text color */
-    line-height: 1.6; /* Improved readability */
+    font-size: 1.25em;
+    max-width: 620px;
+    margin: 25px auto;
+    color: rgba(220, 220, 240, 0.9);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
 }
 
 #start-btn {
-    background-color: #3498db; /* Blue, matching theme */
-    color: white;
-    border: none; /* No border for a cleaner look */
-    padding: 18px 35px; /* Larger button */
-    font-size: 1.6em; /* Larger text */
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.9), rgba(40, 200, 60, 0.95));
+    color: #0a0a12;
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
     cursor: pointer;
-    margin-top: 40px; /* More space above */
-    border-radius: 8px; /* Consistent border radius */
-    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4); /* Button shadow */
-    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow:
+        0 0 15px rgba(57, 255, 20, 0.3),
+        0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 #start-btn:hover {
-    background-color: #2980b9; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.6);
+    background: linear-gradient(135deg, rgba(57, 255, 20, 1), rgba(50, 220, 70, 1));
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 25px rgba(57, 255, 20, 0.5),
+        0 0 50px rgba(57, 255, 20, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.5);
 }

@@ -13,14 +13,16 @@ export const QuizUI = {
     getQuestionTextElement: () => document.getElementById('question-text'),
     getAnswerButtonsContainer: () => document.getElementById('answer-buttons'),
     getFeedbackContainer: () => document.getElementById('feedback-container'),
-    getFeedbackTextElement: () => document.getElementById('feedback-text'), // New getter
+    getFeedbackTextElement: () => document.getElementById('feedback-text'),
     getQuestionSetSelector: () => document.getElementById('question-set'),
     getScoreCountElement: () => document.getElementById('score-count'),
-    getStartButton: () => document.getElementById('start-btn'), // Add getter for start button
-    getLandingPage: () => document.getElementById('landing-page'), // Add getter for landing page
-    getQuizContainer: () => document.getElementById('quiz-container'), // Add getter for quiz container
-    getRestartQuizButton: () => document.getElementById('restart-quiz-btn'), // Add getter for restart button
+    getStartButton: () => document.getElementById('start-btn'),
+    getLandingPage: () => document.getElementById('landing-page'),
+    getQuizContainer: () => document.getElementById('quiz-container'),
+    getRestartQuizButton: () => document.getElementById('restart-quiz-btn'),
     getNextButton: () => document.getElementById('next-btn'),
+    getSdsPage: () => document.getElementById('sds-page'),
+    getSetTiles: () => document.querySelectorAll('.set-tile'),
 
 
     // --- UI Update Functions ---
@@ -73,8 +75,8 @@ export const QuizUI = {
         const feedbackContainer = QuizUI.getFeedbackContainer();
         const feedbackTextElement = QuizUI.getFeedbackTextElement();
         if (feedbackContainer && feedbackTextElement) {
-            feedbackTextElement.innerHTML = message; // Update only the feedback text element
-            feedbackContainer.classList.remove('hide'); // Make the whole container visible
+            feedbackTextElement.innerHTML = message;
+            feedbackContainer.classList.remove('hide');
         }
     },
 
@@ -99,15 +101,28 @@ export const QuizUI = {
     showLandingPage: () => {
         const landingPage = QuizUI.getLandingPage();
         const quizContainer = QuizUI.getQuizContainer();
-        if (landingPage) landingPage.style.display = 'block';
+        const sdsPage = QuizUI.getSdsPage();
+        if (landingPage) landingPage.classList.remove('hide');
         if (quizContainer) quizContainer.classList.add('hide');
+        if (sdsPage) sdsPage.classList.add('hide');
+    },
+
+    showSdsPage: () => {
+        const landingPage = QuizUI.getLandingPage();
+        const quizContainer = QuizUI.getQuizContainer();
+        const sdsPage = QuizUI.getSdsPage();
+        if (landingPage) landingPage.classList.add('hide');
+        if (quizContainer) quizContainer.classList.add('hide');
+        if (sdsPage) sdsPage.classList.remove('hide');
     },
 
     showQuiz: () => {
         const landingPage = QuizUI.getLandingPage();
         const quizContainer = QuizUI.getQuizContainer();
-        if (landingPage) landingPage.style.display = 'none';
+        const sdsPage = QuizUI.getSdsPage();
+        if (landingPage) landingPage.classList.add('hide');
         if (quizContainer) quizContainer.classList.remove('hide');
+        if (sdsPage) sdsPage.classList.add('hide');
     },
 
     renderFinalResults: (score, totalQuestions, reloadPageCallback) => {

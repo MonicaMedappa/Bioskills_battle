@@ -17,14 +17,24 @@ let timerInterval = null; // Initialize to null
 
 /**
  * Handles the click event for the 'GOOD LUCK!' button.
+ * Navigates to the SDS-PAGE set selector.
  */
-async function handleStartButtonClick() {
-    QuizUI.showQuiz(); // Hide landing page, show quiz
-    QuizModel.resetState(); // Reset progress and score
+function handleStartButtonClick() {
+    QuizUI.showSdsPage();
+}
+
+/**
+ * Handles clicking a set tile on the SDS-PAGE.
+ * @param {string} setUrl - The JSON filename for the selected set.
+ */
+async function handleTileClick(setUrl) {
+    QuizModel.questionUrl = setUrl;
+    QuizModel.resetState();
     app.updateScoreDisplay(QuizModel.getScore());
-    QuizUI.hideFeedback(); // Hide feedback if visible
-    await QuizModel.loadQuizData(); // Ensure we load the selected set
-    app.showQuestion(); // Display the first question
+    QuizUI.hideFeedback();
+    QuizUI.showQuiz();
+    await QuizModel.loadQuizData();
+    app.showQuestion();
 }
 
 /**
@@ -35,7 +45,7 @@ function startTimer() {
 
     // Determine time based on question set (e.g., Set 5 for calculations)
     QuizModel.timeLeft = QuizModel.questionUrl === "Set-5-questions.json" ? QuizModel.TIME_PER_CALCULATION_QUESTION : QuizModel.TIME_PER_QUESTION;
-    
+
     QuizUI.updateTimerDisplay(QuizModel.timeLeft);
     QuizUI.setTimerContainerRed(false); // Remove red/blink classes initially
     QuizUI.showTimeUpMessage(false); // Hide time up message initially
@@ -54,7 +64,7 @@ function startTimer() {
             app.stopTimer();
             QuizUI.showTimeUpMessage(true);
             // Automatically advance to the next question when time runs out
-            app.nextQuestion(); 
+            app.nextQuestion();
         }
     }, 1000);
 }
@@ -85,9 +95,9 @@ function showQuestion() {
     }
 
     app.startTimer(); // Start the timer for the new question
-    
+
     QuizUI.updateQuestionText(question.question);
-    
+
     QuizUI.clearAnswerButtons(); // Clear previous buttons
 
     // Ensure options exist and are an array
@@ -109,7 +119,7 @@ function showQuestion() {
  */
 function selectAnswer(selected) {
     app.stopTimer();
-    
+
     const isCorrect = QuizModel.checkAnswer(selected);
     const explanation = QuizModel.getQuestionExplanation();
 
@@ -119,7 +129,7 @@ function selectAnswer(selected) {
     } else {
         QuizUI.updateFeedback(`<strong>Not quite.</strong> ${explanation}`, false);
     }
-    
+
     app.updateScoreDisplay(QuizModel.getScore());
     QuizUI.disableAnswerButtons(true); // Disable all buttons after an answer is selected
 }
@@ -133,39 +143,36 @@ function updateScoreDisplay(currentScore) {
 
 
 // --- Export necessary functions using individual export statements ---
-async function init() { // Export init
+async function init() {
     QuizUI.showLandingPage(); // Start by showing the cover page
+
+    // Set up GOOD LUCK button → navigates to SDS-PAGE
     const startButton = QuizUI.getStartButton();
     if (startButton) {
-        startButton.onclick = handleStartButtonClick; // Set up the event listener for the start button
+        startButton.onclick = handleStartButtonClick;
     }
 
-    // If the question set selector exists, ensure its event listener is set up.
-    const questionSetSelector = QuizUI.getQuestionSetSelector();
-    if (questionSetSelector) {
-        questionSetSelector.onchange = async (e) => {
-            await app.switchSet(e.target.value);
-        };
-    }
+    // Set up tile click handlers on SDS-PAGE
+    const tiles = QuizUI.getSetTiles();
+    tiles.forEach(tile => {
+        tile.onclick = () => app.handleTileClick(tile.dataset.set);
+    });
 
     // Add event listener for the next button
     const nextButton = QuizUI.getNextButton();
     if (nextButton) {
         nextButton.onclick = app.nextQuestion;
     }
-
-    // Load the default quiz set to be ready when the user clicks 'GOOD LUCK!'
-    await QuizModel.loadQuizData();
 }
 
 async function switchSet(newUrl) { // Export switchSet
     app.stopTimer(); // Stop timer when switching set
     QuizModel.questionUrl = newUrl;
     QuizModel.resetState(); // Reset progress and score
-    
+
     app.updateScoreDisplay(QuizModel.getScore());
     QuizUI.hideFeedback();
-    
+
     // Reload the questions for the new set
     await QuizModel.loadQuizData();
 
@@ -190,6 +197,7 @@ function nextQuestion() { // Export nextQuestion
 
 Object.assign(app, {
     handleStartButtonClick,
+    handleTileClick,
     startTimer,
     stopTimer,
     showQuestion,
