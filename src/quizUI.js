@@ -13,6 +13,7 @@ export const QuizUI = {
     getQuestionTextElement: () => document.getElementById('question-text'),
     getAnswerButtonsContainer: () => document.getElementById('answer-buttons'),
     getFeedbackContainer: () => document.getElementById('feedback-container'),
+    getFeedbackTextElement: () => document.getElementById('feedback-text'), // New getter
     getQuestionSetSelector: () => document.getElementById('question-set'),
     getScoreCountElement: () => document.getElementById('score-count'),
     getStartButton: () => document.getElementById('start-btn'), // Add getter for start button
@@ -70,9 +71,10 @@ export const QuizUI = {
 
     updateFeedback: (message, isCorrect) => {
         const feedbackContainer = QuizUI.getFeedbackContainer();
-        if (feedbackContainer) {
-            feedbackContainer.innerHTML = message;
-            feedbackContainer.classList.remove('hide');
+        const feedbackTextElement = QuizUI.getFeedbackTextElement();
+        if (feedbackContainer && feedbackTextElement) {
+            feedbackTextElement.innerHTML = message; // Update only the feedback text element
+            feedbackContainer.classList.remove('hide'); // Make the whole container visible
         }
     },
 

@@ -108,7 +108,7 @@ function showQuestion() {
  * @param {string} explanation - The explanation for the answMEr.
  */
 function selectAnswer(selected) {
-    app.stopTimer(); // Stop the timer when an answer is selected
+    app.stopTimer();
     
     const isCorrect = QuizModel.checkAnswer(selected);
     const explanation = QuizModel.getQuestionExplanation();
