@@ -41,6 +41,7 @@ describe('App Module', () => {
     let mockNextButton;
     let mockQuizContainer;
     let mockFeedbackContainer;
+    let mockFeedbackTextElement; // New mock for feedback text
     let mockTimerDisplay;
     let mockTimeUpMessage;
     let mockTimerContainer;
@@ -97,6 +98,7 @@ describe('App Module', () => {
             },
             innerHTML: ''
         };
+        mockFeedbackTextElement = { innerHTML: '' }; // Mock for feedback text element
         mockTimerDisplay = { innerText: '' };
         mockTimeUpMessage = { classList: { add: jest.fn(), remove: jest.fn(), contains: jest.fn() } };
         mockTimerContainer = { classList: { add: jest.fn(), remove: jest.fn(), contains: jest.fn() } };
@@ -115,6 +117,7 @@ describe('App Module', () => {
                 case 'quiz-container': return mockQuizContainer;
                 case 'landing-page': return {style: {display: 'block'}};
                 case 'feedback-container': return mockFeedbackContainer;
+                case 'feedback-text': return mockFeedbackTextElement; // Return new mock
                 case 'timer-display': return mockTimerDisplay;
                 case 'time-up-message': return mockTimeUpMessage;
                 case 'timer-container': return mockTimerContainer;
@@ -149,6 +152,7 @@ describe('App Module', () => {
         jest.spyOn(QuizUI, 'getNextButton');
         jest.spyOn(QuizUI, 'getQuizContainer');
         jest.spyOn(QuizUI, 'getFeedbackContainer');
+        jest.spyOn(QuizUI, 'getFeedbackTextElement'); // Spy on new getter
 
 
         app = (await import('../src/app.js')).default;
@@ -282,6 +286,7 @@ describe('App Module', () => {
     test('selectAnswer should NOT automatically advance to the next question, and next button should become visible', async () => {
         const nextQuestionSpy = jest.spyOn(app, 'nextQuestion').mockImplementation(() => {});
         jest.spyOn(QuizUI, 'hideFeedback').mockImplementation(() => {}); // Spy on hideFeedback
+        jest.spyOn(QuizUI, 'updateFeedback'); // Spy on QuizUI.updateFeedback
         
         app.selectAnswer('any answer');
         
@@ -295,6 +300,9 @@ describe('App Module', () => {
         expect(mockFeedbackContainer.classList.remove).toHaveBeenCalledWith('hide');
         // And that it does not contain 'hide' anymore (conceptually visible)
         expect(mockFeedbackContainer.classList.contains('hide')).toBe(false); 
+
+        // Assert that the feedback text element's innerHTML was updated
+        expect(mockFeedbackTextElement.innerHTML).toContain('<strong>'); // Check if message content was placed
     });
 
     // Test for nextQuestion()
