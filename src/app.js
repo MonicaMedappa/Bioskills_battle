@@ -16,11 +16,72 @@ let timerInterval = null; // Initialize to null
 
 
 /**
- * Handles the click event for the 'GOOD LUCK!' button.
- * Navigates to the SDS-PAGE set selector.
+ * Handles the click event for the 'Choose your Battle Hub' button.
+ * Shows the Battle Hub modal.
  */
-function handleStartButtonClick() {
-    QuizUI.showSdsPage();
+function handleChooseHubButtonClick() {
+    QuizUI.showBattleHubModal(true);
+}
+
+const labTechniques = [
+    { id: 'sds-page', title: 'SDS-PAGE', icon: '🧬', comingSoon: false },
+    { id: 'dna-gel', title: 'DNA Gel Electrophoresis', icon: '🧪', comingSoon: true },
+    { id: 'pcr', title: 'Polymerase Chain Reaction', icon: '⚗️', comingSoon: true },
+    { id: 'qpcr', title: 'qPCR', icon: '📊', comingSoon: true },
+    { id: 'ph', title: 'pH', icon: '💧', comingSoon: true },
+    { id: 'spec', title: 'OD and Spectrophotometer', icon: '🔦', comingSoon: true },
+    { id: 'rt-pcr', title: 'RT-PCR', icon: '🧬', comingSoon: true },
+    { id: 'elisa', title: 'ELISA', icon: '🧫', comingSoon: true },
+    { id: 'western', title: 'Western Blotting', icon: '🩹', comingSoon: true },
+    { id: 'cloning', title: 'Cloning', icon: '🐑', comingSoon: true }
+];
+
+/**
+ * Handles the click event for the 'The Lab Bench' button in the modal.
+ */
+function handleLabBenchButtonClick() {
+    QuizUI.showBattleHubModal(false);
+    QuizUI.showLabBenchPage();
+    QuizUI.renderTechniquesGrid(labTechniques, app.handleTechniqueClick);
+}
+
+/**
+ * Handles clicking a technique tile.
+ * @param {string} techniqueId - The ID of the selected technique.
+ */
+function handleTechniqueClick(techniqueId) {
+    if (techniqueId === 'sds-page') {
+        QuizUI.showSdsPage();
+    }
+}
+
+const libraryArticles = [
+    {
+        id: 'patho-global-health',
+        title: 'Pathophysiology of Global Health Discoveries',
+        author: 'Journal of Bioskills',
+        year: '2024',
+        comingSoon: false
+    }
+];
+
+/**
+ * Handles the click event for the 'The Library' button in the modal.
+ */
+function handleLibraryButtonClick() {
+    QuizUI.showBattleHubModal(false);
+    QuizUI.showLibraryPage();
+    QuizUI.renderArticlesGrid(libraryArticles, app.handleArticleClick);
+}
+
+/**
+ * Handles clicking an article card.
+ * @param {string} articleId - The ID of the selected article.
+ */
+function handleArticleClick(articleId) {
+    // For now, let's just alert that it's coming soon, or show a placeholder
+    console.log(`Article selected: ${articleId}`);
+    // In Stage 4.3, we'll build the article sets page.
 }
 
 /**
@@ -146,13 +207,42 @@ function updateScoreDisplay(currentScore) {
 async function init() {
     QuizUI.showLandingPage(); // Start by showing the cover page
 
-    // Set up GOOD LUCK button → navigates to SDS-PAGE
-    const startButton = QuizUI.getStartButton();
-    if (startButton) {
-        startButton.onclick = handleStartButtonClick;
+    // Set up Choose Hub button
+    const chooseHubBtn = QuizUI.getChooseHubButton();
+    if (chooseHubBtn) {
+        chooseHubBtn.onclick = handleChooseHubButtonClick;
     }
 
-    // Set up tile click handlers on SDS-PAGE
+    // Set up Hub options in modal
+    const labBenchBtn = QuizUI.getLabBenchButton();
+    if (labBenchBtn) {
+        labBenchBtn.onclick = handleLabBenchButtonClick;
+    }
+
+    const libraryBtn = QuizUI.getLibraryButton();
+    if (libraryBtn) {
+        libraryBtn.onclick = handleLibraryButtonClick;
+    }
+
+    const closeModalBtn = QuizUI.getCloseModalButton();
+    if (closeModalBtn) {
+        closeModalBtn.onclick = () => QuizUI.showBattleHubModal(false);
+    }
+
+    // Set up Back buttons
+    const backToHomeFromLab = QuizUI.getBackToHomeFromLab();
+    if (backToHomeFromLab) {
+        backToHomeFromLab.onclick = () => QuizUI.showLandingPage();
+    }
+
+    const backToHomeFromLibrary = QuizUI.getBackToHomeFromLibrary();
+    if (backToHomeFromLibrary) {
+        backToHomeFromLibrary.onclick = () => QuizUI.showLandingPage();
+    }
+
+    // Temporary: link SDS-PAGE directly for now to keep things working
+    // In Stage 3, we'll have a grid with a click handler.
+    // For now, let's keep the existing SDS-PAGE set tiles logic working if the page is shown.
     const tiles = QuizUI.getSetTiles();
     tiles.forEach(tile => {
         tile.onclick = () => app.handleTileClick(tile.dataset.set);
@@ -196,17 +286,22 @@ function nextQuestion() { // Export nextQuestion
 }
 
 Object.assign(app, {
-    handleStartButtonClick,
+    handleChooseHubButtonClick,
+    handleLabBenchButtonClick,
+    handleLibraryButtonClick,
+    handleTechniqueClick,
+    handleArticleClick,
     handleTileClick,
+    labTechniques,
+    libraryArticles,
     startTimer,
     stopTimer,
     showQuestion,
     selectAnswer,
     updateScoreDisplay,
-    init,
-    switchSet,
     nextQuestion,
+    switchSet,
+    init
 });
 
 export default app;
-

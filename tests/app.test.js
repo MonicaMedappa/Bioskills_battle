@@ -36,7 +36,14 @@ jest.unstable_mockModule('../src/utils.js', () => ({
 }));
 
 describe('App Module', () => {
-    let mockStartButton;
+    let mockChooseHubButton;
+    let mockLabBenchButton;
+    let mockLibraryButton;
+    let mockCloseModalButton;
+    let mockLabBenchPage;
+    let mockLibraryPage;
+    let mockBackToHomeFromLab;
+    let mockBackToHomeFromLibrary;
     let mockQuestionSetSelector;
     let mockNextButton;
     let mockQuizContainer;
@@ -49,6 +56,7 @@ describe('App Module', () => {
     let mockAnswerButtonsContainer;
     let mockScoreCountElement;
     let mockRestartQuizButton;
+    let mockBattleHubModal;
 
     // State for mockFeedbackContainer.classList.contains
     let feedbackContainerIsHidden;
@@ -63,7 +71,7 @@ describe('App Module', () => {
 
         // Spy on `clearInterval` and mock `console.error` globally
         jest.spyOn(global, 'clearInterval');
-        jest.spyOn(console, 'error').mockImplementation(() => {});
+        jest.spyOn(console, 'error').mockImplementation(() => { });
 
         global.fetch = jest.fn(() =>
             Promise.resolve({
@@ -80,7 +88,15 @@ describe('App Module', () => {
         quizContainerIsHidden = true;
 
         // Mock DOM elements
-        mockStartButton = { onclick: jest.fn() };
+        mockChooseHubButton = { onclick: jest.fn() };
+        mockLabBenchButton = { onclick: jest.fn() };
+        mockLibraryButton = { onclick: jest.fn() };
+        mockCloseModalButton = { onclick: jest.fn() };
+        mockLabBenchPage = { classList: { add: jest.fn(), remove: jest.fn(), contains: jest.fn() } };
+        mockLibraryPage = { classList: { add: jest.fn(), remove: jest.fn(), contains: jest.fn() } };
+        mockBackToHomeFromLab = { onclick: jest.fn() };
+        mockBackToHomeFromLibrary = { onclick: jest.fn() };
+        mockBattleHubModal = { classList: { add: jest.fn(), remove: jest.fn(), contains: jest.fn() } };
         mockQuestionSetSelector = { onchange: jest.fn() };
         mockNextButton = { onclick: jest.fn() };
         mockQuizContainer = {
@@ -89,7 +105,7 @@ describe('App Module', () => {
                 add: jest.fn(() => { quizContainerIsHidden = true; }),
                 remove: jest.fn(() => { quizContainerIsHidden = false; }),
             }
-        }; 
+        };
         mockFeedbackContainer = {
             classList: {
                 contains: jest.fn((cls) => cls === 'hide' ? feedbackContainerIsHidden : false),
@@ -111,13 +127,20 @@ describe('App Module', () => {
         // Mock document.getElementById to return our mock elements
         jest.spyOn(document, 'getElementById').mockImplementation((id) => {
             switch (id) {
-                case 'start-btn': return mockStartButton;
-                case 'question-set': return mockQuestionSetSelector;
+                case 'choose-hub-btn': return mockChooseHubButton;
+                case 'lab-bench-btn': return mockLabBenchButton;
+                case 'library-btn': return mockLibraryButton;
+                case 'close-modal-btn': return mockCloseModalButton;
+                case 'battle-hub-modal': return mockBattleHubModal;
+                case 'lab-bench-page': return mockLabBenchPage;
+                case 'library-page': return mockLibraryPage;
+                case 'back-to-home-from-lab': return mockBackToHomeFromLab;
+                case 'back-to-home-from-library': return mockBackToHomeFromLibrary;
                 case 'next-btn': return mockNextButton;
                 case 'quiz-container': return mockQuizContainer;
-                case 'landing-page': return {style: {display: 'block'}};
+                case 'landing-page': return { classList: { add: jest.fn(), remove: jest.fn(), contains: jest.fn() } };
                 case 'feedback-container': return mockFeedbackContainer;
-                case 'feedback-text': return mockFeedbackTextElement; // Return new mock
+                case 'feedback-text': return mockFeedbackTextElement;
                 case 'timer-display': return mockTimerDisplay;
                 case 'time-up-message': return mockTimeUpMessage;
                 case 'timer-container': return mockTimerContainer;
@@ -147,12 +170,19 @@ describe('App Module', () => {
         jest.spyOn(QuizUI, 'disableAnswerButtons');
         jest.spyOn(QuizUI, 'updateScoreDisplay');
         jest.spyOn(QuizUI, 'renderFinalResults');
-        jest.spyOn(QuizUI, 'getStartButton');
-        jest.spyOn(QuizUI, 'getQuestionSetSelector');
+        jest.spyOn(QuizUI, 'getChooseHubButton');
+        jest.spyOn(QuizUI, 'getLabBenchButton');
+        jest.spyOn(QuizUI, 'getLibraryButton');
+        jest.spyOn(QuizUI, 'getCloseModalButton');
+        jest.spyOn(QuizUI, 'getBackToHomeFromLab');
+        jest.spyOn(QuizUI, 'getBackToHomeFromLibrary');
         jest.spyOn(QuizUI, 'getNextButton');
         jest.spyOn(QuizUI, 'getQuizContainer');
         jest.spyOn(QuizUI, 'getFeedbackContainer');
-        jest.spyOn(QuizUI, 'getFeedbackTextElement'); // Spy on new getter
+        jest.spyOn(QuizUI, 'showBattleHubModal');
+        jest.spyOn(QuizUI, 'showLabBenchPage');
+        jest.spyOn(QuizUI, 'showLibraryPage');
+        jest.spyOn(QuizUI, 'getFeedbackTextElement');
 
 
         app = (await import('../src/app.js')).default;
@@ -179,32 +209,40 @@ describe('App Module', () => {
 
     // Test for init()
     test('init should set up UI elements and event listeners', async () => {
-        QuizModel.loadQuizData.mockResolvedValue(true);
-
         await app.init();
 
         expect(QuizUI.showLandingPage).toHaveBeenCalledTimes(1);
-        expect(QuizUI.getStartButton).toHaveBeenCalled(); // Ensure getter is called
-        expect(mockStartButton.onclick).toBeInstanceOf(Function);
-        expect(QuizUI.getQuestionSetSelector).toHaveBeenCalled();
-        expect(mockQuestionSetSelector.onchange).toBeInstanceOf(Function);
-        expect(QuizUI.getNextButton).toHaveBeenCalled();
-        expect(mockNextButton.onclick).toBeInstanceOf(Function);
-        expect(QuizModel.loadQuizData).toHaveBeenCalledTimes(1);
-        expect(QuizModel.loadQuizData).toHaveBeenCalledWith(); // Called with default URL
+        expect(QuizUI.getChooseHubButton).toHaveBeenCalled();
+        expect(mockChooseHubButton.onclick).toBeInstanceOf(Function);
+
+        expect(QuizUI.getLabBenchButton).toHaveBeenCalled();
+        expect(mockLabBenchButton.onclick).toBeInstanceOf(Function);
+
+        expect(QuizUI.getLibraryButton).toHaveBeenCalled();
+        expect(mockLibraryButton.onclick).toBeInstanceOf(Function);
+
+        expect(QuizUI.getBackToHomeFromLab).toHaveBeenCalled();
+        expect(mockBackToHomeFromLab.onclick).toBeInstanceOf(Function);
     });
 
-    // Test for handleStartButtonClick()
-    test('handleStartButtonClick should transition to quiz and load first question', async () => {
-        QuizModel.loadQuizData.mockResolvedValue(true);
+    // Test for handleChooseHubButtonClick()
+    test('handleChooseHubButtonClick should show modal', () => {
+        app.handleChooseHubButtonClick();
+        expect(QuizUI.showBattleHubModal).toHaveBeenCalledWith(true);
+    });
 
-        await app.handleStartButtonClick();
+    // Test for handleLabBenchButtonClick()
+    test('handleLabBenchButtonClick should hide modal and show lab bench page', () => {
+        app.handleLabBenchButtonClick();
+        expect(QuizUI.showBattleHubModal).toHaveBeenCalledWith(false);
+        expect(QuizUI.showLabBenchPage).toHaveBeenCalled();
+    });
 
-        expect(QuizUI.showQuiz).toHaveBeenCalledTimes(1);
-        expect(QuizModel.resetState).toHaveBeenCalledTimes(1);
-        expect(QuizUI.updateScoreDisplay).toHaveBeenCalledWith(0); // Initial score
-        expect(QuizUI.hideFeedback).toHaveBeenCalledTimes(1);
-        expect(QuizModel.loadQuizData).toHaveBeenCalledTimes(1);
+    // Test for handleLibraryButtonClick()
+    test('handleLibraryButtonClick should hide modal and show library page', () => {
+        app.handleLibraryButtonClick();
+        expect(QuizUI.showBattleHubModal).toHaveBeenCalledWith(false);
+        expect(QuizUI.showLibraryPage).toHaveBeenCalled();
     });
 
     // Test for showQuestion()
@@ -284,22 +322,22 @@ describe('App Module', () => {
     });
 
     test('selectAnswer should NOT automatically advance to the next question, and next button should become visible', async () => {
-        const nextQuestionSpy = jest.spyOn(app, 'nextQuestion').mockImplementation(() => {});
-        jest.spyOn(QuizUI, 'hideFeedback').mockImplementation(() => {}); // Spy on hideFeedback
+        const nextQuestionSpy = jest.spyOn(app, 'nextQuestion').mockImplementation(() => { });
+        jest.spyOn(QuizUI, 'hideFeedback').mockImplementation(() => { }); // Spy on hideFeedback
         jest.spyOn(QuizUI, 'updateFeedback'); // Spy on QuizUI.updateFeedback
-        
+
         app.selectAnswer('any answer');
-        
+
         jest.advanceTimersByTime(2000); // Advance time past any potential delay
         expect(nextQuestionSpy).not.toHaveBeenCalled(); // Still should not advance automatically
-        
+
         expect(QuizUI.updateFeedback).toHaveBeenCalled(); // Feedback should be shown
         expect(QuizUI.hideFeedback).not.toHaveBeenCalled(); // hideFeedback should NOT be called
-        
+
         // Assert that 'hide' class was removed from the feedback container
         expect(mockFeedbackContainer.classList.remove).toHaveBeenCalledWith('hide');
         // And that it does not contain 'hide' anymore (conceptually visible)
-        expect(mockFeedbackContainer.classList.contains('hide')).toBe(false); 
+        expect(mockFeedbackContainer.classList.contains('hide')).toBe(false);
 
         // Assert that the feedback text element's innerHTML was updated
         expect(mockFeedbackTextElement.innerHTML).toContain('<strong>'); // Check if message content was placed
@@ -351,24 +389,5 @@ describe('App Module', () => {
 
         await app.switchSet('Set-3-questions.json');
         expect(showQuestionSpy).not.toHaveBeenCalled();
-    });
-
-    // Test for DOMContentLoaded and init()
-    test('clicking start button after init should start the quiz', async () => {
-        // 1. Setup the DOM and mocks - handled in beforeEach now for general elements
-
-        QuizModel.loadQuizData.mockResolvedValue(true);
-        
-        await app.init();
-
-        expect(QuizUI.showLandingPage).toHaveBeenCalledTimes(1);
-        expect(QuizUI.getStartButton).toHaveBeenCalled(); // Ensure getter is called
-        expect(mockStartButton.onclick).toBeInstanceOf(Function);
-        expect(QuizUI.getQuestionSetSelector).toHaveBeenCalled();
-        expect(mockQuestionSetSelector.onchange).toBeInstanceOf(Function);
-        expect(QuizUI.getNextButton).toHaveBeenCalled();
-        expect(mockNextButton.onclick).toBeInstanceOf(Function);
-        expect(QuizModel.loadQuizData).toHaveBeenCalledTimes(1);
-        expect(QuizModel.loadQuizData).toHaveBeenCalledWith(); // Called with default URL
     });
 });

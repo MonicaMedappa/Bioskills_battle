@@ -1,0 +1,67 @@
+﻿
+> bioskills_battle@1.0.0 test
+> node --experimental-vm-modules node_modules/jest/bin/jest.js
+
+node.exe : 
+(node:17596) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Users\monic\AppData
+\Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ((node:17596)    
+ Ex...nge at any ti    
+me:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+PASS tests/app.test.js
+(node:22624) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+PASS 
+tests/homepage.test.js
+(node:10932) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+PASS 
+tests/quizUI.test.js
+
+Test Suites: 3 passed, 
+3 total
+Tests:       37 
+passed, 37 total
+Snapshots:   0 total
+Time:        5.953 s
+Ran all test suites.

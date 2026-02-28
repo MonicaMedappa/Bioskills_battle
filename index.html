@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bioskills Battle</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div id="landing-page">
-        <p id="cover-text">
-Hey Skiller!
-We’re diving deep into the Journal Archives to decode the scientific breakthroughs in global health. 
-From pathophysiology to the front lines of clinical discovery, you’ll be testing your wits against peer-reviewed research.
-But a researcher is only as good as their tools. To win, you’ll need to master the biology techniques that make these discoveries possible. 
-Author by author, method by method- it’s time to bridge the gap between the page and the bench.
-Gear up, dive in, and let the Bioskills Battle begin!
-        </p>
-        <button id="start-btn">GOOD LUCK!</button>
+        <h1 id="game-title">Bioskills Battle</h1>
+        <div id="intro-section">
+            <h2 id="hey-skiller">Hey Skiller!</h2>
+            <p id="cover-text">
+                We’re diving deep into the Journal Archives to decode the scientific breakthroughs in global health.
+                From pathophysiology to the front lines of clinical discovery, you’ll be testing your wits against
+                peer-reviewed research.
+                But a researcher is only as good as their tools. To win, you’ll need to master the biology techniques
+                that make these discoveries possible.
+                Author by author, method by method- it’s time to bridge the gap between the page and the bench.
+                Gear up, dive in, and let the Bioskills Battle begin!
+            </p>
+        </div>
+        <button id="choose-hub-btn">Choose your Battle Hub</button>
+    </div>
+
+    <!-- Battle Hub Modal -->
+    <div id="battle-hub-modal" class="hide">
+        <div class="modal-content">
+            <h2>Choose your Battle Hub</h2>
+            <div class="hub-options">
+                <button id="lab-bench-btn">🔬 The Lab Bench</button>
+                <button id="library-btn">📚 The Library</button>
+            </div>
+            <button id="close-modal-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="lab-bench-page" class="hide">
+        <button class="back-btn" id="back-to-home-from-lab">← Back</button>
+        <h2 class="page-title">The Lab Bench</h2>
+        <p class="page-subtitle">Choose a biology technique to master</p>
+        <div id="techniques-grid" class="techniques-grid">
+            <!-- Technique tiles will be injected here -->
+        </div>
+    </div>
+
+    <!-- Removed duplicate sds-page -->
+    <div id="library-page" class="hide">
+        <button class="back-btn" id="back-to-home-from-library">← Back</button>
+        <h2 class="page-title">The Library</h2>
+        <p class="page-subtitle">Test your wits against peer-reviewed research</p>
+        <div id="articles-grid" class="articles-grid">
+            <!-- Article cards will be injected here -->
+        </div>
     </div>
 
     <div id="sds-page" class="hide">
+        <button id="back-to-lab-btn" class="back-btn">← Back to Lab Bench</button>
         <h2 id="sds-title">SDS-PAGE</h2>
         <p id="sds-subtitle">Choose your challenge set</p>
         <div class="set-tiles-grid">
@@ -53,11 +92,11 @@ Gear up, dive in, and let the Bioskills Battle begin!
                 <span id="score-count">Score: 0</span>
             </div>
         </div>
-        
+
         <div id="question-text">Initializing laboratory questions...</div>
-        
+
         <div id="answer-buttons" class="btn-grid"></div>
-        
+
         <div id="feedback-container" class="hide">
             <div id="feedback-text"></div>
             <button id="next-btn">Next Question</button>
@@ -69,4 +108,5 @@ Gear up, dive in, and let the Bioskills Battle begin!
         document.addEventListener('DOMContentLoaded', app.init);
     </script>
 </body>
+
 </html>

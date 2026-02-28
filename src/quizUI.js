@@ -16,7 +16,18 @@ export const QuizUI = {
     getFeedbackTextElement: () => document.getElementById('feedback-text'),
     getQuestionSetSelector: () => document.getElementById('question-set'),
     getScoreCountElement: () => document.getElementById('score-count'),
-    getStartButton: () => document.getElementById('start-btn'),
+    getGameTitle: () => document.getElementById('game-title'),
+    getChooseHubButton: () => document.getElementById('choose-hub-btn'),
+    getBattleHubModal: () => document.getElementById('battle-hub-modal'),
+    getLabBenchButton: () => document.getElementById('lab-bench-btn'),
+    getLibraryButton: () => document.getElementById('library-btn'),
+    getCloseModalButton: () => document.getElementById('close-modal-btn'),
+    getLabBenchPage: () => document.getElementById('lab-bench-page'),
+    getLibraryPage: () => document.getElementById('library-page'),
+    getBackToHomeFromLab: () => document.getElementById('back-to-home-from-lab'),
+    getBackToHomeFromLibrary: () => document.getElementById('back-to-home-from-library'),
+    getTechniquesGrid: () => document.getElementById('techniques-grid'),
+    getArticlesGrid: () => document.getElementById('articles-grid'),
     getLandingPage: () => document.getElementById('landing-page'),
     getQuizContainer: () => document.getElementById('quiz-container'),
     getRestartQuizButton: () => document.getElementById('restart-quiz-btn'),
@@ -95,34 +106,118 @@ export const QuizUI = {
 
     updateScoreDisplay: (score) => {
         const scoreCountElement = QuizUI.getScoreCountElement();
-        if (scoreCountElement) scoreCountElement.innerText = `Score: ${score}`;
+        if (scoreCountElement) {
+            scoreCountElement.innerText = `Score: ${score}`;
+        }
+    },
+
+    // --- Page Visibility Functions ---
+    hideAllPages: () => {
+        const pages = [
+            QuizUI.getLandingPage(),
+            QuizUI.getQuizContainer(),
+            QuizUI.getSdsPage(),
+            QuizUI.getLabBenchPage(),
+            QuizUI.getLibraryPage(),
+            QuizUI.getBattleHubModal()
+        ];
+        pages.forEach(page => {
+            if (page) page.classList.add('hide');
+        });
     },
 
     showLandingPage: () => {
-        const landingPage = QuizUI.getLandingPage();
-        const quizContainer = QuizUI.getQuizContainer();
-        const sdsPage = QuizUI.getSdsPage();
-        if (landingPage) landingPage.classList.remove('hide');
-        if (quizContainer) quizContainer.classList.add('hide');
-        if (sdsPage) sdsPage.classList.add('hide');
+        QuizUI.hideAllPages();
+        const page = QuizUI.getLandingPage();
+        if (page) page.classList.remove('hide');
     },
 
     showSdsPage: () => {
-        const landingPage = QuizUI.getLandingPage();
-        const quizContainer = QuizUI.getQuizContainer();
-        const sdsPage = QuizUI.getSdsPage();
-        if (landingPage) landingPage.classList.add('hide');
-        if (quizContainer) quizContainer.classList.add('hide');
-        if (sdsPage) sdsPage.classList.remove('hide');
+        QuizUI.hideAllPages();
+        const page = QuizUI.getSdsPage();
+        if (page) page.classList.remove('hide');
     },
 
     showQuiz: () => {
-        const landingPage = QuizUI.getLandingPage();
-        const quizContainer = QuizUI.getQuizContainer();
-        const sdsPage = QuizUI.getSdsPage();
-        if (landingPage) landingPage.classList.add('hide');
-        if (quizContainer) quizContainer.classList.remove('hide');
-        if (sdsPage) sdsPage.classList.add('hide');
+        QuizUI.hideAllPages();
+        const page = QuizUI.getQuizContainer();
+        if (page) page.classList.remove('hide');
+    },
+
+    showLabBenchPage: () => {
+        QuizUI.hideAllPages();
+        const page = QuizUI.getLabBenchPage();
+        if (page) page.classList.remove('hide');
+    },
+
+    showLibraryPage: () => {
+        QuizUI.hideAllPages();
+        const page = QuizUI.getLibraryPage();
+        if (page) page.classList.remove('hide');
+    },
+
+    showBattleHubModal: (show) => {
+        const modal = QuizUI.getBattleHubModal();
+        if (modal) {
+            if (show) modal.classList.remove('hide');
+            else modal.classList.add('hide');
+        }
+    },
+
+    renderTechniquesGrid: (techniques, handleTechniqueClick) => {
+        const grid = QuizUI.getTechniquesGrid();
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        techniques.forEach(tech => {
+            const tile = document.createElement('div');
+            tile.className = 'technique-tile';
+            if (tech.comingSoon) {
+                tile.classList.add('coming-soon');
+            }
+
+            tile.innerHTML = `
+                <div class="tile-icon">${tech.icon}</div>
+                <div class="tile-title">${tech.title}</div>
+                ${tech.comingSoon ? '<div class="coming-soon-badge">Coming Soon</div>' : ''}
+            `;
+
+            if (!tech.comingSoon) {
+                tile.onclick = () => handleTechniqueClick(tech.id);
+            }
+            grid.appendChild(tile);
+        });
+    },
+
+    renderArticlesGrid: (articles, handleArticleClick) => {
+        const grid = QuizUI.getArticlesGrid();
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        articles.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+            if (article.comingSoon) {
+                card.classList.add('coming-soon');
+            }
+
+            card.innerHTML = `
+                <div class="card-content">
+                    <span class="article-category">Scientific Peer-Review</span>
+                    <h3 class="article-title">${article.title}</h3>
+                    <div class="article-meta">
+                        <span class="article-author">${article.author}</span>
+                        <span class="article-date">${article.year}</span>
+                    </div>
+                    ${article.comingSoon ? '<div class="coming-soon-badge">Coming Soon</div>' : '<button class="read-btn">Start Analysis</button>'}
+                </div>
+            `;
+
+            if (!article.comingSoon) {
+                card.onclick = () => handleArticleClick(article.id);
+            }
+            grid.appendChild(card);
+        });
     },
 
     renderFinalResults: (score, totalQuestions, reloadPageCallback) => {
