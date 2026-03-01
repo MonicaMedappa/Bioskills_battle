@@ -7,6 +7,7 @@ import { labTechniques, libraryArticles, articleSets } from './data.js'; // Impo
 
 const app = {};
 let timerInterval = null;
+let quizOrigin = 'landing-page'; // Track where the quiz started from
 
 /**
  * Handles the click event for the 'Choose your Battle Hub' button.
@@ -30,6 +31,7 @@ function handleLabBenchButtonClick() {
  */
 function handleTechniqueClick(techniqueId) {
     if (techniqueId === 'sds-page') {
+        quizOrigin = 'sds-page';
         QuizUI.showSdsPage();
     }
 }
@@ -50,6 +52,7 @@ function handleLibraryButtonClick() {
 function handleArticleClick(articleId) {
     const sets = articleSets[articleId];
     if (sets) {
+        quizOrigin = 'article-sets-page';
         QuizUI.showArticleSetsPage();
         QuizUI.renderArticleSetsGrid(sets, app.handleTileClick);
         const titleElem = document.getElementById('article-sets-title');
@@ -172,10 +175,31 @@ function selectAnswer(selected) {
 }
 
 /**
+ * Handles the back button click during a quiz.
+ */
+function handleQuizBack() {
+    app.stopTimer();
+    if (quizOrigin === 'sds-page') {
+        QuizUI.showSdsPage();
+    } else if (quizOrigin === 'article-sets-page') {
+        QuizUI.showArticleSetsPage();
+    } else {
+        QuizUI.showLandingPage();
+    }
+}
+
+/**
  * Updates the score display on the page.
  */
 function updateScoreDisplay(currentScore) {
     QuizUI.updateScoreDisplay(currentScore);
+}
+
+/**
+ * Sets the quiz origin manually (mainly for testing).
+ */
+function setQuizOrigin(origin) {
+    quizOrigin = origin;
 }
 
 
@@ -234,6 +258,12 @@ async function init() {
     if (nextButton) {
         nextButton.onclick = app.nextQuestion;
     }
+
+    // Set up Quiz Back button
+    const quizBackBtn = QuizUI.getQuizBackButton();
+    if (quizBackBtn) {
+        quizBackBtn.onclick = handleQuizBack;
+    }
 }
 
 async function switchSet(newUrl) { // Export switchSet
@@ -282,6 +312,8 @@ Object.assign(app, {
     updateScoreDisplay,
     nextQuestion,
     switchSet,
+    handleQuizBack,
+    setQuizOrigin,
     init
 });
 

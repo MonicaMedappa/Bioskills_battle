@@ -37,6 +37,7 @@ export const QuizUI = {
     getArticleSetsPage: () => document.getElementById('article-sets-page'),
     getArticleSetsGrid: () => document.getElementById('article-sets-grid'),
     getBackToLibraryButton: () => document.getElementById('back-to-library-btn'),
+    getQuizBackButton: () => document.getElementById('quiz-back-btn'),
 
 
     // --- UI Update Functions ---
@@ -131,33 +132,23 @@ export const QuizUI = {
     },
 
     showLandingPage: () => {
-        QuizUI.hideAllPages();
-        const page = QuizUI.getLandingPage();
-        if (page) page.classList.remove('hide');
+        QuizUI.showPage('landing-page');
     },
 
     showSdsPage: () => {
-        QuizUI.hideAllPages();
-        const page = QuizUI.getSdsPage();
-        if (page) page.classList.remove('hide');
+        QuizUI.showPage('sds-page');
     },
 
     showQuiz: () => {
-        QuizUI.hideAllPages();
-        const page = QuizUI.getQuizContainer();
-        if (page) page.classList.remove('hide');
+        QuizUI.showPage('quiz-container');
     },
 
     showLabBenchPage: () => {
-        QuizUI.hideAllPages();
-        const page = QuizUI.getLabBenchPage();
-        if (page) page.classList.remove('hide');
+        QuizUI.showPage('lab-bench-page');
     },
 
     showLibraryPage: () => {
-        QuizUI.hideAllPages();
-        const page = QuizUI.getLibraryPage();
-        if (page) page.classList.remove('hide');
+        QuizUI.showPage('library-page');
     },
 
     showBattleHubModal: (show) => {
@@ -169,8 +160,12 @@ export const QuizUI = {
     },
 
     showArticleSetsPage: () => {
+        QuizUI.showPage('article-sets-page');
+    },
+
+    showPage: (pageId) => {
         QuizUI.hideAllPages();
-        const page = QuizUI.getArticleSetsPage();
+        const page = document.getElementById(pageId);
         if (page) page.classList.remove('hide');
     },
 

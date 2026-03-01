@@ -35,6 +35,35 @@ jest.unstable_mockModule('../src/utils.js', () => ({
     },
 }));
 
+// Mock data module globally
+jest.unstable_mockModule('../src/data.js', () => ({
+    labTechniques: [
+        { id: 'sds-page', title: 'SDS-PAGE', icon: '🧬', comingSoon: false },
+        { id: 'dna-gel', title: 'DNA Gel Electrophoresis', icon: '🧪', comingSoon: true }
+    ],
+    libraryArticles: [
+        {
+            id: 'trichinellosis',
+            title: 'Trichinellosis: A zoonosis that still requires vigilance',
+            author: 'Ivana Mitic, Sasa Vasilev, Alisa Gruden-Movsesijan',
+            university: 'University of Belgrade',
+            journal: 'Plos Neglected Tropical Diseases',
+            year: 'Jan, 2026',
+            comingSoon: false
+        }
+    ],
+    articleSets: {
+        'trichinellosis': [
+            { id: 'data/library/trichinellosis/Set-1.json', title: 'Set 1' },
+            { id: 'data/library/trichinellosis/Set-2.json', title: 'Set 2' },
+            { id: 'data/library/trichinellosis/Set-3.json', title: 'Set 3' },
+            { id: 'data/library/trichinellosis/Set-4.json', title: 'Set 4' },
+            { id: 'data/library/trichinellosis/Set-5.json', title: 'Set 5' },
+            { id: 'data/library/trichinellosis/Set-6.json', title: 'Set 6' }
+        ]
+    }
+}));
+
 describe('App Module', () => {
     let mockChooseHubButton;
     let mockLabBenchButton;
@@ -182,7 +211,13 @@ describe('App Module', () => {
         jest.spyOn(QuizUI, 'showBattleHubModal');
         jest.spyOn(QuizUI, 'showLabBenchPage');
         jest.spyOn(QuizUI, 'showLibraryPage');
+        jest.spyOn(QuizUI, 'showArticleSetsPage');
+        jest.spyOn(QuizUI, 'renderArticlesGrid');
+        jest.spyOn(QuizUI, 'renderArticleSetsGrid');
+        jest.spyOn(QuizUI, 'renderTechniquesGrid');
         jest.spyOn(QuizUI, 'getFeedbackTextElement');
+        jest.spyOn(QuizUI, 'showSdsPage');
+        jest.spyOn(QuizUI, 'getQuizBackButton');
 
 
         app = (await import('../src/app.js')).default;
@@ -389,5 +424,63 @@ describe('App Module', () => {
 
         await app.switchSet('Set-3-questions.json');
         expect(showQuestionSpy).not.toHaveBeenCalled();
+    });
+
+    describe('Hub Navigation', () => {
+        test('handleLabBenchButtonClick should show Lab Bench and render techniques', () => {
+            app.handleLabBenchButtonClick();
+            expect(QuizUI.showBattleHubModal).toHaveBeenCalledWith(false);
+            expect(QuizUI.showLabBenchPage).toHaveBeenCalled();
+            expect(QuizUI.renderTechniquesGrid).toHaveBeenCalled();
+        });
+
+        test('handleLibraryButtonClick should show Library and render articles', () => {
+            app.handleLibraryButtonClick();
+            expect(QuizUI.showBattleHubModal).toHaveBeenCalledWith(false);
+            expect(QuizUI.showLibraryPage).toHaveBeenCalled();
+            expect(QuizUI.renderArticlesGrid).toHaveBeenCalled();
+        });
+
+        test('handleArticleClick should show article sets and render tiles', () => {
+            app.handleArticleClick('trichinellosis');
+            expect(QuizUI.showArticleSetsPage).toHaveBeenCalled();
+            expect(QuizUI.renderArticleSetsGrid).toHaveBeenCalled();
+        });
+
+        test('handleTileClick should load quiz data and show quiz', async () => {
+            QuizModel.loadQuizData.mockResolvedValue(true);
+            const showQuestionSpy = jest.spyOn(app, 'showQuestion').mockImplementation(() => { });
+
+            await app.handleTileClick('mock-path.json');
+
+            expect(QuizModel.questionUrl).toBe('mock-path.json');
+            expect(QuizModel.loadQuizData).toHaveBeenCalled();
+            expect(QuizUI.showQuiz).toHaveBeenCalled();
+            expect(showQuestionSpy).toHaveBeenCalled();
+        });
+
+        test('handleQuizBack should stop timer and return to SDS-PAGE if origin is sds-page', () => {
+            const stopTimerSpy = jest.spyOn(app, 'stopTimer');
+
+            // Set origin
+            app.handleTechniqueClick('sds-page');
+
+            app.handleQuizBack();
+
+            expect(stopTimerSpy).toHaveBeenCalled();
+            expect(QuizUI.showSdsPage).toHaveBeenCalled();
+        });
+
+        test('handleQuizBack should stop timer and return to Article Sets if origin is article-sets-page', () => {
+            const stopTimerSpy = jest.spyOn(app, 'stopTimer');
+
+            // Set origin
+            app.handleArticleClick('trichinellosis');
+
+            app.handleQuizBack();
+
+            expect(stopTimerSpy).toHaveBeenCalled();
+            expect(QuizUI.showArticleSetsPage).toHaveBeenCalled();
+        });
     });
 });
