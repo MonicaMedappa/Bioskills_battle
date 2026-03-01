@@ -57,10 +57,12 @@ function handleTechniqueClick(techniqueId) {
 
 const libraryArticles = [
     {
-        id: 'patho-global-health',
-        title: 'Pathophysiology of Global Health Discoveries',
-        author: 'Journal of Bioskills',
-        year: '2024',
+        id: 'trichinellosis',
+        title: 'Trichinellosis: A zoonosis that still requires vigilance',
+        author: 'Ivana Mitic, Sasa Vasilev, Alisa Gruden-Movsesijan',
+        university: 'University of Belgrade',
+        journal: 'Plos Neglected Tropical Diseases',
+        year: 'Jan, 2026',
         comingSoon: false
     }
 ];

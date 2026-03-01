@@ -203,12 +203,15 @@ export const QuizUI = {
 
             card.innerHTML = `
                 <div class="card-content">
-                    <span class="article-category">Scientific Peer-Review</span>
+                    <span class="article-category">${article.journal || 'Scientific Peer-Review'}</span>
                     <h3 class="article-title">${article.title}</h3>
-                    <div class="article-meta">
-                        <span class="article-author">${article.author}</span>
-                        <span class="article-date">${article.year}</span>
+                    
+                    <div class="article-meta-expandable">
+                        <div class="meta-item"><strong>Authors:</strong> ${article.author}</div>
+                        <div class="meta-item"><strong>University:</strong> ${article.university}</div>
+                        <div class="meta-item"><strong>Published:</strong> ${article.year}</div>
                     </div>
+
                     ${article.comingSoon ? '<div class="coming-soon-badge">Coming Soon</div>' : '<button class="read-btn">Start Analysis</button>'}
                 </div>
             `;

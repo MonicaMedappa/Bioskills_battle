@@ -615,14 +615,34 @@ h1 {
     color: #ffffff;
 }
 
-.article-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.6);
+.article-meta-expandable {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    padding-top: 0;
+    text-align: left;
+}
+
+.article-card:hover .article-meta-expandable {
+    max-height: 200px;
+    opacity: 1;
     margin-bottom: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meta-item {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.meta-item strong {
+    color: #39ff14;
 }
 
 .read-btn {
