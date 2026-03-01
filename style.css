@@ -227,47 +227,31 @@ body:has(#article-sets-page:not(.hide)) {
     }
 }
 
-/* Main Quiz Container — Lignin Yellow Paper Texture */
+/* Main Quiz Container — Dark Theme */
 #quiz-container {
-    background-color: #f5ecd0;
-    background-image:
-        /* Paper fiber noise layer 1 */
-        repeating-linear-gradient(135deg,
-            transparent,
-            transparent 2px,
-            rgba(210, 190, 140, 0.15) 2px,
-            rgba(210, 190, 140, 0.15) 3px),
-        /* Paper fiber noise layer 2 */
-        repeating-linear-gradient(45deg,
-            transparent,
-            transparent 3px,
-            rgba(190, 170, 120, 0.1) 3px,
-            rgba(190, 170, 120, 0.1) 4px),
-        /* Subtle aged gradient */
-        radial-gradient(ellipse at 30% 20%,
-            rgba(245, 236, 208, 1) 0%,
-            rgba(235, 222, 185, 1) 50%,
-            rgba(225, 210, 170, 1) 100%);
+    background: rgba(18, 6, 30, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     padding: 30px;
-    border-radius: 4px;
+    border-radius: 16px;
     box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.3),
-        0 0 40px rgba(90, 30, 120, 0.1),
-        inset 0 0 60px rgba(210, 190, 140, 0.15);
-    max-width: 500px;
+        0 0 40px rgba(90, 30, 120, 0.15),
+        0 0 80px rgba(114, 243, 39, 0.04),
+        0 8px 32px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
     width: 90%;
-    border: 1px solid rgba(190, 170, 120, 0.4);
+    border: 1px solid rgba(191, 64, 255, 0.3);
     position: relative;
 }
 
 /* Main Title */
 h1 {
-    color: #3d2b1f;
+    color: #ffffff;
     text-align: center;
     font-size: 1.6rem;
     margin-top: 0;
     margin-bottom: 20px;
-    border-bottom: 2px solid #8b6914;
+    border-bottom: 2px solid rgba(114, 243, 39, 0.4);
     padding-bottom: 10px;
 }
 
@@ -322,7 +306,7 @@ h1 {
     text-align: right;
     font-weight: bold;
     font-size: 1.1rem;
-    color: #8b6914;
+    color: #72F327;
 }
 
 /* Timer Specific Styles */
@@ -378,7 +362,7 @@ h1 {
 /* The Question Text */
 #question-text {
     font-size: 1.2rem;
-    color: #3d2b1f;
+    color: #ffffff;
     margin-bottom: 20px;
     line-height: 1.5;
     font-weight: 500;
@@ -394,10 +378,10 @@ h1 {
 
 #quiz-container .btn-grid button {
     padding: 14px 20px;
-    border: 1px solid #8b6914;
-    background-color: rgba(245, 236, 208, 0.6);
-    color: #3d2b1f;
-    border-radius: 6px;
+    border: 1px solid rgba(114, 243, 39, 0.3);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
     text-align: left;
@@ -405,46 +389,53 @@ h1 {
 }
 
 #quiz-container .btn-grid button:hover:not(:disabled) {
-    background-color: #8b6914;
-    color: #f5ecd0;
+    background-color: rgba(114, 243, 39, 0.15);
+    color: #ffffff;
+    border-color: #72F327;
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(139, 105, 20, 0.25);
+    box-shadow: 0 4px 12px rgba(114, 243, 39, 0.15);
 }
 
 #quiz-container .btn-grid button:disabled {
     cursor: not-allowed;
-    border-color: #c4b48a;
-    color: #a09070;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.35);
 }
 
 /* Feedback Box (Correct/Incorrect) */
 #feedback-container {
     margin-top: 25px;
     padding: 20px;
-    background-color: rgba(235, 222, 185, 0.5);
-    border-left: 5px solid #8b6914;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 5px solid rgba(114, 243, 39, 0.6);
     border-radius: 4px;
 }
 
 #feedback-text {
     margin-top: 0;
     line-height: 1.4;
-    color: #3d2b1f;
+    color: #e0e0e0;
 }
 
 /* Next Question Button */
 #next-btn {
-    background-color: #8b6914;
-    color: #f5ecd0;
+    background: linear-gradient(135deg, rgba(114, 243, 39, 0.9), rgba(90, 196, 30, 0.95));
+    color: #0a0a12;
     border: none;
     width: 100%;
     text-align: center;
     font-weight: bold;
     margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
 }
 
 #next-btn:hover {
-    background-color: #6d5210;
+    background: linear-gradient(135deg, rgba(114, 243, 39, 1), rgba(90, 196, 30, 1));
+    box-shadow: 0 0 15px rgba(114, 243, 39, 0.3);
 }
 
 /* Utility Class */
