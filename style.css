@@ -875,3 +875,29 @@ section,
     position: relative;
     margin: 40px 0;
 }
+
+/* ========== Mobile Responsive ========== */
+@media (max-width: 768px) {
+    #game-title {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    #hey-skiller {
+        font-size: 1.3rem;
+    }
+
+    #cover-text {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    #landing-page {
+        padding: 30px 20px;
+    }
+
+    #choose-hub-btn {
+        padding: 14px 30px;
+        font-size: 1.1em;
+    }
+}
