@@ -1,13 +1,122 @@
-﻿[
-    {
-        "question": "This is a placeholder for Trichinellosis Set 6. Is it working?",
-        "options": [
-            "Yes",
-            "No",
-            "Maybe",
-            "Definitely"
-        ],
-        "answer": "Yes",
-        "explanation": "This is just a test set to verify the integration."
-    }
+[
+  {
+    "id": 1,
+    "question": "What is the primary reason trichinellosis remains endemic in certain parts of the world?",
+    "options": [
+      "A lack of effective antiparasitic drugs",
+      "Insufficient awareness among small-scale farmers and failure to submit meat for inspection",
+      "The parasite's ability to survive in cooked meat",
+      "The high cost of available animal vaccines"
+    ],
+    "answer": "Insufficient awareness among small-scale farmers and failure to submit meat for inspection",
+    "explanation": "The disease persists largely because small-scale or backyard farmers may neglect hygiene standards and fail to undergo mandatory veterinary inspections for their meat."
+  },
+  {
+    "id": 2,
+    "question": "Which of the following meat preparation methods is NOT reliable for inactivating Trichinella larvae?",
+    "options": [
+      "Boiling at high temperatures",
+      "Grilling until the center is well-done",
+      "Salting, drying, and smoking",
+      "Roasting in a conventional oven"
+    ],
+    "answer": "Salting, drying, and smoking",
+    "explanation": "Traditional methods like salting, drying, and smoking do not consistently kill infective larvae, making products like homemade sausages a common source of outbreaks."
+  },
+  {
+    "id": 3,
+    "question": "What is the safe internal temperature recommended for cooking meat to ensure Trichinella larvae are killed?",
+    "options": [
+      "55 °C",
+      "63 °C",
+      "71 °C",
+      "85 °C"
+    ],
+    "answer": "71 °C",
+    "explanation": "To prevent infection, pork and wild animal meat should be cooked to a safe internal temperature of 71 °C in the middle of the meat."
+  },
+  {
+    "id": 4,
+    "question": "According to the USDA, how long should meat less than 15 cm thick be frozen at ‒15 °C to kill the larvae?",
+    "options": [
+      "5 days",
+      "10 days",
+      "20 days",
+      "30 days"
+    ],
+    "answer": "20 days",
+    "explanation": "The USDA recommends freezing meat thinner than 15 cm for 20 days at ‒15 °C as a preventive measure."
+  },
+  {
+    "id": 5,
+    "question": "Why is freezing NOT considered a reliable method for making wild game meat safe to eat?",
+    "options": [
+      "Game meat is too dense for the cold to penetrate",
+      "Certain Trichinella species found in wild animals are freeze-resistant",
+      "Freezing destroys the nutritional value of game meat",
+      "Larvae in game meat only die at temperatures below ‒50 °C"
+    ],
+    "answer": "Certain Trichinella species found in wild animals are freeze-resistant",
+    "explanation": "Freezing is not a safe safeguard for game meat because some species that infect wild animals can survive freezing temperatures."
+  },
+  {
+    "id": 6,
+    "question": "What concern is raised regarding the use of microwave ovens to cook potentially infected pork?",
+    "options": [
+      "Microwaves strengthen the larvae's protective capsule",
+      "Uneven heat distribution may leave portions of the meat undercooked",
+      "Microwaves cannot reach the necessary 71 °C",
+      "The radiation makes the parasite more pathogenic"
+    ],
+    "answer": "Uneven heat distribution may leave portions of the meat undercooked",
+    "explanation": "Microwave cooking is not currently considered reliable for inactivating larvae because portions of the meat may remain undercooked due to uneven heating."
+  },
+  {
+    "id": 7,
+    "question": "Which farm-level control measure is specifically mentioned as part of the strategy to reduce infection in animals?",
+    "options": [
+      "Daily administration of antibiotics",
+      "Regular soil testing for larvae",
+      "Rodent control on pig farms",
+      "Using only frozen feed"
+    ],
+    "answer": "Rodent control on pig farms",
+    "explanation": "Control measures at the farm level, such as rodent control and pig identification, are essential for reducing the prevalence of infection in animals."
+  },
+  {
+    "id": 8,
+    "question": "Under EU Regulation No. 2015/1375, which of the following animals must be tested for Trichinella at slaughter?",
+    "options": [
+      "Pigs, wild boars, and horses",
+      "Only pigs intended for private use",
+      "Only imported cattle",
+      "Sheep and goats"
+    ],
+    "answer": "Pigs, wild boars, and horses",
+    "explanation": "EU regulations mandate testing for all slaughtered pigs, wild boars, horses, and other susceptible animals intended for human consumption."
+  },
+  {
+    "id": 9,
+    "question": "What is the primary benefit of laboratories participating in Proficiency Testing (PT) schemes?",
+    "options": [
+      "It reduces the cost of meat for consumers",
+      "It increases the speed of the slaughtering process",
+      "It improves staff accuracy in detecting larvae via artificial digestion",
+      "It allows for the creation of new parasitic vaccines"
+    ],
+    "answer": "It improves staff accuracy in detecting larvae via artificial digestion",
+    "explanation": "Continuous participation in PT schemes ensures the accuracy and high performance of laboratory staff during meat inspections."
+  },
+  {
+    "id": 10,
+    "question": "Why is the development of a broadly effective human vaccine for trichinellosis considered challenging?",
+    "options": [
+      "The parasite does not trigger an immune response",
+      "Infections may involve multiple different Trichinella species",
+      "Humans are not susceptible to the parasite's proteins",
+      "Larvae are too deep in the muscle to be reached by a vaccine"
+    ],
+    "answer": "Infections may involve multiple different Trichinella species",
+    "explanation": "Creating a universal vaccine is difficult because human infections can be caused by various species, including T. spiralis and T. britovi."
+  }
 ]

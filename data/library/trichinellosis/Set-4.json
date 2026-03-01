@@ -1,13 +1,182 @@
-﻿[
-    {
-        "question": "This is a placeholder for Trichinellosis Set 4. Is it working?",
-        "options": [
-            "Yes",
-            "No",
-            "Maybe",
-            "Definitely"
-        ],
-        "answer": "Yes",
-        "explanation": "This is just a test set to verify the integration."
-    }
+[
+  {
+    "id": 1,
+    "question": "What are the three main criteria used for the diagnosis of trichinellosis according to the ECDC?",
+    "options": [
+      "Patient history, clinical examination, and laboratory findings",
+      "Genetic testing, physical therapy, and diet analysis",
+      "MRI scans, skin prick tests, and blood pressure monitoring",
+      "Chest X-rays, urinalysis, and family history"
+    ],
+    "answer": "Patient history, clinical examination, and laboratory findings",
+    "explanation": "Diagnosis is based on a patient's history and epidemiological data, clinical examination, and laboratory findings, including serological testing."
+  },
+  {
+    "id": 2,
+    "question": "Which diagnostic method is considered definitive for trichinellosis but is often avoided due to its invasive nature?",
+    "options": [
+      "Stool sample analysis",
+      "Muscle biopsy",
+      "Liver function test",
+      "Electrocardiogram"
+    ],
+    "answer": "Muscle biopsy",
+    "explanation": "A definitive diagnosis can be made through a muscle biopsy, though it is invasive, painful, and often yields negative results in the early phase of the disease."
+  },
+  {
+    "id": 3,
+    "question": "When does the diagnostic sensitivity of a muscle biopsy typically increase?",
+    "options": [
+      "Within the first 24 hours of infection",
+      "Only after the patient recovers",
+      "Several weeks after infection",
+      "Exactly 4 days after symptoms appear"
+    ],
+    "answer": "Several weeks after infection",
+    "explanation": "While often negative during the early phase, the diagnostic sensitivity of a muscle biopsy increases several weeks after the initial infection."
+  },
+  {
+    "id": 4,
+    "question": "What method is used on muscle biopsy samples to allow for the identification of the specific Trichinella species?",
+    "options": [
+      "Mass spectrometry",
+      "Cell culture growth",
+      "Polymerase chain reaction (PCR)",
+      "Gram staining"
+    ],
+    "answer": "Polymerase chain reaction (PCR)",
+    "explanation": "Muscle biopsy enables the identification of the parasite species using methods based on polymerase chain reaction."
+  },
+  {
+    "id": 5,
+    "question": "Which laboratory finding, though non-specific, is often elevated in trichinellosis due to muscle damage?",
+    "options": [
+      "Blood glucose",
+      "Muscle enzymes",
+      "Serum albumin",
+      "Hemoglobin"
+    ],
+    "answer": "Muscle enzymes",
+    "explanation": "Elevated levels of muscle enzymes, such as creatine phosphokinase and lactate dehydrogenase, are common laboratory findings that support a diagnosis."
+  },
+  {
+    "id": 6,
+    "question": "What is the International Commission on Trichinellosis's recommended serological test for humans?",
+    "options": [
+      "ELISA with ES L1 antigens",
+      "Rapid antigen test",
+      "Stool culture",
+      "Somatic protein sequencing"
+    ],
+    "answer": "ELISA with ES L1 antigens",
+    "explanation": "The International Commission on Trichinellosis recommends using the ELISA test with ES L1 antigens for serological diagnosis in humans."
+  },
+  {
+    "id": 7,
+    "question": "Why are ES L1 antigens used in ELISA tests instead of crude somatic muscle larvae (ML) extracts?",
+    "options": [
+      "They are cheaper to produce",
+      "They show limited cross-reactivity with other parasitic infections",
+      "They detect the parasite within hours of ingestion",
+      "They do not require refrigeration"
+    ],
+    "answer": "They show limited cross-reactivity with other parasitic infections",
+    "explanation": "ES L1 antigens show limited cross-reactivity with antibodies from other parasitic infections compared to crude somatic extracts."
+  },
+  {
+    "id": 8,
+    "question": "Which serological method can detect specific immunoglobulins as early as one week after symptoms appear?",
+    "options": [
+      "ELISA",
+      "Western Blot",
+      "Indirect immunofluorescence assay (IFA)",
+      "Hemagglutination"
+    ],
+    "answer": "Indirect immunofluorescence assay (IFA)",
+    "explanation": "IFA using whole larvae as an antigen can detect specific immunoglobulins earlier than ELISA, often just a week after symptoms begin."
+  },
+  {
+    "id": 9,
+    "question": "What is the primary use of the Western Blot in the diagnosis of trichinellosis?",
+    "options": [
+      "Initial screening tool",
+      "Confirmatory test for ELISA findings",
+      "Determining the patient's blood type",
+      "Measuring lung capacity"
+    ],
+    "answer": "Confirmatory test for ELISA findings",
+    "explanation": "Western Blot should be used as a confirmatory test for ELISA results, especially in inconclusive cases, to avoid false outcomes."
+  },
+  {
+    "id": 10,
+    "question": "In the clinical course of the disease, when does seroconversion typically occur?",
+    "options": [
+      "Within the first 24 hours",
+      "Between the 2nd and 3rd week post-infection",
+      "Exactly 6 months after infection",
+      "Only after the muscle larvae calcify"
+    ],
+    "answer": "Between the 2nd and 3rd week post-infection",
+    "explanation": "Seroconversion, the point at which antibodies become detectable in the serum, usually happens between the 2nd and 3rd week post-infection."
+  },
+  {
+    "id": 11,
+    "question": "Why might serum samples collected very early in the infection yield false-negative results in an ELISA?",
+    "options": [
+      "The larvae have not reached the stomach yet",
+      "ES L1-based ELISA is not sensitive enough during the initial phase of infection",
+      "The patient's immune system is completely suppressed",
+      "ELISA only works for chronic cases"
+    ],
+    "answer": "ES L1-based ELISA is not sensitive enough during the initial phase of infection",
+    "explanation": "Early anti-Trichinella antibodies may target antigens from intestinal infective larvae (IIL) and adult worms (AW) that are absent from the ES L1 products used in standard ELISA."
+  },
+  {
+    "id": 12,
+    "question": "How are initial clinical symptoms like headache and fever typically treated?",
+    "options": [
+      "Surgery",
+      "Symptomatically with antipyretics and anti-inflammatory drugs",
+      "Strict bed rest without medication",
+      "High-dose antibiotics"
+    ],
+    "answer": "Symptomatically with antipyretics and anti-inflammatory drugs",
+    "explanation": "Initial symptoms such as headache and fever are usually managed symptomatically using antipyretics and anti-inflammatory drugs."
+  },
+  {
+    "id": 13,
+    "question": "What is the recommended adult treatment for trichinellosis with systemic complications?",
+    "options": [
+      "Antiparasitic drugs and corticosteroids",
+      "Vitamin supplements and fluids",
+      "Chemotherapy and radiation",
+      "Insulin and aspirin"
+    ],
+    "answer": "Antiparasitic drugs and corticosteroids",
+    "explanation": "Infections with systemic complications are treated with antiparasitic drugs like albendazole and corticosteroids such as prednisone."
+  },
+  {
+    "id": 14,
+    "question": "Which populations are generally advised to avoid using albendazole and mebendazole?",
+    "options": [
+      "Men over 50 years of age",
+      "Pregnant women and children under 2 years of age",
+      "Individuals with high blood pressure",
+      "Athletes"
+    ],
+    "answer": "Pregnant women and children under 2 years of age",
+    "explanation": "Albendazole and mebendazole are not considered safe for use in pregnant women or children who are under 2 years of age."
+  },
+  {
+    "id": 15,
+    "question": "Within what timeframe post-exposure are antiparasitic drugs most effective for worm expulsion?",
+    "options": [
+      "The first 6 days",
+      "After 3 weeks",
+      "Only after 6 months",
+      "Any time within the first year"
+    ],
+    "answer": "The first 6 days",
+    "explanation": "Antiparasitic drugs are most effective when administered within the first 6 days post-exposure, during the phase of intestinal invasion."
+  }
 ]

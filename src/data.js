@@ -27,11 +27,11 @@ export const libraryArticles = [
 
 export const articleSets = {
     'trichinellosis': [
-        { id: 'data/library/trichinellosis/Set-1.json', title: 'Set 1' },
-        { id: 'data/library/trichinellosis/Set-2.json', title: 'Set 2' },
-        { id: 'data/library/trichinellosis/Set-3.json', title: 'Set 3' },
-        { id: 'data/library/trichinellosis/Set-4.json', title: 'Set 4' },
-        { id: 'data/library/trichinellosis/Set-5.json', title: 'Set 5' },
-        { id: 'data/library/trichinellosis/Set-6.json', title: 'Set 6' }
+        { id: 'data/library/trichinellosis/Set-1.json', title: 'History and Life Cycle' },
+        { id: 'data/library/trichinellosis/Set-2.json', title: 'Epidemiology' },
+        { id: 'data/library/trichinellosis/Set-3.json', title: 'Pathophysiology' },
+        { id: 'data/library/trichinellosis/Set-4.json', title: 'Diagnosis' },
+        { id: 'data/library/trichinellosis/Set-5.json', title: 'Clinical Manifestations' },
+        { id: 'data/library/trichinellosis/Set-6.json', title: 'Treatment and Prevention' }
     ]
 };

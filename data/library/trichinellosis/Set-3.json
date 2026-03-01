@@ -1,13 +1,122 @@
-﻿[
-    {
-        "question": "This is a placeholder for Trichinellosis Set 3. Is it working?",
-        "options": [
-            "Yes",
-            "No",
-            "Maybe",
-            "Definitely"
-        ],
-        "answer": "Yes",
-        "explanation": "This is just a test set to verify the integration."
-    }
+[
+  {
+    "id": 1,
+    "question": "What are the two distinct phases that characterize the clinical progression of trichinellosis pathophysiology?",
+    "options": [
+      "Acute and chronic",
+      "Intestinal and systemic",
+      "Incubation and infection",
+      "Primary and secondary"
+    ],
+    "answer": "Intestinal and systemic",
+    "explanation": "Trichinellosis unfolds in a biphasic pattern consisting of the intestinal (enteral) phase and the systemic (parenteral or muscular) phase."
+  },
+  {
+    "id": 2,
+    "question": "By which day post-infection (p.i.) do adult female Trichinella typically begin to release newborn larvae (NBL)?",
+    "options": [
+      "Day 1",
+      "Day 4",
+      "Day 10",
+      "Day 20"
+    ],
+    "answer": "Day 4",
+    "explanation": "After maturing and mating in the small intestine, adult females begin to release a large number of NBLs by day 4 post-infection."
+  },
+  {
+    "id": 3,
+    "question": "In the muscle phase, by which day are contractile proteins like myofibrils and Z-lines are typically lost in the infected cell?",
+    "options": [
+      "Day 2 p.i.",
+      "Day 4 p.i.",
+      "Day 8 p.i.",
+      "Day 12 p.i."
+    ],
+    "answer": "Day 8 p.i.",
+    "explanation": "By day 8 post-infection, NBLs induce structural changes in muscle cells, causing the loss of contractile proteins such as myofibrils, Z-lines, and I-bands."
+  },
+  {
+    "id": 4,
+    "question": "During the formation of a nurse cell, at which stage does the infected myocyte arrest its cell cycle?",
+    "options": [
+      "G0 phase",
+      "S phase",
+      "G1 phase",
+      "G2/M phase"
+    ],
+    "answer": "G2/M phase",
+    "explanation": "The morphogenesis of the nurse cell involves the infected myocyte re-entering the cell cycle and then arresting at the G2/M phase."
+  },
+  {
+    "id": 5,
+    "question": "Approximately how many hypertrophic nuclei cluster within the basophilic cytoplasm of a mature nurse cell?",
+    "options": [
+      "1-2",
+      "10-20",
+      "Up to 100",
+      "Over 500"
+    ],
+    "answer": "Up to 100",
+    "explanation": "A characteristic feature of the nurse cell is the development of up to approximately 100 enlarged, hypertrophic nuclei with prominent nucleoli."
+  },
+  {
+    "id": 6,
+    "question": "Which specific microRNA (miRNA) released by NBLs facilitates immune evasion by promoting the M2 macrophage phenotype?",
+    "options": [
+      "miR-153",
+      "let-7-5p",
+      "miR-21",
+      "let-3-2p"
+    ],
+    "answer": "let-7-5p",
+    "explanation": "The miRNA let-7-5p, released by newborn larvae (NBL), modulates host immune cells by promoting the regulatory M2 macrophage phenotype to dampen inflammation."
+  },
+  {
+    "id": 7,
+    "question": "In encapsulated Trichinella species, which type of collagen is produced by the nurse cell to form the inner layer of the capsule?",
+    "options": [
+      "Type I",
+      "Type II",
+      "Type IV",
+      "Type VI"
+    ],
+    "answer": "Type IV",
+    "explanation": "Type IV collagen is produced by the nurse cell itself and forms the inner layer of the collagenous capsule."
+  },
+  {
+    "id": 8,
+    "question": "What factor do larvae release to induce angiogenesis and form a capillary network around the infected muscle cell?",
+    "options": [
+      "Insulin-like growth factor",
+      "Vascular endothelial growth factor (VEGF)",
+      "Epidermal growth factor",
+      "Fibroblast growth factor"
+    ],
+    "answer": "Vascular endothelial growth factor (VEGF)",
+    "explanation": "Larvae sustain themselves by inducing angiogenesis through the release of VEGF, which forms a capillary network to ensure nutrient delivery."
+  },
+  {
+    "id": 9,
+    "question": "What is the immunodominant carbohydrate epitope found on the N-glycans of Trichinella excretory-secretory (ES) products?",
+    "options": [
+      "Galactose",
+      "Fructose",
+      "Tyvelose",
+      "Glucose"
+    ],
+    "answer": "Tyvelose",
+    "explanation": "Most proteins in the ES (excretory-secretory) L1 products are glycosylated with N-glycans capped with tyvelose, which serves as an immunodominant epitope triggering strong antibody responses."
+  },
+  {
+    "id": 10,
+    "question": "Which metabolic adaptation allows Trichinella larvae to survive for extended periods in decaying carcasses?",
+    "options": [
+      "Aerobic respiration",
+      "Anaerobic metabolism",
+      "Photosynthesis",
+      "Nitrogen fixation"
+    ],
+    "answer": "Anaerobic metabolism",
+    "explanation": "The larvae utilize anaerobic metabolism, an adaptation that ensures their continued viability even in decaying carcasses."
+  }
 ]

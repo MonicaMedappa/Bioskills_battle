@@ -1,13 +1,122 @@
-﻿[
-    {
-        "question": "This is a placeholder for Trichinellosis Set 1. Is it working?",
-        "options": [
-            "Yes",
-            "No",
-            "Maybe",
-            "Definitely"
-        ],
-        "answer": "Yes",
-        "explanation": "This is just a test set to verify the integration."
-    }
+[
+  {
+    "id": 1,
+    "question": "Who first observed the 'sandy diaphragm' during an autopsy in 1835, leading to the discovery of the parasite?",
+    "options": [
+      "Richard Owen",
+      "Jim Paget",
+      "James Cook",
+      "Robert Koch"
+    ],
+    "answer": "Jim Paget",
+    "explanation": "Medical student Jim Paget made this observation in 1835, which eventually led to the identification of the parasite."
+  },
+  {
+    "id": 2,
+    "question": "Which scientist published the first description of the parasite and named it Trichina spiralis?",
+    "options": [
+      "Jim Paget",
+      "Louis Pasteur",
+      "Richard Owen",
+      "Charles Darwin"
+    ],
+    "answer": "Richard Owen",
+    "explanation": "Richard Owen published the formal description of the newly discovered parasite and provided its initial scientific name."
+  },
+  {
+    "id": 3,
+    "question": "What unique characteristic does the Trichinella genus possess among nematodes regarding its life cycle?",
+    "options": [
+      "It requires an intermediate snail host",
+      "It has a direct life cycle completed within a single host",
+      "It only infects cold-blooded animals",
+      "It can only reproduce in soil"
+    ],
+    "answer": "It has a direct life cycle completed within a single host",
+    "explanation": "Trichinella spp. are unique for having a direct life cycle that involves both intestinal and muscle stages within one host."
+  },
+  {
+    "id": 4,
+    "question": "Which Trichinella species is the primary cause of human trichinellosis worldwide?",
+    "options": [
+      "T. britovi",
+      "T. nativa",
+      "T. spiralis",
+      "T. pseudospiralis"
+    ],
+    "answer": "T. spiralis",
+    "explanation": "While several species cause human disease, T. spiralis is recognized as the main common cause globally."
+  },
+  {
+    "id": 5,
+    "question": "In which specific host cells do Trichinella larvae first establish an intracellular stage during the intestinal phase?",
+    "options": [
+      "Red blood cells",
+      "Skeletal muscle cells",
+      "Intestinal epithelial cells (enterocytes)",
+      "Nerve cells"
+    ],
+    "answer": "Intestinal epithelial cells (enterocytes)",
+    "explanation": "The life cycle involves an initial intracellular stage within the columnar epithelial cells of the intestine."
+  },
+  {
+    "id": 6,
+    "question": "Approximately how many hours post-infection (p.i.) do intestinal infective larvae grow into adult worms?",
+    "options": [
+      "12 hours",
+      "30 hours",
+      "4 days",
+      "7 days"
+    ],
+    "answer": "30 hours",
+    "explanation": "After invading the intestinal epithelium and molting four times, larvae grow into adult worms about 30 hours after infection."
+  },
+  {
+    "id": 7,
+    "question": "How many newborn larvae (NBL) can a single adult female Trichinella worm produce?",
+    "options": [
+      "10–50",
+      "100–200",
+      "500–1,500",
+      "5,000–10,000"
+    ],
+    "answer": "500–1,500",
+    "explanation": "A single female can produce between 500 and 1,500 NBLs, depending on the species and the host's immune status."
+  },
+  {
+    "id": 8,
+    "question": "What structure do newborn larvae (NBL) use to penetrate through membranes and into host cells?",
+    "options": [
+      "A sharp stylet",
+      "A protective capsule",
+      "Suction cups",
+      "A thick cuticle"
+    ],
+    "answer": "A sharp stylet",
+    "explanation": "NBLs are equipped with a sharp stylet in their oral cavity used to penetrate cell membranes."
+  },
+  {
+    "id": 9,
+    "question": "The exocrine organ in muscle larvae and adult worms known as the stichosome is composed of which type of cells?",
+    "options": [
+      "Enterocytes",
+      "Stichocytes",
+      "Fibroblasts",
+      "Myocytes"
+    ],
+    "answer": "Stichocytes",
+    "explanation": "The stichosome consists of 45–55 large, stacked cells called stichocytes, which release excretory-secretory products."
+  },
+  {
+    "id": 10,
+    "question": "Unlike encapsulating species, non-encapsulating Trichinella species can infect which group of hosts?",
+    "options": [
+      "Only humans",
+      "Only mammals",
+      "Mammals, birds, and some reptiles",
+      "Only fish"
+    ],
+    "answer": "Mammals, birds, and some reptiles",
+    "explanation": "Encapsulating species are limited to mammals, but non-encapsulating species have a broader range including birds and reptiles."
+  }
 ]
