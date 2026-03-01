@@ -264,6 +264,12 @@ async function init() {
     if (quizBackBtn) {
         quizBackBtn.onclick = handleQuizBack;
     }
+
+    // Set up Back to Lab Bench button on SDS-PAGE
+    const backToLabBtn = QuizUI.getBackToLabButton();
+    if (backToLabBtn) {
+        backToLabBtn.onclick = () => QuizUI.showLabBenchPage();
+    }
 }
 
 async function switchSet(newUrl) { // Export switchSet

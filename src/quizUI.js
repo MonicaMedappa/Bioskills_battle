@@ -38,6 +38,7 @@ export const QuizUI = {
     getArticleSetsGrid: () => document.getElementById('article-sets-grid'),
     getBackToLibraryButton: () => document.getElementById('back-to-library-btn'),
     getQuizBackButton: () => document.getElementById('quiz-back-btn'),
+    getBackToLabButton: () => document.getElementById('back-to-lab-btn'),
 
 
     // --- UI Update Functions ---
