@@ -3,38 +3,17 @@
 import { QuizUI } from './quizUI.js';
 import { QuizModel } from './quizModel.js';
 import { browserUtils } from './utils.js'; // Import browser utilities
+import { labTechniques, libraryArticles, articleSets } from './data.js'; // Import centralized data
 
 const app = {};
-
-// --- State Variables ---
-let timerInterval = null; // Initialize to null
-
-// --- DOM Elements ---
-// Removed let declarations for DOM elements
-
-// --- Helper Functions (not exported directly, but used internally) ---
-
+let timerInterval = null;
 
 /**
  * Handles the click event for the 'Choose your Battle Hub' button.
- * Shows the Battle Hub modal.
  */
 function handleChooseHubButtonClick() {
     QuizUI.showBattleHubModal(true);
 }
-
-const labTechniques = [
-    { id: 'sds-page', title: 'SDS-PAGE', icon: '🧬', comingSoon: false },
-    { id: 'dna-gel', title: 'DNA Gel Electrophoresis', icon: '🧪', comingSoon: true },
-    { id: 'pcr', title: 'Polymerase Chain Reaction', icon: '⚗️', comingSoon: true },
-    { id: 'qpcr', title: 'qPCR', icon: '📊', comingSoon: true },
-    { id: 'ph', title: 'pH', icon: '💧', comingSoon: true },
-    { id: 'spec', title: 'OD and Spectrophotometer', icon: '🔦', comingSoon: true },
-    { id: 'rt-pcr', title: 'RT-PCR', icon: '🧬', comingSoon: true },
-    { id: 'elisa', title: 'ELISA', icon: '🧫', comingSoon: true },
-    { id: 'western', title: 'Western Blotting', icon: '🩹', comingSoon: true },
-    { id: 'cloning', title: 'Cloning', icon: '🐑', comingSoon: true }
-];
 
 /**
  * Handles the click event for the 'The Lab Bench' button in the modal.
@@ -46,7 +25,7 @@ function handleLabBenchButtonClick() {
 }
 
 /**
- * Handles clicking a technique tile.
+ * Handles the click event for a technique tile in the Lab Bench.
  * @param {string} techniqueId - The ID of the selected technique.
  */
 function handleTechniqueClick(techniqueId) {
@@ -54,29 +33,6 @@ function handleTechniqueClick(techniqueId) {
         QuizUI.showSdsPage();
     }
 }
-
-const libraryArticles = [
-    {
-        id: 'trichinellosis',
-        title: 'Trichinellosis: A zoonosis that still requires vigilance',
-        author: 'Ivana Mitic, Sasa Vasilev, Alisa Gruden-Movsesijan',
-        university: 'University of Belgrade',
-        journal: 'Plos Neglected Tropical Diseases',
-        year: 'Jan, 2026',
-        comingSoon: false
-    }
-];
-
-const articleSets = {
-    'trichinellosis': [
-        { id: 'data/library/trichinellosis/Set-1.json', title: 'Set 1' },
-        { id: 'data/library/trichinellosis/Set-2.json', title: 'Set 2' },
-        { id: 'data/library/trichinellosis/Set-3.json', title: 'Set 3' },
-        { id: 'data/library/trichinellosis/Set-4.json', title: 'Set 4' },
-        { id: 'data/library/trichinellosis/Set-5.json', title: 'Set 5' },
-        { id: 'data/library/trichinellosis/Set-6.json', title: 'Set 6' }
-    ]
-};
 
 /**
  * Handles the click event for the 'The Library' button in the modal.
