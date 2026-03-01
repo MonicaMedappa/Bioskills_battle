@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is the typical incubation period for human trichinellosis?",
+    "options": [
+      "1–3 days",
+      "7–30 days",
+      "2–4 months",
+      "1 year"
+    ],
+    "answer": "7–30 days",
+    "explanation": "Symptoms usually appear 1 to 4 weeks after consuming infected meat, with an incubation period ranging from 7 to 30 days."
+  },
+  {
+    "id": 2,
+    "question": "Which set of symptoms constitutes the 'classic triad' of trichinellosis?",
+    "options": [
+      "Cough, rash, and headache",
+      "Diarrhea, vomiting, and abdominal pain",
+      "Fever, periorbital edema, and muscle pain",
+      "Malaise, weight loss, and jaundice"
+    ],
+    "answer": "Fever, periorbital edema, and muscle pain",
+    "explanation": "The classic clinical presentation that medical practitioners look for is the triad of fever, periorbital edema, and muscle pain."
+  },
+  {
+    "id": 3,
+    "question": "When does the intestinal phase of the infection typically begin?",
+    "options": [
+      "Immediately after ingestion",
+      "Around 2 days post-infection",
+      "After 2 weeks",
+      "Only after larvae reach the muscles"
+    ],
+    "answer": "Around 2 days post-infection",
+    "explanation": "The intestinal phase starts about 2 days post-infection (p.i.) when intestinal infective larvae (IIL) invade the mucosa, causing gastroenteritis."
+  },
+  {
+    "id": 4,
+    "question": "Which cytokine is specifically identified as the driver for the characteristic eosinophilia in trichinellosis?",
+    "options": [
+      "IL-2",
+      "IL-5",
+      "IL-12",
+      "IFN-γ"
+    ],
+    "answer": "IL-5",
+    "explanation": "IL-5 drives the maturation and recruitment of eosinophils, making eosinophilia a hallmark finding of the disease."
+  },
+  {
+    "id": 5,
+    "question": "What primary mechanism causes the development of periorbital and facial edema?",
+    "options": [
+      "Kidney failure",
+      "Direct larval consumption of skin tissue",
+      "Mast cell degranulation and capillary leakage",
+      "Lack of protein in the diet"
+    ],
+    "answer": "Mast cell degranulation and capillary leakage",
+    "explanation": "The release of mediators like histamine and prostaglandins during mast cell degranulation leads to capillary leakage and the characteristic facial edema."
+  },
+  {
+    "id": 6,
+    "question": "As larvae disseminate through the body, how does the host's immune response shift?",
+    "options": [
+      "From Th1 to a predominant Th2 profile",
+      "From Th2 to a predominant Th1 profile",
+      "From B-cell to T-cell dominance",
+      "It becomes completely suppressed"
+    ],
+    "answer": "From Th1 to a predominant Th2 profile",
+    "explanation": "While an initial Th1 response occurs, the immune response shifts toward a predominant Th2 profile (marked by IL-4, IL-5, IL-10, and IL-13) as larvae disseminate."
+  },
+  {
+    "id": 7,
+    "question": "Which of the following is a potential cardiovascular complication of severe trichinellosis?",
+    "options": [
+      "Varicose veins",
+      "Myocarditis",
+      "Hypertension",
+      "Mitral valve prolapse"
+    ],
+    "answer": "Myocarditis",
+    "explanation": "Serious cardiovascular complications can include myocarditis, pericardial pain, and changes in electrocardiograms."
+  },
+  {
+    "id": 8,
+    "question": "What is the most likely cause of dyspnea (shortness of breath) during the parenteral phase?",
+    "options": [
+      "Larval invasion of the heart",
+      "Larval invasion of the diaphragm and respiratory muscles",
+      "Psychological stress",
+      "Anemia"
+    ],
+    "answer": "Larval invasion of the diaphragm and respiratory muscles",
+    "explanation": "Dyspnea is a frequent respiratory symptom resulting from the inflammation and invasion of the diaphragm and other respiratory muscles by the larvae."
+  },
+  {
+    "id": 9,
+    "question": "Which rare neurological complications have been associated with trichinellosis?",
+    "options": [
+      "Alzheimer's disease",
+      "Multiple sclerosis",
+      "Meningitis and encephalopathy",
+      "Parkinson's disease"
+    ],
+    "answer": "Meningitis and encephalopathy",
+    "explanation": "Although rare, neurological involvements can include meningitis, encephalopathy, and cortical infarcts."
+  },
+  {
+    "id": 10,
+    "question": "How is chronic trichinellosis characterized in some individuals?",
+    "options": [
+      "Lifelong immunity to all parasites",
+      "Persistent fatigue, myalgia, and reduced muscle strength",
+      "Continuous gastrointestinal bleeding",
+      "Permanent loss of vision"
+    ],
+    "answer": "Persistent fatigue, myalgia, and reduced muscle strength",
+    "explanation": "The chronic form involves symptoms like persistent fatigue, muscle pain, and reduced strength that can last for years or decades."
+  }
+]

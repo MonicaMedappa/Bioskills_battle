@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "Which major clade of the genus Trichinella is characterized by infecting only mammals?",
+    "options": [
+      "The non-encapsulated clade",
+      "The encapsulated clade",
+      "The avian-clade",
+      "The reptilian-clade"
+    ],
+    "answer": "The encapsulated clade",
+    "explanation": "The encapsulated clade, which includes species like T. spiralis and T. nativa, is known to infect only mammalian hosts."
+  },
+  {
+    "id": 2,
+    "question": "Which species of Trichinella has a cosmopolitan distribution because it is dispersed by migratory birds?",
+    "options": [
+      "T. spiralis",
+      "T. britovi",
+      "T. pseudospiralis",
+      "T. papuae"
+    ],
+    "answer": "T. pseudospiralis",
+    "explanation": "While T. spiralis spread globally through human activities, T. pseudospiralis achieves a cosmopolitan distribution via the flight paths of migratory birds."
+  },
+  {
+    "id": 3,
+    "question": "Between 1986 and 2009, which region accounted for 86% of all recorded human trichinellosis cases worldwide?",
+    "options": [
+      "The Americas",
+      "The African Region",
+      "The European Region",
+      "Southeast Asia"
+    ],
+    "answer": "The European Region",
+    "explanation": "A systematic review reported that out of 65,818 global cases in that period, the European Region was responsible for 86% of the total."
+  },
+  {
+    "id": 4,
+    "question": "Which of the following Trichinella taxa has NOT been associated with human infection?",
+    "options": [
+      "T. britovi",
+      "T. pseudospiralis",
+      "T. zimbabwensis",
+      "Genotype T9"
+    ],
+    "answer": "T. zimbabwensis",
+    "explanation": "The sources note that species such as T. zimbabwensis, T. patagoniensis, T. chanchalensis, and genotype T8 have not been linked to human infection."
+  },
+  {
+    "id": 5,
+    "question": "What is considered the primary factor causing the transmission of Trichinella to humans globally?",
+    "options": [
+      "Climate change",
+      "Cultural eating habits",
+      "Lack of effective vaccines",
+      "Migration of wild boars"
+    ],
+    "answer": "Cultural eating habits",
+    "explanation": "Most outbreaks depend on cultural factors, specifically traditional eating habits involving the consumption of raw or undercooked meat."
+  },
+  {
+    "id": 6,
+    "question": "Which species was responsible for the majority of reported cases in northern Thailand between 2001 and 2021?",
+    "options": [
+      "T. spiralis",
+      "T. papuae",
+      "T. nativa",
+      "T. murrelli"
+    ],
+    "answer": "T. papuae",
+    "explanation": "In Southeast Asia, 773 cases in northern Thailand were specifically attributed to T. papuae."
+  },
+  {
+    "id": 7,
+    "question": "Which animals are identified as 'synanthropic' bridges that facilitate transmission from the sylvatic to the domestic cycle?",
+    "options": [
+      "Birds",
+      "Rodents",
+      "Horses",
+      "Cattle"
+    ],
+    "answer": "Rodents",
+    "explanation": "Improper management can allow the parasite to move from wild animal populations to domestic ones via synanthropic animals like rodents."
+  },
+  {
+    "id": 8,
+    "question": "According to the ECDC report for 2022, which country recorded the highest notification rate in Europe?",
+    "options": [
+      "Bulgaria",
+      "Latvia",
+      "Serbia",
+      "Romania"
+    ],
+    "answer": "Latvia",
+    "explanation": "In 2022, Latvia had the highest notification rate in Europe at 0.16 cases per 100,000 inhabitants, followed by Bulgaria at 0.13."
+  },
+  {
+    "id": 9,
+    "question": "Outbreaks of trichinellosis in North America are most commonly associated with the consumption of which meat source?",
+    "options": [
+      "Industrial pork",
+      "Backyard poultry",
+      "Wild game meat (e.g., bear)",
+      "Imported beef"
+    ],
+    "answer": "Wild game meat (e.g., bear)",
+    "explanation": "In North America, where the disease is rare, occasional outbreaks are linked to consuming wild game meat, such as undercooked bear meat."
+  },
+  {
+    "id": 10,
+    "question": "Why has the incidence of trichinellosis in the European Union shown a stable to decreasing trend in recent years?",
+    "options": [
+      "Increased human immunity",
+      "Global warming affecting larvae",
+      "Compliance with controlled pig farming and meat inspection",
+      "A decrease in wild animal populations"
+    ],
+    "answer": "Compliance with controlled pig farming and meat inspection",
+    "explanation": "The decreasing trend is a result of adherence to prescribed measures for controlled pig farming and mandatory inspection of meat intended for human consumption."
+  }
+]
