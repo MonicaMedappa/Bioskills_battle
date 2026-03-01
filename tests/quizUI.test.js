@@ -67,6 +67,20 @@ describe('QuizUI Module', () => {
     expect(QuizUI.getLibraryPage().classList.contains('hide')).toBe(false);
   });
 
+  test('showPage should hide all others and show the target page', () => {
+    // Setup: show a page first
+    QuizUI.showPage('landing-page');
+    expect(QuizUI.getLandingPage().classList.contains('hide')).toBe(false);
+
+    // Action: show another page
+    QuizUI.showPage('lab-bench-page');
+
+    // Verification
+    expect(QuizUI.getLabBenchPage().classList.contains('hide')).toBe(false);
+    expect(QuizUI.getLandingPage().classList.contains('hide')).toBe(true);
+    expect(QuizUI.getQuizContainer().classList.contains('hide')).toBe(true);
+  });
+
   test('showBattleHubModal should toggle modal visibility', () => {
     QuizUI.showBattleHubModal(true);
     expect(QuizUI.getBattleHubModal().classList.contains('hide')).toBe(false);
@@ -199,5 +213,40 @@ describe('QuizUI Module', () => {
     const nextButton = QuizUI.getNextButton();
     expect(nextButton).not.toBeNull();
     expect(nextButton.id).toBe('next-btn');
+  });
+
+  test('renderArticlesGrid should render article cards', () => {
+    const grid = QuizUI.getArticlesGrid();
+    const mockArticles = [
+      { id: 'art1', title: 'Article 1', journal: 'Journal 1', author: 'A1', university: 'U1', year: '2026', comingSoon: false }
+    ];
+    const mockHandler = jest.fn();
+
+    QuizUI.renderArticlesGrid(mockArticles, mockHandler);
+
+    const card = grid.querySelector('.article-card');
+    expect(card).not.toBeNull();
+    expect(card.innerHTML).toContain('Article 1');
+    expect(card.innerHTML).toContain('A1');
+
+    card.click();
+    expect(mockHandler).toHaveBeenCalledWith('art1');
+  });
+
+  test('renderArticleSetsGrid should render set tiles', () => {
+    const grid = QuizUI.getArticleSetsGrid();
+    const mockSets = [
+      { id: 'set1', title: 'Challenge 1' }
+    ];
+    const mockHandler = jest.fn();
+
+    QuizUI.renderArticleSetsGrid(mockSets, mockHandler);
+
+    const tile = grid.querySelector('.set-tile');
+    expect(tile).not.toBeNull();
+    expect(tile.innerHTML).toContain('Challenge 1');
+
+    tile.click();
+    expect(mockHandler).toHaveBeenCalledWith('set1');
   });
 });
