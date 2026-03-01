@@ -34,6 +34,9 @@ export const QuizUI = {
     getNextButton: () => document.getElementById('next-btn'),
     getSdsPage: () => document.getElementById('sds-page'),
     getSetTiles: () => document.querySelectorAll('.set-tile'),
+    getArticleSetsPage: () => document.getElementById('article-sets-page'),
+    getArticleSetsGrid: () => document.getElementById('article-sets-grid'),
+    getBackToLibraryButton: () => document.getElementById('back-to-library-btn'),
 
 
     // --- UI Update Functions ---
@@ -117,6 +120,7 @@ export const QuizUI = {
             QuizUI.getLandingPage(),
             QuizUI.getQuizContainer(),
             QuizUI.getSdsPage(),
+            QuizUI.getArticleSetsPage(),
             QuizUI.getLabBenchPage(),
             QuizUI.getLibraryPage(),
             QuizUI.getBattleHubModal()
@@ -164,6 +168,12 @@ export const QuizUI = {
         }
     },
 
+    showArticleSetsPage: () => {
+        QuizUI.hideAllPages();
+        const page = QuizUI.getArticleSetsPage();
+        if (page) page.classList.remove('hide');
+    },
+
     renderTechniquesGrid: (techniques, handleTechniqueClick) => {
         const grid = QuizUI.getTechniquesGrid();
         if (!grid) return;
@@ -195,6 +205,7 @@ export const QuizUI = {
 
         grid.innerHTML = '';
         articles.forEach(article => {
+            console.log('Rendering article:', article.id, article);
             const card = document.createElement('div');
             card.className = 'article-card';
             if (article.comingSoon) {
@@ -207,9 +218,9 @@ export const QuizUI = {
                     <h3 class="article-title">${article.title}</h3>
                     
                     <div class="article-meta-expandable">
-                        <div class="meta-item"><strong>Authors:</strong> ${article.author}</div>
-                        <div class="meta-item"><strong>University:</strong> ${article.university}</div>
-                        <div class="meta-item"><strong>Published:</strong> ${article.year}</div>
+                        <div class="meta-item"><strong>Authors:</strong> ${article.author || 'Not specified'}</div>
+                        <div class="meta-item"><strong>University:</strong> ${article.university || 'Not specified'}</div>
+                        <div class="meta-item"><strong>Published:</strong> ${article.year || 'N/A'}</div>
                     </div>
 
                     ${article.comingSoon ? '<div class="coming-soon-badge">Coming Soon</div>' : '<button class="read-btn">Start Analysis</button>'}
@@ -220,6 +231,20 @@ export const QuizUI = {
                 card.onclick = () => handleArticleClick(article.id);
             }
             grid.appendChild(card);
+        });
+    },
+
+    renderArticleSetsGrid: (sets, handleSetClick) => {
+        const grid = QuizUI.getArticleSetsGrid();
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        sets.forEach(set => {
+            const tile = document.createElement('button');
+            tile.className = 'set-tile';
+            tile.textContent = set.title;
+            tile.onclick = () => handleSetClick(set.id);
+            grid.appendChild(tile);
         });
     },
 

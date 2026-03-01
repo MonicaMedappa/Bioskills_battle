@@ -1,0 +1,13 @@
+﻿[
+    {
+        "question": "This is a placeholder for Trichinellosis Set 1. Is it working?",
+        "options": [
+            "Yes",
+            "No",
+            "Maybe",
+            "Definitely"
+        ],
+        "answer": "Yes",
+        "explanation": "This is just a test set to verify the integration."
+    }
+]

@@ -67,6 +67,17 @@ const libraryArticles = [
     }
 ];
 
+const articleSets = {
+    'trichinellosis': [
+        { id: 'data/library/trichinellosis/Set-1.json', title: 'Set 1' },
+        { id: 'data/library/trichinellosis/Set-2.json', title: 'Set 2' },
+        { id: 'data/library/trichinellosis/Set-3.json', title: 'Set 3' },
+        { id: 'data/library/trichinellosis/Set-4.json', title: 'Set 4' },
+        { id: 'data/library/trichinellosis/Set-5.json', title: 'Set 5' },
+        { id: 'data/library/trichinellosis/Set-6.json', title: 'Set 6' }
+    ]
+};
+
 /**
  * Handles the click event for the 'The Library' button in the modal.
  */
@@ -81,9 +92,16 @@ function handleLibraryButtonClick() {
  * @param {string} articleId - The ID of the selected article.
  */
 function handleArticleClick(articleId) {
-    // For now, let's just alert that it's coming soon, or show a placeholder
-    console.log(`Article selected: ${articleId}`);
-    // In Stage 4.3, we'll build the article sets page.
+    const sets = articleSets[articleId];
+    if (sets) {
+        QuizUI.showArticleSetsPage();
+        QuizUI.renderArticleSetsGrid(sets, app.handleTileClick);
+        const titleElem = document.getElementById('article-sets-title');
+        const article = libraryArticles.find(a => a.id === articleId);
+        if (titleElem && article) {
+            titleElem.textContent = article.title;
+        }
+    }
 }
 
 /**
@@ -240,6 +258,11 @@ async function init() {
     const backToHomeFromLibrary = QuizUI.getBackToHomeFromLibrary();
     if (backToHomeFromLibrary) {
         backToHomeFromLibrary.onclick = () => QuizUI.showLandingPage();
+    }
+
+    const backToLibraryBtn = QuizUI.getBackToLibraryButton();
+    if (backToLibraryBtn) {
+        backToLibraryBtn.onclick = () => QuizUI.showLibraryPage();
     }
 
     // Temporary: link SDS-PAGE directly for now to keep things working
