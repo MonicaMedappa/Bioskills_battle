@@ -53,7 +53,8 @@ body {
 /* Remove conditional body backgrounds to keep it consistent everywhere */
 body:has(#landing-page:not(.hide)),
 body:has(#quiz-container:not(.hide)),
-body:has(#sds-page:not(.hide)) {
+body:has(#sds-page:not(.hide)),
+body:has(#qpcr-page:not(.hide)) {
     background-image: inherit;
     animation: inherit;
 }
@@ -90,6 +91,7 @@ body:has(#quiz-container:not(.hide)) {
 
 /* SDS-PAGE & Article Sets background: dark purple with subtle neon green lines */
 body:has(#sds-page:not(.hide)),
+body:has(#qpcr-page:not(.hide)),
 body:has(#article-sets-page:not(.hide)) {
     background-color: #12061e;
     background-image:
@@ -109,8 +111,9 @@ body:has(#article-sets-page:not(.hide)) {
     animation: gridShift 12s linear infinite;
 }
 
-/* ========== SDS-PAGE Styles ========== */
-#sds-page {
+/* ========== SDS-PAGE & qPCR styles ========== */
+#sds-page,
+#qpcr-page {
     text-align: center;
     background: rgba(18, 6, 30, 0.88);
     backdrop-filter: blur(14px);
@@ -128,12 +131,14 @@ body:has(#article-sets-page:not(.hide)) {
     overflow: hidden;
 }
 
-#sds-page.hide {
+#sds-page.hide,
+#qpcr-page.hide {
     display: none;
 }
 
 /* Top accent line */
-#sds-page::before {
+#sds-page::before,
+#qpcr-page::before {
     content: '';
     position: absolute;
     top: 0;
@@ -144,7 +149,8 @@ body:has(#article-sets-page:not(.hide)) {
     border-radius: 2px;
 }
 
-#sds-title {
+#sds-title,
+#qpcr-title {
     font-size: 2em;
     font-weight: 800;
     letter-spacing: 4px;
@@ -153,7 +159,8 @@ body:has(#article-sets-page:not(.hide)) {
     text-shadow: 0 0 20px rgba(90, 30, 120, 0.5);
 }
 
-#sds-subtitle {
+#sds-subtitle,
+#qpcr-subtitle {
     font-size: 1em;
     color: rgba(180, 180, 200, 0.7);
     margin: 0 0 30px 0;
@@ -208,6 +215,17 @@ body:has(#article-sets-page:not(.hide)) {
         0 0 50px rgba(114, 243, 39, 0.15),
         0 6px 16px rgba(0, 0, 0, 0.5);
     background: linear-gradient(135deg, rgba(114, 243, 39, 1), rgba(90, 196, 30, 1));
+}
+
+.set-tile.qpcr-quiz-card {
+    background: linear-gradient(135deg, #008000, #006400);
+    /* Darker green */
+    border: 2px solid #00ff00;
+}
+
+.set-tile.qpcr-quiz-card:hover {
+    background: linear-gradient(135deg, #00ff00, #00cc00);
+    color: #1a1a2e;
 }
 
 .set-tile:hover::after {

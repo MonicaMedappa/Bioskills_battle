@@ -33,6 +33,9 @@ function handleTechniqueClick(techniqueId) {
     if (techniqueId === 'sds-page') {
         quizOrigin = 'sds-page';
         QuizUI.showSdsPage();
+    } else if (techniqueId === 'qpcr') {
+        quizOrigin = 'qpcr-page';
+        QuizUI.showQpcrPage();
     }
 }
 
@@ -181,6 +184,8 @@ function handleQuizBack() {
     app.stopTimer();
     if (quizOrigin === 'sds-page') {
         QuizUI.showSdsPage();
+    } else if (quizOrigin === 'qpcr-page') {
+        QuizUI.showQpcrPage();
     } else if (quizOrigin === 'article-sets-page') {
         QuizUI.showArticleSetsPage();
     } else {
@@ -269,6 +274,11 @@ async function init() {
     const backToLabBtn = QuizUI.getBackToLabButton();
     if (backToLabBtn) {
         backToLabBtn.onclick = () => QuizUI.showLabBenchPage();
+    }
+
+    const backToLabFromQpcrBtn = QuizUI.getBackToLabFromQpcrButton();
+    if (backToLabFromQpcrBtn) {
+        backToLabFromQpcrBtn.onclick = () => QuizUI.showLabBenchPage();
     }
 }
 

@@ -4,7 +4,7 @@ export const labTechniques = [
     { id: 'sds-page', title: 'SDS-PAGE', icon: '🧬', comingSoon: false },
     { id: 'dna-gel', title: 'DNA Gel Electrophoresis', icon: '🧪', comingSoon: true },
     { id: 'pcr', title: 'Polymerase Chain Reaction', icon: '⚗️', comingSoon: true },
-    { id: 'qpcr', title: 'qPCR', icon: '📊', comingSoon: true },
+    { id: 'qpcr', title: 'qPCR', icon: '📊', comingSoon: false },
     { id: 'ph', title: 'pH', icon: '💧', comingSoon: true },
     { id: 'spec', title: 'OD and Spectrophotometer', icon: '🔦', comingSoon: true },
     { id: 'rt-pcr', title: 'RT-PCR', icon: '🧬', comingSoon: true },

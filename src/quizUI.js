@@ -39,6 +39,8 @@ export const QuizUI = {
     getBackToLibraryButton: () => document.getElementById('back-to-library-btn'),
     getQuizBackButton: () => document.getElementById('quiz-back-btn'),
     getBackToLabButton: () => document.getElementById('back-to-lab-btn'),
+    getQpcrPage: () => document.getElementById('qpcr-page'),
+    getBackToLabFromQpcrButton: () => document.getElementById('back-to-lab-from-qpcr-btn'),
 
 
     // --- UI Update Functions ---
@@ -125,7 +127,8 @@ export const QuizUI = {
             QuizUI.getArticleSetsPage(),
             QuizUI.getLabBenchPage(),
             QuizUI.getLibraryPage(),
-            QuizUI.getBattleHubModal()
+            QuizUI.getBattleHubModal(),
+            QuizUI.getQpcrPage()
         ];
         pages.forEach(page => {
             if (page) page.classList.add('hide');
@@ -138,6 +141,10 @@ export const QuizUI = {
 
     showSdsPage: () => {
         QuizUI.showPage('sds-page');
+    },
+
+    showQpcrPage: () => {
+        QuizUI.showPage('qpcr-page');
     },
 
     showQuiz: () => {

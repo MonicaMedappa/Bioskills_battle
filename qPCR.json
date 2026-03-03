@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "question": "At what stage of the PCR reaction is data collected to provide quantitative information about the initial yield input?",
+    "options": ["Plateau phase", "Linear ground phase", "Exponential phase", "Lag phase"],
+    "answer": "Exponential phase",
+    "explanation": "Data collected during the exponential phase gives the quantitative information of the initial yield input because reagents are still in excess and the polymerase is highly efficient."
+  },
+  {
+    "id": 2,
+    "question": "How is the 'threshold cycle' (Ct) defined in real-time PCR?",
+    "options": ["The final cycle of the PCR reaction", "The cycle where the fluorescent signal crosses the threshold", "The cycle where reagents are completely exhausted", "The cycle with the lowest background noise"],
+    "answer": "The cycle where the fluorescent signal crosses the threshold",
+    "explanation": "The Ct is the cycle number at which the fluorescent signal of the reaction crosses the threshold, which is set to distinguish relevant signal from background noise."
+  },
+  {
+    "id": 3,
+    "question": "What is the ideal slope of a standard curve for a PCR reaction with 100% efficiency?",
+    "options": ["-1.00", "-3.32", "-4.50", "-2.50"],
+    "answer": "-3.32",
+    "explanation": "A PCR efficiency of 100% means the template doubles after each thermal cycle, which corresponds to a slope of -3.32 on a standard curve."
+  },
+  {
+    "id": 4,
+    "question": "In a TaqMan probe-based assay, what mechanism enables the release of the fluorescent signal?",
+    "options": ["Heat denaturation of the probe", "5' to 3' exonuclease activity of DNA polymerase", "Binding of SYBR Green to double-stranded DNA", "The cooling of the reaction to the annealing temperature"],
+    "answer": "5' to 3' exonuclease activity of DNA polymerase",
+    "explanation": "During extension, the DNA polymerase encounters the probe and its 5' to 3' exonuclease activity cleaves it, physically separating the reporter dye from the quencher."
+  },
+  {
+    "id": 5,
+    "question": "Why are gene-specific primers (GSPs) required for one-step qRT-PCR?",
+    "options": ["To allow the RTase to function at lower temperatures", "Because random primers generate non-specific products in this format", "To ensure the DNA polymerase can bind to the RNA template", "To increase the total volume of the reaction mix"],
+    "answer": "Because random primers generate non-specific products in this format",
+    "explanation": "Using oligo(dT) or random primers in a one-step procedure will generate non-specific products and reduce the amount of the specific product of interest."
+  },
+  {
+    "id": 6,
+    "question": "What is a commonly recommended starting final concentration for Mg2+ in a real-time PCR reaction?",
+    "options": ["0.5 mM", "1.5 mM", "3.0 mM", "10.0 mM"],
+    "answer": "3.0 mM",
+    "explanation": "While the optimal concentration can vary between 3 and 6 mM, magnesium is typically used at a final concentration of 3 mM for most targets.Higher concentrations can increase yield but may decrease specificity, while lower concentrations may lead to poor amplification"
+  },
+  {
+    "id": 7,
+    "question": "What does the 'baseline' of a real-time PCR reaction represent?",
+    "options": ["The maximum fluorescence reached at the plateau", "The background noise during the initial cycles", "The point where DNA begins to double", "The concentration of the internal control gene"],
+    "answer": "The background noise during the initial cycles",
+    "explanation": "The baseline refers to the signal level during the initial cycles (usually 3 to 15) where there is little change in fluorescence, representing the 'noise' of the reaction."
+  },
+  {
+    "id": 8,
+    "question": "In relative quantification, what is the purpose of using a 'normalizer gene' like β-actin?",
+    "options": ["To increase the rate of the PCR reaction", "To control for experimental variability in the amount of starting DNA", "To provide a standard curve for absolute copy number", "To act as a quencher for the reporter dye"],
+    "answer": "To control for experimental variability in the amount of starting DNA",
+    "explanation": "A normalizer gene is used as a control for experimental variability, ensuring that differences in the amount of total DNA added to tubes do not skew results."
+  },
+  {
+    "id": 9,
+    "question": "What happens to the fluorescence in a melting curve analysis when the temperature reaches the Tm?",
+    "options": ["Fluorescence increases as more dye binds to the DNA", "Fluorescence decreases as DNA strands dissociate and release the dye", "Fluorescence stays constant because the probe is cleaved", "Fluorescence disappears because the DNA polymerase is denatured"],
+    "answer": "Fluorescence decreases as DNA strands dissociate and release the dye",
+    "explanation": "When the melting temperature (Tm) is reached, double-stranded DNA dissociates into single strands, causing a decrease in fluorescence as the dye is released."
+  },
+  {
+    "id": 10,
+    "question": "What is the expected Ct shift for a 10-fold decrease in DNA concentration if the efficiency is 100%?",
+    "options": ["1.0 cycle", "2.0 cycles", "3.3 cycles", "10.0 cycles"],
+    "answer": "3.3 cycles",
+    "explanation": "For every 10-fold decrease in DNA, the Ct value should increase by approximately 3.3 cycles based on the math of exponential growth."
+  },
+  {
+    "id": 11,
+    "question": "What is a primary disadvantage of using non-specific dyes like SYBR Green compared to probes?",
+    "options": ["They require a quencher", "They can bind to non-target DNA such as primer-dimers", "They require higher temperatures for detection", "They are more expensive than probes"],
+    "answer": "They can bind to non-target DNA such as primer-dimers",
+    "explanation": "SYBR Green binds non-specifically to all double-stranded DNA, meaning it can generate signal from non-target products like primer-dimers."
+  },
+  {
+    "id": 12,
+    "question": "Which phase of qPCR is described as the 'Golden Era' where DNA doubles every cycle and data is used for quantification?",
+    "options": ["Linear ground phase", "Plateau phase", "Exponential phase", "Early exponential phase"],
+    "answer": "Exponential phase",
+    "explanation": "The linear exponential phase is where the reaction is at maximum efficiency and the signal doubles every cycle; this is the phase used to calculate starting DNA."
+  },
+  {
+    "id": 13,
+    "question": "How does a Minor Groove Binder (MGB) moiety affect a qPCR probe?",
+    "options": ["It acts as a secondary reporter dye", "It stabilizes the DNA duplex and significantly increases the probe’s Tm", "It prevents the DNA polymerase from binding to the template", "It decreases the sensitivity of the assay"],
+    "answer": "It stabilizes the DNA duplex and significantly increases the probe’s Tm",
+    "explanation": "MGB moieties bind non-covalently to the minor groove, stabilizing the duplex and increasing the melting temperature, which allows for shorter probes."
+  },
+  {
+    "id": 14,
+    "question": "What does the 'Y-intercept' on a qPCR standard curve represent?",
+    "options": ["The maximum fluorescence level", "The theoretical limit of detection for the reaction", "The concentration of the primers", "The time it takes for the reaction to start"],
+    "answer": "The theoretical limit of detection for the reaction",
+    "explanation": "The y-intercept corresponds to the theoretical limit of detection, or the Ct value expected if the lowest copy number of target molecules gave significant amplification."
+  },
+  {
+    "id": 15,
+    "question": "Why does the qPCR reaction eventually enter the 'Plateau Phase'?",
+    "options": ["Exhaustion of reagents like primers and dNTPs", "Loss of enzyme activity", "Build-up of inhibitory by-products", "All of the above"],
+    "answer": "All of the above",
+    "explanation": "The plateau phase occurs because reagents are exhausted, the polymerase degrades, and by-products like pyrophosphate inhibit the reaction."
+  },
+  {
+    "id": 16,
+    "question": "Which type of quantification involves comparing samples of known quantity to unknowns to determine an exact copy number?",
+    "options": ["Relative quantification", "Absolute quantification", "Comparative quantification", "Qualitative analysis"],
+    "answer": "Absolute quantification",
+    "explanation": "Absolute quantification uses serially diluted samples of known quantity to generate a standard curve for quantifying unknowns."
+  },
+  {
+    "id": 17,
+    "question": "What is the acceptable range for PCR efficiency in a high-quality reaction?",
+    "options": ["50% to 75%", "100% to 200%", "90% to 110%", "Above 150%"],
+    "answer": "90% to 110%",
+    "explanation": "A good reaction should have an efficiency between 90% and 110%, which corresponds to a curve slope between -3.58 and -3.10."
+  },
+  {
+    "id": 18,
+    "question": "What role does the BHQ (Black Hole Quencher) play in a probe-based assay?",
+    "options": ["It emits light when excited", "It absorbs the reporter's energy and releases it as heat", "It binds to the primer-dimers", "It acts as the starting point for DNA polymerase"],
+    "answer": "It absorbs the reporter's energy and releases it as heat",
+    "explanation": "BHQ is a dark quencher that absorbs the energy from the FAM reporter and releases it as harmless heat, preventing signal emission from intact probes."
+  },
+  {
+    "id": 19,
+    "question": "What is 'Dynamic Range' in the context of real-time qPCR?",
+    "options": ["The range of temperatures used in the melting curve", "The range over which starting material results in a proportional increase in product", "The total number of cycles in the reaction", "The speed at which the DNA polymerase extends the strand"],
+    "answer": "The range over which starting material results in a proportional increase in product",
+    "explanation": "Dynamic range is the range of starting concentrations where an increase in material results in a corresponding increase in the final amplification product."
+  }
+]
