@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "In real-time PCR, when is the amount of DNA measured?",
+    "options": ["Only at the end of the reaction", "After each cycle", "Before the exponential phase", "After the plateau phase"],
+    "answer": "After each cycle",
+    "explanation": "Real-time PCR measures the increasing fluorescent signal in direct proportion to the amplicons generated after each cycle."
+  },
+  {
+    "id": 2,
+    "question": "Which phase of the PCR reaction provides quantitative information on the initial yield input?",
+    "options": ["Plateau phase", "Linear phase", "Exponential phase", "Lag phase"],
+    "answer": "Exponential phase",
+    "explanation": "Data collected during the exponential phase is used because it accurately reflects the starting material."
+  },
+  {
+    "id": 3,
+    "question": "What does the fluorescent signal in real-time PCR directly correspond to?",
+    "options": ["The number of cycles completed", "The temperature of the instrument", "The number of PCR product molecules (amplicons) generated", "The concentration of primers"],
+    "answer": "The number of PCR product molecules (amplicons) generated",
+    "explanation": "The dyes used yield an increasing signal that is in direct proportion to the number of amplicons produced."
+  },
+  {
+    "id": 4,
+    "question": "What is the name of the plot generated to represent the accumulation of product over the entire reaction?",
+    "options": ["Standard curve", "Melting curve", "Amplification plot", "Dissociation curve"],
+    "answer": "Amplification plot",
+    "explanation": "The instrument plots fluorescent signal against cycle number to generate an amplification plot."
+  },
+  {
+    "id": 5,
+    "question": "What is a primary advantage of real-time PCR over traditional PCR regarding post-amplification handling?",
+    "options": ["It requires more tubes for verification", "It eliminates the need for post-PCR manipulations", "It requires agarose gel electrophoresis", "It uses radioactive markers"],
+    "answer": "It eliminates the need for post-PCR manipulations",
+    "explanation": "Since amplification and detection occur in a single tube, post-PCR steps are eliminated, reducing contamination risk [3]."
+  },
+  {
+    "id": 6,
+    "question": "In two-step qRT-PCR, why are random primers often used for cDNA synthesis instead of oligo (dT) primers?",
+    "options": ["To increase the melting temperature", "To avoid 3' bias", "To target the poly(A) tail specifically", "To reduce the amount of RT enzyme needed"],
+    "answer": "To avoid 3' bias",
+    "explanation": "Random primers are typically used to ensure even coverage and avoid the 3' bias associated with oligo (dT) primers."
+  },
+  {
+    "id": 7,
+    "question": "Approximately what percentage of cDNA is transferred to a separate tube for the PCR step in a two-step procedure?",
+    "options": ["50%", "1%", "10%", "100%"],
+    "answer": "10%",
+    "explanation": "In two-step RT-PCR, usually about 10% of the synthesized cDNA is transferred to a new tube for the reaction."
+  },
+  {
+    "id": 8,
+    "question": "Which type of primer is strictly required for one-step qRT-PCR to avoid nonspecific products?",
+    "options": ["Random hexamers", "Oligo(dT) primers", "Gene-specific primers (GSPs)", "Universal primers"],
+    "answer": "Gene-specific primers (GSPs)",
+    "explanation": "One-step procedures require GSPs because random or oligo(dT) primers would generate nonspecific products and reduce the yield of interest."
+  },
+  {
+    "id": 9,
+    "question": "What unique feature of eukaryotic mRNA do oligo(dT) primers target?",
+    "options": ["The 5' Cap", "The Poly(A) tail", "Intron-exon junctions", "The promoter region"],
+    "answer": "The Poly(A) tail",
+    "explanation": "Oligo(dT) primers are short chains of Thymine that act as molecular magnets for the string of Adenine bases (Poly(A) tail) on mRNA."
+  },
+  {
+    "id": 10,
+    "question": "What is the main 'Pro' of using oligo(dT) primers over random hexamers when studying eukaryotic gene expression?",
+    "options": ["They are cheaper to produce", "They are very specific to protein-coding mRNA", "They work on broken RNA strands", "They can bind to ribosomal RNA"],
+    "answer": "They are very specific to protein-coding mRNA",
+    "explanation": "Oligo(dT) ensures the enzyme copies protein-coding mRNA rather than 'junk' ribosomal RNA."
+  },
+  {
+    "id": 11,
+    "question": "What is the significant drawback ('Con') of using oligo(dT) primers for cDNA synthesis?",
+    "options": ["They produce too much background noise", "They can cause 3' bias", "They require very low temperatures", "They are not compatible with Taq polymerase"],
+    "answer": "They can cause 3' bias",
+    "explanation": "They can cause 3' bias, failing to copy the 5' end of long transcripts. If the RNA strand is broken, the primer stays at the tail and the enzyme never reaches the 'head' of the gene."
+  },
+  {
+    "id": 12,
+    "question": "What is the defining characteristic of a 'Hot-Start' DNA polymerase?",
+    "options": ["It only works at 42°C", "It is inactivated at room temperature", "It is used to synthesize RNA", "It requires oligo(dT) primers to function"],
+    "answer": "It is inactivated at room temperature",
+    "explanation": "Hot-start enzymes are 'locked' at room temperature and only become active once the reaction reaches 95°C."
+  },
+  {
+    "id": 13,
+    "question": "Which of the following is a problem prevented by using a Hot-Start enzyme?",
+    "options": ["The degradation of RNA", "Primer dimers and non-specific binding", "Excessive Mg2+ concentration", "Slow thermal cycling"],
+    "answer": "Primer dimers and non-specific binding",
+    "explanation": "Because standard Taq is 'leaky' at room temperature, it can create 'molecular junk' like primer dimers before the reaction starts."
+  },
+  {
+    "id": 14,
+    "question": "In one-step RT-PCR, why must the Hot-Start Taq remain 'locked' during the RT step?",
+    "options": ["To save energy", "To prevent non-specific amplification", "To allow the DNA to melt", "To increase the dynamic range"],
+    "answer": "To prevent non-specific amplification",
+    "explanation": "Taq creates primer dimers or non-specific DNA products while the RT is trying to work. If these form early, they will out-compete your actual target during the PCR phase.  "
+  },
+  {
+    "id": 15,
+    "question": "What is the primary purpose of the 95°C activation step in a Hot-Start protocol?",
+    "options": ["To anneal the primers", "To synthesize cDNA", "To kill the RTase and activate the Taq polymerase", "To perform final extension"],
+    "answer": "To kill the RTase and activate the Taq polymerase",
+    "explanation": "The high heat kills the heat-sensitive RTase and 'wakes up' the Hot-Start Taq."
+  },
+  {
+    "id": 16,
+    "question": "Which component is as critical to the success of qRT-PCR as the DNA polymerase?",
+    "options": ["The thermal cycler's camera", "The reverse transcriptase (RT)", "The random hexamer length", "The TE buffer volume"],
+    "answer": "The reverse transcriptase (RT)",
+    "explanation": "RT is critical; it must provide high yields of full-length cDNA and perform well at high temperatures."
+  },
+  {
+    "id": 17,
+    "question": "What is the typical final concentration of Magnesium (Mg2+) used in most optimized real-time PCR master mixes?",
+    "options": ["10 mM", "3 mM", "1 mM", "0.5 mM"],
+    "answer": "3 mM",
+    "explanation": "While it can vary between 3 and 6 mM, 3 mM is the typical final concentration that works for most targets."
+  },
+  {
+    "id": 18,
+    "question": "What is the recommended amplicon length for optimal real-time PCR efficiency?",
+    "options": ["300–500 bp", "50–150 bp", "Over 1000 bp", "10–20 bp"],
+    "answer": "50–150 bp",
+    "explanation": "Longer products do not amplify as efficiently, so 50–150 bp is ideal."
+  },
+  {
+    "id": 19,
+    "question": "What is the typical standard final concentration for each primer in a real-time PCR reaction?",
+    "options": ["100 uM", "200 nM", "500 nM", "10 nM"],
+    "answer": "200 nM",
+    "explanation": "A final concentration of 200 nM for each primer is effective for most reactions."
+  },
+  {
+    "id": 20,
+    "question": "When resuspending lyophilized primers to a high-concentration stock, what is the usual concentration reached?",
+    "options": ["200 nM", "100 uM", "10 uM", "1 M"],
+    "answer": "100 uM",
+    "explanation": "Primers are usually resuspended to a high-concentration stock of 100 uM."
+  }
+]

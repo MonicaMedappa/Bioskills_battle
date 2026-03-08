@@ -35,3 +35,14 @@ export const articleSets = {
         { id: 'data/library/trichinellosis/Set-6.json', title: 'Treatment and Prevention' }
     ]
 };
+
+export const qpcrSets = [
+    { id: 'qPCR.json', title: 'General qPCR Quiz' },
+    { id: 'data/qpcr/Real-Time PCR Fundamentals.json', title: 'Real-Time PCR Fundamentals' },
+    { id: 'data/qpcr/The Chemistry of qPCR.json', title: 'The Chemistry of qPCR' },
+    { id: 'data/qpcr/Principles and Optimization.json', title: 'Principles and Optimization' },
+    { id: 'data/qpcr/The qPCR Essentials Quiz.json', title: 'The qPCR Essentials Quiz' },
+    { id: 'data/qpcr/qPCR Data Analysis & Assay Validation.json', title: 'qPCR Data Analysis & Assay Validation' },
+    { id: 'data/qpcr/A qPCR Deep Dive.json', title: 'A qPCR Deep Dive' },
+];
+

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "In a perfect qPCR world, how does the amount of DNA change every cycle?",
+    "options": ["It triples", "It stays constant", "It doubles", "It increases by 10%"],
+    "answer": "It doubles",
+    "explanation": "At 100% efficiency, the DNA in a qPCR reaction doubles every cycle (2^n)."
+  },
+  {
+    "id": 2,
+    "question": "What is the relationship between the Ct value and the amount of starting target DNA?",
+    "options": ["They are directly proportional", "There is no relationship", "They are inversely proportional", "The Ct value is always double the starting amount"],
+    "answer": "They are inversely proportional",
+    "explanation": "A high amount of starting DNA is detected early (low Ct), while a low amount takes many cycles to detect (high Ct)."
+  },
+  {
+    "id": 3,
+    "question": "A high Ct value indicates which of the following?",
+    "options": ["High amount of starting DNA", "Low amount of starting DNA", "Perfect reaction efficiency", "Presence of inhibitors"],
+    "answer": "Low amount of starting DNA",
+    "explanation": "A high Ct means it took many cycles for the signal to rise above background noise, indicating less starting material."
+  },
+  {
+    "id": 4,
+    "question": "What is the expected increase in Ct value for a 10-fold decrease in DNA concentration at 100% efficiency?",
+    "options": ["1.0 cycle", "3.3 cycles", "10.0 cycles", "5.0 cycles"],
+    "answer": "3.3 cycles",
+    "explanation": "The math for a 10-fold dilution (log2 of 10) results in a predictable shift of approximately 3.3 cycles."
+  },
+  {
+    "id": 5,
+    "question": "Which mathematical expression correctly calculates the number of cycles (n) required to achieve a 10-fold change in DNA, assuming 100% PCR efficiency?",
+    "options": ["log10(2)", "log2(10)", "10 / 3.3", "2 * 10"],
+    "answer": "Log2(10)",
+    "explanation": "In a perfect reaction, DNA follows the exponential growth equation 2^n = Fold Change. To find the number of cycles (n) for a 10-fold change, we set 2^n = 10. Solving for n requires taking the log of both sides, resulting in n = log2(10), which equals approximately 3.32 cycles."
+  },
+  {
+    "id": 6,
+    "question": "What is required to convert a Ct value into an actual 'absolute number of copies'?",
+    "options": ["A passive reference dye", "A melting curve", "A standard curve", "A 40-cycle run"],
+    "answer": "A standard curve",
+    "explanation": "A standard curve, created by running known concentrations, is necessary to turn Ct values into absolute copy numbers."
+  },
+  {
+    "id": 7,
+    "question": "Which of the following is typically used to create a series of known concentrations for a standard curve?",
+    "options": ["Total RNA only", "Plasmid DNA or synthesized DNA standards", "Untreated lung tissue", "Reverse transcriptase"],
+    "answer": "Plasmid DNA or synthesized DNA standards",
+    "explanation": "Known quantities like plasmid DNA are used as standards to generate the linear regression needed for quantification."
+  },
+  {
+    "id": 8,
+    "question": "In a linear regression for qPCR, what is plotted on the x-axis?",
+    "options": ["The observed Ct values", "The fluorescence signal", "The log of the known concentrations", "The cycle number"],
+    "answer": "The log of the known concentrations",
+    "explanation": "To generate the line equation (y = mx + b), the log of known concentrations is plotted on the x-axis."
+  },
+  {
+    "id": 9,
+    "question": "If a 10-fold dilution series shows a Ct shift of 4.0 cycles, what does this indicate?",
+    "options": ["The reaction efficiency is low", "The efficiency is perfect (100%)", "There are primer-dimers interfering", "The starting DNA was too high"],
+    "answer": "The reaction efficiency is low",
+    "explanation": "A shift significantly higher than 3.3 (like 4.0) means the DNA is not doubling every cycle, indicating low efficiency."
+  },
+  {
+    "id": 10,
+    "question": "If a 10-fold dilution series shows a Ct shift of only 2.8 cycles (less than the expected 3.3), what is the most likely cause?",
+    "options": ["The reaction efficiency is too low due to inhibitors", "The DNA is doubling more than once per cycle", "Primer-dimers or non-specific amplification are interfering with the signal.", "The starting DNA concentration was too high for the machine to read"],
+    "answer": "Primer-dimers or non-specific amplification are interfering with the signal",
+    "explanation": "A shift smaller than 3.3 suggests super-efficiency, which is physically impossible. This usually happens because primer-dimers or artifacts are contributing to the fluorescence in the lower-concentration samples, making their Ct values appear earlier than they truly are."
+  },
+  {
+    "id": 11,
+    "question": "What are you literally counting when discussing 'DNA copies' in qPCR?",
+    "options": ["The weight of the DNA pellet", "The number of individual double-stranded DNA molecules", "The total number of nucleotides", "The volume of the PCR tube"],
+    "answer": "The number of individual double-stranded DNA molecules",
+    "explanation": "In qPCR, 'copies' refers to the specific count of the targeted double-stranded DNA molecules in the reaction."
+  },
+  {
+    "id": 12,
+    "question": "Which analogy is used in the notes to describe 'DNA copies' vs. total DNA weight?",
+    "options": ["Measuring water volume vs. weight", "Counting printed books vs. the weight of paper", "Counting leaves vs. the height of a tree", "Measuring light intensity vs. heat"],
+    "answer": "Counting printed books vs. the weight of paper",
+    "explanation": "This analogy highlights that qPCR counts specific sequences (books) rather than the total bulk of DNA (paper weight)."
+  },
+  {
+    "id": 13,
+    "question": "What does 'Absolute Copy Number' refer to?",
+    "options": ["The ratio of two different genes", "The exact count of molecules in a sample", "The change in expression after treatment", "The size of the genome in base pairs"],
+    "answer": "The exact count of molecules in a sample",
+    "explanation": "Absolute copy number provides a specific numerical count, such as the number of viral copies in a swab."
+  },
+  {
+    "id": 14,
+    "question": "How many copies of most genes do humans usually have per cell?",
+    "options": ["1 copy", "2 copies", "4 copies", "Thousands"],
+    "answer": "2 copies",
+    "explanation": "Most human cells are diploid and contain two copies of most genes, which is used to calculate genome equivalents."
+  },
+  {
+    "id": 15,
+    "question": "If a human sample contains 1,000 copies of a specific gene, how many cells' worth of DNA is represented?",
+    "options": ["1,000 cells", "2,000 cells", "500 cells", "250 cells"],
+    "answer": "500 cells",
+    "explanation": "Since humans have 2 copies of most genes per cell, 1,000 copies would equal 500 cells (1,000 divided by 2)."
+  },
+  {
+    "id": 16,
+    "question": "What is 'Copy Number Variation' (CNV)?",
+    "options": ["The change in DNA concentration over time", "Genetic duplications or deletions within a genome", "The speed at which Taq polymerase works", "The difference between RNA and DNA"],
+    "answer": "Genetic duplications or deletions within a genome",
+    "explanation": "CNVs occur when individuals have more or fewer than the standard 2 copies of a gene due to genetic changes."
+  },
+  {
+    "id": 17,
+    "question": "What is a common application of qPCR regarding Copy Number Variations?",
+    "options": ["Measuring the temperature of the thermal cycler", "Diagnosing genetic conditions or studying cancer", "Synthesizing new primers", "Cleaning the PCR machine"],
+    "answer": "Diagnosing genetic conditions or studying cancer",
+    "explanation": "qPCR is frequently used to 'count' variations to identify genetic disorders or cancer-related duplications."
+  },
+  {
+    "id": 18,
+    "question": "In relative quantification, what are you comparing?",
+    "options": ["The sample to a plasmid standard", "The expression of a gene in a treated vs. untreated sample", "The weight of DNA to the weight of RNA", "The number of primers to the number of dNTPs"],
+    "answer": "The expression of a gene in a treated vs. untreated sample",
+    "explanation": "Relative quantification looks at the fold change in gene expression between two different conditions, like healthy vs. diseased tissue."
+  },
+  {
+    "id": 19,
+    "question": "Why is the Ct of a target gene alone insufficient for comparing two different samples?",
+    "options": ["The machine cannot read single genes", "You might have put more total DNA into one tube than the other", "The target gene might not have a Poly(A) tail", "Ct values are only for absolute quantification"],
+    "answer": "You might have put more total DNA into one tube than the other",
+    "explanation": "Varying amounts of starting material ('stuff') would make a gene look higher or lower regardless of actual expression levels."
+  },
+  {
+    "id": 20,
+    "question": "What is the purpose of using a 'normalizer gene' in relative quantification?",
+    "options": ["To increase the fluorescent signal", "To control for experimental variability in the amount of total DNA used", "To stop the reaction at the plateau phase", "To act as a reporter dye"],
+    "answer": "To control for experimental variability in the amount of total DNA used",
+    "explanation": "A normalizer gene ensures that differences in Ct values are due to biological changes, not pipetting errors or concentration differences."
+  },
+  {
+    "id": 21,
+    "question": "Which gene is specifically mentioned in the notes as a common normalizer gene?",
+    "options": ["Taq polymerase", "ROX", "β-actin", "FAM"],
+    "answer": "β-actin",
+    "explanation": "β-actin is a standard 'housekeeping' gene used as a control for experimental variability."
+  },
+  {
+    "id": 22,
+    "question": "In relative quantification, if the final calculation results in a 'fold change' of 2.0, what does this conclude about the target gene?",
+    "options": ["The gene is expressed at half the level of the control", "There is twice as much of the target sequence in the treated sample compared to the control", "The reaction took exactly 2 cycles to reach the threshold", "The DNA sequence has 2 mutations"],
+    "answer": "There is twice as much of the target sequence in the treated sample compared to the control.",
+    "explanation": "Fold change represents the ratio of target gene expression between two groups. A value of 2.0 indicates 2-fold expression, meaning the treated sample has twice the amount of starting material (mRNA/DNA) as the control."
+  },
+  {
+    "id": 23,
+    "question": "What is the name for the exact cycle number where the signal crosses the background threshold?",
+    "options": ["Ct (Cycle Threshold)", "Rn", "The plateau", "Tm"],
+    "answer": "Ct (Cycle Threshold)",
+    "explanation": "The Ct is the point where the fluorescent signal rises significantly above background noise."
+  },
+  {
+    "id": 24,
+    "question": "In the linear regression equation y = mx + b, what does 'y' represent?",
+    "options": ["Log of concentration", "The observed Ct value", "Reaction efficiency", "The slope"],
+    "answer": "The observed Ct value",
+    "explanation": "In the standard curve equation, the y-axis (y) represents the Ct values measured by the instrument."
+  },
+  {
+    "id": 25,
+    "question": "True or False: A low Ct value represents a high amount of starting DNA.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Because DNA doubles exponentially, a sample with more starting material hits the detection threshold much earlier."
+  },
+  {
+    "id": 26,
+    "question": "What would the cycle shift be for a 100-fold difference in concentration at 100% efficiency?",
+    "options": ["3.3 cycles", "6.6 cycles", "10.0 cycles", "20.0 cycles"],
+    "answer": "6.6 cycles",
+    "explanation": "Since a 10-fold shift is 3.3 cycles, a 100-fold shift (10 x 10) is 3.3 + 3.3 = 6.6 cycles."
+  },
+  {
+    "id": 27,
+    "question": "The term 'Genome Equivalents' is used to translate gene copies into:",
+    "options": ["Number of cells", "Weight of protein", "Volume of RNA", "Number of cycles"],
+    "answer": "Number of cells",
+    "explanation": "Genome equivalents allow researchers to estimate the number of cells in a sample based on the known number of gene copies per genome."
+  },
+  {
+    "id": 28,
+    "question": "Relative quantification is most useful for comparing which two types of samples?",
+    "options": ["Two different viruses", "Treated vs. untreated (control) samples", "Two different species of bacteria", "Plasmid DNA vs. genomic DNA"],
+    "answer": "Treated vs. untreated (control) samples",
+    "explanation": "It is specifically used to measure the change in gene expression relative to a control group."
+  },
+  {
+    "id": 29,
+    "question": "If you put 10 times more 'stuff' in Tube A than Tube B, but the gene expression is actually the same, what will happen to Tube A's Ct?",
+    "options": ["It will be 3.3 cycles higher", "It will be 3.3 cycles lower", "It will stay the same", "It will be 10 cycles higher"],
+    "answer": "It will be 3.3 cycles lower",
+    "explanation": "Because there is more template in Tube A, it will reach the threshold faster (lower Ct), even if the expression per cell is identical."
+  },
+  {
+    "id": 30,
+    "question": "Mastering the math of qPCR primarily involves understanding which type of growth?",
+    "options": ["Linear growth", "Exponential growth", "Stagnant growth", "Polynomial growth"],
+    "answer": "Exponential growth",
+    "explanation": "The relationship between cycle numbers and DNA copies is based on the math of exponential doubling (2^n)."
+  }
+]

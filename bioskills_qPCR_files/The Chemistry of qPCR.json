@@ -1,0 +1,213 @@
+[
+  {
+    "id": 1,
+    "question": "Which fluorescent dye binds non-specifically to double-stranded oligonucleotides in qPCR?",
+    "options": ["FAM", "SYBR Green", "ROX", "BHQ"],
+    "answer": "SYBR Green",
+    "explanation": "SYBR Green is a fluorescent dye that binds to ds oligonucleotides non-specifically, increasing its signal 20-100 fold upon binding."
+  },
+  {
+    "id": 2,
+    "question": "What is a major disadvantage of using SYBR Green in qPCR?",
+    "options": ["It is too expensive", "It only binds to single-stranded DNA", "It can bind to non-target DNA like primer dimers", "It requires a specialized laser"],
+    "answer": "It can bind to non-target DNA like primer dimers",
+    "explanation": "Because SYBR Green is non-specific, it can bind to any double-stranded DNA, including artifacts like primer dimers, which can lead to false results."
+  },
+  {
+    "id": 3,
+    "question": "In specific self-quenching primer systems, where is the fluorescent label typically placed to ensure the signal is suppressed until amplification occurs?",
+    "options": ["At the 3'-end attached to a Poly-A tail", "At the 5'-end adjacent to multiple Adenosine residues", "At the 5'-end adjacent to one or more Cytosine residues", "Attached to the phosphate backbone"],
+    "answer": "At the 5'-end adjacent to one or more Cytosine residues",
+    "explanation": "In this detection method, the label is placed next to a Cytosine. During PCR, a Guanosine is incorporated opposite that Cytosine, which then quenches or reduces the signal of the dye through direct proximity "
+  },
+  {
+    "id": 4,
+    "question": "Which natural DNA base is known to have an electron-rich property that allows it to function as a natural quencher of fluorescence?",
+    "options": ["Adenosine", "Thymidine", "Cytosine", "Guanosine"],
+    "answer": "Guanosine",
+    "explanation": "Guanosine ($G$) residues are naturally capable of quenching certain fluorescent dyes (like FAM) through a process called photoinduced electron transfer (PET). This is why probe designers often avoid placing a reporter dye directly next to a G in the sequence."
+  },
+  {
+    "id": 5,
+    "question": "What is the definition of a 'quencher' in the context of qPCR?",
+    "options": ["A dye that increases the signal", "A molecule that absorbs and suppresses fluorescence", "An enzyme that builds DNA", "A buffer that stabilizes pH"],
+    "answer": "A molecule that absorbs and suppresses fluorescence",
+    "explanation": "A quencher is a molecule that absorbs and suppresses fluorescence, thereby diminishing the emitted signal from a reporter dye."
+  },
+  {
+    "id": 6,
+    "question": "Why are probe-based qPCR assays generally preferred over those using SYBR Green?",
+    "options": ["They are cheaper", "They are more sensitive and specific", "They do not require a thermal cycler", "They work faster"],
+    "answer": "They are more sensitive and specific",
+    "explanation": "Labeled probes only bind to target regions of the DNA, making the assay more sensitive and specific than non-specific dyes."
+  },
+  {
+    "id": 7,
+    "question": "In a TaqMan probe, what is the role of FAM?",
+    "options": ["It is the quencher", "It is the DNA polymerase", "It is the reporter dye", "It is the primer"],
+    "answer": "It is the reporter dye",
+    "explanation": "FAM is the reporter dye that emits the fluorescent signal detected by the qPCR instrument."
+  },
+  {
+    "id": 8,
+    "question": "Where is the FAM reporter dye typically located on a fluorescent probe?",
+    "options": ["The 3' end", "The 5' end", "The minor groove", "The major groove"],
+    "answer": "The 5' end",
+    "explanation": "In a standard probe setup, FAM is located at the 5' end of the probe sequence."
+  },
+  {
+   "id": 9,
+   "question": "What is the role of the BHQ molecule in a fluorescent TaqMan probe?",
+   "options": ["Reporter dye", "DNA Polymerase", "Quencher", "Passive reference"],
+   "answer": "Quencher",
+   "explanation": "BHQ (Black Hole Quencher) is the molecule located at the 3' end of the probe that absorbs and suppresses the fluorescent signal from the FAM reporter."
+
+  },
+  {
+    "id": 10,
+    "question": "What happens to FAM's energy when the probe is intact and BHQ is in close proximity?",
+    "options": ["It is emitted as bright light", "It is converted into more DNA", "BHQ absorbs the energy as heat instead of light", "The energy is used to activate Taq polymerase"],
+    "answer": "BHQ absorbs the energy as heat instead of light",
+    "explanation": "Through FRET or static quenching, the BHQ absorbs the energy from the excited FAM and releases it as heat, preventing signal emission."
+  },
+  {
+    "id": 11,
+    "question": "Which enzyme activity is responsible for cleaving the probe during qPCR?",
+    "options": ["3' to 5' exonuclease activity", "5' to 3' exonuclease activity", "Ligase activity", "Helicase activity"],
+    "answer": "5' to 3' exonuclease activity",
+    "explanation": "The detection of amplification occurs via the 5' to 3' exonuclease activity of the DNA polymerase (like Taq) during the extension phase."
+  },
+  {
+    "id": 12,
+    "question": "In which direction does nucleotide addition occur during the extension phase?",
+    "options": ["3' to 5'", "5' to 3'", "Randomly", "Both directions simultaneously"],
+    "answer": "5' to 3'",
+    "explanation": "During PCR, nucleotide addition by the DNA polymerase occurs in the 5' to 3' direction."
+  },
+  {
+    "id": 13,
+    "question": "In which direction does the proofreading activity of high-fidelity DNA polymerase occur?",
+    "options": ["5' to 3'", "3' to 5'", "5' to 5'", "3' to 3'"],
+    "answer": "3' to 5'",
+    "explanation": "While nucleotide addition is 5' to 3', the proofreading activity of the enzyme occurs from 3' to 5'."
+  },
+  {
+    "id": 14,
+    "question": "What triggers the release of the FAM fluorescent signal?",
+    "options": ["The cooling of the reaction to 4 degrees", "The physical cleavage of the probe by the polymerase", "The binding of the probe to the primer", "The exhaustion of dNTPs"],
+    "answer": "The physical cleavage of the probe by the polymerase",
+    "explanation": "When the polymerase cleaves the probe, it physically separates the FAM reporter from the BHQ quencher, allowing FAM to fluoresce."
+  },
+  {
+    "id": 15,
+    "question": "Why is the use of BHQ advantageous over older quenchers like TAMRA?",
+    "options": ["It is a 'dark quencher' with no background fluorescence", "It makes the reaction run at higher temperatures", "It is cheaper to manufacture", "It increases the size of the DNA"],
+    "answer": "It is a 'dark quencher' with no background fluorescence",
+    "explanation": "BHQ contributes no background fluorescence of its own, leading to a much higher signal-to-noise ratio and greater sensitivity."
+  },
+  {
+    "id": 16,
+    "question": "How does the amount of target DNA relate to the light detected in probe-based qPCR?",
+    "options": ["More target DNA leads to less light", "There is no relationship", "More target DNA leads to more light detected", "Light is only detected if there is no DNA"],
+    "answer": "More target DNA leads to more light detected",
+    "explanation": "More target DNA results in more polymerase activity, more probes cleaved, and more FAM separated, leading to more light being detected."
+  },
+  {
+    "id": 17,
+    "question": "What does 'MGB' stand for in the context of MGB probes?",
+    "options": ["Major Groove Binder", "Minor Groove Binder", "Molecular Gene Builder", "Modified Guanosine Base"],
+    "answer": "Minor Groove Binder",
+    "explanation": "MGB stands for Minor Groove Binder; these probes fold into the minor groove of the target sequence."
+  },
+  {
+    "id": 18,
+    "question": "What is a structural advantage of using MGB probes?",
+    "options": ["They are much longer than standard probes", "They can be designed as shorter probes", "They eliminate the need for a reporter dye", "They are made of RNA instead of DNA"],
+    "answer": "They can be designed as shorter probes",
+    "explanation": "MGB probes can be shorter, which brings the quencher and reporter closer together for better quenching."
+  },
+  {
+    "id": 19,
+    "question": "How does the MGB moiety affect the stability of the probe-target duplex?",
+    "options": ["It makes the duplex less stable", "It has no effect on stability", "It stabilizes the duplex and increases the Tm", "It causes the duplex to melt instantly"],
+    "answer": "It stabilizes the duplex and increases the Tm",
+    "explanation": "The MGB moiety non-covalently binds to the minor groove, stabilizing the DNA duplex and significantly increasing the probe’s melting temperature (Tm)."
+  },
+  {
+    "id": 20,
+    "question": "Why are qPCR reactions typically performed in triplicates?",
+    "options": ["To use up extra reagents", "To check if the machine is working", "To account for variability and allow for sound statistical analysis", "Because one tube is never enough for the camera to see"],
+    "answer": "To account for variability and allow for sound statistical analysis",
+    "explanation": "Triplicates are done to account for assay variability, which is required for sound statistical analysis and publishable results."
+  },
+  {
+    "id": 21,
+    "question": "During the absence of amplification, what is the state of the probe?",
+    "options": ["It is cleaved and floating", "It is bound to the primer", "It is intact with FAM and BHQ in close proximity", "It is destroyed by the heat"],
+    "answer": "It is intact with FAM and BHQ in close proximity",
+    "explanation": "Before amplification, the probe is intact, meaning FAM and BHQ are close enough for the signal to be quenched."
+  },
+  {
+    "id": 22,
+    "question": "What does BHQ do with the light energy it absorbs from FAM?",
+    "options": ["Re-emits it as green light", "Re-emits it as red light", "Releases it as harmless heat", "Stores it to power the polymerase"],
+    "answer": "Releases it as harmless heat",
+    "explanation": "BHQ is a dark quencher that absorbs light energy and releases it as heat instead of light."
+  },
+  {
+    "id": 23,
+    "question": "The cleavage of the probe occurs during which phase of the PCR cycle?",
+    "options": ["Denaturation", "Annealing", "Extension", "Hold"],
+    "answer": "Extension",
+    "explanation": "The polymerase cleaves the probe as it extends the new DNA strand during the extension phase."
+  },
+  {
+    "id": 24,
+    "question": "In the MGB probe structure, where is the MGB moiety attached?",
+    "options": ["The 5' end", "The 3' end", "The middle of the probe", "Attached to the FAM reporter"],
+    "answer": "The 3' end",
+    "explanation": "In MGB probes, the 3' end is connected to the MGB moiety that binds to the minor groove."
+  },
+  {
+    "id": 25,
+    "question": "What is the typical length range for an MGB probe?",
+    "options": ["50-100 bases", "13-20 bases", "Over 200 bases", "Exactly 3 bases"],
+    "answer": "13-20 bases",
+    "explanation": "MGB probes are generally 13-20 bases long. "
+  },
+  {
+    "id": 26,
+    "question": "Compared to TAMRA, BHQ results in a better:",
+    "options": ["Melting temperature", "Extension speed", "Signal-to-noise ratio", "Primer binding"],
+    "answer": "Signal-to-noise ratio",
+    "explanation": "Because BHQ has no background fluorescence of its own, it provides a much higher signal-to-noise ratio than older quenchers like TAMRA."
+  },
+  {
+    "id": 27,
+    "question": "True or False: Regular primers are still required when using a TaqMan probe.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Even when using a probe, regular primers are still necessary because they are what the DNA polymerase extends to create the new strand."
+  },
+  {
+    "id": 28,
+    "question": "While standard Taq polymerase is used in qPCR for its 5' to 3' exonuclease activity, which specific activity does it lack, preventing it from performing proofreading?",
+    "options": ["5' to 3' exonuclease", "3' to 5' exonuclease", "5' to 3' polymerase", "3' to 5' helicase"],
+    "answer": "3' to 5' exonuclease",
+    "explanation": "Standard Taq DNA polymerase lacks 3' to 5' exonuclease activity, which is the proofreading mechanism used to remove mismatched bases. In qPCR, Taq is chosen specifically for its 5' to 3' exonuclease activity, which allows it to chew through and cleave the TaqMan probe as it synthesizes the new strand."
+  },
+  {
+    "id": 29,
+    "question": "What is the primary function of the 'reporter dye' in qPCR?",
+    "options": ["To quench background noise", "To emit a signal that tells you how much DNA you have", "To bind the minor groove", "To catalyze the reaction"],
+    "answer": "To emit a signal that tells you how much DNA you have",
+    "explanation": "The reporter dye (like FAM) provides the fluorescent signal that is measured to quantify DNA amplification."
+  },
+  {
+    "id": 30,
+    "question": "When FAM is 'excited' but the probe is intact, why do we see no signal?",
+    "options": ["The FAM molecule is broken", "The machine's light isn't strong enough", "BHQ absorbs the energy before it can be emitted as light", "The DNA blocks the light"],
+    "answer": "BHQ absorbs the energy before it can be emitted as light",
+    "explanation": "When the probe is intact, FAM and BHQ are in proximity, allowing BHQ to absorb the excitation energy and release it as heat."
+  }
+]

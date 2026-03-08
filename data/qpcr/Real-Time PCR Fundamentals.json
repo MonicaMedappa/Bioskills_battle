@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "In qPCR data analysis, what does the 'Baseline' specifically represent?",
+    "options": ["The cycle where DNA starts doubling", "The signal level during initial cycles (background noise)", "The maximum fluorescence of the reporter dye", "The slope of the standard curve"],
+    "answer": "The signal level during initial cycles (background noise)",
+    "explanation": "The baseline refers to the signal level during the initial cycles of PCR (usually 3 to 15) where there is little change in fluorescence, equating to background noise or 'static'."
+  },
+  {
+    "id": 2,
+    "question": "What is the primary purpose of 'Baseline Subtraction' in real-time PCR software?",
+    "options": ["To increase the speed of the reaction", "To identify the melting temperature", "To accurately determine the threshold cycle (Ct)", "To reduce the number of cycles required"],
+    "answer": "To determine the threshold cycle (Ct) accurately",
+    "explanation": "Setting the baseline correctly tells the software to ignore background noise, allowing for the accurate determination of the Ct value."
+  },
+  {
+    "id": 3,
+    "question": "Which cycle range is most commonly used by default to calculate the baseline?",
+    "options": ["Cycles 1 to 5", "Cycles 35 to 40", "Cycles 3 to 15", "Cycles 20 to 30"],
+    "answer": "Cycles 3 to 15",
+    "explanation": "The baseline is usually determined during the initial cycles of PCR, typically between cycles 3 and 15."
+  },
+  {
+    "id": 4,
+    "question": "What happens to the data if the baseline window is set too late and overlaps with amplification?",
+    "options": ["The Ct value becomes lower", "The software over-corrects, causing the curve to dip or flatline", "The reaction efficiency increases", "The fluorescence signal increases exponentially"],
+    "answer": "The software over-corrects, causing the curve to dip or flatline",
+    "explanation": "If the baseline includes cycles where DNA growth has started, the software treats actual signal as noise, pulling the curve downward and ruining Cq/Ct values."
+  },
+  {
+    "id": 5,
+    "question": "What is the 'Goldilocks Zone' for manually setting a baseline?",
+    "options": ["Cycle 1 to the end of the run", "Cycle 10 to cycle 20", "Cycle 3 to two cycles before the first visible rise", "Cycle 15 to cycle 25"],
+    "answer": "Cycle 3 to two cycles before the first visible rise",
+    "explanation": "To avoid noise and premature DNA signal, a safe baseline is generally set from cycle 3 up to two cycles before the signal begins to climb."
+  },
+  {
+    "id": 6,
+    "question": "How is the Normalized Reporter (Rn) value calculated?",
+    "options": ["Reporter dye signal minus the threshold", "Reporter dye signal divided by the passive reference dye signal", "Baseline signal plus the threshold signal", "Delta Rn multiplied by the cycle number"],
+    "answer": "Reporter dye signal divided by the passive reference dye signal",
+    "explanation": "Rn is the ratio of the fluorescence of a reporter dye (like FAM) to that of a passive reference dye (typically ROX)."
+  },
+  {
+    "id": 7,
+    "question": "What is the primary function of a passive reference dye like ROX?",
+    "options": ["To signal the synthesis of new DNA", "To provide a stable yardstick for normalization", "To bind specifically to the target gene sequence", "To act as a quencher for the reporter dye"],
+    "answer": "To provide a stable yardstick for normalization",
+    "explanation": "ROX emits a constant signal that does not change during PCR, allowing the software to normalize raw signal and cancel out non-biological noise like pipetting errors or bubbles."
+  },
+  {
+    "id": 8,
+    "question": "In the context of qPCR spectra, which wavelength range is associated with the ROX dye?",
+    "options": ["Green spectrum (~520nm)", "Blue spectrum (~450nm)", "Red spectrum (~610nm)", "Ultraviolet spectrum (~300nm)"],
+    "answer": "Red spectrum (~610nm)",
+    "explanation": "FAM and SYBR Green are in the green spectrum (~520nm), while the ROX passive reference dye is in the red spectrum (~610nm) [6]."
+  },
+  {
+    "id": 9,
+    "question": "What is 'Delta Rn' representing in an amplification plot?",
+    "options": ["The total fluorescence at the plateau", "The normalized reporter signal minus the baseline fluorescence", "The cycle number divided by efficiency", "The ratio of FAM to VIC"],
+    "answer": "The normalized reporter signal minus the baseline fluorescence",
+    "explanation": "Delta Rn is the value of the normalized reporter (Rn) after the calculated baseline has been subtracted."
+  },
+  {
+    "id": 10,
+    "question": "What happens to the mathematical analysis if a software expects ROX but it is missing from the master mix?",
+    "options": ["The reaction becomes 100% efficient", "The threshold is automatically lowered", "The data shows 'NaN' errors or jagged lines", "The Ct values become more precise"],
+    "answer": "The data shows 'NaN' errors or jagged lines",
+    "explanation": "If ROX is missing, the software attempts to divide the reporter signal by zero or very low noise, causing the mathematical calculations to break."
+  },
+  {
+    "id": 11,
+    "question": "How does the instrument software typically set the 'Threshold' automatically?",
+    "options": ["At 10 times the standard deviation of the baseline fluorescence", "At the 40th cycle of every run", "At the highest point of the linear phase", "At 50% of the maximum Rn"],
+    "answer": "At 10 times the standard deviation of the baseline fluorescence",
+    "explanation": "The threshold is set to distinguish relevant signal from background; a commom default method is setting it at 10 times the standard deviation of the baseline signal."
+  },
+  {
+    "id": 12,
+    "question": "What is the Threshold Cycle (Ct) defined as?",
+    "options": ["The final cycle of the PCR reaction", "The cycle where reagents are exhausted", "The cycle number where the fluorescent signal crosses the threshold", "The cycle with the lowest fluorescence"],
+    "answer": "The cycle number where the fluorescent signal crosses the threshold",
+    "explanation": "The Ct (or Cq) is the specific cycle number at which the fluorescence signal from the sample becomes strong enough to cross the set threshold."
+  },
+  {
+    "id": 13,
+    "question": "What is the relationship between the Ct value and the starting amount of target DNA?",
+    "options": ["They are directly proportional", "The Ct value is inversely related to the starting amount", "There is no correlation between them", "The Ct value is always half the starting amount"],
+    "answer": "The Ct value is inversely related to the starting amount",
+    "explanation": "A sample with more starting DNA will reach the threshold earlier, resulting in a lower Ct value compared to a sample with less DNA."
+  },
+  {
+    "id": 14,
+    "question": "If sample A has twice as much starting DNA as sample B, what is the expected difference in their Ct values?",
+    "options": ["Sample A will be 10 cycles earlier", "Sample A will be 1 cycle earlier", "Sample A will be 3.3 cycles later", "They will have the same Ct value"],
+    "answer": "Sample A will be 1 cycle earlier",
+    "explanation": "In a perfect doubling system, having twice the starting amount yields a Ct exactly one cycle earlier."
+  },
+  {
+    "id": 15,
+    "question": "Why is a Logarithmic Scale standard for viewing qPCR amplification plots?",
+    "options": ["It makes the plateau phase easier to see", "It turns the exponential growth phase into a straight line", "It hides background noise completely", "It is the only way to see the baseline"],
+    "answer": "It turns the exponential growth phase into a straight line",
+    "explanation": "Plotting Delta Rn on a log scale linearizes the exponential phase, making it easier to see if the threshold line is positioned correctly."
+  },
+  {
+    "id": 16,
+    "question": "Which type of plot is recommended specifically for setting the baseline?",
+    "options": ["Logarithmic plot", "Melting curve plot", "Linear plot", "Standard curve plot"],
+    "answer": "Linear plot",
+    "explanation": "A linear plot is used for setting the baseline, while a logarithmic plot is used for setting the threshold."
+  },
+  {
+    "id": 17,
+    "question": "What is plotted on the X-axis and Y-axis to establish a Standard Curve?",
+    "options": ["X: Cycle Number; Y: Fluorescence", "X: Log of concentration; Y: Ct value", "X: Temperature; Y: Delta Rn", "X: Efficiency; Y: Slope"],
+    "answer": "X: Log of concentration; Y: Ct value",
+    "explanation": "A standard curve is created by plotting the log of known template concentrations on the x-axis against their corresponding Ct values on the y-axis."
+  },
+  {
+    "id": 18,
+    "question": "What does the Y-intercept of a standard curve represent?",
+    "options": ["The maximum DNA yield", "The theoretical Ct for a single copy", "The concentration of ROX dye", "The average efficiency of the enzyme"],
+    "answer": "The theoretical Ct for a single copy",
+    "explanation": "The Y-intercept on a standard curve represents expected Ct value for a single unit (1 copy) of the target template."
+  },
+  {
+    "id": 19,
+    "question": "A PCR efficiency of 100% corresponds to which slope value on a standard curve?",
+    "options": ["-1.00", "-3.32", "-3.58", "0.999"],
+    "answer": "-3.32",
+    "explanation": "Ideally, the efficiency is 100% (DNA doubles every cycle), which is equivalent to a slope of -3.32."
+  },
+  {
+    "id": 20,
+    "question": "What is the acceptable range for a 'good' qPCR reaction efficiency?",
+    "options": ["50% to 75%", "90% to 110%", "110% to 150%", "Always exactly 100%"],
+    "answer": "90% to 110%",
+    "explanation": "A good reaction should have an efficiency between 90% and 110%, which corresponds to a slope between -3.58 and -3.10."
+  },
+  {
+    "id": 21,
+    "question": "What does an R-squared (R2) value of 0.999 on a standard curve indicate?",
+    "options": ["The reaction has low sensitivity", "The data fits the standard curve well (high linearity)", "There are PCR inhibitors present", "The primers are forming dimers"],
+    "answer": "The data fits the standard curve well (high linearity)",
+    "explanation": "The R2 value measures how well the data fits the standard curve; a value of 0.999 represents a very good fit."
+  },
+  {
+    "id": 22,
+    "question": "Why can a Ct value be a decimal (e.g., 24.5) even though cycles are whole numbers?",
+    "options": ["The machine only takes snapshots every half-cycle", "It is a mathematical intersection calculated between snapshots", "The reagents are only 50% efficient", "The software rounds up from the baseline"],
+    "answer": "It is a mathematical intersection calculated between snapshots",
+    "explanation": "The software uses an algorithm to calculate the precise point where the amplification curve crosses the threshold between two cycle snapshots."
+  },
+  {
+    "id": 23,
+    "question": "Why is it important to quantify reactions in the early exponential phase rather than the plateau?",
+    "options": ["Because the signal is highest at the plateau", "Because reagents are still in excess and the enzyme is highly efficient", "Because primers have been depleted by that stage", "To ensure the DNA has stopped doubling"],
+    "answer": "Because reagents are still in excess and the enzyme is highly efficient",
+    "explanation": "In the early exponential phase, reagents are plentiful and the polymerase is working at peak efficiency, leading to more accurate data."
+  },
+  {
+    "id": 24,
+    "question": "How is 'Absolute Quantification' performed?",
+    "options": ["Comparing a treated sample to an untreated control", "Using a dilution series of known quantities to generate a standard curve", "Measuring the weight of the total RNA", "Checking the color of the final PCR product"],
+    "answer": "Using a dilution series of known quantities to generate a standard curve",
+    "explanation": "Absolute quantification involves amplifying serial dilutions of known quantities to create a curve used to quantify unknowns."
+  },
+  {
+    "id": 25,
+    "question": "In 'Relative Quantification,' what is the role of a normalizer gene like β-actin?",
+    "options": ["To increase the sensitivity of the target gene", "To control for experimental variability between samples", "To act as a passive reference dye", "To provide the poly(A) tail for the RT step"],
+    "answer": "To control for experimental variability between samples",
+    "explanation": "A normalizer gene is used to ensure differences in gene expression aren't just due to putting more total DNA into one tube than another."
+  },
+  {
+    "id": 26,
+    "question": "What happens during a 'Melting Curve' analysis using an intercalating dye (e.g., SYBR Green) as the temperature reaches the Tm?",
+    "options": ["Fluorescence increases as DNA strands join", "Fluorescence decreases as DNA strands dissociate and release dye", "The DNA becomes permanent double-stranded molecules", "The ROX dye is activated by the heat"],
+    "answer": "Fluorescence decreases as DNA strands dissociate and release dye",
+    "explanation": "As dsDNA 'melts' into ssDNA, the incorporated dye is released, causing a sharp decrease in the fluorescent signal."
+  },
+  {
+    "id": 27,
+    "question": "What is the standard dynamic range for real-time PCR when using plasmid DNA?",
+    "options": ["1-2 orders of magnitude", "7-8 orders of magnitude", "Exactly 100 copies", "Only 3-4 log range"],
+    "answer": "7-8 orders of magnitude",
+    "explanation": "Ideally, the dynamic range for plasmid DNA should be 7-8 orders of magnitude."
+  },
+  {
+    "id": 28,
+    "question": "What Ct value was used as the cutoff for a positive H. ducreyi result in the QuantStudio example?",
+    "options": ["Ct higher than 40", "Ct lower than 34", "Ct exactly at 20", "Any detectable Ct value"],
+    "answer": "Ct lower than 34",
+    "explanation": "For the detection of H. ducreyi using the QuantStudio system, Ct values lower than 34 were considered positive."
+  },
+  {
+    "id": 29,
+    "question": "What does a shift of 3.3 cycles represent in a 10-fold dilution series?",
+    "options": ["Low reaction efficiency", "Perfect 100% PCR efficiency", "Presence of inhibitors", "Primer dimer formation"],
+    "answer": "Perfect 100% PCR efficiency",
+    "explanation": "A 10-fold decrease in DNA should result in a Ct increase of approximately 3.3 cycles if the efficiency is 100%."
+  },
+  {
+    "id": 30,
+    "question": "If a sample has a shift of 4.0 cycles for a 10-fold dilution, what does this indicate?",
+    "options": ["The reaction efficiency is low", "The DNA is doubling too fast", "The baseline was set too early", "There is no target DNA present"],
+    "answer": "The reaction efficiency is low",
+    "explanation": "A shift of significantly more than 3.3 cycles (like 4.0) means the reaction efficiency is low and the DNA isn't doubling every cycle."
+  }
+]

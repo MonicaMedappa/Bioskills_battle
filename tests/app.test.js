@@ -14,6 +14,7 @@ jest.unstable_mockModule('../src/quizModel.js', () => ({
         score: 0,
         questionUrl: 'Set-1-questions.json',
         TIME_PER_QUESTION: 20,
+        TIME_PER_QPCR_QUESTION: 30,
         TIME_PER_CALCULATION_QUESTION: 60,
         timeLeft: 20,
         resetState: jest.fn(),
@@ -39,6 +40,7 @@ jest.unstable_mockModule('../src/utils.js', () => ({
 jest.unstable_mockModule('../src/data.js', () => ({
     labTechniques: [
         { id: 'sds-page', title: 'SDS-PAGE', icon: '🧬', comingSoon: false },
+        { id: 'qpcr', title: 'qPCR', icon: '🧪', comingSoon: false },
         { id: 'dna-gel', title: 'DNA Gel Electrophoresis', icon: '🧪', comingSoon: true }
     ],
     libraryArticles: [
@@ -61,8 +63,13 @@ jest.unstable_mockModule('../src/data.js', () => ({
             { id: 'data/library/trichinellosis/Set-5.json', title: 'Set 5' },
             { id: 'data/library/trichinellosis/Set-6.json', title: 'Set 6' }
         ]
-    }
+    },
+    qpcrSets: [
+        { id: 'qPCR.json', title: 'General qPCR Quiz' },
+        { id: 'data/qpcr/Set-1.json', title: 'Topic 1' }
+    ]
 }));
+
 
 describe('App Module', () => {
     let mockChooseHubButton;
@@ -217,7 +224,10 @@ describe('App Module', () => {
         jest.spyOn(QuizUI, 'renderTechniquesGrid');
         jest.spyOn(QuizUI, 'getFeedbackTextElement');
         jest.spyOn(QuizUI, 'showSdsPage');
+        jest.spyOn(QuizUI, 'showQpcrPage');
+        jest.spyOn(QuizUI, 'renderQpcrSetsGrid');
         jest.spyOn(QuizUI, 'getQuizBackButton');
+        jest.spyOn(QuizUI, 'getQpcrSetsGrid');
 
 
         app = (await import('../src/app.js')).default;
@@ -481,6 +491,20 @@ describe('App Module', () => {
 
             expect(stopTimerSpy).toHaveBeenCalled();
             expect(QuizUI.showArticleSetsPage).toHaveBeenCalled();
+        });
+
+        test('handleTechniqueClick should show qPCR page and render sets when qpcr is clicked', () => {
+            app.handleTechniqueClick('qpcr');
+            expect(QuizUI.showQpcrPage).toHaveBeenCalled();
+            expect(QuizUI.renderQpcrSetsGrid).toHaveBeenCalledWith(expect.any(Array), app.handleTileClick);
+        });
+
+        test('handleQuizBack should return to qPCR page if origin is qpcr-page', () => {
+            const stopTimerSpy = jest.spyOn(app, 'stopTimer');
+            app.handleTechniqueClick('qpcr');
+            app.handleQuizBack();
+            expect(stopTimerSpy).toHaveBeenCalled();
+            expect(QuizUI.showQpcrPage).toHaveBeenCalled();
         });
     });
 });

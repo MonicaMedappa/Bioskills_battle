@@ -3,7 +3,7 @@
 import { QuizUI } from './quizUI.js';
 import { QuizModel } from './quizModel.js';
 import { browserUtils } from './utils.js'; // Import browser utilities
-import { labTechniques, libraryArticles, articleSets } from './data.js'; // Import centralized data
+import { labTechniques, libraryArticles, articleSets, qpcrSets } from './data.js'; // Import centralized data
 
 const app = {};
 let timerInterval = null;
@@ -36,6 +36,7 @@ function handleTechniqueClick(techniqueId) {
     } else if (techniqueId === 'qpcr') {
         quizOrigin = 'qpcr-page';
         QuizUI.showQpcrPage();
+        QuizUI.renderQpcrSetsGrid(qpcrSets, app.handleTileClick);
     }
 }
 
@@ -86,8 +87,14 @@ async function handleTileClick(setUrl) {
 function startTimer() {
     app.stopTimer(); // Always clear previous timer before starting a new one
 
-    // Determine time based on question set (e.g., Set 5 for calculations)
-    QuizModel.timeLeft = QuizModel.questionUrl === "Set-5-questions.json" ? QuizModel.TIME_PER_CALCULATION_QUESTION : QuizModel.TIME_PER_QUESTION;
+    // Determine time based on question set (e.g., Set 5 for calculations, qPCR for 30s)
+    if (QuizModel.questionUrl === "Set-5-questions.json") {
+        QuizModel.timeLeft = QuizModel.TIME_PER_CALCULATION_QUESTION;
+    } else if (quizOrigin === 'qpcr-page') {
+        QuizModel.timeLeft = QuizModel.TIME_PER_QPCR_QUESTION;
+    } else {
+        QuizModel.timeLeft = QuizModel.TIME_PER_QUESTION;
+    }
 
     QuizUI.updateTimerDisplay(QuizModel.timeLeft);
     QuizUI.setTimerContainerRed(false); // Remove red/blink classes initially

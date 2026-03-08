@@ -5,6 +5,7 @@ jest.unstable_mockModule('../src/quizUI.js', () => ({
     QuizUI: {
         showLandingPage: jest.fn(),
         showLabBenchPage: jest.fn(),
+        showQpcrPage: jest.fn(),
         getChooseHubButton: jest.fn(() => ({ onclick: null })),
         getLabBenchButton: jest.fn(() => ({ onclick: null })),
         getLibraryButton: jest.fn(() => ({ onclick: null })),
@@ -15,8 +16,10 @@ jest.unstable_mockModule('../src/quizUI.js', () => ({
         getSetTiles: jest.fn(() => []),
         getNextButton: jest.fn(() => ({ onclick: null })),
         getQuizBackButton: jest.fn(() => ({ onclick: null })),
-        // This is the missing getter we are testing for
-        getBackToLabButton: jest.fn(),
+        getBackToLabButton: jest.fn(() => ({ onclick: null })),
+        getBackToLabFromQpcrButton: jest.fn(() => ({ onclick: null })),
+        getQpcrSetsGrid: jest.fn(() => ({ onclick: null })),
+        renderQpcrSetsGrid: jest.fn(),
         showBattleHubModal: jest.fn(),
     }
 }));
@@ -38,7 +41,8 @@ jest.unstable_mockModule('../src/utils.js', () => ({
 jest.unstable_mockModule('../src/data.js', () => ({
     labTechniques: [],
     libraryArticles: [],
-    articleSets: {}
+    articleSets: {},
+    qpcrSets: []
 }));
 
 describe('Back to Lab Bench Button', () => {

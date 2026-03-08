@@ -41,6 +41,7 @@ export const QuizUI = {
     getBackToLabButton: () => document.getElementById('back-to-lab-btn'),
     getQpcrPage: () => document.getElementById('qpcr-page'),
     getBackToLabFromQpcrButton: () => document.getElementById('back-to-lab-from-qpcr-btn'),
+    getQpcrSetsGrid: () => document.getElementById('qpcr-sets-grid'),
 
 
     // --- UI Update Functions ---
@@ -245,6 +246,20 @@ export const QuizUI = {
         sets.forEach(set => {
             const tile = document.createElement('button');
             tile.className = 'set-tile';
+            tile.textContent = set.title;
+            tile.onclick = () => handleSetClick(set.id);
+            grid.appendChild(tile);
+        });
+    },
+
+    renderQpcrSetsGrid: (sets, handleSetClick) => {
+        const grid = QuizUI.getQpcrSetsGrid();
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        sets.forEach(set => {
+            const tile = document.createElement('button');
+            tile.className = 'set-tile qpcr-quiz-card';
             tile.textContent = set.title;
             tile.onclick = () => handleSetClick(set.id);
             grid.appendChild(tile);

@@ -9,6 +9,7 @@ jest.unstable_mockModule('../src/quizModel.js', () => ({
         score: 0,
         questionUrl: 'Set-1-questions.json',
         TIME_PER_QUESTION: 20,
+        TIME_PER_QPCR_QUESTION: 30,
         TIME_PER_CALCULATION_QUESTION: 60,
         timeLeft: 20,
         resetState: jest.fn(),
@@ -34,7 +35,6 @@ describe('qPCR Quiz Flow', () => {
     });
 
     test('qPCR technique should be enabled and clickable', async () => {
-        // This will fail initially because qpcr is comingSoon: true in data.js
         await app.init();
         const labBenchBtn = document.getElementById('lab-bench-btn');
         labBenchBtn.click();
@@ -46,7 +46,7 @@ describe('qPCR Quiz Flow', () => {
         expect(qpcrTile.classList.contains('coming-soon')).toBe(false);
     });
 
-    test('clicking qPCR tile should show qPCR page with General qPCR Quiz card', async () => {
+    test('clicking qPCR tile should show qPCR page with all 7 quiz cards', async () => {
         await app.init();
         app.handleTechniqueClick('qpcr');
 
@@ -54,13 +54,61 @@ describe('qPCR Quiz Flow', () => {
         expect(qpcrPage).toBeTruthy();
         expect(qpcrPage.classList.contains('hide')).toBe(false);
 
-        const quizCard = Array.from(document.querySelectorAll('#qpcr-page .set-tile'))
-            .find(tile => tile.textContent.includes('General qPCR Quiz'));
-
-        expect(quizCard).toBeTruthy();
+        // Should have 7 quiz cards total (General + 6 sections)
+        const quizCards = document.querySelectorAll('#qpcr-sets-grid .set-tile');
+        expect(quizCards.length).toBe(7);
     });
 
-    test('clicking General qPCR Quiz card should start quiz with 20s timer', async () => {
+    test('should render General qPCR Quiz card', async () => {
+        await app.init();
+        app.handleTechniqueClick('qpcr');
+
+        const tiles = document.querySelectorAll('#qpcr-sets-grid .set-tile');
+        const titles = Array.from(tiles).map(t => t.textContent);
+        expect(titles).toContain('General qPCR Quiz');
+    });
+
+    test('should render all 6 new section titles', async () => {
+        await app.init();
+        app.handleTechniqueClick('qpcr');
+
+        const tiles = document.querySelectorAll('#qpcr-sets-grid .set-tile');
+        const titles = Array.from(tiles).map(t => t.textContent);
+
+        expect(titles).toContain('Real-Time PCR Fundamentals');
+        expect(titles).toContain('The Chemistry of qPCR');
+        expect(titles).toContain('Principles and Optimization');
+        expect(titles).toContain('The qPCR Essentials Quiz');
+        expect(titles).toContain('qPCR Data Analysis & Assay Validation');
+        expect(titles).toContain('A qPCR Deep Dive');
+    });
+
+    test('clicking a section tile should start the quiz with correct JSON', async () => {
+        QuizModel.getCurrentQuestion.mockReturnValue({
+            question: 'Test question',
+            options: ['A', 'B', 'C', 'D'],
+            answer: 'C',
+            explanation: 'Test explanation'
+        });
+        QuizModel.getQuestionOptions.mockReturnValue(['A', 'B', 'C', 'D']);
+
+        await app.init();
+        app.handleTechniqueClick('qpcr');
+
+        // Click the "The Chemistry of qPCR" tile
+        const tiles = document.querySelectorAll('#qpcr-sets-grid .set-tile');
+        const chemistryTile = Array.from(tiles)
+            .find(t => t.textContent === 'The Chemistry of qPCR');
+
+        expect(chemistryTile).toBeTruthy();
+        chemistryTile.click();
+
+        expect(QuizModel.questionUrl).toBe('data/qpcr/The Chemistry of qPCR.json');
+        expect(QuizModel.resetState).toHaveBeenCalled();
+        expect(document.getElementById('quiz-container').classList.contains('hide')).toBe(false);
+    });
+
+    test('clicking General qPCR Quiz card should start quiz with qPCR.json', async () => {
         QuizModel.getCurrentQuestion.mockReturnValue({
             question: 'At what stage...',
             options: ['A', 'B', 'C', 'D'],
@@ -70,23 +118,51 @@ describe('qPCR Quiz Flow', () => {
         QuizModel.getQuestionOptions.mockReturnValue(['A', 'B', 'C', 'D']);
 
         await app.init();
-        // Simulate clicking the qPCR quiz card
-        // We'll need to find it and click it
-        const quizCard = document.createElement('button');
-        quizCard.className = 'set-tile';
-        quizCard.dataset.set = 'qPCR.json';
-        quizCard.textContent = 'General qPCR Quiz';
+        app.handleTechniqueClick('qpcr');
 
-        // In reality, this will be in index.html after our changes
-        // For now, let's just test the handler directly if possible, or expect it to be there
+        const tiles = document.querySelectorAll('#qpcr-sets-grid .set-tile');
+        const generalTile = Array.from(tiles)
+            .find(t => t.textContent === 'General qPCR Quiz');
 
-        await app.handleTileClick('qPCR.json');
+        expect(generalTile).toBeTruthy();
+        generalTile.click();
 
         expect(QuizModel.questionUrl).toBe('qPCR.json');
         expect(QuizModel.resetState).toHaveBeenCalled();
         expect(document.getElementById('quiz-container').classList.contains('hide')).toBe(false);
+    });
 
-        // Check timer - it should be 20 for qPCR
-        expect(QuizModel.timeLeft).toBe(20);
+    test('quiz back button should return to qPCR page', async () => {
+        await app.init();
+        app.handleTechniqueClick('qpcr');
+        app.handleQuizBack();
+
+        const qpcrPage = document.getElementById('qpcr-page');
+        expect(qpcrPage.classList.contains('hide')).toBe(false);
+    });
+
+    test('qPCR quiz cards should have the qpcr-quiz-card class', async () => {
+        await app.init();
+        app.handleTechniqueClick('qpcr');
+
+        const tiles = document.querySelectorAll('#qpcr-sets-grid .set-tile');
+        tiles.forEach(tile => {
+            expect(tile.classList.contains('qpcr-quiz-card')).toBe(true);
+        });
+    });
+
+    test('qPCR quiz should start with a 30-second timer', async () => {
+        await app.init();
+        app.handleTechniqueClick('qpcr');
+
+        const tiles = document.querySelectorAll('#qpcr-sets-grid .set-tile');
+        const generalTile = Array.from(tiles)
+            .find(t => t.textContent === 'General qPCR Quiz');
+
+        generalTile.click();
+
+        // This should fail as CURRENTLY it is 20
+        expect(QuizModel.timeLeft).toBe(30);
     });
 });
+

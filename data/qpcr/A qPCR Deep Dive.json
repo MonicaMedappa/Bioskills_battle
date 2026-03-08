@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "What is the first stage of a qPCR reaction called?",
+    "options": ["Early exponential phase", "Plateau phase", "Linear ground phase", "Log-linear Exponential phase"],
+    "answer": "Linear ground phase",
+    "explanation": "The linear ground phase is the initial stage where the fluorescent signal is as low as the background noise."
+  },
+  {
+    "id": 2,
+    "question": "What is the nickname given to the 'Linear Ground Phase' in the sources?",
+    "options": ["The Takeoff", "The Invisible Phase", "The Golden Era", "The Burnout"],
+    "answer": "The Invisible Phase",
+    "explanation": "It is called the 'Invisible Phase' because the DNA is doubling, but the fluorescence is buried under background noise."
+  },
+  {
+    "id": 3,
+    "question": "In the Linear Ground Phase, how does the fluorescent signal compare to the background?",
+    "options": ["It is double the background", "It is indistinguishable from the baseline", "It is 10 times the background", "It is decreasing below the baseline"],
+    "answer": "It is indistinguishable from the baseline",
+    "explanation": "During this phase, the signal detected is as low as the background and cannot be seen yet by the machine."
+  },
+  {
+    "id": 4,
+    "question": "What does the qPCR software use the cycles in the Linear Ground Phase for?",
+    "options": ["To calculate the Ct value", "To calculate the baseline", "To determine the melting temperature", "To quantify the final DNA amount"],
+    "answer": "To calculate the baseline",
+    "explanation": "The software uses these initial cycles to determine the level of background noise to establish a baseline."
+  },
+  {
+    "id": 5,
+    "question": "Is DNA doubling during the Linear Ground Phase?",
+    "options": ["No, the enzyme is still asleep", "No, only primers are binding", "Yes, but the signal is too tiny to see", "Yes, and the signal is at its maximum"],
+    "answer": "Yes, but the signal is too tiny to see",
+    "explanation": "DNA is doubling, but the fluorescence generated is so small that it is 'buried' under background noise."
+  },
+  {
+    "id": 6,
+    "question": "What is the second stage of the qPCR process?",
+    "options": ["Log-linear Exponential phase", "Early exponential phase", "Plateau phase", "Ground phase"],
+    "answer": "Early exponential phase",
+    "explanation": "The second stage is the early exponential phase, where the signal rise begins to exceed the background."
+  },
+  {
+    "id": 7,
+    "question": "What nickname is used for the 'Early Exponential Phase'?",
+    "options": ["The Takeoff", "The Invisible Phase", "The Golden Era", "The Burnout"],
+    "answer": "The Takeoff",
+    "explanation": "This phase is called 'The Takeoff' because it is the point where the signal finally becomes visible above the noise."
+  },
+  {
+    "id": 8,
+    "question": "During the early exponential phase, the software identifies the Ct. Why is this specific value so important",
+    "options": ["It is the only time the DNA stops doubling", "It is the point where the signal is first high enough to be statistically distinguished from background noise.", "It marks the end of the 40-cycle run.", "It is the point where all reagents have been exhausted"],
+    "answer": "It is the point where the signal is first high enough to be statistically distinguished from background noise.",
+    "explanation": "The sooner a sample reaches this threshold (a lower Ct number), the more DNA you had at the very beginning."
+  },
+  {
+    "id": 9,
+    "question": "Where is the 'Threshold' typically set in relation to the background?",
+    "options": ["Below the background", "Just above the baseline/background", "At the very top of the graph", "At the halfway point of the plateau"],
+    "answer": "Just above the baseline/background",
+    "explanation": "The threshold line is set just above the baseline noise to identify the first meaningful signal."
+  },
+  {
+    "id": 10,
+    "question": "In which phase does the signal-to-noise ratio finally favor the signal?",
+    "options": ["Linear ground phase", "Plateau phase", "Early exponential phase", "Lag phase"],
+    "answer": "Early exponential phase",
+    "explanation": "In the 'Takeoff' phase, the signal becomes strong enough to be distinguished from the noise."
+  },
+  {
+    "id": 11,
+    "question": "What is the third stage of qPCR called?",
+    "options": ["Plateau phase", "Linear ground phase", "Early exponential phase", "Log-linear Exponential phase"],
+    "answer": "Log-linear Exponential phase",
+    "explanation": "On a logarithmic scale, this appears as a straight line, but the DNA is consistently doubling in amount every cycle."
+  },
+  {
+    "id": 12,
+    "question": "What is the nickname for the 'Log-linear Exponential phase'?",
+    "options": ["The Invisible Phase", "The Golden Era", "The Takeoff", "The Burnout"],
+    "answer": "The Golden Era",
+    "explanation": "It is called 'The Golden Era' because the reaction is at its maximum efficiency."
+  },
+  {
+    "id": 13,
+    "question": "What happens to the DNA template during every cycle of the Log-linear Exponential phase?",
+    "options": ["It stops doubling", "It doubles every cycle", "It increases by 10% each cycle", "It degrades"],
+    "answer": "It doubles every cycle",
+    "explanation": "During this phase, the PCR reaction ideally doubles the amplification of the template in every single cycle."
+  },
+  {
+    "id": 14,
+    "question": "How does the 'Log-linear Exponential phase' appear on a log-scale graph?",
+    "options": ["As a curved sigmoid line", "As a flat horizontal line", "As a straight diagonal line", "As a vertical line"],
+    "answer": "As a straight diagonal line",
+    "explanation": "Because the DNA is doubling consistently, the exponential growth looks like a straight line on a log scale."
+  },
+  {
+    "id": 15,
+    "question": "Which phase is primarily used to calculate the Efficiency and Slope of the PCR reaction",
+    "options": ["Linear ground phase", "Early exponential phase", "Log-linear Exponential phase", "Plateau phase"],
+    "answer": "Log-linear Exponential phase",
+    "explanation": "This is the only phase where the reaction is most stable and doubling perfectly, allowing for calculating the efficiency of the enzyme."
+  },
+  {
+    "id": 16,
+    "question": "What is the fourth and final stage of a qPCR reaction?",
+    "options": ["Linear ground phase", "Plateau phase", "Log-linear Exponential phase", "Early exponential phase"],
+    "answer": "Plateau phase",
+    "explanation": "The plateau phase is the last phase where the fluorescent signal stops increasing."
+  },
+  {
+    "id": 17,
+    "question": "What is the nickname for the 'Plateau Phase'?",
+    "options": ["The Invisible Phase", "The Takeoff", "The Golden Era", "The Burnout"],
+    "answer": "The Burnout",
+    "explanation": "It is called 'The Burnout' because the reaction has reached its limit and stopped."
+  },
+  {
+    "id": 18,
+    "question": "Which of the following is a reason the reaction enters the Plateau Phase?",
+    "options": ["Reagents are exhausted and product inhibition", "The machine turns off", "The DNA becomes too heavy", "The temperature is too low"],
+    "answer": "Reagents are exhausted and product inhibition",
+    "explanation": "Primers and dNTPs are used up, causing the reaction to stop."
+  },
+  {
+    "id": 19,
+    "question": "What happens to the Polymerase enzyme in the Plateau Phase?",
+    "options": ["It gets faster", "It starts making RNA", "It loses activity", "It binds to the quencher"],
+    "answer": "It loses activity",
+    "explanation": "The enzyme eventually loses its functionality over many cycles due to pyrophosphate buildup."
+  },
+  {
+    "id": 20,
+    "question": "Which by-product builds up and inhibits the reaction in the Plateau Phase?",
+    "options": ["Inorganic pyrophosphate", "Ethidium bromide", "Carbon dioxide", "Sodium chloride"],
+    "answer": "Inorganic pyrophosphate",
+    "explanation": "The buildup of by-products like inorganic pyrophosphate inhibits the PCR reaction."
+  },
+  {
+    "id": 21,
+    "question": "Why is the Plateau Phase data NOT used to determine starting DNA amounts?",
+    "options": ["It is too bright for the machine", "It does not reflect the initial starting material", "It only measures primers", "The software cannot see the plateau"],
+    "answer": "It does not reflect the initial starting material",
+    "explanation": "The final amount of DNA at the plateau is restricted by reagent limits, not by how much you started with."
+  },
+  {
+    "id": 22,
+    "question": "When does the 'Linear Ground Phase' occur in a standard 40-cycle run?",
+    "options": ["At the end (cycles 35-40)", "During the middle (cycles 20-30)", "In the early cycles", "Only during the final extension"],
+    "answer": "In the early cycles",
+    "explanation": "The ground phase occurs in the very first cycles where the signal is too low to be seen."
+  },
+  {
+    "id": 23,
+    "question": "What happens to the fluorescent signal as the number of amplified DNA molecules increases in the Log-linear Exponential phase?",
+    "options": ["The signal decreases", "The signal stays constant", "The signal rises", "The signal disappears"],
+    "answer": "The signal rises",
+    "explanation": "The fluorescent signal rises in direct proportion as more DNA is being amplified."
+  },
+  {
+    "id": 24,
+    "question": "In which phase is the reaction at 'maximum efficiency'?",
+    "options": ["Linear ground phase", "Log-linear Exponential phase", "Plateau phase", "Pre-amplification phase"],
+    "answer": "Log-linear Exponential phase",
+    "explanation": "The 'Golden Era' or Log-linear Exponential phase is where the reaction reaches peak doubling efficiency."
+  },
+  {
+    "id": 25,
+    "question": "What determines the transition from the Linear Ground Phase to the Early Exponential Phase?",
+    "options": ["The depletion of primers", "Crossing the threshold", "The degradation of the enzyme", "The end of the 40th cycle"],
+    "answer": "Crossing the threshold",
+    "explanation": "The transition occurs when the DNA signal becomes strong enough to rise above the background and cross the threshold."
+  },
+  {
+    "id": 26,
+    "question": "True or False: Reagent depletion is the only reason for the plateau phase.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "In addition to reagent depletion, the plateau is caused by enzyme degradation and the buildup of inhibitory by-products."
+  },
+  {
+    "id": 27,
+    "question": "Which phase involves the signal being 'buried' under background noise?",
+    "options": ["Linear ground phase", "Early exponential phase", "Log-linear Exponential phase", "Plateau phase"],
+    "answer": "Linear ground phase",
+    "explanation": "This is the first phase where signal exists but cannot be distinguished from the noise."
+  },
+  {
+    "id": 28,
+    "question": "The term 'linear' in 'linear exponential' specifically refers to its appearance on which type of scale?",
+    "options": ["Linear scale", "Logarithmic scale", "Celsius scale", "pH scale"],
+    "answer": "Logarithmic scale",
+    "explanation": "On a log-scale graph, the doubling of DNA looks like a straight diagonal line."
+  },
+  {
+    "id": 29,
+    "question": "How many stages of qPCR are defined in the sources?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "explanation": "The sources define the 4 stages as: Linear ground, Early exponential, Log-linear exponential, and Plateau."
+  },
+  {
+    "id": 30,
+    "question": "In the 'Burnout' phase, what happens to the fluorescent signal?",
+    "options": ["It drops to zero", "It stops increasing", "It doubles every cycle", "It becomes indistinguishable from background"],
+    "answer": "It stops increasing",
+    "explanation": "The plateau phase is characterized by the signal leveling off and stopping its increase."
+  }
+]

@@ -11,10 +11,11 @@ export const QuizModel = {
 
     // --- Timer Variables (controlled by app.js, but state managed here for clarity) ---
     TIME_PER_QUESTION: 20,
+    TIME_PER_QPCR_QUESTION: 30,
     TIME_PER_CALCULATION_QUESTION: 60,
     timeLeft: 20, // Initial value, will be set by startTimer
 
-    resetState: function() {
+    resetState: function () {
         this.currentQuestionIndex = 0;
         this.score = 0;
     },
@@ -24,7 +25,7 @@ export const QuizModel = {
      * @param {string} url - The URL to fetch quiz data from.
      * @returns {Promise<boolean>} - True if data loaded successfully, false otherwise.
      */
-    loadQuizData: async function(url = this.questionUrl) {
+    loadQuizData: async function (url = this.questionUrl) {
         this.questionUrl = url; // Update questionUrl if a new one is provided
         try {
             if (!this.questionUrl) {
@@ -33,7 +34,7 @@ export const QuizModel = {
             }
             const response = await fetch(this.questionUrl);
             if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
-            
+
             this.currentQuestions = await response.json();
             if (!Array.isArray(this.currentQuestions) || this.currentQuestions.length === 0) {
                 throw new Error("Loaded data is not a valid question array or is empty.");
@@ -50,7 +51,7 @@ export const QuizModel = {
      * Advances to the next question or finishes the quiz.
      * @returns {object|null} The next question object, or null if quiz finished.
      */
-    getNextQuestion: function() {
+    getNextQuestion: function () {
         this.currentQuestionIndex++;
         if (this.currentQuestionIndex < this.currentQuestions.length) {
             return this.currentQuestions[this.currentQuestionIndex];
@@ -63,7 +64,7 @@ export const QuizModel = {
      * Gets the current question.
      * @returns {object|null} The current question object, or null if no questions.
      */
-    getCurrentQuestion: function() {
+    getCurrentQuestion: function () {
         if (this.currentQuestions.length > 0 && this.currentQuestionIndex < this.currentQuestions.length) {
             return this.currentQuestions[this.currentQuestionIndex];
         }
@@ -75,7 +76,7 @@ export const QuizModel = {
      * @param {string} selectedAnswer - The answer selected by the user.
      * @returns {boolean} True if the answer is correct, false otherwise.
      */
-    checkAnswer: function(selectedAnswer) {
+    checkAnswer: function (selectedAnswer) {
         const currentQuestion = this.getCurrentQuestion();
         if (currentQuestion && selectedAnswer === currentQuestion.answer) {
             this.score++;
@@ -84,20 +85,20 @@ export const QuizModel = {
         return false;
     },
 
-    getScore: function() {
+    getScore: function () {
         return this.score;
     },
 
-    getTotalQuestions: function() {
+    getTotalQuestions: function () {
         return this.currentQuestions.length;
     },
 
-    getQuestionExplanation: function() {
+    getQuestionExplanation: function () {
         const currentQuestion = this.getCurrentQuestion();
         return currentQuestion ? currentQuestion.explanation : "";
     },
 
-    getQuestionOptions: function() {
+    getQuestionOptions: function () {
         const currentQuestion = this.getCurrentQuestion();
         return currentQuestion ? currentQuestion.options : [];
     }

@@ -35,7 +35,8 @@ jest.unstable_mockModule('../src/utils.js', () => ({
 jest.unstable_mockModule('../src/data.js', () => ({
     labTechniques: [],
     libraryArticles: [],
-    articleSets: {}
+    articleSets: {},
+    qpcrSets: []
 }));
 
 describe('Feature 1: Quiz Back Button', () => {
