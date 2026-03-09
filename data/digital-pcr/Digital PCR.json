@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "question": "What type of curve is typically recorded in real-time during qPCR?",
+    "options": [
+      "Linear curve",
+      "Sigmoid curve",
+      "Bell curve",
+      "Exponential decay curve"
+    ],
+    "answer": "Sigmoid curve",
+    "explanation": "qPCR results are recorded in real-time and typically display a sigmoid curve."
+  },
+  {
+    "id": 2,
+    "question": "How does digital PCR (dPCR) handle a sample to achieve high sensitivity?",
+    "options": [
+      "By heating the sample to higher temperatures",
+      "By monitoring the reaction in a single large tube",
+      "By partitioning the sample into thousands or millions of tiny reaction vessels",
+      "By using more primers than qPCR"
+    ],
+    "answer": "By partitioning the sample into thousands or millions of tiny reaction vessels",
+    "explanation": "In dPCR, the PCR sample containing DNA is partitioned into many reactions in tiny individual vessels such as droplets, chip wells, or microtitre plates."
+  },
+  {
+    "id": 3,
+    "question": "How does Digital PCR (dPCR) differ from qPCR in achieving absolute quantification?",
+    "options": [
+      "qPCR cannot perform absolute quantification.",
+      "dPCR provides absolute quantification without the need for a standard curve.",
+      "dPCR uses a more complex standard curve than qPCR.",
+      "Only qPCR can determine the exact number of molecules."
+    ],
+    "answer": "dPCR provides absolute quantification without the need for a standard curve.",
+    "explanation": "Both can quantify, but dPCR is absolute by nature of its counting method, whereas qPCR requires a reference standard curve to determine absolute values."
+  },
+  {
+    "id": 4,
+    "question": "What mathematical distribution is used in dPCR to calculate the initial copy number?",
+    "options": [
+      "Normal distribution",
+      "Binomial distribution",
+      "Poisson statistics",
+      "Linear regression"
+    ],
+    "answer": "Poisson statistics",
+    "explanation": "The initial copy number and density of target DNA are calculated using Poisson statistics."
+  },
+  {
+    "id": 5,
+    "question": "In the context of dPCR, what does a binary count of '0' represent?",
+    "options": [
+      "A successful reaction with many molecules",
+      "A compartment containing no target molecule",
+      "A failed thermal cycler run",
+      "The presence of one target molecule"
+    ],
+    "answer": "A compartment containing no target molecule",
+    "explanation": "A compartment with a reaction containing no target molecule is counted as 0."
+  },
+  {
+    "id": 6,
+    "question": "Based on implementation techniques, what are the two main divisions of dPCR?",
+    "options": [
+      "Linear dPCR and Sigmoid dPCR",
+      "Droplet dPCR and chip-based dPCR",
+      "Real-time dPCR and End-point dPCR",
+      "Manual dPCR and Automated dPCR"
+    ],
+    "answer": "Droplet dPCR and chip-based dPCR",
+    "explanation": "dPCR can be divided into droplet dPCR and chip-based dPCR based on different implementation techniques."
+  },
+  {
+    "id": 7,
+    "question": "According to the analogy provided, relative quantification (qPCR) is like:",
+    "options": [
+      "Counting the exact number of lightbulbs in a room",
+      "Saying a room is twice as bright as a hallway",
+      "Measuring the weight of individual molecules",
+      "Predicting how many molecules are in a droplet"
+    ],
+    "answer": "Saying a room is twice as bright as a hallway",
+    "explanation": "Relative quantification is compared to knowing the ratio of brightness between two areas without knowing the exact number of lumens."
+  },
+  {
+    "id": 8,
+    "question": "Which PCR method does NOT require a standard curve for quantification?",
+    "options": [
+      "Conventional PCR",
+      "qPCR",
+      "Digital PCR (dPCR)",
+      "All PCR methods require a standard curve"
+    ],
+    "answer": "Digital PCR (dPCR)",
+    "explanation": "Digital PCR does not need a standard curve, which is a powerful advantage over conventional and qPCR."
+  },
+  {
+    "id": 9,
+    "question": "How is binary counting performed in ddPCR?",
+    "options": [
+      "By measuring the total amount of fluorescence",
+      "By asking if a droplet is glowing (1) or dark (0)",
+      "By timing how long it takes for a sample to glow",
+      "By counting the number of primers in each droplet"
+    ],
+    "answer": "By asking if a droplet is glowing (1) or dark (0)",
+    "explanation": "The machine performs binary counting by asking if a droplet is glowing or dark, rather than measuring total fluorescence."
+  },
+  {
+    "id": 10,
+    "question": "What is a major medical application for absolute quantification mentioned in the notes?",
+    "options": [
+      "Measuring blood pressure",
+      "Viral load monitoring (e.g., HIV)",
+      "Determining blood type",
+      "Surgical planning"
+    ],
+    "answer": "Viral load monitoring (e.g., HIV)",
+    "explanation": "Absolute quantification is used for viral load monitoring to determine the exact number of viral copies in a patient's blood."
+  },
+  {
+    "id": 11,
+    "question": "Why is dPCR preferred for Copy Number Variation (CNV) detection?",
+    "options": [
+      "It is faster than qPCR",
+      "It uses less oil",
+      "It can distinguish between exactly 2, 3, or 4 gene copies",
+      "It does not use primers"
+    ],
+    "answer": "It can distinguish between exactly 2, 3, or 4 gene copies",
+    "explanation": "dPCR can detect if a person has exactly 2, 3, or 4 copies of a gene, which is difficult for relative qPCR to distinguish."
+  },
+  {
+    "id": 12,
+    "question": "What is 'Rare Mutation Detection' in the context of dPCR?",
+    "options": [
+      "Finding 1 mutated cancer cell in 10,000 healthy cells",
+      "Finding a rare gene in a large population of people",
+      "Detecting mutations that only occur in 1% of the population",
+      "Finding DNA in an ancient fossil"
+    ],
+    "answer": "Finding 1 mutated cancer cell in 10,000 healthy cells",
+    "explanation": "dPCR is used for rare mutation detection, such as finding one mutated cell among 10,000 healthy ones."
+  },
+  {
+    "id": 13,
+    "question": "Why are dPCR results more reproducible across different laboratories than qPCR?",
+    "options": [
+      "Because all labs use the same oil",
+      "Because dPCR doesn't rely on a standard curve",
+      "Because it uses a flow cytometer",
+      "Because the reactions are done in London and New York"
+    ],
+    "answer": "Because dPCR doesn't rely on a standard curve",
+    "explanation": "Since dPCR doesn't rely on a standard curve, which can vary between labs, results are much more reproducible."
+  },
+  {
+    "id": 14,
+    "question": "If qPCR is considered a measurement of total fluorescence, dPCR is considered a ________ measurement.",
+    "options": [
+      "Volumetric",
+      "Digital (binary)",
+      "Logarithmic",
+      "Comparative"
+    ],
+    "answer": "Digital (binary)",
+    "explanation": "dPCR is digital because it breaks the signal into discrete units (0 or 1), whereas qPCR measures a continuous, increasing signal."
+  },
+  {
+    "id": 15,
+    "question": "What is a potential risk when using a standard curve in qPCR?",
+    "options": [
+      "The curve may become too bright",
+      "Inconsistent pipetting can lead to an incorrect final answer",
+      "The DNA molecules might be too heavy",
+      "The curve might become linear"
+    ],
+    "answer": "Inconsistent pipetting can lead to an incorrect final answer",
+    "explanation": "If a standard curve is slightly off or pipetting is inconsistent, the final answer in qPCR will be wrong."
+  },
+  {
+    "id": 16,
+    "question": "How many droplets are typically created in the partitioning step of ddPCR?",
+    "options": [
+      "1,000",
+      "5,000",
+      "20,000",
+      "100,000"
+    ],
+    "answer": "20,000",
+    "explanation": "In ddPCR, the sample is mixed with oil to create exactly 20,000 nanoliter-sized droplets."
+  },
+  {
+    "id": 17,
+    "question": "Why would a simple count of glowing droplets potentially underestimate the total DNA molecules?",
+    "options": [
+      "Because some droplets may contain more than one molecule",
+      "Because some molecules may not be glowing bright enough",
+      "Because the oil interferes with the count",
+      "Because the software cannot count above 5,000"
+    ],
+    "answer": "Because some droplets may contain more than one molecule",
+    "explanation": "If a droplet contains multiple DNA molecules but is only counted as one 'Yes,' the total would be underestimated."
+  },
+  {
+    "id": 18,
+    "question": "How does dPCR software calculate the number of molecules when clumping occurs?",
+    "options": [
+      "By increasing the brightness of the reader",
+      "By ignoring the positive droplets",
+      "By using the ratio of empty (negative) droplets to total droplets",
+      "By multiplying the positive count by two"
+    ],
+    "answer": "By using the ratio of empty (negative) droplets to total droplets",
+    "explanation": "The software uses the ratio of empty droplets to total droplets to calculate the most probable number of molecules."
+  },
+  {
+    "id": 19,
+    "question": "Why is the negative (empty) droplet critical for Poisson statistics in dPCR?",
+    "options": [
+      "It contains the most primers",
+      "It is the only result the machine is 100% sure contains zero molecules",
+      "It is used to calibrate the oil density",
+      "It represents the standard curve"
+    ],
+    "answer": "It is the only result the machine is 100% sure contains zero molecules",
+    "explanation": "A negative droplet is the only result that is 100% certain to have zero molecules, allowing the math to determine the sample's 'crowdedness'."
+  },
+  {
+    "id": 20,
+    "question": "What happens if 100% of the droplets in a dPCR run are positive?",
+    "options": [
+      "The results are extremely accurate",
+      "The Poisson math fails because there are no 'empty' droplets",
+      "The machine will automatically re-run the sample",
+      "The concentration is calculated as infinite"
+    ],
+    "answer": "The Poisson math fails because there are no 'empty' droplets",
+    "explanation": "If 100% of droplets are positive, the math fails as there are no empty droplets to use as a reference."
+  },
+  {
+    "id": 21,
+    "question": "What is the 'Sweet Spot' requirement for dPCR samples?",
+    "options": [
+      "The sample must be concentrated as much as possible",
+      "The sample must be diluted enough so some droplets remain 'dark'",
+      "The sample must be heated to exactly 95 degrees",
+      "The sample must be mixed for 20 minutes"
+    ],
+    "answer": "The sample must be diluted enough so some droplets remain 'dark'",
+    "explanation": "dPCR requires sample dilution so that at least some droplets remain dark for the Poisson math to work."
+  },
+  {
+    "id": 22,
+    "question": "Which of the following is NOT a component typically mixed during dPCR sample preparation?",
+    "options": [
+      "Primers",
+      "Probes",
+      "Standard curve DNA",
+      "Master mix"
+    ],
+    "answer": "Standard curve DNA",
+    "explanation": "dPCR sample preparation involves mixing DNA with primers, probes, and a master mix, but it does not require a standard curve."
+  },
+  {
+    "id": 23,
+    "question": "One advantage of dPCR over qPCR is that it is more resistant to:",
+    "options": [
+      "High temperatures",
+      "Inhibitors",
+      "Oil contamination",
+      "Standard curves"
+    ],
+    "answer": "Inhibitors",
+    "explanation": "dPCR is more resistant to inhibitors compared to qPCR."
+  },
+  {
+    "id": 24,
+    "question": "What is the typical volume prepared for a ddPCR reaction?",
+    "options": [
+      "1 µL",
+      "20 µL",
+      "50 µL",
+      "100 µL"
+    ],
+    "answer": "20 µL",
+    "explanation": "In sample preparation, you typically prepare a 20 µL reaction mixture."
+  },
+  {
+    "id": 25,
+    "question": "What happens in the 'Digital' step of the dPCR workflow?",
+    "options": [
+      "The DNA is sequenced",
+      "The sample is partitioned into independent reaction chambers",
+      "The results are uploaded to a cloud server",
+      "The standard curve is generated"
+    ],
+    "answer": "The sample is partitioned into independent reaction chambers",
+    "explanation": "Partitioning is the 'Digital' step where the mixture is divided into thousands of reaction chambers."
+  },
+  {
+    "id": 26,
+    "question": "How are droplets generated in the Bio-Rad QX200 system?",
+    "options": [
+      "By shaking the sample manually",
+      "Using a 'Water-in-Oil' emulsion technique",
+      "By boiling the water-based mix",
+      "By spinning the sample in a centrifuge"
+    ],
+    "answer": "Using a 'Water-in-Oil' emulsion technique",
+    "explanation": "Systems like the Bio-Rad QX200 use a 'Water-in-Oil' emulsion technique to generate droplets."
+  },
+  {
+    "id": 27,
+    "question": "What role does the 'Droplet Generator' play in ddPCR?",
+    "options": [
+      "It counts the molecules",
+      "It uses microfluidics to pull oil and PCR mix through a T-junction",
+      "It performs thermal cycling",
+      "It creates the standard curve"
+    ],
+    "answer": "It uses microfluidics to pull oil and PCR mix through a T-junction",
+    "explanation": "The generator uses pressure or microfluidics to pull oil and the PCR mix through a T-junction to create uniform spheres."
+  },
+  {
+    "id": 28,
+    "question": "What is the output of the droplet generation process?",
+    "options": [
+      "A clear liquid",
+      "A cloudy-looking emulsion of 20,000 droplets",
+      "A solid chip",
+      "A sigmoid curve"
+    ],
+    "answer": "A cloudy-looking emulsion of 20,000 droplets",
+    "explanation": "The machine produces a cloudy-looking emulsion containing a suspension of 20,000 monodisperse droplets."
+  },
+  {
+    "id": 29,
+    "question": "Where is the droplet emulsion placed for the amplification process?",
+    "options": [
+      "Directly into the reader",
+      "A 96-well plate for a thermal cycler",
+      "A microfluidic chip",
+      "A flow cytometer"
+    ],
+    "answer": "A 96-well plate for a thermal cycler",
+    "explanation": "The emulsion is pipetted into a 96-well plate for use in a thermal cycler."
+  },
+  {
+    "id": 30,
+    "question": "During thermal cycling, how does each droplet behave?",
+    "options": [
+      "It merges with other droplets",
+      "It acts as its own miniature test tube",
+      "It stays dark until the reader turns it on",
+      "It follows a sigmoid curve monitored in real-time"
+    ],
+    "answer": "It acts as its own miniature test tube",
+    "explanation": "In thermal cycling, every single droplet acts as its own independent miniature test tube."
+  },
+  {
+    "id": 31,
+    "question": "When is the signal measured in dPCR compared to qPCR?",
+    "options": [
+      "In real-time for both",
+      "At the end-point for dPCR, rather than watching the glow grow",
+      "Continuously for dPCR",
+      "Only during the first cycle of dPCR"
+    ],
+    "answer": "At the end-point for dPCR, rather than watching the glow grow",
+    "explanation": "Unlike qPCR, dPCR is an end-point reaction where we wait until the reaction is finished to count the results.Because the final count is taken after all cycles are complete, rather than monitoring cycle-by-cycle."
+  },
+  {
+    "id": 32,
+    "question": "What causes a positive droplet to glow during amplification?",
+    "options": [
+      "The oil reacts with the DNA",
+      "The fluorescent probe is released when the target DNA amplifies",
+      "The reader shines a laser on it",
+      "The droplet is heated to 100 degrees"
+    ],
+    "answer": "The fluorescent probe is released when the target DNA amplifies",
+    "explanation": "If a droplet contains target DNA, amplification causes the fluorescent probe to release a signal."
+  },
+  {
+    "id": 33,
+    "question": "How are droplets read in the ddPCR reader step?",
+    "options": [
+      "The whole plate is photographed at once",
+      "Droplets stream single file past a detector",
+      "The software calculates weight by volume",
+      "Each well is individually heated"
+    ],
+    "answer": "Droplets stream single file past a detector",
+    "explanation": "In ddPCR, droplets stream single file past a detector, similar to a tiny flow cytometer."
+  },
+  {
+    "id": 34,
+    "question": "What final data does the dPCR software provide?",
+    "options": [
+      "A sigmoid curve",
+      "An absolute concentration in copies/µL",
+      "A ratio compared to a London lab",
+      "A visual map of the chip"
+    ],
+    "answer": "An absolute concentration in copies/µL",
+    "explanation": "The software uses Poisson distribution to provide an absolute concentration, such as 450 copies/µL."
+  },
+  {
+    "id": 35,
+    "question": "What happens if a droplet contains no target DNA?",
+    "options": [
+      "It turns green",
+      "The droplet stays dark",
+      "The droplet is discarded by the reader",
+      "The software counts it as a '1'"
+    ],
+    "answer": "The droplet stays dark",
+    "explanation": "If there is no target DNA in a droplet, it stays dark and is recorded as negative."
+  },
+  {
+    "id": 36,
+    "question": "Why is dPCR considered more accurate for 'crowded' samples?",
+    "options": [
+      "It uses more oil to spread the molecules out",
+      "Poisson math accounts for multiple molecules in one droplet",
+      "It uses a larger volume than 20 µL",
+      "The reader can see through the molecules"
+    ],
+    "answer": "Poisson math accounts for multiple molecules in one droplet",
+    "explanation": "Poisson math predicts how many molecules are 'hidden' in positive droplets when the sample is crowded."
+  },
+  {
+    "id": 37,
+    "question": "What is the standard partitioning count for ddPCR systems like the QX200?",
+    "options": [
+      "100",
+      "20,000",
+      "1,000,000",
+      "Variable based on the user"
+    ],
+    "answer": "20,000",
+    "explanation": "The QX200 system produces a suspension of 20,000 monodisperse droplets."
+  },
+  {
+    "id": 38,
+    "question": "Which component is required for creating droplets in ddPCR?",
+    "options": [
+      "Droplet Generation Oil",
+      "A flow cytometer",
+      "A standard curve DNA set",
+      "A microfluidic chip with wells"
+    ],
+    "answer": "Droplet Generation Oil",
+    "explanation": "ddPCR requires specialized plastic cartridges and 'Droplet Generation Oil' to create the emulsion."
+  },
+  {
+    "id": 39,
+    "question": "How long does it take for a Droplet Generator to produce the emulsion?",
+    "options": [
+      "2 seconds",
+      "2 minutes",
+      "20 minutes",
+      "2 hours"
+    ],
+    "answer": "2 minutes",
+    "explanation": "The droplet generation process typically takes about 2 minutes to produce the emulsion."
+  },
+  {
+    "id": 40,
+    "question": "What is the primary factor that allows for standardization between different labs in dPCR?",
+    "options": [
+      "Shared oil brands",
+      "The lack of reliance on a standard curve",
+      "Uniform room brightness",
+      "Using the same flow cytometers"
+    ],
+    "answer": "The lack of reliance on a standard curve",
+    "explanation": "Because dPCR does not rely on a standard curve, which can vary between labs, it allows for better standardization of results."
+  }
+]

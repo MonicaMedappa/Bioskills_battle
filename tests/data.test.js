@@ -1,5 +1,5 @@
 // tests/data.test.js
-import { labTechniques, libraryArticles, articleSets, qpcrSets } from '../src/data.js';
+import { labTechniques, libraryArticles, articleSets, qpcrSets, digitalPcrSets } from '../src/data.js';
 
 describe('Game Data Module', () => {
     test('labTechniques should contain SDS-PAGE', () => {
@@ -55,5 +55,25 @@ describe('Game Data Module', () => {
                 expect(set.id).toMatch(/^data\/qpcr\/.+\.json$/);
             });
         });
+    });
+
+    describe('digitalPcrSets', () => {
+        test('should export digitalPcrSets with 1 entry', () => {
+            expect(digitalPcrSets).toBeDefined();
+            expect(digitalPcrSets).toHaveLength(1);
+        });
+
+        test('should contain the General Digital PCR (dPCR) Quiz', () => {
+            expect(digitalPcrSets[0].id).toBe('data/digital-pcr/Digital PCR.json');
+            expect(digitalPcrSets[0].title).toBe('General Digital PCR (dPCR) Quiz');
+        });
+    });
+
+    test('labTechniques should contain Digital PCR', () => {
+        const dpcr = labTechniques.find(tech => tech.id === 'digital-pcr');
+        expect(dpcr).toBeDefined();
+        expect(dpcr.title).toBe('Digital PCR');
+        expect(dpcr.icon).toBe('💧🔢');
+        expect(dpcr.comingSoon).toBe(false);
     });
 });

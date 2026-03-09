@@ -3,7 +3,7 @@
 import { QuizUI } from './quizUI.js';
 import { QuizModel } from './quizModel.js';
 import { browserUtils } from './utils.js'; // Import browser utilities
-import { labTechniques, libraryArticles, articleSets, qpcrSets } from './data.js'; // Import centralized data
+import { labTechniques, libraryArticles, articleSets, qpcrSets, digitalPcrSets } from './data.js'; // Import centralized data
 
 const app = {};
 let timerInterval = null;
@@ -37,6 +37,10 @@ function handleTechniqueClick(techniqueId) {
         quizOrigin = 'qpcr-page';
         QuizUI.showQpcrPage();
         QuizUI.renderQpcrSetsGrid(qpcrSets, app.handleTileClick);
+    } else if (techniqueId === 'digital-pcr') {
+        quizOrigin = 'digital-pcr-page';
+        QuizUI.showDigitalPcrPage();
+        QuizUI.renderDigitalPcrSetsGrid(digitalPcrSets, app.handleTileClick);
     }
 }
 
@@ -195,6 +199,8 @@ function handleQuizBack() {
         QuizUI.showQpcrPage();
     } else if (quizOrigin === 'article-sets-page') {
         QuizUI.showArticleSetsPage();
+    } else if (quizOrigin === 'digital-pcr-page') {
+        QuizUI.showDigitalPcrPage();
     } else {
         QuizUI.showLandingPage();
     }
@@ -286,6 +292,11 @@ async function init() {
     const backToLabFromQpcrBtn = QuizUI.getBackToLabFromQpcrButton();
     if (backToLabFromQpcrBtn) {
         backToLabFromQpcrBtn.onclick = () => QuizUI.showLabBenchPage();
+    }
+
+    const backToLabFromDigitalPcrBtn = QuizUI.getBackToLabFromDigitalPcrButton();
+    if (backToLabFromDigitalPcrBtn) {
+        backToLabFromDigitalPcrBtn.onclick = () => QuizUI.showLabBenchPage();
     }
 }
 

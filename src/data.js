@@ -5,6 +5,7 @@ export const labTechniques = [
     { id: 'dna-gel', title: 'DNA Gel Electrophoresis', icon: '🧪', comingSoon: true },
     { id: 'pcr', title: 'Polymerase Chain Reaction', icon: '⚗️', comingSoon: true },
     { id: 'qpcr', title: 'qPCR', icon: '📊', comingSoon: false },
+    { id: 'digital-pcr', title: 'Digital PCR', icon: '💧🔢', comingSoon: false },
     { id: 'ph', title: 'pH', icon: '💧', comingSoon: true },
     { id: 'spec', title: 'OD and Spectrophotometer', icon: '🔦', comingSoon: true },
     { id: 'rt-pcr', title: 'RT-PCR', icon: '🧬', comingSoon: true },
@@ -44,5 +45,9 @@ export const qpcrSets = [
     { id: 'data/qpcr/The qPCR Essentials Quiz.json', title: 'The qPCR Essentials Quiz' },
     { id: 'data/qpcr/qPCR Data Analysis & Assay Validation.json', title: 'qPCR Data Analysis & Assay Validation' },
     { id: 'data/qpcr/A qPCR Deep Dive.json', title: 'A qPCR Deep Dive' },
+];
+
+export const digitalPcrSets = [
+    { id: 'data/digital-pcr/Digital PCR.json', title: 'General Digital PCR (dPCR) Quiz' }
 ];
 

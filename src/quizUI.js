@@ -42,6 +42,9 @@ export const QuizUI = {
     getQpcrPage: () => document.getElementById('qpcr-page'),
     getBackToLabFromQpcrButton: () => document.getElementById('back-to-lab-from-qpcr-btn'),
     getQpcrSetsGrid: () => document.getElementById('qpcr-sets-grid'),
+    getDigitalPcrPage: () => document.getElementById('digital-pcr-page'),
+    getBackToLabFromDigitalPcrButton: () => document.getElementById('back-to-lab-from-digital-pcr-btn'),
+    getDigitalPcrSetsGrid: () => document.getElementById('digital-pcr-sets-grid'),
 
 
     // --- UI Update Functions ---
@@ -129,7 +132,8 @@ export const QuizUI = {
             QuizUI.getLabBenchPage(),
             QuizUI.getLibraryPage(),
             QuizUI.getBattleHubModal(),
-            QuizUI.getQpcrPage()
+            QuizUI.getQpcrPage(),
+            QuizUI.getDigitalPcrPage()
         ];
         pages.forEach(page => {
             if (page) page.classList.add('hide');
@@ -146,6 +150,10 @@ export const QuizUI = {
 
     showQpcrPage: () => {
         QuizUI.showPage('qpcr-page');
+    },
+
+    showDigitalPcrPage: () => {
+        QuizUI.showPage('digital-pcr-page');
     },
 
     showQuiz: () => {
@@ -260,6 +268,20 @@ export const QuizUI = {
         sets.forEach(set => {
             const tile = document.createElement('button');
             tile.className = 'set-tile qpcr-quiz-card';
+            tile.textContent = set.title;
+            tile.onclick = () => handleSetClick(set.id);
+            grid.appendChild(tile);
+        });
+    },
+
+    renderDigitalPcrSetsGrid: (sets, handleSetClick) => {
+        const grid = QuizUI.getDigitalPcrSetsGrid();
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        sets.forEach(set => {
+            const tile = document.createElement('button');
+            tile.className = 'set-tile'; // Use standard tile style as requested
             tile.textContent = set.title;
             tile.onclick = () => handleSetClick(set.id);
             grid.appendChild(tile);

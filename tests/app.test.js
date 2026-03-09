@@ -67,6 +67,9 @@ jest.unstable_mockModule('../src/data.js', () => ({
     qpcrSets: [
         { id: 'qPCR.json', title: 'General qPCR Quiz' },
         { id: 'data/qpcr/Set-1.json', title: 'Topic 1' }
+    ],
+    digitalPcrSets: [
+        { id: 'data/digital-pcr/Digital PCR.json', title: 'General Digital PCR (dPCR) Quiz' }
     ]
 }));
 
