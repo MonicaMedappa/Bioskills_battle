@@ -2,140 +2,238 @@
   {
     "id": 1,
     "question": "What is the primary goal of absolute quantification in qPCR?",
-    "options": ["To compare gene expression between two samples", "To determine the exact copy number or concentration of a target nucleic acid", "To calculate the percentage of a specific mutation", "To measure the fold-change relative to a housekeeping gene"],
+    "options": [
+      "To compare gene expression between two samples",
+      "To determine the exact copy number or concentration of a target nucleic acid",
+      "To calculate the percentage of a specific mutation",
+      "To measure the fold-change relative to a housekeeping gene"
+    ],
     "answer": "To determine the exact copy number or concentration of a target nucleic acid",
     "explanation": "Absolute quantification uses a standard curve of known concentrations to calculate the precise amount (e.g., copies/µL) of a target in an unknown sample."
   },
   {
     "id": 2,
     "question": "Which of the following is essential for performing absolute quantification?",
-    "options": ["A reference gene", "A standard curve of known concentrations", "A negative control only", "The Delta-Delta Ct method"],
+    "options": [
+      "A reference gene",
+      "A standard curve of known concentrations",
+      "A negative control only",
+      "The Delta-Delta Ct method"
+    ],
     "answer": "A standard curve of known concentrations",
     "explanation": "To determine absolute values, the Ct values of unknown samples must be compared against a curve generated from a template of known quantity."
   },
   {
     "id": 3,
     "question": "Relative quantification is most commonly used to measure what?",
-    "options": ["Viral load in a clinical sample", "Total DNA mass in a forensic sample", "Changes in gene expression between a treated and a control group", "The exact number of bacterial cells in a soil sample"],
+    "options": [
+      "Viral load in a clinical sample",
+      "Total DNA mass in a forensic sample",
+      "Changes in gene expression between a treated and a control group",
+      "The exact number of bacterial cells in a soil sample"
+    ],
     "answer": "Changes in gene expression between a treated and a control group",
     "explanation": "Relative quantification calculates the ratio of a target gene's expression compared to a reference, rather than an exact numerical value."
   },
   {
     "id": 4,
     "question": "What does a qPCR efficiency of 100% (E = 2) signify?",
-    "options": ["The target sequence is doubling every cycle", "The primer concentration is too high", "There is significant DNA contamination", "The reaction has stopped before completion"],
+    "options": [
+      "The target sequence is doubling every cycle",
+      "The primer concentration is too high",
+      "There is significant DNA contamination",
+      "The reaction has stopped before completion"
+    ],
     "answer": "The target sequence is doubling every cycle",
     "explanation": "Perfect efficiency means that every single template molecule is successfully replicated during each PCR cycle."
   },
   {
     "id": 5,
     "question": "In a standard curve, what is typically plotted on the x-axis?",
-    "options": ["The Cycle Threshold (Ct) value", "The log of the initial template concentration", "The fluorescence intensity", "The melting temperature (Tm)"],
+    "options": [
+      "The Cycle Threshold (Ct) value",
+      "The log of the initial template concentration",
+      "The fluorescence intensity",
+      "The melting temperature (Tm)"
+    ],
     "answer": "The log of the initial template concentration",
     "explanation": "Standard curves plot the log of the starting quantity on the x-axis against the Ct value on the y-axis to create a linear relationship."
   },
   {
     "id": 6,
     "question": "Which mathematical expression represents the relative fold-change of a target gene compared to a reference gene, where E is the amplification efficiency factor (e.g., 2.0) and ΔΔCt is the normalized difference in cycle thresholds?",
-    "options": ["E^(-ΔΔCt)", "2 * ΔΔCt", "10^((Ct - b)/m)", "(1 + E)^-ΔΔCt"],
+    "options": [
+      "E^(-ΔΔCt)",
+      "2 * ΔΔCt",
+      "10^((Ct - b)/m)",
+      "(1 + E)^-ΔΔCt"
+    ],
     "answer": "E^(-ΔΔCt)",
     "explanation": "While many labs use 2^-ΔΔCt as a shortcut, that '2' specifically represents a perfect 100% efficiency (where the DNA doubles every cycle). In a more scientifically accurate model—especially when your efficiency is not exactly 100%—the base must be the actual measured efficiency factor (E) of the reaction."
   },
   {
     "id": 7,
     "question": "If a qPCR standard curve has a slope of -3.32, what does this indicate about the rate of template doubling per cycle?",
-    "options": ["The template is doubling exactly once every cycle (100% efficiency)", "The template is tripling every cycle (200% efficiency)", "The reaction is inhibited and doubling every 1.5 cycles", "The primer concentration is too low to reach doubling"],
+    "options": [
+      "The template is doubling exactly once every cycle (100% efficiency)",
+      "The template is tripling every cycle (200% efficiency)",
+      "The reaction is inhibited and doubling every 1.5 cycles",
+      "The primer concentration is too low to reach doubling"
+    ],
     "answer": "The template is doubling exactly once every cycle (100% efficiency)",
     "explanation": "The relationship is defined by Slope = -1 / log10(Efficiency Factor). A slope of -3.322 means the Efficiency Factor is 10^(-1/-3.322) = 2.0. An Efficiency Factor of 2.0 means the DNA doubles (100% increase) each cycle"
   },
   {
     "id": 8,
     "question": "Why is a 'Reference Gene' (housekeeping gene) used in relative quantification?",
-    "options": ["To increase the sensitivity of the reaction", "To normalize for variations in initial sample amount or quality", "To speed up the PCR cycles", "To prevent primer-dimer formation"],
+    "options": [
+      "To increase the sensitivity of the reaction",
+      "To normalize for variations in initial sample amount or quality",
+      "To speed up the PCR cycles",
+      "To prevent primer-dimer formation"
+    ],
     "answer": "To normalize for variations in initial sample amount or quality",
     "explanation": "Reference genes provide a baseline to ensure that differences in Ct values are due to biological expression rather than differences in the amount of cDNA added."
   },
   {
     "id": 9,
     "question": "What does an R² value of 0.99 on a standard curve indicate?",
-    "options": ["The primers are highly specific", "The amplification is inhibited", "There is a high degree of linear correlation between Ct and concentration", "The sample has high DNA degradation"],
+    "options": [
+      "The primers are highly specific",
+      "The amplification is inhibited",
+      "There is a high degree of linear correlation between Ct and concentration",
+      "The sample has high DNA degradation"
+    ],
     "answer": "There is a high degree of linear correlation between Ct and concentration",
     "explanation": "R² measures the 'goodness of fit' of the linear regression; values close to 1.00 suggest the standard curve is highly reliable."
   },
   {
     "id": 10,
     "question": "If a standard curve shows an efficiency of 115%, what is a likely technical cause?",
-    "options": ["The presence of PCR inhibitors", "Primer-dimers or non-specific amplification", "Excessive template DNA", "Very high annealing temperatures"],
+    "options": [
+      "The presence of PCR inhibitors",
+      "Primer-dimers or non-specific amplification",
+      "Excessive template DNA",
+      "Very high annealing temperatures"
+    ],
     "answer": "Primer-dimers or non-specific amplification",
     "explanation": "Efficiencies over 110% often suggest that something other than the target (like primer-dimers) is contributing to the fluorescence signal."
   },
   {
     "id": 11,
     "question": "Which method should be used if the target and reference genes have significantly different amplification efficiencies?",
-    "options": ["The Delta-Delta Ct method", "The Pfaffl method", "The Comparative Ct method", "Absolute quantification only"],
+    "options": [
+      "The Delta-Delta Ct method",
+      "The Pfaffl method",
+      "The Comparative Ct method",
+      "Absolute quantification only"
+    ],
     "answer": "The Pfaffl method",
     "explanation": "The Pfaffl method accounts for differences in efficiency between the target and the reference, making it more accurate than the standard Delta-Delta Ct method."
   },
   {
     "id": 12,
     "question": "What is the significance of the Cycle Threshold (Ct)?",
-    "options": ["It is the cycle where the reaction stops", "It is the cycle where fluorescence exceeds a defined background level", "It is the melting temperature of the product", "It is the total number of cycles in the run"],
+    "options": [
+      "It is the cycle where the reaction stops",
+      "It is the cycle where fluorescence exceeds a defined background level",
+      "It is the melting temperature of the product",
+      "It is the total number of cycles in the run"
+    ],
     "answer": "It is the cycle where fluorescence exceeds a defined background level",
     "explanation": "The Ct value is inversely proportional to the amount of starting template; lower Ct means more starting material."
   },
   {
     "id": 13,
     "question": "In relative quantification, what does a Delta-Delta Ct value of 0 imply?",
-    "options": ["The gene is not expressed", "There is a 2-fold increase in expression", "There is no change in expression compared to the control", "The reaction failed"],
+    "options": [
+      "The gene is not expressed",
+      "There is a 2-fold increase in expression",
+      "There is no change in expression compared to the control",
+      "The reaction failed"
+    ],
     "answer": "There is no change in expression compared to the control",
     "explanation": "A Delta-Delta Ct of 0 results in 2^-0 = 1, indicating a 1-fold change (no difference) relative to the calibrator."
   },
   {
     "id": 14,
     "question": "What is the recommended dynamic range for a reliable standard curve?",
-    "options": ["At least 2 orders of magnitude", "At least 5 orders of magnitude", "Exactly 10 cycles", "1 to 2 cycles"],
+    "options": [
+      "At least 2 orders of magnitude",
+      "At least 5 orders of magnitude",
+      "Exactly 10 cycles",
+      "1 to 2 cycles"
+    ],
     "answer": "At least 5 orders of magnitude",
     "explanation": "A broad dynamic range (e.g., 5 to 7 logs) ensures that the curve can accurately quantify both high and low abundance samples."
   },
   {
     "id": 15,
     "question": "Which of these is a common source of known DNA for an absolute standard curve?",
-    "options": ["Total RNA from a cell line", "Purified plasmid DNA containing the target sequence", "Serum from a healthy patient", "Random hexamer primers"],
+    "options": [
+      "Total RNA from a cell line",
+      "Purified plasmid DNA containing the target sequence",
+      "Serum from a healthy patient",
+      "Random hexamer primers"
+    ],
     "answer": "Purified plasmid DNA containing the target sequence",
     "explanation": "Plasmids are stable and their concentration can be precisely measured via spectrophotometry to calculate exact copy numbers."
   },
   {
     "id": 16,
     "question": "How does the presence of a PCR inhibitor affect the Ct value?",
-    "options": ["It decreases the Ct value", "It increases the Ct value", "It has no effect on the Ct value", "It makes the Ct value zero"],
+    "options": [
+      "It decreases the Ct value",
+      "It increases the Ct value",
+      "It has no effect on the Ct value",
+      "It makes the Ct value zero"
+    ],
     "answer": "It increases the Ct value",
     "explanation": "Inhibitors reduce efficiency, meaning it takes more cycles for the fluorescence to reach the threshold, thus increasing the Ct."
   },
   {
     "id": 17,
     "question": " When validating a qPCR assay, which formula is used to calculate the Amplification Factor (E) from the slope of a standard curve?",
-    "options": ["E = 10^(-1/slope)", "E = (10^-1/slope - 1) * 100", "E = slope^2 / Ct", "E = log10(slope)"],
+    "options": [
+      "E = 10^(-1/slope)",
+      "E = (10^-1/slope - 1) * 100",
+      "E = slope^2 / Ct",
+      "E = log10(slope)"
+    ],
     "answer": "E = 10^(-1/slope)",
     "explanation": "This logarithmic relationship is used to convert the linear slope of a standard curve into the amplification efficiency factor (E)."
   },
   {
     "id": 18,
     "question": "True or False: In relative quantification, the 'calibrator' is the sample used as the baseline for comparison.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answer": "True",
     "explanation": "The calibrator (e.g., untreated control) is the sample to which all other samples are compared to determine fold-change."
   },
   {
     "id": 19,
     "question": "What is the most significant technical limitation of using the standard 2^-delta-delta Ct (Livak) method for relative quantification?",
-    "options": ["It requires the use of expensive fluorescent probes instead of SYBR Green", "It can only be used if the target and reference genes have near-identical efficiencies", "It fails to account for the initial mass of the DNA sample.", "It is only compatible with absolute quantification standard curves"],
-    "answer": "It can only be used if the target and reference genes have identical, near-100% efficiencies.",
+    "options": [
+      "It requires the use of expensive fluorescent probes instead of SYBR Green",
+      "It can only be used if the target and reference genes have near-identical efficiencies",
+      "It fails to account for the initial mass of the DNA sample.",
+      "It is only compatible with absolute quantification standard curves"
+    ],
+    "answer": "It can only be used if the target and reference genes have near-identical efficiencies",
     "explanation": "The number 2 in the 2^-delta-delta Ct formula assumes 100% efficiency. If your genes amplify at different rates, using '2' creates an exponential error over multiple cycles. To maintain accuracy when efficiencies are unequal, the Pfaffl method incorporates the specific measured efficiency for each gene."
   },
   {
     "id": 20,
     "question": "Which component of a qPCR mix provides the signal for quantification?",
-    "options": ["Taq Polymerase", "dNTPs", "Fluorescent dye or probe", "Magnesium Chloride"],
+    "options": [
+      "Taq Polymerase",
+      "dNTPs",
+      "Fluorescent dye or probe",
+      "Magnesium Chloride"
+    ],
     "answer": "Fluorescent dye or probe",
     "explanation": "Dyes (like SYBR Green) or probes (like TaqMan) emit fluorescence as DNA is amplified, which is what the qPCR machine measures to determine the Ct."
   }

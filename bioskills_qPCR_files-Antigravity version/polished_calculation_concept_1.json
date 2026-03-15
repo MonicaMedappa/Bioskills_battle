@@ -129,7 +129,7 @@
     "id": 19,
     "question": "What is the most significant technical limitation of using the standard 2^-delta-delta Ct (Livak) method for relative quantification?",
     "options": ["It requires the use of expensive fluorescent probes instead of SYBR Green", "It can only be used if the target and reference genes have near-identical efficiencies", "It fails to account for the initial mass of the DNA sample.", "It is only compatible with absolute quantification standard curves"],
-    "answer": "It can only be used if the target and reference genes have identical, near-100% efficiencies.",
+    "answer": "It can only be used if the target and reference genes have near-identical efficiencies",
     "explanation": "The number 2 in the 2^-delta-delta Ct formula assumes 100% efficiency. If your genes amplify at different rates, using '2' creates an exponential error over multiple cycles. To maintain accuracy when efficiencies are unequal, the Pfaffl method incorporates the specific measured efficiency for each gene."
   },
   {
