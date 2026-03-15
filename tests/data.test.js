@@ -20,9 +20,9 @@ describe('Game Data Module', () => {
     });
 
     describe('qpcrSets', () => {
-        test('should export qpcrSets with 7 entries (General + 6 sections)', () => {
+        test('should export qpcrSets with 9 entries (General + 8 sections)', () => {
             expect(qpcrSets).toBeDefined();
-            expect(qpcrSets).toHaveLength(7);
+            expect(qpcrSets).toHaveLength(9);
         });
 
         test('every entry should have an id and title', () => {

@@ -84,4 +84,9 @@ describe('QuizModel Module', () => {
         expect(QuizModel.getQuestionExplanation()).toBe('Expl');
         expect(QuizModel.getQuestionOptions()).toEqual(['A', 'B']);
     });
+
+    test('getQuestionTimeLimit should return 60s for Principles of Lab Calculations set', () => {
+        QuizModel.questionUrl = 'data/qpcr/Principles of Lab Calculations.json';
+        expect(QuizModel.getQuestionTimeLimit()).toBe(60);
+    });
 });

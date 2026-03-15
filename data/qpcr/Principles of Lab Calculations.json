@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "question": "Why is Avogadro’s number (6.022 x 10^23) essential when calculating DNA copy numbers?",
+    "options": [
+      "It converts molar concentration to the actual number of molecules",
+      "It determines the speed of the centrifuge",
+      "It calculates the length of the DNA strand",
+      "It defines the pH of the Tris buffer"
+    ],
+    "answer": "It converts molar concentration to the actual number of molecules",
+    "explanation": "Since we cannot see individual molecules, Avogadro's number provides the bridge between the macroscopic 'mole' and the microscopic count of DNA strands."
+  },
+  {
+    "id": 2,
+    "question": "What is the primary conceptual reason for using a 'Dilution Factor' (e.g., 1:10)?",
+    "options": [
+      "To increase the concentration of the solute",
+      "To express the ratio of the initial concentration to the final concentration (or part to whole volume).",
+      "To calculate the molecular weight",
+      "To determine the purity of the DNA"
+    ],
+    "answer": "To express the ratio of the initial concentration to the final concentration (or part to whole volume).",
+    "explanation": "A dilution factor represents how much more dilute the working solution is compared to the stock. Mathematically, it is the ratio of the final volume to the initial aliquot volume (DF = V2 / V1)."
+  },
+  {
+    "id": 3,
+    "question": "Why do we use the unit 'g/mol' (Molar Mass) when preparing solutions?",
+    "options": [
+      "To measure the volume of water needed",
+      "To relate the physical mass we weigh on a balance to the number of molecules",
+      "To determine the boiling point of the solution",
+      "To calculate the UV absorbance"
+    ],
+    "answer": "To relate the physical mass we weigh on a balance to the number of molecules",
+    "explanation": "Because different molecules have different weights, g/mol tells us exactly how much mass is required to obtain a specific number of moles."
+  },
+  {
+    "id": 4,
+    "question": "In qPCR, why is the 'Slope' of the standard curve used to calculate efficiency?",
+    "options": [
+      "To determine the derivative of the fluorescence intensity at the plateau phase.",
+      "It indicates the relationship between the log of the DNA concentration and the cycle threshold",
+      "To calculate the geometric mean of the primer dimer artifacts.",
+      "To measure the vertical displacement of the baseline from the origin."
+    ],
+    "answer": "It indicates the relationship between the log of the DNA concentration and the cycle threshold",
+    "explanation": "The slope tells us how many cycles it takes for the DNA to double; a slope of -3.32 indicates 100% amplification efficiency."
+  },
+  {
+    "id": 5,
+    "question": "Why is 'Amplification Efficiency' (E) critical for relative quantification in PCR?",
+    "options": [
+      "To synchronize the annealing temperatures of different gene targets.",
+      "To account for the fact that DNA might not perfectly double in every cycle",
+      "To normalize the fluorescence signal against the background noise of the master mix.",
+      "To ensure that the Cq values are always prime numbers for easier statistical processing."
+    ],
+    "answer": "To account for the fact that DNA might not perfectly double in every cycle",
+    "explanation": "If efficiency is low, a small difference in initial DNA amounts will be drastically exaggerated after 40 cycles, leading to inaccurate data."
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of using the 'C1V1 = C2V2' equation?",
+    "options": [
+      "To calculate the terminal velocity of a protein during ultracentrifugation.",
+      "To calculate how to change a concentration while keeping the amount of solute constant",
+      "To determine the molar extinction coefficient of a sample using Beer's Law.",
+      "To compensate for the volume of air trapped in a micropipette tip at high altitudes."
+    ],
+    "answer": "To calculate how to change a concentration while keeping the amount of solute constant",
+    "explanation": "This conservation of mass formula ensures that the total amount of substance remains the same even if the volume of the solvent changes."
+  },
+  {
+    "id": 7,
+   "question": "Why is 'Absorbance at 260nm' used to calculate DNA concentration?",
+    "options": [
+      "Because the aromatic rings of the nitrogenous bases absorb light specifically at this wavelength",
+      "Because the pentose sugar rings undergo resonance at this frequency",
+      "Because the phosphodiester bonds create a peak in the UV spectrum at 260nm",
+      "Because it represents the specific excitation energy required for hydrogen bond cleavage"
+    ],
+    "answer": "Because the aromatic rings of the nitrogenous bases absorb light specifically at this wavelength",
+    "explanation": "Because the aromatic rings of the nitrogenous bases absorb UV light at this wavelength."
+  },
+  {
+    "id": 8,
+    "question": "Why is the 260/280 ratio used in molecular biology?",
+    "options": [
+      "To calculate the speed of the gel",
+      "To assess the purity of nucleic acids against protein contamination",
+      "To determine the size of the genome",
+      "To count the number of cells"
+    ],
+    "answer": "To assess the purity of nucleic acids against protein contamination",
+    "explanation": "Proteins absorb at 280nm (due to aromatic amino acids); a low ratio indicates that protein 'noise' is interfering with the DNA signal."
+  },
+  {
+    "id": 9,
+    "question": "What is the mathematical reason for using 'logarithmic scales' in PCR plots?",
+    "options": [
+      "To make the numbers look smaller",
+      "To visualize exponential growth as a linear relationship",
+      "To hide errors in the experiment",
+      "To calculate the volume of the reaction"
+    ],
+    "answer": "To visualize exponential growth as a linear relationship",
+    "explanation": "Since DNA doubles every cycle (2^n), a log scale turns that curve into a straight line, making it much easier to identify the threshold cycle (Ct)."
+  },
+  {
+    "id": 10,
+    "question": " Why is 'micromolar' uM preferred over mass-based units (like mg/mL) for primers in a PCR master mix?",
+    "options": [
+      "Because primers are invisible to the naked eye.",
+      "Because reaction kinetics depend on the number of molecules, not their weight.",
+      "Because uM is the only unit compatible with PCR thermal cyclers.",
+      "Because mass-based units do not account for the length of the primer."
+    ],
+    "answer": "Because reaction kinetics depend on the number of molecules, not their weight.",
+    "explanation": "We cannot weigh out nanograms of a specific primer on a bench scale, and molarity ensures the correct ratio of primer-to-template molecules."
+  },
+  {
+    "id": 11,
+    "question": "Why is the 'Average Molecular Weight' of a deoxynucleotide (330 Daltons) used in DNA calculations?",
+    "options": [
+      "To normalize the molar concentration against the total number of phosphodiester bonds.",
+      "To estimate the total mass of a DNA fragment based on its length in nucleotides.",
+      "To calculate the precise melting temperature (Tm).",
+      "To determine the buoyancy of DNA."
+    ],
+    "answer": "To estimate the total mass of a DNA fragment based on its length in nucleotides.",
+    "explanation": "The four DNA bases (A, T, C, and G) actually have slightly different individual weights. However, in a typical DNA sequence, these differences average out to approximately 330 Da per nucleotide."
+  },
+  {
+    "id": 12,
+    "question": "In enzyme kinetics, why is Vmax a theoretical limit rather than a starting point?",
+    "options": [
+      "Because enzymes work slower at the start",
+      "Because it represents the point where all enzyme active sites are saturated with substrate",
+      "Because Vmax is always zero",
+      "Because it measures the volume of the tube"
+    ],
+    "answer": "Because it represents the point where all enzyme active sites are saturated with substrate",
+    "explanation": "Mathematically, Vmax is the limit where adding more substrate no longer increases the speed of the reaction."
+  },
+  {
+    "id": 13,
+    "question": "Why do we calculate 'Relative Centrifugal Force' (RCF) instead of just using RPM?",
+    "options": [
+      "Because RPM only measures the angular velocity without considering the sedimentation coefficient of the particle ",
+      "RCF accounts for the radius of the rotor, ensuring reproducibility across different machines",
+      "Because the torque generated by the motor varies linearly with the atmospheric pressure inside the chamber",
+      "To normalize the gravitational constant against the friction coefficient of the rotor's spindle "
+    ],
+    "answer": "RCF accounts for the radius of the rotor, ensuring reproducibility across different machines",
+    "explanation": "Two different centrifuges spinning at 5000 RPM will exert different forces if their rotors have different sizes; RCF standardizes this force."
+  },
+  {
+    "id": 14,
+    "question": "Why is the 'Molar Extinction Coefficient' (epsilon) used in the Beer-Lambert Law to determine concentration?",
+    "options": [
+      "To account for the light scattering caused by the refractive index of the solvent",
+      "To define the unique constant of proportionality that describes how strongly a specific substance absorbs light at a given wavelength.",
+      "To normalize the absorbance relative to the standard 1 cm path length of the quartz cuvette",
+      "To calculate the quantum yield of fluorescence following photon absorption"
+    ],
+    "answer": "To define the unique constant of proportionality that describes how strongly a specific substance absorbs light at a given wavelength.",
+    "explanation": "In the Beer-Lambert equation (A = ε · c · l), the Molar Extinction Coefficient (ε) acts as the bridge between how much light was blocked (Absorbance) and how many molecules are in the way (Concentration).  "
+  },
+  {
+    "id": 15,
+    "question": "What is the logic behind using 'Percent Weight/Volume' (% w/v) for agarose gels?",
+    "options": [
+      "It measures the density of the DNA",
+      "It defines the 'pore size' of the gel matrix",
+      "It is easier to calculate than molarity for polymers",
+      "Both B and C"
+    ],
+    "answer": "Both B and C",
+    "explanation": "Agarose is a polymer with varying molecular weights, so molarity is impractical; % w/v effectively describes the physical density of the mesh."
+  },
+  {
+    "id": 16,
+    "question": "Why is the constant 660 Daltons (g/mol) frequently used when calculating the mass or molarity of double-stranded DNA (dsDNA)?",
+    "options": [
+      "It represents the average molecular weight of a single-stranded nucleotide.",
+      "It is the average molecular weight of one double-stranded DNA base pair (bp).",
+      "It is the average molecular weight of a single-stranded deoxyribonucleoside monophosphate (dNMP) including the 5' terminal phosphate.",
+      "It is the mathematical constant used to normalize the refractive index of the electrophoresis buffer."
+    ],
+    "answer": "It is the average molecular weight of one double-stranded DNA base pair (bp).",
+    "explanation": "Because double-stranded DNA consists of two nucleotides paired together. This allows scientists to easily estimate the total molecular weight of a DNA fragment simply by multiplying its length (in base pairs) by 660."
+  },
+  {
+    "id": 17,
+    "question": "In buffer preparation, why is 'pKa' mathematically significant?",
+    "options": [
+      "It is the point where the buffer has its maximum buffering capacity",
+      "It tells us the concentration of the salt",
+      "It is the weight of the buffer",
+      "It determines the color of the solution"
+    ],
+    "answer": "It is the point where the buffer has its maximum buffering capacity",
+    "explanation": "Mathematically, when pH = pKa, the concentrations of the acid and its conjugate base are equal, providing the best resistance to pH change."
+  },
+  {
+    "id": 18,
+    "question": "Why do we use 'Standard Curves' in molecular assays?",
+    "options": [
+      "To adjust for the intrinsic fluorescence quenching and background noise inherent in the detection reagents.",
+      "To provide a reference to convert an unknown signal into a known quantity",
+      "To determine the precise limit of detection (LOD) by measuring the point where the signal-to-noise ratio reaches 1:1.",
+      "To verify that the spatial orientation of the samples across the microplate does not influence the enzymatic reaction rate."
+    ],
+    "answer": "To provide a reference to convert an unknown signal into a known quantity",
+    "explanation": "By measuring known standards, we create a mathematical map that allows us to interpret the values of our unknown samples."
+  },
+  {
+    "id": 19,
+    "question": "Why is 'Molarity' (M) preferred over 'Mass Concentration' (g/L) in biochemical reactions?",
+    "options": [
+      "Molarity measures volume more accurately",
+      "Reactions occur between molecules in fixed ratios, not fixed masses",
+      "Grams are too hard to calculate",
+      "Molarity is always a whole number"
+    ],
+    "answer": "Reactions occur between molecules in fixed ratios, not fixed masses",
+    "explanation": "Chemical equations (like A + B -> C) happen on a molecule-to-molecule basis, which molarity directly represents."
+  },
+  {
+    "id": 20,
+    "question": "What is the reason for using 'n-fold' dilutions in a series?",
+    "options": [
+      "To waste less tips",
+      "To cover a wide range of concentrations systematically",
+      "To make the solution more acidic",
+      "To stop the reaction"
+    ],
+    "answer": "To cover a wide range of concentrations systematically",
+    "explanation": "Serial dilutions allow you to span several orders of magnitude (e.g., 10^1 to 10^6) with high precision."
+  },
+  {
+    "id": 21,
+    "question": "Why is the 'Geometric Mean' sometimes used instead of the 'Arithmetic Mean' for qPCR data?",
+    "options": [
+      "It is easier to calculate by hand",
+      "It better represents data that changes exponentially",
+      "It eliminates all outliers automatically",
+      "It is always a higher number"
+    ],
+    "answer": "It better represents data that changes exponentially",
+    "explanation": "Since PCR is an exponential process, the geometric mean provides a more accurate central tendency for the data."
+  },
+  {
+    "id": 22,
+    "question": "Why do we use 'Parts Per Million' (ppm) in trace element analysis?",
+    "options": [
+      "Because the concentrations are too small for percentages to be convenient",
+      "Because it only applies to liquid metals",
+      "Because it is more scientific than molarity",
+      "Because it measures the weight of the air"
+    ],
+    "answer": "Because the concentrations are too small for percentages to be convenient",
+    "explanation": "1 ppm is equivalent to 1 mg/L, making it a manageable unit for extremely dilute substances."
+  },
+  {
+    "id": 23,
+    "question": "Why is 'Molar Ratio' used when planning a ligation reaction (e.g., 3:1 Insert to Vector)?",
+    "options": [
+      "To ensure the vector is heavier than the insert",
+      "To increase the statistical probability of an insert colliding with a vector",
+      "To save money on ligase enzyme",
+      "To change the color of the colonies"
+    ],
+    "answer": "To increase the statistical probability of an insert colliding with a vector",
+    "explanation": "Having an excess of insert molecules makes it more likely that every open vector will find an insert to bind with."
+  },
+  {
+    "id": 24,
+    "question": "In electrophoresis, why is the 'Log of Molecular Weight' plotted against migration distance?",
+    "options": [
+      "Because gravity is logarithmic",
+      "Because the gel matrix provides exponential resistance to larger molecules",
+      "Because it makes the line go up instead of down",
+      "Because DNA is shaped like a log"
+    ],
+    "answer": "Because the gel matrix provides exponential resistance to larger molecules",
+    "explanation": "The relationship between size and movement in a gel is not linear; taking the log of the size linearizes the data for easier analysis."
+  },
+  {
+    "id": 25,
+    "question": "Why do we calculate 'Specific Activity' for enzymes?",
+    "options": [
+      "To find out how much the enzyme weighs",
+      "To measure the purity of the enzyme by relating activity to total protein mass",
+      "To determine the optimal pH",
+      "To calculate the shelf life"
+    ],
+    "answer": "To measure the purity of the enzyme by relating activity to total protein mass",
+    "explanation": "If the activity stays the same but the total protein decreases during purification, the 'Specific Activity' goes up, indicating a purer sample."
+  },
+  {
+    "id": 26,
+    "question": "What is the mathematical purpose of a 'Negative Control' in a quantitative assay?",
+    "options": [
+      "To subtract 'background noise' or non-specific signals from the results",
+      "To provide a target for the primers",
+      "To increase the final concentration",
+      "To make the experiment take longer"
+    ],
+    "answer": "To subtract 'background noise' or non-specific signals from the results",
+    "explanation": "The negative control gives a 'baseline' value that is mathematically subtracted to find the true signal of the sample."
+  },
+  {
+    "id": 27,
+    "question": "Why is 'Poisson Distribution' used in Digital PCR (dPCR)?",
+    "options": [
+      "To calculate the temperature of the droplets",
+      "To predict the probability of a specific number of DNA molecules being in a single droplet",
+      "To determine the sequence of the DNA",
+      "To measure the volume of the oil"
+    ],
+    "answer": "To predict the probability of a specific number of DNA molecules being in a single droplet",
+    "explanation": "Because dPCR partitions molecules randomly, Poisson math is needed to calculate the actual concentration from the number of positive vs negative partitions."
+  },
+  {
+    "id": 28,
+    "question": "Why is the unit 'Units per Microliter' (U/uL) used for restriction enzymes?",
+    "options": [
+      "Because enzymes are not pure proteins",
+      "To define the 'functional' strength (activity) rather than the physical mass",
+      "Because microliters are the smallest unit",
+      "To measure the volume of the DNA"
+    ],
+    "answer": "To define the 'functional' strength (activity) rather than the physical mass",
+    "explanation": "One 'Unit' is usually defined by the work the enzyme does (e.g., digesting 1 ug of DNA), which is more useful than knowing how much the enzyme weighs."
+  },
+  {
+    "id": 29,
+    "question": "Why do we use the '2^-Delta-Delta Ct' method in gene expression analysis?",
+    "options": [
+      "To calculate the molecular weight of RNA",
+      "To determine the fold-change in gene expression relative to a control and a housekeeper gene",
+      "To measure the speed of the PCR reaction",
+      "To calculate the primer melting temperature"
+    ],
+    "answer": "To determine the fold-change in gene expression relative to a control and a housekeeper gene",
+    "explanation": "This formula normalizes the data against a reference gene and then compares the treated sample to the control, resulting in a 'fold-change' value."
+  },
+  {
+    "id": 30,
+    "question": "What is the reason for using 'Normalizing' constants in data analysis?",
+    "options": [
+      "To make all the numbers the same",
+      "To correct for variations in sample loading or technical errors",
+      "To increase the signal-to-noise ratio",
+      "To change the units from grams to moles"
+    ],
+    "answer": "To correct for variations in sample loading or technical errors",
+    "explanation": "Normalization ensures that the differences you see are biological, not just because you put more DNA in one tube than another."
+  },
+  {
+    "id": 31,
+    "question": "Why is 'Half-life' (t1/2) a logarithmic calculation?",
+    "options": [
+      "Because the decay rate is constant per molecule, leading to an exponential decline",
+      "Because it only happens in the dark",
+      "Because the weight of the isotope changes",
+      "Because it is easier to divide by two"
+    ],
+    "answer": "Because the decay rate is constant per molecule, leading to an exponential decline",
+    "explanation": "Since the amount of substance decreases by a percentage over time, the math follows an exponential decay curve."
+  },
+  {
+    "id": 32,
+    "question": "Why do we use 'Coefficient of Variation' (CV) instead of just Standard Deviation?",
+    "options": [
+      "CV is always a smaller number",
+      "CV expresses the standard deviation as a percentage of the mean, allowing for comparison between different scales",
+      "CV measures the speed of the pipette",
+      "CV is used only for protein gels"
+    ],
+    "answer": "CV expresses the standard deviation as a percentage of the mean, allowing for comparison between different scales",
+    "explanation": "A standard deviation of 5 is huge if the mean is 10, but tiny if the mean is 1000. CV makes this relative relationship clear."
+  },
+  {
+    "id": 33,
+    "question": "Why is the 'Ionic Strength' of a buffer calculated?",
+    "options": [
+      "To see if it will conduct electricity",
+      "To understand how the salt concentration affects the stability and interactions of biological molecules",
+      "To determine the color of the buffer",
+      "To calculate the weight of the Tris-base"
+    ],
+    "answer": "To understand how the salt concentration affects the stability and interactions of biological molecules",
+    "explanation": "Ionic strength affects the 'Debye length'—the distance over which electrostatic effects are felt—which is crucial for DNA-protein binding."
+  },
+  {
+    "id": 34,
+    "question": "Why is 'Molarity of Water' (55.5 M) rarely mentioned but conceptually important?",
+    "options": [
+      "Because water is the solute",
+      "Because it shows that the solvent is in vast excess compared to the biological molecules",
+      "Because it is used to calculate pH",
+      "Because water has no weight"
+    ],
+    "answer": "Because it shows that the solvent is in vast excess compared to the biological molecules",
+    "explanation": "In most biological math, we assume the properties of the solution are dominated by the solvent (water) because its concentration is so high."
+  },
+  {
+    "id": 35,
+    "question": "Why do we use 'Daltons' (Da) instead of 'Atomic Mass Units' (amu) for proteins?",
+    "options": [
+      "They are actually the same unit, but 'Dalton' is the standard convention in biochemistry",
+      "Daltons are larger than amu",
+      "Daltons measure volume, amu measures mass",
+      "Daltons are only for amino acids"
+    ],
+    "answer": "They are actually the same unit, but 'Dalton' is the standard convention in biochemistry",
+    "explanation": "The term Dalton is used to honor John Dalton and is the universally accepted unit for reporting the molecular weight of large biomolecules."
+  },
+  {
+    "id": 36,
+    "question": "What is the reason for using 'Correction Factors' when measuring protein with Bradford assay?",
+    "options": [
+      "To account for the fact that different proteins bind the dye with different intensities",
+      "To fix a broken spectrophotometer",
+      "To make the protein heavier",
+      "To change the pH of the dye"
+    ],
+    "answer": "To account for the fact that different proteins bind the dye with different intensities",
+    "explanation": "The Bradford dye binds mainly to basic and aromatic residues; if your protein has few of these, you must adjust the math to avoid underestimating the concentration."
+  },
+  {
+    "id": 37,
+    "question": "Why is the 'Melting Temperature' (Tm) calculation essential for PCR?",
+    "options": [
+      "To know when the plastic tube will melt",
+      "To determine the optimal annealing temperature where primers bind to the target DNA",
+      "To calculate the speed of the fan",
+      "To measure the humidity in the room"
+    ],
+    "answer": "To determine the optimal annealing temperature where primers bind to the target DNA",
+    "explanation": "The Tm is the temperature where 50% of the DNA duplex is dissociated; setting the PCR temperature near this ensures specific primer binding."
+  },
+  {
+    "id": 38,
+    "question": "Why do we use 'Stock Concentrations' (e.g., 10X) instead of just making 1X solutions?",
+    "options": [
+      "To save storage space and increase the stability of the chemicals",
+      "Because 10X is more powerful",
+      "To make the math harder",
+      "Because 1X solutions are always toxic"
+    ],
+    "answer": "To save storage space and increase the stability of the chemicals",
+    "explanation": "Concentrated stocks are more stable over time and take up less shelf space, requiring only a simple dilution before use."
+  },
+  {
+    "id": 39,
+    "question": "Why is the 'Dead Volume' of a pipette mathematically significant in master mixes?",
+    "options": [
+      "It is the volume of air in the room",
+      "It is the small amount of liquid that cannot be dispensed, requiring you to over-prepare the mix",
+      "It is the weight of the pipette tip",
+      "It is the volume of the waste bin"
+    ],
+    "answer": "It is the small amount of liquid that cannot be dispensed, requiring you to over-prepare the mix",
+    "explanation": "If you need 10 reactions, you usually calculate for 11 to ensure that the 'dead volume' left in the tips/tubes doesn't leave the last reaction short."
+  },
+  {
+    "id": 40,
+    "question": "Why is 'Dimensional Analysis' (unit conversion) the most important skill in bio-math?",
+    "options": [
+      "To make sure the answer is in the correct units (e.g., converting mg to ug)",
+      "To understand the biology of the cell",
+      "To name the different parts of the DNA",
+      "To draw better graphs"
+    ],
+    "answer": "To make sure the answer is in the correct units (e.g., converting mg to ug)",
+    "explanation": "Most mistakes in the lab aren't from bad logic, but from failing to convert units correctly, leading to 1000-fold errors in concentration."
+  }
+]

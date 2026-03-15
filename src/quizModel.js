@@ -107,7 +107,7 @@ export const QuizModel = {
     getQuestionTimeLimit: function () {
         if (this.questionUrl === "Set-5-questions.json") {
             return this.TIME_PER_CALCULATION_QUESTION;
-        } else if (this.questionUrl === "data/qpcr/Mastering the Ct.json") {
+        } else if (this.questionUrl === "data/qpcr/Mastering the Ct.json" || this.questionUrl === "data/qpcr/Principles of Lab Calculations.json") {
             return this.TIME_PER_ADVANCED_QPCR_QUESTION;
         } else if (this.questionUrl.startsWith('data/qpcr/') || this.questionUrl === 'qPCR.json') {
             return this.TIME_PER_QPCR_QUESTION;
