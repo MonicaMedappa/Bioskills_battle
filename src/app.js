@@ -91,14 +91,7 @@ async function handleTileClick(setUrl) {
 function startTimer() {
     app.stopTimer(); // Always clear previous timer before starting a new one
 
-    // Determine time based on question set (e.g., Set 5 for calculations, qPCR for 30s)
-    if (QuizModel.questionUrl === "Set-5-questions.json") {
-        QuizModel.timeLeft = QuizModel.TIME_PER_CALCULATION_QUESTION;
-    } else if (quizOrigin === 'qpcr-page') {
-        QuizModel.timeLeft = QuizModel.TIME_PER_QPCR_QUESTION;
-    } else {
-        QuizModel.timeLeft = QuizModel.TIME_PER_QUESTION;
-    }
+    QuizModel.timeLeft = QuizModel.getQuestionTimeLimit();
 
     QuizUI.updateTimerDisplay(QuizModel.timeLeft);
     QuizUI.setTimerContainerRed(false); // Remove red/blink classes initially

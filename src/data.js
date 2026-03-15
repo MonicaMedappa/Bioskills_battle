@@ -45,6 +45,7 @@ export const qpcrSets = [
     { id: 'data/qpcr/The qPCR Essentials Quiz.json', title: 'The qPCR Essentials Quiz' },
     { id: 'data/qpcr/qPCR Data Analysis & Assay Validation.json', title: 'qPCR Data Analysis & Assay Validation' },
     { id: 'data/qpcr/A qPCR Deep Dive.json', title: 'A qPCR Deep Dive' },
+    { id: 'data/qpcr/Mastering the Ct.json', title: 'Mastering the Ct: qPCR Advanced Quiz' },
 ];
 
 export const digitalPcrSets = [

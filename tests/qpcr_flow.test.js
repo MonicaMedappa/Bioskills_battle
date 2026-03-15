@@ -21,6 +21,7 @@ jest.unstable_mockModule('../src/quizModel.js', () => ({
         getTotalQuestions: jest.fn(() => 0),
         getQuestionExplanation: jest.fn(),
         getQuestionOptions: jest.fn(() => []),
+        getQuestionTimeLimit: jest.fn(() => 30),
     }
 }));
 
@@ -54,9 +55,9 @@ describe('qPCR Quiz Flow', () => {
         expect(qpcrPage).toBeTruthy();
         expect(qpcrPage.classList.contains('hide')).toBe(false);
 
-        // Should have 7 quiz cards total (General + 6 sections)
+        // Should have 8 quiz cards total (General + 7 sections)
         const quizCards = document.querySelectorAll('#qpcr-sets-grid .set-tile');
-        expect(quizCards.length).toBe(7);
+        expect(quizCards.length).toBe(8);
     });
 
     test('should render General qPCR Quiz card', async () => {

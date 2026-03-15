@@ -13,6 +13,7 @@ export const QuizModel = {
     TIME_PER_QUESTION: 20,
     TIME_PER_QPCR_QUESTION: 30,
     TIME_PER_CALCULATION_QUESTION: 60,
+    TIME_PER_ADVANCED_QPCR_QUESTION: 60,
     timeLeft: 20, // Initial value, will be set by startTimer
 
     resetState: function () {
@@ -101,5 +102,17 @@ export const QuizModel = {
     getQuestionOptions: function () {
         const currentQuestion = this.getCurrentQuestion();
         return currentQuestion ? currentQuestion.options : [];
+    },
+
+    getQuestionTimeLimit: function () {
+        if (this.questionUrl === "Set-5-questions.json") {
+            return this.TIME_PER_CALCULATION_QUESTION;
+        } else if (this.questionUrl === "data/qpcr/Mastering the Ct.json") {
+            return this.TIME_PER_ADVANCED_QPCR_QUESTION;
+        } else if (this.questionUrl.startsWith('data/qpcr/') || this.questionUrl === 'qPCR.json') {
+            return this.TIME_PER_QPCR_QUESTION;
+        } else {
+            return this.TIME_PER_QUESTION;
+        }
     }
 };
