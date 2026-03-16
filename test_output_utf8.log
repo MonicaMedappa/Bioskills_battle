@@ -1,0 +1,992 @@
+﻿
+> bioskills_battle@1.0.0 test
+> node --experimental-vm-modules node_modules/jest/bin/jest.js
+
+node.exe : 
+(node:15836) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Users\monic\AppData
+\Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ((node:15836)    
+ Ex...nge at any ti    
+me:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+FAIL 
+tests/backToLab.test.js
+  ÔŚĆ Back to Lab 
+Bench Button ÔÇ║ init 
+should wire up the 
+back-to-lab-btn to 
+showLabBenchPage
+
+    SyntaxError: The 
+requested module 
+'./data.js' does not 
+provide an export 
+named 'digitalPcrSets'
+
+    [0m [90m 53 
+|[39m         jest[33
+m.[39mclearAllMocks()
+[33m;[39m
+     [90m 54 |[39m   
+      ({ 
+[33mQuizUI[39m } 
+[33m=[39m 
+[36mawait[39m [36mim
+port[39m([32m'../src/
+quizUI.js'[39m))[33m;
+[39m
+    [31m[1m>[22m[39
+m[90m 55 |[39m       
+  [36mconst[39m 
+appModule [33m=[39m 
+[36mawait[39m [36mim
+port[39m([32m'../src/
+app.js'[39m)[33m;[39
+m
+     [90m    |[39m   
+                       
+ [31m[1m^[22m[39m
+     [90m 56 |[39m   
+      app [33m=[39m a
+ppModule[33m.[39m[36
+mdefault[39m[33m;[39
+m
+     [90m 57 |[39m   
+  })[33m;[39m
+     [90m 58 
+|[39m[0m
+
+      at Runtime.linkAn
+dEvaluateModule (node_m
+odules/jest-runtime/bui
+ld/index.js:684:5)
+      at 
+Object.<anonymous> (tes
+ts/backToLab.test.js:55
+:27)
+
+(node:21392) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+PASS tests/advanced_qpc
+r.test.js
+(node:12632) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+FAIL 
+tests/feature1.test.js
+  ÔŚĆ Feature 1: Quiz 
+Back Button ÔÇ║ 
+handleTileClick should 
+track origin of quiz 
+from SDS-PAGE
+
+    SyntaxError: The 
+requested module 
+'./data.js' does not 
+provide an export 
+named 'digitalPcrSets'
+
+    [0m [90m 63 
+|[39m         jest[33
+m.[39mspyOn([33mQuizU
+I[39m[33m,[39m [32m
+'hideFeedback'[39m)[3
+3m;[39m
+     [90m 64 |[39m
+    [31m[1m>[22m[39
+m[90m 65 |[39m       
+  app [33m=[39m 
+([36mawait[39m [36mi
+mport[39m([32m'../src
+/app.js'[39m))[33m.[
+39m[36mdefault[39m[3
+3m;[39m
+     [90m    |[39m   
+             
+[31m[1m^[22m[39m
+     [90m 66 |[39m   
+  })[33m;[39m
+     [90m 67 |[39m
+     [90m 68 |[39m   
+  test([32m'handleTile
+Click should track 
+origin of quiz from SDS
+-PAGE'[39m[33m,[39m 
+[36masync[39m () 
+[33m=>[39m {[0m
+
+      at Runtime.linkAn
+dEvaluateModule (node_m
+odules/jest-runtime/bui
+ld/index.js:684:5)
+      at 
+Object.<anonymous> (tes
+ts/feature1.test.js:65:
+16)
+
+  ÔŚĆ Feature 1: Quiz 
+Back Button ÔÇ║ 
+handleTileClick should 
+track origin of quiz 
+from Article Sets
+
+    SyntaxError: The 
+requested module 
+'./data.js' does not 
+provide an export 
+named 'digitalPcrSets'
+
+    [0m [90m 63 
+|[39m         jest[33
+m.[39mspyOn([33mQuizU
+I[39m[33m,[39m [32m
+'hideFeedback'[39m)[3
+3m;[39m
+     [90m 64 |[39m
+    [31m[1m>[22m[39
+m[90m 65 |[39m       
+  app [33m=[39m 
+([36mawait[39m [36mi
+mport[39m([32m'../src
+/app.js'[39m))[33m.[
+39m[36mdefault[39m[3
+3m;[39m
+     [90m    |[39m   
+             
+[31m[1m^[22m[39m
+     [90m 66 |[39m   
+  })[33m;[39m
+     [90m 67 |[39m
+     [90m 68 |[39m   
+  test([32m'handleTile
+Click should track 
+origin of quiz from SDS
+-PAGE'[39m[33m,[39m 
+[36masync[39m () 
+[33m=>[39m {[0m
+
+      at Runtime.linkAn
+dEvaluateModule (node_m
+odules/jest-runtime/bui
+ld/index.js:684:5)
+      at 
+Object.<anonymous> (tes
+ts/feature1.test.js:65:
+16)
+
+  ÔŚĆ Feature 1: Quiz 
+Back Button ÔÇ║ 
+handleQuizBack should 
+stop timer
+
+    SyntaxError: The 
+requested module 
+'./data.js' does not 
+provide an export 
+named 'digitalPcrSets'
+
+    [0m [90m 63 
+|[39m         jest[33
+m.[39mspyOn([33mQuizU
+I[39m[33m,[39m [32m
+'hideFeedback'[39m)[3
+3m;[39m
+     [90m 64 |[39m
+    [31m[1m>[22m[39
+m[90m 65 |[39m       
+  app [33m=[39m 
+([36mawait[39m [36mi
+mport[39m([32m'../src
+/app.js'[39m))[33m.[
+39m[36mdefault[39m[3
+3m;[39m
+     [90m    |[39m   
+             
+[31m[1m^[22m[39m
+     [90m 66 |[39m   
+  })[33m;[39m
+     [90m 67 |[39m
+     [90m 68 |[39m   
+  test([32m'handleTile
+Click should track 
+origin of quiz from SDS
+-PAGE'[39m[33m,[39m 
+[36masync[39m () 
+[33m=>[39m {[0m
+
+      at Runtime.linkAn
+dEvaluateModule (node_m
+odules/jest-runtime/bui
+ld/index.js:684:5)
+      at 
+Object.<anonymous> (tes
+ts/feature1.test.js:65:
+16)
+
+(node:21480) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+FAIL tests/app.test.js
+  ÔŚĆ App Module ÔÇ║ 
+showQuestion should 
+display current 
+question and options
+
+    TypeError: QuizMode
+l.getQuestionTimeLimit 
+is not a function
+
+    [0m [90m 92 
+|[39m     app[33m.[3
+9mstopTimer()[33m;[39
+m [90m// Always clear 
+previous timer before 
+starting a new one[39m
+     [90m 93 |[39m
+    [31m[1m>[22m[39
+m[90m 94 |[39m     [
+33mQuizModel[39m[33m.
+[39mtimeLeft 
+[33m=[39m [33mQuizMo
+del[39m[33m.[39mgetQ
+uestionTimeLimit()[33m
+;[39m
+     [90m    |[39m   
+                       
+          
+[31m[1m^[22m[39m
+     [90m 95 |[39m
+     [90m 96 |[39m   
+  [33mQuizUI[39m[33m
+.[39mupdateTimerDispla
+y([33mQuizModel[39m[
+33m.[39mtimeLeft)[33m
+;[39m
+     [90m 97 |[39m   
+  [33mQuizUI[39m[33m
+.[39msetTimerContainer
+Red([36mfalse[39m)[3
+3m;[39m [90m// 
+Remove red/blink 
+classes 
+initially[39m[0m
+
+      at 
+Object.startTimer 
+(src/app.js:94:36)
+      at 
+Object.showQuestion 
+(src/app.js:144:9)
+      at 
+Object.<anonymous> (tes
+ts/app.test.js:307:13)
+
+  ÔŚĆ App Module ÔÇ║ 
+showQuestion should 
+handle no options 
+gracefully
+
+    TypeError: QuizMode
+l.getQuestionTimeLimit 
+is not a function
+
+    [0m [90m 92 
+|[39m     app[33m.[3
+9mstopTimer()[33m;[39
+m [90m// Always clear 
+previous timer before 
+starting a new one[39m
+     [90m 93 |[39m
+    [31m[1m>[22m[39
+m[90m 94 |[39m     [
+33mQuizModel[39m[33m.
+[39mtimeLeft 
+[33m=[39m [33mQuizMo
+del[39m[33m.[39mgetQ
+uestionTimeLimit()[33m
+;[39m
+     [90m    |[39m   
+                       
+          
+[31m[1m^[22m[39m
+     [90m 95 |[39m
+     [90m 96 |[39m   
+  [33mQuizUI[39m[33m
+.[39mupdateTimerDispla
+y([33mQuizModel[39m[
+33m.[39mtimeLeft)[33m
+;[39m
+     [90m 97 |[39m   
+  [33mQuizUI[39m[33m
+.[39msetTimerContainer
+Red([36mfalse[39m)[3
+3m;[39m [90m// 
+Remove red/blink 
+classes 
+initially[39m[0m
+
+      at 
+Object.startTimer 
+(src/app.js:94:36)
+      at 
+Object.showQuestion 
+(src/app.js:144:9)
+      at 
+Object.<anonymous> (tes
+ts/app.test.js:335:13)
+
+  ÔŚĆ App Module ÔÇ║ 
+nextQuestion should 
+advance to next 
+question if available
+
+    TypeError: QuizMode
+l.getQuestionTimeLimit 
+is not a function
+
+    [0m [90m 92 
+|[39m     app[33m.[3
+9mstopTimer()[33m;[39
+m [90m// Always clear 
+previous timer before 
+starting a new one[39m
+     [90m 93 |[39m
+    [31m[1m>[22m[39
+m[90m 94 |[39m     [
+33mQuizModel[39m[33m.
+[39mtimeLeft 
+[33m=[39m [33mQuizMo
+del[39m[33m.[39mgetQ
+uestionTimeLimit()[33m
+;[39m
+     [90m    |[39m   
+                       
+          
+[31m[1m^[22m[39m
+     [90m 95 |[39m
+     [90m 96 |[39m   
+  [33mQuizUI[39m[33m
+.[39mupdateTimerDispla
+y([33mQuizModel[39m[
+33m.[39mtimeLeft)[33m
+;[39m
+     [90m 97 |[39m   
+  [33mQuizUI[39m[33m
+.[39msetTimerContainer
+Red([36mfalse[39m)[3
+3m;[39m [90m// 
+Remove red/blink 
+classes 
+initially[39m[0m
+
+      at 
+Object.startTimer 
+(src/app.js:94:36)
+      at 
+Object.showQuestion 
+(src/app.js:144:9)
+      at 
+Object.nextQuestion 
+(src/app.js:319:13)
+      at 
+Object.<anonymous> (tes
+ts/app.test.js:399:13)
+
+  ÔŚĆ App Module ÔÇ║ 
+switchSet should 
+update question URL, 
+reset state, and 
+reload questions
+
+    TypeError: QuizMode
+l.getQuestionTimeLimit 
+is not a function
+
+    [0m [90m 92 
+|[39m     app[33m.[3
+9mstopTimer()[33m;[39
+m [90m// Always clear 
+previous timer before 
+starting a new one[39m
+     [90m 93 |[39m
+    [31m[1m>[22m[39
+m[90m 94 |[39m     [
+33mQuizModel[39m[33m.
+[39mtimeLeft 
+[33m=[39m [33mQuizMo
+del[39m[33m.[39mgetQ
+uestionTimeLimit()[33m
+;[39m
+     [90m    |[39m   
+                       
+          
+[31m[1m^[22m[39m
+     [90m 95 |[39m
+     [90m 96 |[39m   
+  [33mQuizUI[39m[33m
+.[39mupdateTimerDispla
+y([33mQuizModel[39m[
+33m.[39mtimeLeft)[33m
+;[39m
+     [90m 97 |[39m   
+  [33mQuizUI[39m[33m
+.[39msetTimerContainer
+Red([36mfalse[39m)[3
+3m;[39m [90m// 
+Remove red/blink 
+classes 
+initially[39m[0m
+
+      at 
+Object.startTimer 
+(src/app.js:94:36)
+      at 
+Object.showQuestion 
+(src/app.js:144:9)
+      at 
+Object.switchSet 
+(src/app.js:310:13)
+      at 
+Object.<anonymous> (tes
+ts/app.test.js:423:9)
+
+PASS 
+tests/labBench.test.js
+PASS 
+tests/clipping.test.js
+PASS tests/library_expa
+nsion.test.js
+  ÔŚĆ Console
+
+    console.log
+      Rendering 
+article: 
+trichinellosis {
+        id: 
+'trichinellosis',
+        title: 
+'Trichinellosis: A 
+zoonosis that still 
+requires vigilance',
+        author: 'Ivana 
+Mitic, Sasa Vasilev, 
+Alisa 
+Gruden-Movsesijan',
+        university: 
+'University of 
+Belgrade',
+        journal: 'Plos 
+Neglected Tropical 
+Diseases',
+        year: 'Jan, 
+2026',
+        comingSoon: 
+false
+      }
+
+      at 
+src/quizUI.js:220:21
+          at 
+Array.forEach 
+(<anonymous>)
+
+PASS tests/regressions.
+test.js
+PASS 
+tests/homepage.test.js
+PASS 
+tests/library.test.js
+(node:15156) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+PASS tests/digitalPcrUI
+.test.js
+(node:20580) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+PASS 
+tests/quizUI.test.js
+  ÔŚĆ Console
+
+    console.log
+      Rendering 
+article: art1 {
+        id: 'art1',
+        title: 
+'Article 1',
+        journal: 
+'Journal 1',
+        author: 'A1',
+        university: 
+'U1',
+        year: '2026',
+        comingSoon: 
+false
+      }
+
+      at 
+src/quizUI.js:220:21
+          at 
+Array.forEach 
+(<anonymous>)
+
+PASS tests/data.test.js
+(node:21368) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+FAIL 
+tests/qpcr_flow.test.js
+  ÔŚĆ qPCR Quiz Flow 
+ÔÇ║ clicking qPCR tile 
+should show qPCR page 
+with all 7 quiz cards
+
+    expect(received).to
+Be(expected) // 
+Object.is equality
+
+    Expected: 8
+    Received: 9
+
+    [0m [90m 58 
+|[39m         [90m// 
+Should have 8 quiz 
+cards total (General + 
+7 sections)[39m
+     [90m 59 |[39m   
+      [36mconst[39m 
+quizCards [33m=[39m d
+ocument[33m.[39mquery
+SelectorAll([32m'#qpcr
+-sets-grid .set-tile'[
+39m)[33m;[39m
+    [31m[1m>[22m[39
+m[90m 60 |[39m       
+  expect(quizCards[33m
+.[39mlength)[33m.[39
+mtoBe([35m8[39m)[33m
+;[39m
+     [90m    |[39m   
+                       
+        
+[31m[1m^[22m[39m
+     [90m 61 |[39m   
+  })[33m;[39m
+     [90m 62 |[39m
+     [90m 63 |[39m   
+  test([32m'should 
+render General qPCR 
+Quiz 
+card'[39m[33m,[39m 
+[36masync[39m () 
+[33m=>[39m {[0m
+
+      at 
+Object.<anonymous> (tes
+ts/qpcr_flow.test.js:60
+:34)
+
+PASS 
+tests/quizModel.test.js
+  ÔŚĆ Console
+
+    console.error
+      Error loading 
+the questions: Error: 
+Network error
+          at 
+Object.<anonymous> (C:\
+Users\monic\OneDrive\De
+sktop\J\from_github_bio
+skills\Bioskills_battle
+\tests\quizModel.test.j
+s:38:44)
+          at Promise.fi
+nally.completed (C:\Use
+rs\monic\OneDrive\Deskt
+op\J\from_github_bioski
+lls\Bioskills_battle\no
+de_modules\jest-circus\
+build\jestAdapterInit.j
+s:1557:28)
+          at new 
+Promise (<anonymous>)
+          at 
+callAsyncCircusFn (C:\U
+sers\monic\OneDrive\Des
+ktop\J\from_github_bios
+kills\Bioskills_battle\
+node_modules\jest-circu
+s\build\jestAdapterInit
+.js:1497:10)
+          at 
+_callCircusTest (C:\Use
+rs\monic\OneDrive\Deskt
+op\J\from_github_bioski
+lls\Bioskills_battle\no
+de_modules\jest-circus\
+build\jestAdapterInit.j
+s:1007:40)
+          at processTic
+ksAndRejections (node:i
+nternal/process/task_qu
+eues:103:5)
+          at _runTest (
+C:\Users\monic\OneDrive
+\Desktop\J\from_github_
+bioskills\Bioskills_bat
+tle\node_modules\jest-c
+ircus\build\jestAdapter
+Init.js:947:3)
+          at C:\Users\m
+onic\OneDrive\Desktop\J
+\from_github_bioskills\
+Bioskills_battle\node_m
+odules\jest-circus\buil
+d\jestAdapterInit.js:84
+9:7
+          at _runTestsF
+orDescribeBlock (C:\Use
+rs\monic\OneDrive\Deskt
+op\J\from_github_bioski
+lls\Bioskills_battle\no
+de_modules\jest-circus\
+build\jestAdapterInit.j
+s:862:11)
+          at _runTestsF
+orDescribeBlock (C:\Use
+rs\monic\OneDrive\Deskt
+op\J\from_github_bioski
+lls\Bioskills_battle\no
+de_modules\jest-circus\
+build\jestAdapterInit.j
+s:857:11)
+          at run (C:\Us
+ers\monic\OneDrive\Desk
+top\J\from_github_biosk
+ills\Bioskills_battle\n
+ode_modules\jest-circus
+\build\jestAdapterInit.
+js:761:3)
+          at runAndTran
+sformResultsToJestForma
+t (C:\Users\monic\OneDr
+ive\Desktop\J\from_gith
+ub_bioskills\Bioskills_
+battle\node_modules\jes
+t-circus\build\jestAdap
+terInit.js:1918:21)
+          at 
+jestAdapter (C:\Users\m
+onic\OneDrive\Desktop\J
+\from_github_bioskills\
+Bioskills_battle\node_m
+odules\jest-circus\buil
+d\runner.js:101:19)
+          at 
+runTestInternal (C:\Use
+rs\monic\OneDrive\Deskt
+op\J\from_github_bioski
+lls\Bioskills_battle\no
+de_modules\jest-runner\
+build\testWorker.js:275
+:16)
+          at runTest (C
+:\Users\monic\OneDrive\
+Desktop\J\from_github_b
+ioskills\Bioskills_batt
+le\node_modules\jest-ru
+nner\build\testWorker.j
+s:343:7)
+          at 
+Object.worker (C:\Users
+\monic\OneDrive\Desktop
+\J\from_github_bioskill
+s\Bioskills_battle\node
+_modules\jest-runner\bu
+ild\testWorker.js:497:1
+2)
+
+    [0m [90m 43 
+|[39m             
+[36mreturn[39m [36mt
+rue[39m[33m;[39m
+     [90m 44 |[39m   
+      } 
+[36mcatch[39m 
+(error) {
+    [31m[1m>[22m[39
+m[90m 45 |[39m       
+      console[33m.[39
+merror([32m"Error 
+loading the questions:"
+[39m[33m,[39m 
+error)[33m;[39m
+     [90m    |[39m   
+                  
+[31m[1m^[22m[39m
+     [90m 46 |[39m   
+          [36mthis[39
+m[33m.[39mcurrentQues
+tions [33m=[39m 
+[][33m;[39m [90m// 
+Clear questions on 
+error[39m
+     [90m 47 |[39m   
+          
+[36mreturn[39m [36mf
+alse[39m[33m;[39m
+     [90m 48 |[39m   
+      }[0m
+
+      at 
+Object.loadQuizData (sr
+c/quizModel.js:45:21)
+      at 
+Object.<anonymous> (tes
+ts/quizModel.test.js:39
+:24)
+
+    console.error
+      Error loading 
+the questions: Error: 
+Loaded data is not a 
+valid question array 
+or is empty.
+          at 
+Object.loadQuizData (C:
+\Users\monic\OneDrive\D
+esktop\J\from_github_bi
+oskills\Bioskills_battl
+e\src\quizModel.js:41:2
+3)
+          at processTic
+ksAndRejections (node:i
+nternal/process/task_qu
+eues:103:5)
+          at 
+Object.<anonymous> (C:\
+Users\monic\OneDrive\De
+sktop\J\from_github_bio
+skills\Bioskills_battle
+\tests\quizModel.test.j
+s:49:24)
+
+    [0m [90m 43 
+|[39m             
+[36mreturn[39m [36mt
+rue[39m[33m;[39m
+     [90m 44 |[39m   
+      } 
+[36mcatch[39m 
+(error) {
+    [31m[1m>[22m[39
+m[90m 45 |[39m       
+      console[33m.[39
+merror([32m"Error 
+loading the questions:"
+[39m[33m,[39m 
+error)[33m;[39m
+     [90m    |[39m   
+                  
+[31m[1m^[22m[39m
+     [90m 46 |[39m   
+          [36mthis[39
+m[33m.[39mcurrentQues
+tions [33m=[39m 
+[][33m;[39m [90m// 
+Clear questions on 
+error[39m
+     [90m 47 |[39m   
+          
+[36mreturn[39m [36mf
+alse[39m[33m;[39m
+     [90m 48 |[39m   
+      }[0m
+
+      at 
+Object.loadQuizData (sr
+c/quizModel.js:45:21)
+      at 
+Object.<anonymous> (tes
+ts/quizModel.test.js:49
+:24)
+
+C:\Users\monic\OneDrive
+\Desktop\J\from_github_
+bioskills\Bioskills_bat
+tle\src\app.js:94
+    QuizModel.timeLeft 
+= QuizModel.getQuestion
+TimeLimit();
+                       
+            ^
+
+[TypeError: QuizModel.g
+etQuestionTimeLimit is 
+not a function]
+
+Node.js v24.13.0
+(node:22080) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+C:\Users\monic\OneDrive
+\Desktop\J\from_github_
+bioskills\Bioskills_bat
+tle\src\app.js:94
+    QuizModel.timeLeft 
+= QuizModel.getQuestion
+TimeLimit();
+                       
+            ^
+
+[TypeError: QuizModel.g
+etQuestionTimeLimit is 
+not a function]
+
+Node.js v24.13.0
+(node:11924) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+C:\Users\monic\OneDrive
+\Desktop\J\from_github_
+bioskills\Bioskills_bat
+tle\src\app.js:94
+    QuizModel.timeLeft 
+= QuizModel.getQuestion
+TimeLimit();
+                       
+            ^
+
+[TypeError: QuizModel.g
+etQuestionTimeLimit is 
+not a function]
+
+Node.js v24.13.0
+(node:12152) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+C:\Users\monic\OneDrive
+\Desktop\J\from_github_
+bioskills\Bioskills_bat
+tle\src\app.js:94
+    QuizModel.timeLeft 
+= QuizModel.getQuestion
+TimeLimit();
+                       
+            ^
+
+[TypeError: QuizModel.g
+etQuestionTimeLimit is 
+not a function]
+
+Node.js v24.13.0
+FAIL tests/digitalPcrFl
+ow.test.js
+  ÔŚĆ Test suite 
+failed to run
+
+    Jest worker 
+encountered 4 child 
+process exceptions, 
+exceeding retry limit
+
+      at ChildProcessWo
+rker.initialize (node_m
+odules/jest-worker/buil
+d/index.js:805:21)
+
+Test Suites: 5 failed, 
+11 passed, 16 total
+Tests:       9 failed, 
+92 passed, 101 total
+Snapshots:   0 total
+Time:        10.104 s
+Ran all test suites.
