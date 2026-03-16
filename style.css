@@ -178,9 +178,9 @@ body:has(#article-sets-page:not(.hide)) {
 
 /* Individual Tile */
 .set-tile {
-    background: linear-gradient(135deg, rgba(114, 243, 39, 0.88), rgba(90, 196, 30, 0.92));
+    background: linear-gradient(135deg, rgba(114, 243, 39, 1), rgba(90, 196, 30, 1));
     color: #0a0a12;
-    border: none;
+    border: 2px solid transparent;
     padding: 18px 12px 22px 12px;
     line-height: 1.6;
     font-size: 1.05em;
@@ -190,11 +190,12 @@ body:has(#article-sets-page:not(.hide)) {
     border-radius: 10px;
     text-align: center;
     box-shadow:
-        0 0 12px rgba(114, 243, 39, 0.2),
-        0 3px 8px rgba(0, 0, 0, 0.4);
-    transition: all 0.25s ease;
+        0 0 12px rgba(114, 243, 39, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: visible;
+    animation: none !important; /* Explicitly disable any rogue animations */
 }
 
 .set-tile::after {
@@ -209,11 +210,12 @@ body:has(#article-sets-page:not(.hide)) {
 }
 
 .set-tile:hover {
-    transform: translateY(-4px) scale(1.03);
+    transform: translateY(-5px) scale(1.03);
+    border-color: #bf40ff; /* Light neon purple border */
     box-shadow:
-        0 0 22px rgba(114, 243, 39, 0.45),
-        0 0 50px rgba(114, 243, 39, 0.15),
-        0 6px 16px rgba(0, 0, 0, 0.5);
+        0 0 25px rgba(191, 64, 255, 0.4), /* Soft purple glow */
+        0 0 50px rgba(191, 64, 255, 0.15),
+        0 8px 20px rgba(0, 0, 0, 0.5);
     background: linear-gradient(135deg, rgba(114, 243, 39, 1), rgba(90, 196, 30, 1));
 }
 
@@ -226,6 +228,10 @@ body:has(#article-sets-page:not(.hide)) {
 .set-tile.qpcr-quiz-card:hover {
     background: linear-gradient(135deg, #00ff00, #00cc00);
     color: #1a1a2e;
+    border-color: #bf40ff; /* Light neon purple border */
+    box-shadow:
+        0 0 25px rgba(191, 64, 255, 0.5),
+        0 0 50px rgba(191, 64, 255, 0.2);
 }
 
 .set-tile:hover::after {
@@ -535,9 +541,9 @@ h1 {
 
 .technique-tile:hover:not(.coming-soon) {
     transform: translateY(-5px);
-    background: rgba(114, 243, 39, 0.1);
-    border-color: #72F327;
-    box-shadow: 0 0 20px rgba(114, 243, 39, 0.2);
+    background: rgba(114, 243, 39, 0.15);
+    border-color: #bf40ff; /* Neon Purple */
+    box-shadow: 0 0 25px rgba(191, 64, 255, 0.5), 0 0 50px rgba(191, 64, 255, 0.2);
 }
 
 .technique-tile.coming-soon {
