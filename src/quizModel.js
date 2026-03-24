@@ -111,6 +111,8 @@ export const QuizModel = {
             return this.TIME_PER_ADVANCED_QPCR_QUESTION;
         } else if (this.questionUrl.startsWith('data/qpcr/') || this.questionUrl === 'qPCR.json') {
             return this.TIME_PER_QPCR_QUESTION;
+        } else if (this.questionUrl.startsWith('data/western-blotting/')) {
+            return this.TIME_PER_QUESTION; // Explicitly 20s for Western Blotting
         } else {
             return this.TIME_PER_QUESTION;
         }

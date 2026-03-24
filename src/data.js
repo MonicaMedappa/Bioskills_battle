@@ -10,7 +10,7 @@ export const labTechniques = [
     { id: 'spec', title: 'OD and Spectrophotometer', icon: '🔦', comingSoon: true },
     { id: 'rt-pcr', title: 'RT-PCR', icon: '🧬', comingSoon: true },
     { id: 'elisa', title: 'ELISA', icon: '🧫', comingSoon: true },
-    { id: 'western', title: 'Western Blotting', icon: '🩹', comingSoon: true },
+    { id: 'western', title: 'Western Blotting', icon: '🥪⚡📸', comingSoon: false },
     { id: 'cloning', title: 'Cloning', icon: '🐑', comingSoon: true }
 ];
 
@@ -51,5 +51,9 @@ export const qpcrSets = [
 
 export const digitalPcrSets = [
     { id: 'data/digital-pcr/Digital PCR.json', title: 'General Digital PCR (dPCR) Quiz' }
+];
+
+export const westernBlottingSets = [
+    { id: 'data/western-blotting/Western Blotting.json', title: 'Basics of Western Blotting' }
 ];
 

@@ -45,6 +45,10 @@ export const QuizUI = {
     getDigitalPcrPage: () => document.getElementById('digital-pcr-page'),
     getBackToLabFromDigitalPcrButton: () => document.getElementById('back-to-lab-from-digital-pcr-btn'),
     getDigitalPcrSetsGrid: () => document.getElementById('digital-pcr-sets-grid'),
+    getWesternBlottingPage: () => document.getElementById('western-blotting-page'),
+    getBackToLabFromWesternButton: () => document.getElementById('back-to-lab-from-western-btn'),
+    getWesternBlottingSetsGrid: () => document.getElementById('western-blotting-sets-grid'),
+
 
 
     // --- UI Update Functions ---
@@ -133,8 +137,10 @@ export const QuizUI = {
             QuizUI.getLibraryPage(),
             QuizUI.getBattleHubModal(),
             QuizUI.getQpcrPage(),
-            QuizUI.getDigitalPcrPage()
+            QuizUI.getDigitalPcrPage(),
+            QuizUI.getWesternBlottingPage()
         ];
+
         pages.forEach(page => {
             if (page) page.classList.add('hide');
         });
@@ -155,6 +161,11 @@ export const QuizUI = {
     showDigitalPcrPage: () => {
         QuizUI.showPage('digital-pcr-page');
     },
+
+    showWesternBlottingPage: () => {
+        QuizUI.showPage('western-blotting-page');
+    },
+
 
     showQuiz: () => {
         QuizUI.showPage('quiz-container');
@@ -287,6 +298,21 @@ export const QuizUI = {
             grid.appendChild(tile);
         });
     },
+
+    renderWesternBlottingSetsGrid: (sets, handleSetClick) => {
+        const grid = QuizUI.getWesternBlottingSetsGrid();
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        sets.forEach(set => {
+            const tile = document.createElement('button');
+            tile.className = 'set-tile western-blotting-quiz-card';
+            tile.textContent = set.title;
+            tile.onclick = () => handleSetClick(set.id);
+            grid.appendChild(tile);
+        });
+    },
+
 
     renderFinalResults: (score, totalQuestions, reloadPageCallback) => {
         const quizContainer = QuizUI.getQuizContainer();

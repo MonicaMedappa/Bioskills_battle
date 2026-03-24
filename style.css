@@ -51,10 +51,8 @@ body {
 }
 
 /* Remove conditional body backgrounds to keep it consistent everywhere */
-body:has(#landing-page:not(.hide)),
-body:has(#quiz-container:not(.hide)),
-body:has(#sds-page:not(.hide)),
-body:has(#qpcr-page:not(.hide)) {
+body:has(#digital-pcr-page:not(.hide)),
+body:has(#western-blotting-page:not(.hide)) {
     background-image: inherit;
     animation: inherit;
 }
@@ -92,6 +90,8 @@ body:has(#quiz-container:not(.hide)) {
 /* SDS-PAGE & Article Sets background: dark purple with subtle neon green lines */
 body:has(#sds-page:not(.hide)),
 body:has(#qpcr-page:not(.hide)),
+body:has(#digital-pcr-page:not(.hide)),
+body:has(#western-blotting-page:not(.hide)),
 body:has(#article-sets-page:not(.hide)) {
     background-color: #12061e;
     background-image:
@@ -113,7 +113,9 @@ body:has(#article-sets-page:not(.hide)) {
 
 /* ========== SDS-PAGE & qPCR styles ========== */
 #sds-page,
-#qpcr-page {
+#qpcr-page,
+#digital-pcr-page,
+#western-blotting-page {
     text-align: center;
     background: rgba(18, 6, 30, 0.88);
     backdrop-filter: blur(14px);
@@ -138,7 +140,9 @@ body:has(#article-sets-page:not(.hide)) {
 
 /* Top accent line */
 #sds-page::before,
-#qpcr-page::before {
+#qpcr-page::before,
+#digital-pcr-page::before,
+#western-blotting-page::before {
     content: '';
     position: absolute;
     top: 0;
@@ -150,7 +154,9 @@ body:has(#article-sets-page:not(.hide)) {
 }
 
 #sds-title,
-#qpcr-title {
+#qpcr-title,
+#digital-pcr-title,
+#western-blotting-title {
     font-size: 2em;
     font-weight: 800;
     letter-spacing: 4px;
@@ -160,7 +166,9 @@ body:has(#article-sets-page:not(.hide)) {
 }
 
 #sds-subtitle,
-#qpcr-subtitle {
+#qpcr-subtitle,
+#digital-pcr-subtitle,
+#western-blotting-subtitle {
     font-size: 1em;
     color: rgba(180, 180, 200, 0.7);
     margin: 0 0 30px 0;
@@ -236,6 +244,21 @@ body:has(#article-sets-page:not(.hide)) {
     background: linear-gradient(135deg, #00ff00, #00cc00);
     color: #1a1a2e;
     border-color: #bf40ff; /* Light neon purple border */
+    box-shadow:
+        0 0 25px rgba(191, 64, 255, 0.5),
+        0 0 50px rgba(191, 64, 255, 0.2);
+}
+
+.set-tile.western-blotting-quiz-card {
+    background: linear-gradient(135deg, rgba(114, 243, 39, 1), rgba(90, 196, 30, 1));
+    border: 2px solid transparent;
+    color: #0a0a12;
+}
+
+.set-tile.western-blotting-quiz-card:hover {
+    background: linear-gradient(135deg, rgba(114, 243, 39, 1), rgba(90, 196, 30, 1));
+    color: #0a0a12;
+    border-color: #bf40ff;
     box-shadow:
         0 0 25px rgba(191, 64, 255, 0.5),
         0 0 50px rgba(191, 64, 255, 0.2);
